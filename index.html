@@ -5,12 +5,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="icon" href="favicon.ico">
-<link rel="manifest" href="site.webmanifest">
-
 <title>GoatLink — Best Bonus Only</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -45,13 +39,8 @@ z-index: -1;
 }
 
 @keyframes moveBackground {
-0% {
-transform: translate(0,0) rotate(0deg);
-}
-
-100% {
-transform: translate(-5%, -5%) rotate(8deg);
-}
+0% {transform: translate(0,0) rotate(0deg);}
+100% {transform: translate(-5%, -5%) rotate(8deg);}
 }
 
 .container {
@@ -63,11 +52,6 @@ padding:20px;
 header {
 text-align:center;
 padding:40px 0;
-}
-
-.logo-img {
-width:90px;
-margin-bottom:15px;
 }
 
 .logo {
@@ -88,8 +72,7 @@ margin-top:40px;
 }
 
 .card {
-background: rgba(20,20,25,0.7);
-backdrop-filter: blur(10px);
+background:#141419;
 padding:25px;
 border-radius:20px;
 transition:0.3s;
@@ -99,6 +82,13 @@ cursor:pointer;
 .card:hover {
 transform:translateY(-5px);
 background:#1a1a22;
+}
+
+.card-logo{
+width:40px;
+height:40px;
+object-fit:contain;
+margin-bottom:10px;
 }
 
 .bonus {
@@ -135,8 +125,7 @@ color:#aaa;
 }
 
 .guide {
-background: rgba(20,20,25,0.7);
-backdrop-filter: blur(10px);
+background:#141419;
 padding:25px;
 border-radius:20px;
 line-height:1.7;
@@ -166,8 +155,7 @@ document.getElementById("home").style.display="block"
 <div class="container">
 
 <header>
-<img src="logo.png" class="logo-img">
-<div class="logo">GoatLink</div>
+<div class="logo">🐐 GoatLink</div>
 <div class="subtitle">Best Bonus Only</div>
 </header>
 
@@ -176,24 +164,28 @@ document.getElementById("home").style.display="block"
 <div class="cards">
 
 <div class="card" onclick="openPage('bbva')">
+<img src="logos/bbva.png" class="card-logo">
 <h3>BBVA</h3>
 <div class="bonus">10€</div>
 <button>Guida</button>
 </div>
 
 <div class="card" onclick="openPage('buddy')">
+<img src="logos/buddybank.png" class="card-logo">
 <h3>Buddybank</h3>
 <div class="bonus">50€</div>
 <button>Guida</button>
 </div>
 
 <div class="card" onclick="openPage('bybit')">
+<img src="logos/bybit.png" class="card-logo">
 <h3>Bybit</h3>
 <div class="bonus">45€</div>
 <button>Guida</button>
 </div>
 
 <div class="card" onclick="openPage('coinbase')">
+<img src="logos/coinbase.png" class="card-logo">
 <h3>Coinbase</h3>
 <div class="bonus">20€</div>
 <button>Guida</button>
@@ -201,7 +193,6 @@ document.getElementById("home").style.display="block"
 
 </div>
 </div>
-
 <!-- BBVA -->
 
 <div id="bbva" class="page">
@@ -257,6 +248,7 @@ La promo è tornata alla versione standard:
 
 </div>
 </div>
+
 
 <!-- Buddybank -->
 
@@ -331,6 +323,7 @@ Se paghi online:<br>
 </div>
 </div>
 
+
 <!-- Bybit -->
 
 <div id="bybit" class="page">
@@ -367,6 +360,7 @@ COME FUNZIONA
 
 </div>
 </div>
+
 
 <!-- Coinbase -->
 
