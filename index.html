@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GoatLink — Best Bonus Only</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Inter', sans-serif;
+}
+
+body {
+background: #0b0b0f;
+color: white;
+}
+
+.container {
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+header {
+text-align:center;
+padding:40px 0;
+}
+
+.logo {
+font-size:40px;
+font-weight:700;
+}
+
+.subtitle {
+color:#999;
+margin-top:10px;
+}
+
+.cards {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.card {
+background:#141419;
+padding:25px;
+border-radius:20px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover {
+transform:translateY(-5px);
+background:#1a1a22;
+}
+
+.bonus {
+font-size:26px;
+font-weight:700;
+margin:10px 0;
+}
+
+button {
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:#6c5cff;
+color:white;
+font-weight:600;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover {
+background:#7e70ff;
+}
+
+.page {
+display:none;
+margin-top:30px;
+}
+
+.back {
+margin-bottom:20px;
+cursor:pointer;
+color:#aaa;
+}
+
+.guide {
+background:#141419;
+padding:25px;
+border-radius:20px;
+line-height:1.6;
+}
+
+</style>
+
+<script>
+
+function openPage(id){
+document.querySelectorAll('.page').forEach(p => p.style.display="none")
+document.getElementById(id).style.display="block"
+window.scrollTo(0,0)
+}
+
+function goHome(){
+document.querySelectorAll('.page').forEach(p => p.style.display="none")
+document.getElementById("home").style.display="block"
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<div class="logo">🐐 GoatLink</div>
+<div class="subtitle">Best Bonus Only</div>
+</header>
+
+<div id="home">
+
+<div class="cards">
+
+<div class="card" onclick="openPage('bbva')">
+<h3>BBVA</h3>
+<div class="bonus">10€</div>
+<button>Guida</button>
+</div>
+
+<div class="card" onclick="openPage('buddy')">
+<h3>Buddybank</h3>
+<div class="bonus">50€</div>
+<button>Guida</button>
+</div>
+
+<div class="card" onclick="openPage('bybit')">
+<h3>Bybit</h3>
+<div class="bonus">45€</div>
+<button>Guida</button>
+</div>
+
+<div class="card" onclick="openPage('coinbase')">
+<h3>Coinbase</h3>
+<div class="bonus">20€</div>
+<button>Guida</button>
+</div>
+
+</div>
+</div>
+
+<!-- BBVA -->
+
+<div id="bbva" class="page">
+<div class="back" onclick="goHome()">← Torna indietro</div>
+<div class="guide">
+
+<h2>BBVA — Bonus 10€</h2>
+<br>
+
+1️⃣ Scarica l'app BBVA<br>
+2️⃣ Inserisci codice:<br> <b>1E550060F05890</b><br><br>
+
+3️⃣ Fai una spesa qualsiasi<br>
+4️⃣ Ricevi 10€ entro 2 giorni
+
+<br><br>
+
+<a href="https://www.bbva.it/promo/passaparola.html">
+<button>Vai alla Promo</button>
+</a>
+
+</div>
+</div>
+
+<!-- Buddy -->
+
+<div id="buddy" class="page">
+<div class="back" onclick="goHome()">← Torna indietro</div>
+
+<div class="guide">
+
+<h2>Buddybank — Bonus 50€</h2>
+<br>
+
+1️⃣ Richiedi MyOne digitale<br>
+2️⃣ Codice:<br> <b>B2601MD29S8CUL</b><br><br>
+
+3️⃣ Fai pagamento 10€<br>
+4️⃣ Ricevi 50€
+
+</div>
+</div>
+
+<!-- Bybit -->
+
+<div id="bybit" class="page">
+<div class="back" onclick="goHome()">← Torna indietro</div>
+
+<div class="guide">
+
+<h2>Bybit — Bonus 45€</h2>
+
+<br>
+
+Deposita 100€<br>
+Non muovere nulla<br>
+Ricevi bonus
+
+<br><br>
+
+<a href="https://www.bybit.eu/invite?ref=7X0RZYL">
+<button>Vai alla Promo</button>
+</a>
+
+</div>
+</div>
+
+<!-- Coinbase -->
+
+<div id="coinbase" class="page">
+<div class="back" onclick="goHome()">← Torna indietro</div>
+
+<div class="guide">
+
+<h2>Coinbase — Bonus 20€</h2>
+
+<br>
+
+Deposita 20€<br>
+Fai trade<br>
+Ricevi bonus
+
+<br><br>
+
+<a href="https://coinbase.com/join/LR35VV5?src=ios-link">
+<button>Vai alla Promo</button>
+</a>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
