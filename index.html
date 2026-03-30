@@ -96,6 +96,8 @@ cursor:pointer;
 margin-top:15px;
 }
 
+/* POPUP */
+
 .modal{
 display:none;
 position:fixed;
@@ -157,14 +159,13 @@ color:#ccc;
 <script>
 
 function openPage(id){
-document.querySelectorAll('.modal').forEach(el=>el.style.display='none');
-document.getElementById(id).style.display='block';
-window.scrollTo(0,0);
+document.querySelectorAll('.modal').forEach(p=>p.style.display="none")
+document.getElementById(id).style.display="block"
+window.scrollTo(0,0)
 }
 
 function goHome(){
-document.querySelectorAll('.modal').forEach(el=>el.style.display='none');
-window.scrollTo(0,0);
+document.querySelectorAll('.modal').forEach(p=>p.style.display="none")
 }
 
 </script>
@@ -233,7 +234,6 @@ Ogni guida è verificata e spiegata passo-passo.
 
 </div>
 
-
 <!-- BBVA -->
 
 <div id="bbva" class="modal">
@@ -289,10 +289,15 @@ La promo è tornata alla versione standard:
 🔄 Cambio banca semplificato<br>
 ⚠️ Apple Pay può non attivarsi subito → usa la carta manualmente la prima volta
 
-</div>
-</div>
-</div>
+<br><br>
 
+<a href="https://www.bbva.it/" target="_blank">
+<button>Apri Conto BBVA</button>
+</a>
+
+</div>
+</div>
+</div>
 
 <!-- Buddybank -->
 
@@ -365,10 +370,15 @@ Se paghi online:<br>
 
 5️⃣ Ricevi 50€ 🎁
 
-</div>
-</div>
-</div>
+<br><br>
 
+<a href="https://www.buddy.unicredit.it/" target="_blank">
+<button>Apri Buddybank</button>
+</a>
+
+</div>
+</div>
+</div>
 
 <!-- Bybit -->
 
@@ -404,6 +414,12 @@ COME FUNZIONA
 <br><br>
 
 ⚠️ NON muovere il deposito
+
+<br><br>
+
+<a href="https://www.bybit.eu/invite?ref=7X0RZYL" target="_blank">
+<button>Registrati su Bybit</button>
+</a>
 
 </div>
 </div>
@@ -496,14 +512,13 @@ Non creare account multipli. Coinbase:<br>
 
 <br><br>
 
-<a href="https://coinbase.com/join/LR35VV5?src=ios-link">
+<a href="https://coinbase.com/join/LR35VV5?src=ios-link" target="_blank">
 <button>Iscriviti Ora</button>
 </a>
 
 </div>
 </div>
 </div>
-
 
 <a href="https://wa.link/3wljkr" target="_blank">
 <div class="help-button">
