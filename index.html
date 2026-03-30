@@ -96,8 +96,6 @@ cursor:pointer;
 margin-top:15px;
 }
 
-/* POPUP */
-
 .modal{
 display:none;
 position:fixed;
@@ -166,6 +164,7 @@ window.scrollTo(0,0)
 
 function goHome(){
 document.querySelectorAll('.modal').forEach(p=>p.style.display="none")
+window.scrollTo(0,0)
 }
 
 </script>
@@ -234,6 +233,7 @@ Ogni guida è verificata e spiegata passo-passo.
 
 </div>
 
+
 <!-- BBVA -->
 
 <div id="bbva" class="modal">
@@ -291,11 +291,13 @@ La promo è tornata alla versione standard:
 
 </div>
 </div>
+</div>
 
 
 <!-- Buddybank -->
 
-<div id="buddy" class="page">
+<div id="buddy" class="modal">
+<div class="modal-content">
 <div class="back" onclick="goHome()">← Torna indietro</div>
 
 <div class="guide">
@@ -365,11 +367,13 @@ Se paghi online:<br>
 
 </div>
 </div>
+</div>
 
 
 <!-- Bybit -->
 
-<div id="bybit" class="page">
+<div id="bybit" class="modal">
+<div class="modal-content">
 <div class="back" onclick="goHome()">← Torna indietro</div>
 
 <div class="guide">
@@ -403,11 +407,13 @@ COME FUNZIONA
 
 </div>
 </div>
+</div>
 
 
 <!-- Coinbase -->
 
-<div id="coinbase" class="page">
+<div id="coinbase" class="modal">
+<div class="modal-content">
 <div class="back" onclick="goHome()">← Torna indietro</div>
 
 <div class="guide">
@@ -496,8 +502,8 @@ Non creare account multipli. Coinbase:<br>
 
 </div>
 </div>
-
 </div>
+
 
 <a href="https://wa.link/3wljkr" target="_blank">
 <div class="help-button">
