@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-
 <html lang="it">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,6 +12,38 @@
 <style>
 
 * {
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Inter', sans-serif;
+}
+
+body {
+background:#0b0b0f;
+color:white;
+overflow-x:hidden;
+position:relative;
+}
+
+body::before {
+content:"";
+position:fixed;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:
+radial-gradient(circle at 30% 30%, rgba(108,92,255,0.15), transparent 40%),
+radial-gradient(circle at 70% 70%, rgba(0,200,255,0.12), transparent 40%);
+animation:moveBackground 25s ease-in-out infinite alternate;
+z-index:-1;
+}
+
+@keyframes moveBackground {
+0% {transform: translate(0,0) rotate(0deg);}
+100% {transform: translate(-5%, -5%) rotate(8deg);}
+}
+
 .main-logo{
 width:260px;
 margin-bottom:10px;
@@ -21,49 +53,6 @@ transition:0.3s;
 
 .main-logo:hover{
 transform:scale(1.03);
-}
-}
-<style>
-
-body {
-background:#0b0b0f;
-}
-
-.card {
-background:#141419;
-}
-
-.small {
-margin-top:10px;
-font-size:13px;
-color:#aaa;
-line-height:1.4;
-}
-
-</style>
-body {
-background: #0b0b0f;
-color: white;
-overflow-x: hidden;
-position: relative;
-}
-
-body::before {
-content: "";
-position: fixed;
-top: -50%;
-left: -50%;
-width: 200%;
-height: 200%;
-background: radial-gradient(circle at 30% 30%, rgba(108,92,255,0.15), transparent 40%),
-radial-gradient(circle at 70% 70%, rgba(0,200,255,0.12), transparent 40%);
-animation: moveBackground 25s ease-in-out infinite alternate;
-z-index: -1;
-}
-
-@keyframes moveBackground {
-0% {transform: translate(0,0) rotate(0deg);}
-100% {transform: translate(-5%, -5%) rotate(8deg);}
 }
 
 .container {
@@ -154,6 +143,13 @@ border-radius:20px;
 line-height:1.7;
 }
 
+.small {
+margin-top:10px;
+font-size:13px;
+color:#aaa;
+line-height:1.4;
+}
+
 </style>
 
 <script>
@@ -234,6 +230,7 @@ document.getElementById("home").style.display="block"
 </div>
 </div>
 </div>
+
 <!-- BBVA -->
 
 <div id="bbva" class="page">
