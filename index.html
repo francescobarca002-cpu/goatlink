@@ -45,6 +45,16 @@ color:#999;
 margin-top:10px;
 }
 
+.badge{
+display:inline-block;
+background:#1b1b22;
+padding:8px 14px;
+border-radius:20px;
+font-size:13px;
+margin-top:10px;
+color:#8b7fff;
+}
+
 .intro{
 max-width:650px;
 margin:20px auto;
@@ -57,11 +67,30 @@ padding:22px;
 border-radius:18px;
 }
 
+.how{
+margin-top:25px;
+background:#141419;
+padding:25px;
+border-radius:18px;
+color:#b8b8c0;
+}
+
+.how h3{
+margin-bottom:15px;
+color:white;
+}
+
+.section-title{
+margin-top:40px;
+text-align:center;
+font-size:22px;
+}
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-margin-top:40px;
+margin-top:30px;
 }
 
 .card{
@@ -69,6 +98,13 @@ background:#141419;
 padding:25px;
 border-radius:20px;
 cursor:pointer;
+transition:.2s;
+border:1px solid transparent;
+}
+
+.card:hover{
+transform:translateY(-4px);
+border:1px solid #24242d;
 }
 
 .card-logo{
@@ -84,6 +120,12 @@ font-weight:700;
 margin:10px 0;
 }
 
+.card-info{
+color:#999;
+font-size:14px;
+margin-top:6px;
+}
+
 button{
 width:100%;
 padding:15px;
@@ -95,8 +137,6 @@ font-weight:600;
 cursor:pointer;
 margin-top:15px;
 }
-
-/* POPUP */
 
 .modal{
 display:none;
@@ -160,8 +200,11 @@ color:#ccc;
 
 function openPage(id){
 document.querySelectorAll('.modal').forEach(p=>p.style.display="none")
-document.getElementById(id).style.display="block"
+const el=document.getElementById(id)
+if(el){
+el.style.display="block"
 window.scrollTo(0,0)
+}
 }
 
 function goHome(){
@@ -182,10 +225,28 @@ document.querySelectorAll('.modal').forEach(p=>p.style.display="none")
 
 <div class="subtitle">Best Bonus Only</div>
 
+<div class="badge">
+🟢 Bonus Attivi e Verificati
+</div>
+
 <div class="intro">
 GoatLink raccoglie promozioni ufficiali offerte da banche, fintech e piattaforme digitali per acquisire nuovi utenti.
 I bonus sono reali e finanziati direttamente dalle aziende.
 Ogni guida è verificata e spiegata passo-passo.
+</div>
+
+<div class="how">
+<h3>Come funziona</h3>
+
+1️⃣ Apri il bonus<br>
+2️⃣ Segui la guida<br>
+3️⃣ Ricevi il bonus
+
+<br><br>
+
+⏱ 5-15 minuti<br>
+💸 Nessun costo
+
 </div>
 
 <div class="reviews">
@@ -200,12 +261,17 @@ Ogni guida è verificata e spiegata passo-passo.
 
 </header>
 
+<div class="section-title">
+💰 Bonus Disponibili
+</div>
+
 <div class="cards">
 
 <div class="card" onclick="openPage('bbva')">
 <img src="logos/bbva.png" class="card-logo">
 <h3>BBVA</h3>
 <div class="bonus">10€</div>
+<div class="card-info">⏱ 10 minuti • 🟢 Facile</div>
 <button>Guida</button>
 </div>
 
@@ -213,6 +279,7 @@ Ogni guida è verificata e spiegata passo-passo.
 <img src="logos/buddybank.png" class="card-logo">
 <h3>Buddybank</h3>
 <div class="bonus">50€</div>
+<div class="card-info">⏱ 10 minuti • 🟢 Facile</div>
 <button>Guida</button>
 </div>
 
@@ -220,6 +287,7 @@ Ogni guida è verificata e spiegata passo-passo.
 <img src="logos/bybit.png" class="card-logo">
 <h3>Bybit</h3>
 <div class="bonus">45€</div>
+<div class="card-info">📈 Crypto • ⏱ 15 minuti • 🟢 Facile</div>
 <button>Guida</button>
 </div>
 
@@ -227,6 +295,7 @@ Ogni guida è verificata e spiegata passo-passo.
 <img src="logos/coinbase.png" class="card-logo">
 <h3>Coinbase</h3>
 <div class="bonus">20€</div>
+<div class="card-info">📈 Crypto • ⏱ 15 minuti • 🟡 Medio</div>
 <button>Guida</button>
 </div>
 
