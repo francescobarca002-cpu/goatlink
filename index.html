@@ -6,16 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>GoatLink — Best Bonus Only</title>
-<div class="intro">
-GoatLink raccoglie promozioni ufficiali offerte da banche, fintech e piattaforme digitali per acquisire nuovi utenti.
-
-I bonus sono reali e finanziati direttamente dalle aziende, non da GoatLink.  
-Ogni guida è verificata e spiegata passo-passo per evitare errori.
-
-⚡ Solo promo attive  
-🎯 Guide semplici e rapide  
-🔥 per qualsiasi informazione clicca sul tasto "gethelp" GOATLINK è sempre disponibile per aiutare
-</div>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -86,6 +76,20 @@ color:#999;
 margin-top:10px;
 }
 
+.intro{
+max-width:650px;
+margin:20px auto 0;
+color:#b8b8c0;
+font-size:15px;
+line-height:1.7;
+text-align:center;
+background:rgba(20,20,25,0.9);
+padding:22px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.04);
+backdrop-filter: blur(8px);
+}
+
 .cards {
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -100,6 +104,108 @@ border-radius:20px;
 transition:0.3s;
 cursor:pointer;
 }
+
+.card:hover {
+transform:translateY(-5px);
+background:#1a1a22;
+}
+
+.card-logo{
+width:40px;
+height:40px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+.bonus {
+font-size:26px;
+font-weight:700;
+margin:10px 0;
+}
+
+button {
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:#6c5cff;
+color:white;
+font-weight:600;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover {
+background:#7e70ff;
+}
+
+.page {
+display:none;
+margin-top:30px;
+}
+
+.back {
+margin-bottom:20px;
+cursor:pointer;
+color:#aaa;
+}
+
+.guide {
+background:#141419;
+padding:25px;
+border-radius:20px;
+line-height:1.7;
+}
+
+.small {
+margin-top:10px;
+font-size:13px;
+color:#aaa;
+line-height:1.4;
+}
+
+</style>
+
+<script>
+
+function openPage(id){
+document.querySelectorAll('.page').forEach(p => p.style.display="none")
+document.getElementById(id).style.display="block"
+window.scrollTo(0,0)
+}
+
+function goHome(){
+document.querySelectorAll('.page').forEach(p => p.style.display="none")
+document.getElementById("home").style.display="block"
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<div class="logo">
+<img src="logo.png" class="main-logo">
+</div>
+
+<div class="subtitle">Best Bonus Only</div>
+
+<div class="intro">
+GoatLink raccoglie promozioni ufficiali offerte da banche, fintech e piattaforme digitali per acquisire nuovi utenti.
+
+I bonus sono reali e finanziati direttamente dalle aziende, non da GoatLink.  
+Ogni guida è verificata e spiegata passo-passo per evitare errori.
+
+⚡ Solo promo attive  
+🎯 Guide semplici e rapide  
+🔥 Per qualsiasi informazione clicca su "Get Help"
+</div>
+
+</header>
 
 .card:hover {
 transform:translateY(-5px);
