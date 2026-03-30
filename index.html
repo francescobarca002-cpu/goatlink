@@ -126,6 +126,12 @@ font-size:14px;
 margin-top:6px;
 }
 
+.card-badge{
+font-size:13px;
+margin-top:6px;
+color:#8b7fff;
+}
+
 button{
 width:100%;
 padding:15px;
@@ -166,7 +172,47 @@ color:#aaa;
 background:#141419;
 padding:25px;
 border-radius:20px;
-line-height:1.7;
+line-height:1.8;
+font-size:16px;
+}
+
+.guide br{
+content:"";
+display:block;
+margin:8px 0;
+}
+
+.guide h2{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.progress{
+display:flex;
+gap:8px;
+margin:15px 0 25px 0;
+}
+
+.progress div{
+flex:1;
+height:6px;
+background:#1f1f26;
+border-radius:10px;
+}
+
+.progress div.active{
+background:#6c5cff;
+}
+
+.back{
+margin-bottom:20px;
+cursor:pointer;
+color:#aaa;
+position:sticky;
+top:0;
+background:#0b0b0f;
+padding:10px 0;
+z-index:10;
 }
 
 .help-button{
@@ -272,6 +318,7 @@ Ogni guida è verificata e spiegata passo-passo.
 <h3>BBVA</h3>
 <div class="bonus">10€</div>
 <div class="card-info">⏱ 10 minuti • 🟢 Facile</div>
+<div class="card-badge">⭐ Consigliato per iniziare • Bonus pagato in 2 giorni</div>
 <button>Guida</button>
 </div>
 
@@ -280,6 +327,7 @@ Ogni guida è verificata e spiegata passo-passo.
 <h3>Buddybank</h3>
 <div class="bonus">50€</div>
 <div class="card-info">⏱ 10 minuti • 🟢 Facile</div>
+<div class="card-badge">🔥 Bonus più alto • Bonus pagato in 7‑14 giorni</div>
 <button>Guida</button>
 </div>
 
@@ -288,6 +336,7 @@ Ogni guida è verificata e spiegata passo-passo.
 <h3>Bybit</h3>
 <div class="bonus">45€</div>
 <div class="card-info">📈 Crypto • ⏱ 15 minuti • 🟢 Facile</div>
+<div class="card-badge">⚡ Bonus pagato in 2‑7 giorni</div>
 <button>Guida</button>
 </div>
 
@@ -296,6 +345,7 @@ Ogni guida è verificata e spiegata passo-passo.
 <h3>Coinbase</h3>
 <div class="bonus">20€</div>
 <div class="card-info">📈 Crypto • ⏱ 15 minuti • 🟡 Medio</div>
+<div class="card-badge">💰 Bonus pagato in 2 giorni</div>
 <button>Guida</button>
 </div>
 
@@ -312,6 +362,12 @@ Ogni guida è verificata e spiegata passo-passo.
 <div class="guide">
 
 <h2>BBVA — Bonus 10€</h2>
+
+<div class="progress">
+<div class="active"></div>
+<div class="active"></div>
+<div class="active"></div>
+</div>
 
 <br>
 
@@ -377,6 +433,12 @@ La promo è tornata alla versione standard:
 <div class="guide">
 
 <h2>Buddybank — Bonus 50€</h2>
+
+<div class="progress">
+<div class="active"></div>
+<div class="active"></div>
+<div class="active"></div>
+</div>
 
 <br>
 
@@ -459,6 +521,12 @@ Se paghi online:<br>
 
 <h2>Bybit — Bonus 45€</h2>
 
+<div class="progress">
+<div class="active"></div>
+<div class="active"></div>
+<div class="active"></div>
+</div>
+
 <br>
 
 COME FUNZIONA
@@ -504,6 +572,12 @@ COME FUNZIONA
 <div class="guide">
 
 <h2>Coinbase — Bonus 20€</h2>
+
+<div class="progress">
+<div class="active"></div>
+<div class="active"></div>
+<div class="active"></div>
+</div>
 
 <br>
 
