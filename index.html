@@ -493,11 +493,11 @@ footer p { max-width: 500px; margin: 0 auto; line-height: 1.7; }
  
 <!-- ── HERO ── -->
 <section id="home">
-  <div class="hero-badge"><span class="dot"></span> Bonus attivi e verificati — Aggiornato marzo 2026</div>
+  <div class="hero-badge"><span class="dot"></span> Bonus attivi e verificati — Aggiornato aprile 2026</div>
   <img src="logo.png" class="hero-logo" alt="GoatLink" onerror="this.style.display='none'">
-  <h1 class="hero-title">Guadagna fino a <span class="hl">190€</span><br>senza spendere nulla</h1>
+  <h1 class="hero-title">Guadagna fino a <span class="hl">215€+</span><br>senza spendere nulla</h1>
   <p class="hero-sub">GoatLink raccoglie i migliori bonus referral da banche, fintech e crypto. Guide verificate, passo-passo, zero rischi.</p>
-  <div class="hero-total">💰 190€ totali disponibili <span>con tutti i bonus attivi</span></div>
+  <div class="hero-total">💰 215€+ totali disponibili <span>con tutti i bonus attivi</span></div>
   <div class="hero-steps">
     <div class="step-pill">1️⃣ <strong>Scegli</strong> il bonus</div>
     <div class="step-pill">2️⃣ <strong>Segui</strong> la guida</div>
@@ -588,6 +588,15 @@ footer p { max-width: 500px; margin: 0 auto; line-height: 1.7; }
       <div class="card-bonus">10€</div>
       <div class="card-meta">💳 Fintech &nbsp;•&nbsp; ⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
       <div class="card-tag star">⭐ Deposito min. 20€ &nbsp;•&nbsp; Bonus in 30 giorni</div>
+      <button class="card-btn">Apri la guida →</button>
+    </div>
+
+    <div class="card" onclick="openModal('naga')">
+      <img src="logos/naga.png" class="card-logo" alt="NAGA" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>📈</div>'">
+      <div class="card-name">NAGA</div>
+      <div class="card-bonus">25$–100$+</div>
+      <div class="card-meta">📊 Trading &nbsp;•&nbsp; ⏱ 10 minuti &nbsp;•&nbsp; 🟡 Medio</div>
+      <div class="card-tag fire">⏳ Scade il 30/04 &nbsp;•&nbsp; 1 azione gratis &nbsp;•&nbsp; Deposito 100$</div>
       <button class="card-btn">Apri la guida →</button>
     </div>
 
@@ -1042,6 +1051,71 @@ footer p { max-width: 500px; margin: 0 auto; line-height: 1.7; }
     </div>
 
     <a href="http://bit.ly/2EueBxs" target="_blank" class="modal-cta">Registrati su Tinaba →</a>
+  </div>
+</div>
+
+<!-- NAGA -->
+<div id="modal-naga" class="modal">
+  <div class="modal-inner">
+    <button class="modal-back" onclick="closeModal()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Torna ai bonus
+    </button>
+    <div class="modal-header">
+      <img src="logos/naga.png" class="modal-logo" alt="NAGA" onerror="this.outerHTML='<div class=\'modal-logo-placeholder\'>📈</div>'">
+      <div>
+        <div class="modal-title">NAGA</div>
+        <div class="modal-bonus">1 azione gratis da 25$ a 100$+</div>
+      </div>
+    </div>
+
+    <div class="guide-block">
+      <h4>⚙️ Come funziona</h4>
+      <div class="tip">🎁 Ricevi 1 azione gratuita con valore casuale tra 25$ e oltre 100$, registrandoti tramite link referral e depositando almeno 100$ sul conto Real Shares (DMA).</div>
+      <div class="warn">⏳ Promo valida dal 18/03/2026 al 30/04/2026 — non aspettare!</div>
+    </div>
+
+    <div class="guide-block">
+      <h4>🎯 Valore della free share</h4>
+      <div class="step-line">💰 25$–50$ → probabilità 50%</div>
+      <div class="step-line">💰 51$–75$ → probabilità 25%</div>
+      <div class="step-line">💰 76$–100$ → probabilità 15%</div>
+      <div class="step-line">💰 oltre 100$ → probabilità 10%</div>
+      <div class="tip">✅ Il minimo garantito è 25$, ma puoi riceverne molti di più — in media vale la pena!</div>
+    </div>
+
+    <div class="guide-block">
+      <h4>🪜 Procedura passo-passo</h4>
+      <div class="step-line">1️⃣ Registrati tramite il link ufficiale qui sotto (ricevuto in privato via GetHelp)</div>
+      <div class="step-line">2️⃣ Completa la verifica identità (KYC) — documento valido richiesto</div>
+      <div class="step-line">3️⃣ Accedi al conto <strong>Real Shares (DMA)</strong></div>
+      <div class="warn">⚠️ NON usare il conto CFD: i depositi su CFD non sono validi per questa promo!</div>
+      <div class="step-line">4️⃣ Deposita almeno <strong>100$</strong> sul conto Real Shares (DMA)</div>
+      <div class="step-line">5️⃣ Attendi: la free share arriva entro 72 ore (3 giorni lavorativi) 🎉</div>
+      <div class="step-line">6️⃣ Lascia il saldo sopra i 100$ per tutta la durata del blocco (45 giorni)</div>
+    </div>
+
+    <div class="guide-block">
+      <h4>🔒 Blocco del bonus (lock 45 giorni)</h4>
+      <div class="step-line">📌 La free share ricevuta è bloccata per <strong>45 giorni</strong></div>
+      <div class="step-line">❌ Non puoi venderla né trasferirla durante il lock</div>
+      <div class="step-line">❌ Se la vendi prima, i soldi ricavati restano bloccati fino alla fine dei 45 giorni</div>
+      <div class="warn">⚠️ Se prelevi e il saldo scende sotto i 100$, perdi il bonus — e lo perde anche chi ti ha invitato. Le perdite di mercato non fanno saltare il bonus: solo i prelievi contano.</div>
+      <div class="tip">👉 Strategia semplice: deposita 100$ e non toccarli per 45 giorni.</div>
+    </div>
+
+    <div class="guide-block">
+      <h4>📊 Riepilogo</h4>
+      <div class="step-line">🏦 Piattaforma: NAGA (Real Shares / DMA)</div>
+      <div class="step-line">🎁 Bonus: 1 azione gratis da 25$ a 100$+</div>
+      <div class="step-line">💵 Deposito richiesto: 100$ (sul conto giusto!)</div>
+      <div class="step-line">⏱ Arrivo reward: entro 72 ore dall'attivazione</div>
+      <div class="step-line">🔒 Lock bonus: 45 giorni</div>
+      <div class="step-line">📅 Scadenza promo: 30 aprile 2026</div>
+      <div class="tip">📩 Per ricevere il link di registrazione, contattaci in privato tramite il pulsante GetHelp qui sotto.</div>
+    </div>
+
+    <a href="https://wa.link/3wljkr" target="_blank" class="modal-cta">📩 Richiedi il link NAGA in privato →</a>
   </div>
 </div>
 
