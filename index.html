@@ -273,7 +273,54 @@ nav {
   border: 1px solid var(--border);
 }
 .card-btn:hover { background: var(--accent); color: #08080d; border-color: var(--accent); }
- 
+
+/* ── EXPIRED SECTION ── */
+#scaduti {
+  padding: 60px 24px 80px;
+  max-width: 1100px; margin: 0 auto;
+}
+.expired-label {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+}
+.expired-title {
+  font-family: 'Syne', sans-serif; font-weight: 800;
+  font-size: clamp(1.4rem, 3vw, 2rem); letter-spacing: -0.02em;
+  margin-bottom: 8px; color: var(--muted2);
+}
+.expired-sub { color: var(--muted); font-size: 0.95rem; font-weight: 300; margin-bottom: 36px; }
+
+.card-expired {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+  opacity: 0.7;
+}
+.card-expired .card-bonus { color: var(--muted2); }
+.card-expired .card-name { color: var(--muted2); }
+
+.expired-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(245,96,96,0.1); border: 1px solid rgba(245,96,96,0.2);
+  color: #f06060; font-size: 0.75rem; font-weight: 700;
+  padding: 4px 10px; border-radius: 99px;
+  margin-bottom: 12px; width: fit-content;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+
+.notify-btn {
+  width: 100%; padding: 13px;
+  border: 1px solid #25D36640; border-radius: 10px;
+  background: #1a3a27; color: #25D366;
+  font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.9rem;
+  cursor: pointer; transition: all 0.2s;
+  text-decoration: none; display: block; text-align: center;
+}
+.notify-btn:hover { background: #25D36622; border-color: #25D366; transform: translateY(-1px); }
+
 /* ── HOW IT WORKS ── */
 #come-funziona {
   padding: 80px 24px;
@@ -387,18 +434,20 @@ footer p { max-width: 500px; margin: 0 auto; line-height: 1.7; }
   transition: all 0.25s;
 }
 .help-float:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(18,140,126,0.5); }
- 
-/* ── MODALS (guide) ── */
+
+/* ── MODAL ── */
 .modal {
-  display: none; position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: var(--bg); z-index: 9999; overflow-y: auto;
+  display: none;
+  position: fixed; inset: 0; z-index: 500;
+  background: var(--bg);
+  overflow-y: auto;
 }
 .modal-inner {
-  max-width: 740px; margin: 0 auto; padding: 24px 24px 80px;
+  max-width: 640px; margin: 0 auto;
+  padding: 24px 24px 80px;
 }
 .modal-back {
-  display: inline-flex; align-items: center; gap: 8px;
+  display: flex; align-items: center; gap: 8px;
   color: var(--muted2); cursor: pointer; font-size: 0.9rem; font-weight: 500;
   padding: 10px 0; border: none; background: none;
   position: sticky; top: 0;
@@ -511,11 +560,11 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
  
 <!-- ── HERO ── -->
 <section id="home">
-  <div class="hero-badge"><span class="dot"></span> Bonus attivi e verificati — Aggiornato aprile 2026</div>
+  <div class="hero-badge"><span class="dot"></span> Bonus attivi e verificati — Aggiornato maggio 2026</div>
   <img src="logo.png" class="hero-logo" alt="GoatLink" onerror="this.style.display='none'">
-  <h1 class="hero-title">Guadagna fino a <span class="hl">215€+</span><br>senza spendere nulla</h1>
+  <h1 class="hero-title">Guadagna fino a <span class="hl">225€+</span><br>senza spendere nulla</h1>
   <p class="hero-sub">GoatLink raccoglie i migliori bonus referral da banche, fintech e crypto. Guide verificate, passo-passo, zero rischi.</p>
-  <div class="hero-total">💰 215€+ totali disponibili <span>con tutti i bonus attivi</span></div>
+  <div class="hero-total">💰 225€+ totali disponibili <span>con tutti i bonus attivi</span></div>
   <div class="hero-steps">
     <div class="step-pill">1️⃣ <strong>Scegli</strong> il bonus</div>
     <div class="step-pill">2️⃣ <strong>Segui</strong> la guida</div>
@@ -537,7 +586,7 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
   </div>
 </div>
  
-<!-- ── BONUS ── -->
+<!-- ── BONUS ATTIVI ── -->
 <section id="bonus">
   <div class="section-header">
     <div class="section-label">Offerte attive</div>
@@ -591,15 +640,6 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <button class="card-btn">Apri la guida →</button>
     </div>
 
-    <div class="card" onclick="openModal('trading212')">
-      <img src="logos/trading212.png" class="card-logo" alt="Trading 212" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>📊</div>'">
-      <div class="card-name">Trading 212</div>
-      <div class="card-bonus">10–100€</div>
-      <div class="card-meta">📊 Trading &nbsp;•&nbsp; ⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
-      <div class="card-tag fire">⏳ Scade il 28/04 &nbsp;•&nbsp; Azione gratis &nbsp;•&nbsp; Prelevabile subito</div>
-      <button class="card-btn">Apri la guida →</button>
-    </div>
-
     <div class="card" onclick="openModal('tinaba')">
       <img src="logos/tinaba.png" class="card-logo" alt="Tinaba" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>💜</div>'">
       <div class="card-name">Tinaba</div>
@@ -609,13 +649,52 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <button class="card-btn">Apri la guida →</button>
     </div>
 
-    <div class="card" onclick="openModal('naga')">
+    <!-- BITSTACK — NUOVO -->
+    <div class="card" onclick="openModal('bitstack')">
+      <div class="card-logo-placeholder">₿</div>
+      <div class="card-name">Bitstack</div>
+      <div class="card-bonus">10€ BTC</div>
+      <div class="card-meta">₿ Bitcoin &nbsp;•&nbsp; ⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
+      <div class="card-tag star">⭐ 5€ dall'app + 5€ da noi &nbsp;•&nbsp; Acquisto min. 100€</div>
+      <button class="card-btn">Apri la guida →</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── BONUS SCADUTI ── -->
+<section id="scaduti" style="border-top: 1px solid var(--border); padding-top: 60px;">
+  <div style="text-align:center; margin-bottom: 36px;">
+    <div class="expired-label">⏰ Bonus scaduti</div>
+    <h2 class="expired-title">Torneranno presto</h2>
+    <p class="expired-sub">Queste promo sono terminate, ma potrebbero riattivarsi. Iscriviti per ricevere una notifica su WhatsApp non appena tornano.</p>
+  </div>
+  <div class="cards-grid">
+
+    <!-- TRADING 212 — SCADUTO -->
+    <div class="card-expired">
+      <div class="expired-badge">⏰ Scaduto</div>
+      <img src="logos/trading212.png" class="card-logo" alt="Trading 212" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>📊</div>'">
+      <div class="card-name">Trading 212</div>
+      <div class="card-bonus">10–100€</div>
+      <div class="card-meta">📊 Trading &nbsp;•&nbsp; Azione gratuita casuale</div>
+      <div class="card-tag" style="margin-bottom:20px;">Promo terminata il 28/04/2026</div>
+      <a href="https://wa.me/393421619836?text=Ciao!%20Vorrei%20essere%20avvisato%20quando%20torna%20il%20bonus%20Trading%20212%20%F0%9F%93%88" target="_blank" class="notify-btn" onclick="if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'notify_trading212'});">
+        🔔 Avvisami quando torna
+      </a>
+    </div>
+
+    <!-- NAGA — SCADUTO -->
+    <div class="card-expired">
+      <div class="expired-badge">⏰ Scaduto</div>
       <img src="logos/naga.png" class="card-logo" alt="NAGA" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>📈</div>'">
       <div class="card-name">NAGA</div>
       <div class="card-bonus">25$–100$+</div>
-      <div class="card-meta">📊 Trading &nbsp;•&nbsp; ⏱ 10 minuti &nbsp;•&nbsp; 🟡 Medio</div>
-      <div class="card-tag fire">⏳ Scade il 30/04 &nbsp;•&nbsp; 1 azione gratis &nbsp;•&nbsp; Deposito 100$</div>
-      <button class="card-btn">Apri la guida →</button>
+      <div class="card-meta">📊 Trading &nbsp;•&nbsp; 1 azione gratuita</div>
+      <div class="card-tag" style="margin-bottom:20px;">Promo terminata il 30/04/2026</div>
+      <a href="https://wa.me/393421619836?text=Ciao!%20Vorrei%20essere%20avvisato%20quando%20torna%20il%20bonus%20NAGA%20%F0%9F%93%88" target="_blank" class="notify-btn" onclick="if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'notify_naga'});">
+        🔔 Avvisami quando torna
+      </a>
     </div>
 
   </div>
@@ -656,27 +735,102 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
 </section>
  
 <!-- ── REVIEWS ── -->
-<section id="recensioni" style="max-width:900px;margin:0 auto;padding:80px 24px;">
+<section id="recensioni" style="max-width:1000px;margin:0 auto;padding:80px 24px;">
   <div class="section-header">
-    <div class="section-label">Testimonianze</div>
+    <div class="section-label">Testimonianze reali</div>
     <h2 class="section-title">Cosa dicono gli utenti</h2>
+    <p class="section-sub">Screenshot reali dalle nostre chat WhatsApp 💬</p>
   </div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">Ho ricevuto 60€ in meno di una settimana seguendo due guide. Tutto chiaro e senza sorprese.</div>
-      <div class="review-author">— Marco R., Milano</div>
+
+  <style>
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .screenshot-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+    .screenshot-card:hover {
+      transform: translateY(-4px);
+      border-color: #2e2e40;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .screenshot-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      max-height: 420px;
+    }
+    .screenshot-caption {
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: var(--muted2);
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .screenshot-caption .wa-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #25D366; flex-shrink: 0;
+    }
+    .lightbox {
+      display: none;
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.92);
+      align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 480px; width: 100%;
+      max-height: 90vh; object-fit: contain;
+      border-radius: 16px;
+    }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 24px;
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--text); font-size: 1.2rem;
+      width: 40px; height: 40px; border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+  </style>
+
+  <div class="screenshots-grid">
+    <div class="screenshot-card" onclick="openLightbox('r1.jpg')">
+      <img src="r1.jpg" alt="Recensione utente GoatLink" loading="lazy">
+      <div class="screenshot-caption"><span class="wa-dot"></span> "50€ netti topp — due soldini in più in tasca fanno sempre comodo"</div>
     </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">Le guide sono semplicissime, persino mia madre è riuscita ad aprire Buddybank e ottenere i 50€.</div>
-      <div class="review-author">— Giulia T., Roma</div>
+    <div class="screenshot-card" onclick="openLightbox('r2.jpg')">
+      <img src="r2.jpg" alt="Recensione utente GoatLink" loading="lazy">
+      <div class="screenshot-caption"><span class="wa-dot"></span> "Metodi funzionanti veramente, mettendoci poco tempo e senza spendere nulla"</div>
     </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">Promo reali e verificate. Ho provato altri siti simili ma qui le istruzioni sono molto più precise.</div>
-      <div class="review-author">— Luca M., Torino</div>
+    <div class="screenshot-card" onclick="openLightbox('r3.jpg')">
+      <img src="r3.jpg" alt="Recensione utente GoatLink" loading="lazy">
+      <div class="screenshot-caption"><span class="wa-dot"></span> "Facile, se ti viene spiegato passo passo si può fare in 20 minuti"</div>
     </div>
+    <div class="screenshot-card" onclick="openLightbox('r4.jpg')">
+      <img src="r4.jpg" alt="Recensione utente GoatLink" loading="lazy">
+      <div class="screenshot-caption"><span class="wa-dot"></span> "Super affidabile e professionale 💯"</div>
+    </div>
+    <div class="screenshot-card" onclick="openLightbox('r5.jpg')">
+      <img src="r5.jpg" alt="Recensione utente GoatLink" loading="lazy">
+      <div class="screenshot-caption"><span class="wa-dot"></span> "Affidabile al 100% dalla mia esperienza!"</div>
+    </div>
+    <div class="screenshot-card" onclick="openLightbox('r6.jpg')">
+      <img src="r6.jpg" alt="Recensione utente GoatLink" loading="lazy">
+      <div class="screenshot-caption"><span class="wa-dot"></span> "Ho già guadagnato 500€ — spero sia uno dei tanti 😉"</div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+    <img id="lightbox-img" src="" alt="Recensione">
   </div>
 </section>
  
@@ -726,7 +880,7 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
           <span class="icon">+</span>
         </button>
         <div class="faq-a">
-          Sì! Puoi ottenere tutti i bonus disponibili, uno alla volta o in parallelo. In totale puoi guadagnare fino a 125€ seguendo tutte le guide.
+          Sì! Puoi ottenere tutti i bonus disponibili, uno alla volta o in parallelo. In totale puoi guadagnare fino a 220€+ seguendo tutte le guide attive.
         </div>
       </div>
  
@@ -757,11 +911,12 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
 <!-- ── FOOTER ── -->
 <footer>
   <span class="foot-logo">GoatLink</span>
-  <p>GoatLink raccoglie promozioni ufficiali di terze parti. I bonus sono finanziati direttamente dalle aziende. Non siamo affiliati con BBVA, Buddybank, Bybit, Coinbase, Isybank, Trading 212 o Tinaba.<br>Aggiornato: aprile 2026</p>
+  <p>GoatLink raccoglie promozioni ufficiali di terze parti. I bonus sono finanziati direttamente dalle aziende. Non siamo affiliati con BBVA, Buddybank, Bybit, Coinbase, Isybank, Tinaba o Bitstack.<br>Aggiornato: maggio 2026</p>
+  <p style="margin-top:16px;"><a href="privacy.html" style="color:var(--muted2);text-decoration:none;font-size:0.82rem;border-bottom:1px solid var(--border);">Privacy Policy</a></p>
 </footer>
  
 <!-- ── WHATSAPP FLOAT ── -->
-<a href="https://wa.link/3wljkr" target="_blank" class="help-float" onclick="if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'whatsapp_help'});">💬 Get Help</a>
+<a href="https://wa.me/393421619836" target="_blank" class="help-float" onclick="if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'whatsapp_help'});">💬 Get Help</a>
  
 <!-- ══════════════════════════ MODALS ══════════════════════════ -->
  
@@ -806,7 +961,7 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <div class="warn">⚠️ Apple Pay può non attivarsi subito → usa la carta manualmente la prima volta</div>
     </div>
  
-    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'bbva'});" href="https://www.bbva.it/" target="_blank" class="modal-cta">Apri Conto BBVA →</a>
+    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'bbva'});" href="https://wa.me/393421619836?text=BBVA" target="_blank" class="modal-cta">Ricevi il link su WhatsApp →</a>
   </div>
 </div>
  
@@ -853,7 +1008,7 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <div class="no-list">✗ Più pagamenti per arrivare a 10€ (fai 1 singolo da 10€)</div>
     </div>
  
-    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'buddybank'});" href="https://www.buddy.unicredit.it/promo/geniuspromo/?ucid=SEM-BB:26ao:goo:br:conto&gad_source=1&gad_campaignid=992605635&gclid=Cj0KCQjwkYLPBhC3ARIsAIyHi3QohI4PXiyvZ-GOBK6YugyNAzrjW0Z98xsDOLgPIbxFI_WD7eYdVEEaAsLMEALw_wcB" target="_blank" class="modal-cta">Apri Buddybank →</a>
+    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'buddybank'});" href="https://wa.me/393421619836?text=BUDDYBANK" target="_blank" class="modal-cta">Ricevi il link su WhatsApp →</a>
   </div>
 </div>
  
@@ -895,7 +1050,7 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <div class="warn">⚠️ Dopo aver ricevuto il bonus puoi prelevare liberamente. Prima no.</div>
     </div>
 
-    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'bybit'});" href="https://www.bybit.eu/invite?ref=7X0RZYL" target="_blank" class="modal-cta">Registrati su Bybit →</a>
+    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'bybit'});" href="https://wa.me/393421619836?text=BYBIT" target="_blank" class="modal-cta">Ricevi il link su WhatsApp →</a>
   </div>
 </div>
  
@@ -946,7 +1101,7 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <div class="no-list" style="margin-top:10px;">❌ Blocca i bonus &nbsp;&nbsp; ❌ Disattiva il referral &nbsp;&nbsp; ❌ Non avvisa in caso di penalità</div>
     </div>
 
-    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'coinbase'});" href="https://coinbase.com/join/LR35VV5?src=ios-link" target="_blank" class="modal-cta">Iscriviti su Coinbase →</a>
+    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'coinbase'});" href="https://wa.me/393421619836?text=COINBASE" target="_blank" class="modal-cta">Ricevi il link su WhatsApp →</a>
   </div>
 </div>
  
@@ -994,53 +1149,7 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <div class="tip">🏦 Isybank è la banca digitale del gruppo Intesa Sanpaolo — sicura e regolamentata</div>
     </div>
  
-    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'isybank'});" href="https://www.isybank.com/" target="_blank" class="modal-cta">Apri Isybank →</a>
-  </div>
-</div>
- 
-<!-- TRADING 212 -->
-<div id="modal-trading212" class="modal">
-  <div class="modal-inner">
-    <button class="modal-back" onclick="closeModal()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-      Torna ai bonus
-    </button>
-    <div class="modal-header">
-      <img src="logos/trading212.png" class="modal-logo" alt="Trading 212" onerror="this.outerHTML='<div class=\'modal-logo-placeholder\'>📊</div>'">
-      <div>
-        <div class="modal-title">Trading 212</div>
-        <div class="modal-bonus">10€–100€ in azione gratuita</div>
-      </div>
-    </div>
-
-    <div class="guide-block">
-      <h4>⚙️ Come funziona</h4>
-      <div class="tip">📊 Ricevi un'azione casuale del valore tra 10€ e 100€ registrandoti e depositando almeno 1€</div>
-      <div class="warn">⏳ Scadenza promo: 28 aprile 2026</div>
-    </div>
-
-    <div class="guide-block">
-      <h4>🪜 Procedura passo-passo</h4>
-      <div class="step-line">1️⃣ Registrati tramite il link dedicato qui sotto</div>
-      <div class="step-line">2️⃣ Completa la verifica identità (KYC)</div>
-      <div class="tip">✅ Documenti accettati: Carta d'identità elettronica, Carta d'identità cartacea, Passaporto</div>
-      <div class="warn">❌ La patente NON è accettata</div>
-      <div class="step-line">3️⃣ Apri un conto <strong>Invest</strong> o <strong>Stock ISA</strong></div>
-      <div class="warn">🚨 ATTENZIONE: i conti <strong>CFD</strong> e <strong>Cash ISA</strong> NON sono validi per questa promo. Devi aprire esclusivamente un conto Invest o Stock ISA.</div>
-      <div class="step-line">4️⃣ Deposita almeno 11€ con carta o bonifico</div>
-      <div class="tip">💡 Consigliati 11€ per coprire eventuali arrotondamenti</div>
-      <div class="step-line">5️⃣ Ricevi un'azione casuale in regalo 🎁</div>
-      <div class="tip">💸 Il bonus è prelevabile subito — non ci sono requisiti di mantenimento</div>
-    </div>
-
-    <div class="guide-block">
-      <h4>📌 Info extra</h4>
-      <div class="step-line">📊 App di trading azioni ed ETF regolamentata</div>
-      <div class="step-line">💳 Carta virtuale gratuita opzionale</div>
-      <div class="step-line">🔁 Inviti illimitati: bonus per ogni amico che si registra tramite il tuo link</div>
-    </div>
-
-    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'trading212'});" href="https://www.trading212.com/invite/19AKcybS7x" target="_blank" class="modal-cta">Registrati su Trading 212 →</a>
+    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'isybank'});" href="https://wa.me/393421619836?text=ISYBANK" target="_blank" class="modal-cta">Ricevi il link su WhatsApp →</a>
   </div>
 </div>
 
@@ -1083,77 +1192,73 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <div class="tip">🔁 Bonus cumulabile: guadagni altri 10€ per ogni amico che inviti con il tuo codice</div>
     </div>
 
-    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'tinaba'});" href="http://bit.ly/2EueBxs" target="_blank" class="modal-cta">Registrati su Tinaba →</a>
+    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'tinaba'});" href="https://wa.me/393421619836?text=TINABA" target="_blank" class="modal-cta">Ricevi il link su WhatsApp →</a>
   </div>
 </div>
 
-<!-- NAGA -->
-<div id="modal-naga" class="modal">
+<!-- BITSTACK -->
+<div id="modal-bitstack" class="modal">
   <div class="modal-inner">
     <button class="modal-back" onclick="closeModal()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
       Torna ai bonus
     </button>
     <div class="modal-header">
-      <img src="logos/naga.png" class="modal-logo" alt="NAGA" onerror="this.outerHTML='<div class=\'modal-logo-placeholder\'>📈</div>'">
+      <div class="modal-logo-placeholder">₿</div>
       <div>
-        <div class="modal-title">NAGA</div>
-        <div class="modal-bonus">1 azione gratis da 25$ a 100$+</div>
+        <div class="modal-title">Bitstack</div>
+        <div class="modal-bonus">10€ in Bitcoin</div>
       </div>
     </div>
 
     <div class="guide-block">
       <h4>⚙️ Come funziona</h4>
-      <div class="tip">🎁 Ricevi 1 azione gratuita con valore casuale tra 25$ e oltre 100$, registrandoti tramite link referral e depositando almeno 100$ sul conto Real Shares (DMA).</div>
-      <div class="warn">⏳ Promo valida dal 18/03/2026 al 30/04/2026 — non aspettare!</div>
-    </div>
-
-    <div class="guide-block">
-      <h4>🎯 Valore della free share</h4>
-      <div class="step-line">💰 25$–50$ → probabilità 50%</div>
-      <div class="step-line">💰 51$–75$ → probabilità 25%</div>
-      <div class="step-line">💰 76$–100$ → probabilità 15%</div>
-      <div class="step-line">💰 oltre 100$ → probabilità 10%</div>
-      <div class="tip">✅ Il minimo garantito è 25$, ma puoi riceverne molti di più — in media vale la pena!</div>
+      <div class="tip">₿ Bitstack è l'app per accumulare Bitcoin automaticamente. Iscrivendoti tramite link referral e acquistando almeno 100€ di BTC, ricevi 5€ in Bitcoin dall'app — più altri <strong>5€ extra direttamente da GoatLink</strong> via WhatsApp. Totale: <strong>10€ in BTC gratis</strong>.</div>
+      <div class="step-line">🏦 Piattaforma regolamentata in Europa &nbsp;•&nbsp; 🟢 Ideale per principianti</div>
     </div>
 
     <div class="guide-block">
       <h4>🪜 Procedura passo-passo</h4>
-      <div class="step-line">1️⃣ Registrati tramite il link ufficiale qui sotto (ricevuto in privato via GetHelp)</div>
-      <div class="step-line">2️⃣ Completa la verifica identità (KYC) — documento valido richiesto</div>
-      <div class="step-line">3️⃣ Accedi al conto <strong>Real Shares (DMA)</strong></div>
-      <div class="warn">⚠️ NON usare il conto CFD: i depositi su CFD non sono validi per questa promo!</div>
-      <div class="step-line">4️⃣ Deposita almeno <strong>100$</strong> sul conto Real Shares (DMA)</div>
-      <div class="step-line">5️⃣ Attendi: la free share arriva entro 72 ore (3 giorni lavorativi) 🎉</div>
-      <div class="step-line">6️⃣ Lascia il saldo sopra i 100$ per tutta la durata del blocco (45 giorni)</div>
+      <div class="step-line">1️⃣ Scarica l'app Bitstack (iOS / Android)</div>
+      <div class="step-line">2️⃣ Registrati tramite il link dedicato qui sotto</div>
+      <div class="warn">⚠️ Devi usare il link referral per attivare il bonus — non cercare l'app direttamente sullo store</div>
+      <div class="step-line">3️⃣ Completa la verifica identità (KYC) — documento + selfie</div>
+      <div class="step-line">4️⃣ Acquista almeno 100€ di Bitcoin (in una o più transazioni entro 180 giorni)</div>
+      <div class="tip">💡 Puoi farlo anche con piccoli acquisti ricorrenti — non serve un unico versamento da 100€</div>
+      <div class="step-line">5️⃣ Ricevi 5€ in BTC dall'app entro 7 giorni lavorativi 🎉</div>
+      <div class="step-line">6️⃣ Manda lo screenshot del bonus ricevuto su WhatsApp → ricevi altri <strong>5€ extra da GoatLink</strong> 🎁</div>
     </div>
 
     <div class="guide-block">
-      <h4>🔒 Blocco del bonus (lock 45 giorni)</h4>
-      <div class="step-line">📌 La free share ricevuta è bloccata per <strong>45 giorni</strong></div>
-      <div class="step-line">❌ Non puoi venderla né trasferirla durante il lock</div>
-      <div class="step-line">❌ Se la vendi prima, i soldi ricavati restano bloccati fino alla fine dei 45 giorni</div>
-      <div class="warn">⚠️ Se prelevi e il saldo scende sotto i 100$, perdi il bonus — e lo perde anche chi ti ha invitato. Le perdite di mercato non fanno saltare il bonus: solo i prelievi contano.</div>
-      <div class="tip">👉 Strategia semplice: deposita 100$ e non toccarli per 45 giorni.</div>
+      <h4>📌 Riepilogo</h4>
+      <div class="step-line">🏦 Piattaforma: Bitstack (regolamentata EU)</div>
+      <div class="step-line">🎁 Bonus totale: <strong>10€ in Bitcoin</strong> (5€ dall'app + 5€ da GoatLink)</div>
+      <div class="step-line">💵 Acquisto minimo: 100€ di BTC entro 180 giorni</div>
+      <div class="step-line">⏱ Accredito app: entro 7 giorni lavorativi dall'acquisto qualificante</div>
+      <div class="tip">📲 Dopo aver ricevuto i 5€ dall'app, mandaci lo screenshot su WhatsApp — ti mandiamo subito i 5€ extra!</div>
     </div>
 
     <div class="guide-block">
-      <h4>📊 Riepilogo</h4>
-      <div class="step-line">🏦 Piattaforma: NAGA (Real Shares / DMA)</div>
-      <div class="step-line">🎁 Bonus: 1 azione gratis da 25$ a 100$+</div>
-      <div class="step-line">💵 Deposito richiesto: 100$ (sul conto giusto!)</div>
-      <div class="step-line">⏱ Arrivo reward: entro 72 ore dall'attivazione</div>
-      <div class="step-line">🔒 Lock bonus: 45 giorni</div>
-      <div class="step-line">📅 Scadenza promo: 30 aprile 2026</div>
-      <div class="tip">📩 Per ricevere il link di registrazione, contattaci in privato tramite il pulsante GetHelp qui sotto.</div>
+      <h4>⚠️ Importante</h4>
+      <div class="no-list">✗ Non registrarti senza il link referral — perdi il bonus</div>
+      <div class="no-list">✗ Non usare account duplicati o dati condivisi</div>
+      <div class="tip">✅ Bitstack si riserva il diritto di modificare i termini in qualsiasi momento — verifica sempre le condizioni in app</div>
     </div>
 
-    <a href="https://wa.link/3wljkr" target="_blank" class="modal-cta">📩 Richiedi il link NAGA in privato →</a>
+    <a onclick="if(typeof fbq!=='undefined')fbq('track','Lead',{content_name:'bitstack'});" href="https://wa.me/393421619836?text=BITSTACK" target="_blank" class="modal-cta">Ricevi il link su WhatsApp →</a>
   </div>
 </div>
 
 <!-- ── SCRIPTS ── -->
 <script>
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox(e) {
+  if (e) e.stopPropagation();
+  document.getElementById('lightbox').classList.remove('open');
+}
 function openModal(id) {
   document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
   const m = document.getElementById('modal-' + id);
