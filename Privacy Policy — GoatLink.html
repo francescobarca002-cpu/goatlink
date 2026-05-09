@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — GoatLink</title>
+<meta name="description" content="Privacy Policy di GoatLink. Informativa sul trattamento dei dati personali ai sensi del GDPR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #08080d;
+  --bg2: #0f0f16;
+  --card: #13131c;
+  --border: #22222e;
+  --accent: #b8f548;
+  --accent-dim: rgba(184,245,72,0.08);
+  --text: #eeeef5;
+  --muted: #6b6b88;
+  --muted2: #9999b8;
+  --radius: 18px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 40px;
+  background: rgba(8,8,13,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800; font-size: 1.25rem;
+  color: var(--accent); text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.nav-logo span { color: var(--text); }
+.nav-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--muted2); text-decoration: none;
+  font-size: 0.88rem; font-weight: 500;
+  padding: 7px 14px; border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.nav-back:hover { color: var(--text); border-color: #3a3a50; }
+
+/* HERO */
+.privacy-hero {
+  padding: 140px 24px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.privacy-hero::before {
+  content: '';
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 400px;
+  background: radial-gradient(ellipse, rgba(184,245,72,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.privacy-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--card); border: 1px solid var(--border);
+  padding: 6px 14px; border-radius: 99px;
+  font-size: 0.8rem; font-weight: 500; color: var(--muted2);
+  margin-bottom: 24px;
+}
+.privacy-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800; font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.03em; margin-bottom: 12px;
+}
+.privacy-title span { color: var(--accent); }
+.privacy-sub {
+  color: var(--muted2); font-size: 0.95rem; font-weight: 300;
+}
+
+/* CONTENT */
+.privacy-content {
+  max-width: 760px; margin: 0 auto;
+  padding: 0 24px 100px;
+}
+
+.section {
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.section-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 28px;
+  cursor: pointer;
+  background: var(--card);
+  transition: background 0.2s;
+  gap: 16px;
+}
+.section-head:hover { background: var(--card2, #181822); }
+.section-num {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.75rem;
+  color: var(--accent); letter-spacing: 0.1em; min-width: 28px;
+}
+.section-name {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem;
+  flex: 1;
+}
+.section-icon {
+  width: 24px; height: 24px; min-width: 24px;
+  background: var(--bg2); border-radius: 50%; border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; color: var(--muted2);
+  transition: transform 0.3s, color 0.2s;
+}
+.section.open .section-icon { transform: rotate(45deg); color: var(--accent); }
+
+.section-body {
+  display: none;
+  padding: 0 28px 24px;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  color: var(--muted2);
+  font-size: 0.92rem; line-height: 1.8;
+}
+.section-body.visible { display: block; }
+.section-body p { margin-bottom: 12px; }
+.section-body p:last-child { margin-bottom: 0; }
+.section-body ul {
+  padding-left: 20px; margin: 10px 0;
+}
+.section-body ul li { margin-bottom: 6px; }
+.section-body strong { color: var(--text); font-weight: 600; }
+.section-body a { color: var(--accent); text-decoration: none; }
+.section-body a:hover { text-decoration: underline; }
+
+.highlight {
+  background: var(--accent-dim); border: 1px solid rgba(184,245,72,0.15);
+  border-radius: 10px; padding: 14px 18px;
+  color: var(--accent); font-size: 0.88rem;
+  margin: 14px 0;
+}
+
+/* SUMMARY BOX */
+.summary-box {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+  margin-bottom: 32px;
+}
+.summary-box h3 {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.8rem;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--muted); margin-bottom: 16px;
+}
+.summary-row {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.summary-row:last-child { border-bottom: none; padding-bottom: 0; }
+.summary-key { color: var(--muted2); min-width: 160px; font-weight: 500; }
+.summary-val { color: var(--text); }
+
+/* FOOTER */
+.privacy-footer {
+  text-align: center; padding: 0 24px 48px;
+  color: var(--muted); font-size: 0.85rem;
+}
+.privacy-footer a { color: var(--accent); text-decoration: none; }
+
+@media (max-width: 680px) {
+  nav { padding: 14px 20px; }
+  .summary-row { flex-direction: column; gap: 4px; }
+  .summary-key { min-width: unset; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Goat<span>Link</span></a>
+  <a href="index.html" class="nav-back">← Torna al sito</a>
+</nav>
+
+<div class="privacy-hero">
+  <div class="privacy-badge">📄 Documento legale</div>
+  <h1 class="privacy-title">Privacy <span>Policy</span></h1>
+  <p class="privacy-sub">Informativa sul trattamento dei dati personali ai sensi del GDPR (Reg. UE 2016/679)<br>Ultimo aggiornamento: maggio 2026</p>
+</div>
+
+<div class="privacy-content">
+
+  <!-- SUMMARY -->
+  <div class="summary-box">
+    <h3>Riepilogo rapido</h3>
+    <div class="summary-row">
+      <span class="summary-key">Titolare del trattamento</span>
+      <span class="summary-val">GoatLink</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-key">Contatto</span>
+      <span class="summary-val"><a href="https://wa.me/393421619836">WhatsApp</a></span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-key">Dati raccolti</span>
+      <span class="summary-val">Dati di navigazione, dati inseriti volontariamente via WhatsApp, dati tecnici (Meta Pixel)</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-key">Finalità</span>
+      <span class="summary-val">Erogazione del servizio, marketing, analisi statistica</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-key">Cookie</span>
+      <span class="summary-val">Solo tecnici e di profilazione (Meta Pixel) — vedi sezione 6</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-key">Trasferimento dati extra-UE</span>
+      <span class="summary-val">Meta Platforms (USA) — con garanzie adeguate</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-key">I tuoi diritti</span>
+      <span class="summary-val">Accesso, rettifica, cancellazione, opposizione, portabilità</span>
+    </div>
+  </div>
+
+  <!-- SECTIONS -->
+
+  <div class="section open">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-num">01</span>
+      <span class="section-name">Titolare del trattamento</span>
+      <span class="section-icon">+</span>
+    </div>
+    <div class="section-body visible">
+      <p>Il titolare del trattamento dei dati personali è <strong>GoatLink</strong>, contattabile tramite WhatsApp al numero <a href="https://wa.me/393421619836">+39 342 161 9836</a>.</p>
+      <p>GoatLink è un servizio di aggregazione di bonus referral. Non raccoglie dati per finalità diverse da quelle indicate nella presente informativa.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-num">02</span>
+      <span class="section-name">Dati raccolti e modalità di raccolta</span>
+      <span class="section-icon">+</span>
+    </div>
+    <div class="section-body">
+      <p>GoatLink raccoglie le seguenti categorie di dati:</p>
+      <ul>
+        <li><strong>Dati di navigazione:</strong> indirizzo IP, tipo di browser, sistema operativo, pagine visitate, orario di accesso. Raccolti automaticamente dal server e tramite Meta Pixel.</li>
+        <li><strong>Dati comunicati volontariamente:</strong> numero di telefono WhatsApp e qualsiasi informazione fornita dall'utente quando contatta GoatLink tramite WhatsApp (es. richieste di guide, segnalazioni).</li>
+        <li><strong>Dati comportamentali:</strong> interazioni con il sito (click sui bonus, apertura guide) tracciati tramite Meta Pixel per finalità pubblicitarie.</li>
+      </ul>
+      <div class="highlight">GoatLink non raccoglie dati bancari, credenziali di accesso, documenti d'identità o dati di pagamento. Tali dati vengono inseriti dall'utente direttamente sulle piattaforme terze (BBVA, Bybit, ecc.).</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-num">03</span>
+      <span class="section-name">Finalità e basi giuridiche del trattamento</span>
+      <span class="section-icon">+</span>
+    </div>
+    <div class="section-body">
+      <p>I dati sono trattati per le seguenti finalità:</p>
+      <ul>
+        <li><strong>Erogazione del servizio</strong> — rispondere alle richieste via WhatsApp, inviare guide e link referral. Base giuridica: esecuzione di un contratto/misure precontrattuali (art. 6(1)(b) GDPR).</li>
+        <li><strong>Marketing e remarketing</strong> — mostrare annunci pubblicitari agli utenti che hanno visitato il sito, tramite Meta Ads. Base giuridica: consenso (art. 6(1)(a) GDPR).</li>
+        <li><strong>Analisi statistica</strong> — comprendere come gli utenti interagiscono con il sito per migliorarlo. Base giuridica: legittimo interesse (art. 6(1)(f) GDPR).</li>
+        <li><strong>Comunicazioni commerciali</strong> — informare gli utenti su nuovi bonus disponibili, tramite WhatsApp, previo consenso. Base giuridica: consenso (art. 6(1)(a) GDPR).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-num">04</span>
+      <span class="section-name">Conservazione dei dati</span>
+      <span class="section-icon">+</span>
+    </div>
+    <div class="section-body">
+      <p>I dati sono conservati per il tempo strettamente necessario alle finalità per cui sono stati raccolti:</p>
+      <ul>
+        <li><strong>Dati di navigazione:</strong> massimo 12 mesi.</li>
+        <li><strong>Conversazioni WhatsApp:</strong> fino a revoca del consenso o richiesta di cancellazione da parte dell'utente.</li>
+        <li><strong>Dati Meta Pixel:</strong> secondo le politiche di conservazione di Meta Platforms (generalmente 180 giorni).</li>
+      </ul>
+      <p>Trascorsi tali termini, i dati vengono cancellati o resi anonimi.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-num">05</span>
+      <span class="section-name">Condivisione con terze parti</span>
+      <span class="section-icon">+</span>
+    </div>
+    <div class="section-body">
+      <p>GoatLink non vende né cede i dati personali a terzi. I dati possono essere condivisi con:</p>
+      <ul>
+        <li><strong>Meta Platforms Inc. (USA)</strong> — tramite Meta Pixel installato sul sito, per finalità pubblicitarie. Meta agisce come titolare autonomo del trattamento per i propri sistemi. Il trasferimento avviene con garanzie adeguate (Standard Contractual Clauses). Privacy Policy Meta: <a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a></li>
+        <li><strong>Vercel Inc. (USA)</strong> — provider di hosting del sito. Raccoglie dati tecnici di accesso. Privacy Policy: <a href="https://vercel.com/legal/privacy-policy" target="_blank">vercel.com/legal/privacy-policy</a></li>
+        <li><strong>WhatsApp Ireland Ltd.</strong> — piattaforma di messaggistica utilizzata per le comunicazioni con gli utenti. Privacy Policy: <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank">whatsapp.com/legal/privacy-policy-eea</a></li>
+      </ul>
+      <div class="highlight">GoatLink non è affiliato con BBVA, Buddybank, Bybit, Coinbase, Isybank, Tinaba o Bitstack. I dati inseriti su tali piattaforme sono trattati da esse in totale autonomia.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-num">06</span>
+      <span class="section-name">Cookie e tecnologie di tracciamento</span>
+      <span class="section-icon">+</span>
+    </div>
+    <div class="section-body">
+      <p>Il sito utilizza le seguenti tipologie di cookie:</p>
+      <ul>
+        <li><strong>Cookie tecnici:</strong> necessari al funzionamento del sito. Non richiedono consenso.</li>
+        <li><strong>Cookie di profilazione (Meta Pixel):</strong> tracciano il comportamento degli utenti per mostrare annunci personalizzati su Facebook e Instagram. Richiedono consenso preventivo.</li>
+      </ul>
+      <p>Il Meta Pixel è attivo al caricamento della pagina. Se non desideri essere tracciato, puoi:</p>
+      <ul>
+        <li>Usare un browser con blocco dei tracker (es. Firefox con Enhanced Tracking Protection)</li>
+        <li>Installare un ad-blocker</li>
+        <li>Opt-out dalle preferenze pubblicitarie di Meta: <a href="https://www.facebook.com/ads/preferences" target="_blank">facebook.com/ads/preferences</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-num">07</span>
+      <span class="section-name">I tuoi diritti (GDPR)</span>
+      <span class="section-icon">+</span>
+    </div>
+    <div class="section-body">
+      <p>Ai sensi degli artt. 15-22 del GDPR, hai diritto di:</p>
+      <ul>
+        <li><strong>Accesso</strong> — ottenere conferma del trattamento e copia dei tuoi dati</li>
+        <li><strong>Rettifica</strong> — correggere dati inesatti o incompleti</li>
+        <li><strong>Cancellazione</strong> — ottenere la cancellazione dei tuoi dati ("diritto all'oblio")</li>
+        <li><strong>Limitazione</strong> — limitare il trattamento in determinate circostanze</li>
+        <li><strong>Portabilità</strong> — ricevere i tuoi dati in formato strutturato e leggibile da macchina</li>
+        <li><strong>Opposizione</strong> — opporti al trattamento basato su legittimo interesse o per finalità di marketing diretto</li>
+        <li><strong>Revoca del consenso</strong> — in qualsiasi momento, senza pregiudizio per la liceità del trattamento precedente</li>
+      </ul>
+      <p>Per esercitare i tuoi diritti, contattaci su <a href="https://wa.me/393421619836">WhatsApp</a>. Risponderemo entro 30 giorni.</p>
+      <p>Hai anche il diritto di proporre reclamo al <strong>Garante per la Protezione dei Dati Personali</strong>: <a href="https://www.garanteprivacy.it" target="_blank">garanteprivacy.it</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head" onclick="toggleSection(this)">
+      <span class="section-num">08</span>
+      <span class="section-name">Modifiche alla Privacy Policy</span>
+      <span class="section-icon">+</span>
+    </div>
+    <div class="section-body">
+      <p>GoatLink si riserva il diritto di modificare la presente informativa in qualsiasi momento, in particolare per adeguarsi a eventuali variazioni normative o all'introduzione di nuovi servizi.</p>
+      <p>Le modifiche saranno pubblicate su questa pagina con aggiornamento della data in calce. Per modifiche sostanziali, gli utenti che hanno interagito via WhatsApp potranno essere informati direttamente.</p>
+      <p>L'uso continuato del sito dopo la pubblicazione delle modifiche costituisce accettazione della nuova informativa.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="privacy-footer">
+  <p>GoatLink — <a href="index.html">Torna al sito</a> &nbsp;·&nbsp; Contatto: <a href="https://wa.me/393421619836">WhatsApp</a></p>
+  <p style="margin-top:8px;">Ultimo aggiornamento: maggio 2026</p>
+</div>
+
+<script>
+function toggleSection(head) {
+  const section = head.closest('.section');
+  const body = section.querySelector('.section-body');
+  const isOpen = section.classList.contains('open');
+  section.classList.toggle('open', !isOpen);
+  body.classList.toggle('visible', !isOpen);
+}
+</script>
+
+</body>
+</html>
