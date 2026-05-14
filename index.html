@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GoatLink — Best Bonus Only</title>
-<meta name="description" content="GoatLink raccoglie i migliori bonus referral da banche, fintech e crypto. Guide verificate passo-passo. Guadagna fino a 190€ gratis in 5–15 minuti.">
+<meta name="description" content="GoatLink raccoglie i migliori bonus referral da banche, fintech e crypto. Guide verificate passo-passo. Guadagna fino a 225€+ gratis in 5–15 minuti.">
 <meta property="og:title" content="GoatLink — Best Bonus Only">
-<meta property="og:description" content="Guadagna fino a 155€ con bonus ufficiali da BBVA, Buddybank, Bybit, Coinbase e Isybank. Guide verificate, zero costi.">
+<meta property="og:description" content="Guadagna fino a 225€+ con bonus ufficiali da BBVA, Coinbase, Buddybank, Bybit, Isybank, Tinaba e Bitstack. Guide verificate, zero costi.">
+<meta property="og:image" content="https://goatlink-weld.vercel.app/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://goatlink-weld.vercel.app/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -512,7 +515,63 @@ footer p { max-width: 500px; margin: 0 auto; line-height: 1.7; }
 }
 .modal-cta:hover { opacity: 0.88; transform: translateY(-2px); }
  
-/* ── ANIMATIONS ── */
+/* ── URGENCY COUNTDOWN ── */
+.urgency-banner {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(245,80,80,0.12); border: 1px solid rgba(245,80,80,0.35);
+  color: #ff6b6b; font-size: 0.78rem; font-weight: 700;
+  padding: 5px 11px; border-radius: 99px;
+  margin-bottom: 10px; width: fit-content;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  animation: urgency-pulse 1.8s ease-in-out infinite;
+}
+.urgency-banner .urgency-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #ff6b6b; flex-shrink: 0;
+  animation: pulse 1.2s infinite;
+}
+@keyframes urgency-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(245,80,80,0); }
+  50% { box-shadow: 0 0 0 4px rgba(245,80,80,0.12); }
+}
+.card.expiring-soon {
+  border-color: rgba(245,80,80,0.45) !important;
+  box-shadow: 0 0 0 1px rgba(245,80,80,0.15);
+}
+.card.expiring-soon::before { opacity: 1 !important; background: linear-gradient(90deg, transparent, #ff6b6b, transparent) !important; }
+
+/* ── PERCORSO / STEP PATH ── */
+.step-path-header {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; flex-wrap: wrap; margin-bottom: 32px;
+}
+.step-path-item {
+  display: flex; align-items: center; gap: 0;
+}
+.step-path-label {
+  font-size: 0.72rem; font-weight: 700; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 5px 14px; border-radius: 99px;
+  background: var(--card); border: 1px solid var(--border);
+  white-space: nowrap;
+}
+.step-path-label.start { color: var(--accent); border-color: rgba(184,245,72,0.3); background: var(--accent-dim); }
+.step-path-arrow {
+  color: var(--muted); font-size: 0.8rem; padding: 0 4px;
+}
+
+/* CARD step numero */
+.card-step-num {
+  position: absolute; top: 14px; right: 14px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--card2); border: 1px solid var(--border);
+  color: var(--muted); font-size: 0.72rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif;
+}
+.card-step-num.first { background: var(--accent-dim); border-color: rgba(184,245,72,0.3); color: var(--accent); }
+
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -593,9 +652,12 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
     <h2 class="section-title">Scegli il tuo bonus</h2>
     <p class="section-sub">Tutti verificati. Tutti gratuiti. Tutti pagati.</p>
   </div>
-  <div class="cards-grid">
- 
+
+  <div class="cards-grid" id="bonus-grid">
+
+    <!-- 1. BBVA — primo step -->
     <div class="card" onclick="openModal('bbva')">
+      <div class="card-step-num first">1</div>
       <img src="logos/bbva.png" class="card-logo" alt="BBVA" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>🏦</div>'">
       <div class="card-name">BBVA</div>
       <div class="card-bonus">10€</div>
@@ -603,26 +665,10 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <div class="card-tag star">⭐ Consigliato per iniziare &nbsp;•&nbsp; Pagato in 2 giorni</div>
       <button class="card-btn">Apri la guida →</button>
     </div>
- 
-    <div class="card" onclick="openModal('buddy')">
-      <img src="logos/buddybank.png" class="card-logo" alt="Buddybank" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>💙</div>'">
-      <div class="card-name">Buddybank</div>
-      <div class="card-bonus">50€</div>
-      <div class="card-meta">⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
-      <div class="card-tag fire">🔥 Bonus più alto &nbsp;•&nbsp; Pagato in 7–14 giorni</div>
-      <button class="card-btn">Apri la guida →</button>
-    </div>
- 
-    <div class="card" onclick="openModal('bybit')">
-      <img src="logos/bybit.png" class="card-logo" alt="Bybit" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>📈</div>'">
-      <div class="card-name">Bybit</div>
-      <div class="card-bonus">45€</div>
-      <div class="card-meta">📈 Crypto &nbsp;•&nbsp; ⏱ 15 minuti &nbsp;•&nbsp; 🟢 Facile</div>
-      <div class="card-tag">⚡ Pagato in 2–7 giorni</div>
-      <button class="card-btn">Apri la guida →</button>
-    </div>
- 
+
+    <!-- 2. COINBASE — secondo step -->
     <div class="card" onclick="openModal('coinbase')">
+      <div class="card-step-num">2</div>
       <img src="logos/coinbase.png" class="card-logo" alt="Coinbase" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>🪙</div>'">
       <div class="card-name">Coinbase</div>
       <div class="card-bonus">20€</div>
@@ -630,17 +676,43 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <div class="card-tag">💰 Pagato in 2–30 giorni</div>
       <button class="card-btn">Apri la guida →</button>
     </div>
- 
-    <div class="card" onclick="openModal('isybank')">
+
+    <!-- 3. BUDDYBANK -->
+    <div class="card" onclick="openModal('buddy')">
+      <div class="card-step-num">3</div>
+      <img src="logos/buddybank.png" class="card-logo" alt="Buddybank" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>💙</div>'">
+      <div class="card-name">Buddybank</div>
+      <div class="card-bonus">50€</div>
+      <div class="card-meta">⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
+      <div class="card-tag fire">🔥 Bonus più alto &nbsp;•&nbsp; Pagato in 7–14 giorni</div>
+      <button class="card-btn">Apri la guida →</button>
+    </div>
+
+    <!-- 4. BYBIT -->
+    <div class="card" onclick="openModal('bybit')">
+      <div class="card-step-num">4</div>
+      <img src="logos/bybit.png" class="card-logo" alt="Bybit" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>📈</div>'">
+      <div class="card-name">Bybit</div>
+      <div class="card-bonus">45€</div>
+      <div class="card-meta">📈 Crypto &nbsp;•&nbsp; ⏱ 15 minuti &nbsp;•&nbsp; 🟢 Facile</div>
+      <div class="card-tag">⚡ Pagato in 2–7 giorni</div>
+      <button class="card-btn">Apri la guida →</button>
+    </div>
+
+    <!-- 5. ISYBANK — con data scadenza per urgency automatica -->
+    <div class="card" onclick="openModal('isybank')" data-expires="2026-05-15T23:59:00">
+      <div class="card-step-num">5</div>
       <img src="logos/isybank.png" class="card-logo" alt="Isybank" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>🟢</div>'">
       <div class="card-name">Isybank</div>
       <div class="card-bonus">30€</div>
       <div class="card-meta">🛒 Buono Amazon &nbsp;•&nbsp; ⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
-      <div class="card-tag fire">⏳ Scade il 15/05 &nbsp;•&nbsp; Senza deposito &nbsp;•&nbsp; Intesa Sanpaolo</div>
+      <div class="card-tag fire" id="isybank-tag">⏳ Scade il 15/05 &nbsp;•&nbsp; Senza deposito &nbsp;•&nbsp; Intesa Sanpaolo</div>
       <button class="card-btn">Apri la guida →</button>
     </div>
 
+    <!-- 6. TINABA -->
     <div class="card" onclick="openModal('tinaba')">
+      <div class="card-step-num">6</div>
       <img src="logos/tinaba.png" class="card-logo" alt="Tinaba" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>💜</div>'">
       <div class="card-name">Tinaba</div>
       <div class="card-bonus">10€</div>
@@ -649,8 +721,9 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <button class="card-btn">Apri la guida →</button>
     </div>
 
-    <!-- BITSTACK — NUOVO -->
+    <!-- 7. BITSTACK -->
     <div class="card" onclick="openModal('bitstack')">
+      <div class="card-step-num">7</div>
       <div class="card-logo-placeholder">₿</div>
       <div class="card-name">Bitstack</div>
       <div class="card-bonus">10€ BTC</div>
@@ -880,7 +953,7 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
           <span class="icon">+</span>
         </button>
         <div class="faq-a">
-          Sì! Puoi ottenere tutti i bonus disponibili, uno alla volta o in parallelo. In totale puoi guadagnare fino a 220€+ seguendo tutte le guide attive.
+          Sì! Puoi ottenere tutti i bonus disponibili, uno alla volta o in parallelo. In totale puoi guadagnare fino a 225€+ seguendo tutte le guide attive.
         </div>
       </div>
  
@@ -1278,6 +1351,65 @@ function toggleFaq(btn) {
   });
   if (!isOpen) { item.classList.add('open'); ans.classList.add('visible'); }
 }
+
+/* ── URGENCY AUTOMATICA 72h ── */
+function formatCountdown(ms) {
+  if (ms <= 0) return null;
+  const h = Math.floor(ms / 3600000);
+  const m = Math.floor((ms % 3600000) / 60000);
+  if (h >= 24) {
+    const d = Math.floor(h / 24);
+    const rh = h % 24;
+    return d + 'g ' + rh + 'h';
+  }
+  return h + 'h ' + String(m).padStart(2,'0') + 'm';
+}
+
+function checkUrgency() {
+  const cards = document.querySelectorAll('.card[data-expires]');
+  cards.forEach(card => {
+    const expires = new Date(card.getAttribute('data-expires')).getTime();
+    const now = Date.now();
+    const diff = expires - now;
+    const THRESHOLD = 72 * 3600 * 1000; // 72 ore
+
+    // Rimuovi banner precedente se esiste
+    const existing = card.querySelector('.urgency-banner');
+    if (existing) existing.remove();
+
+    if (diff > 0 && diff <= THRESHOLD) {
+      // Aggiungi classe border rosso
+      card.classList.add('expiring-soon');
+
+      // Crea banner countdown
+      const banner = document.createElement('div');
+      banner.className = 'urgency-banner';
+      const cdText = formatCountdown(diff);
+      banner.innerHTML = '<span class="urgency-dot"></span> SCADE TRA ' + cdText + '!';
+
+      // Inserisci prima del logo
+      const logo = card.querySelector('.card-logo, .card-logo-placeholder');
+      if (logo) card.insertBefore(banner, logo);
+      else card.prepend(banner);
+
+      // Aggiorna il tag se presente
+      const tag = card.querySelector('.card-tag');
+      if (tag) {
+        tag.style.color = '#ff6b6b';
+      }
+    } else if (diff <= 0) {
+      // Bonus scaduto — non mostrare (potrebbe essere gestito altrove)
+      card.style.opacity = '0.5';
+      card.style.pointerEvents = 'none';
+    } else {
+      card.classList.remove('expiring-soon');
+    }
+  });
+}
+
+// Controlla subito e poi ogni minuto
+checkUrgency();
+setInterval(checkUrgency, 60000);
 </script>
  
 </body>
