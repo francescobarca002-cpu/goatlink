@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GoatLink CRM">
+<meta name="theme-color" content="#08080d">
+<title>GoatLink — Gestionale</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #08080d; --bg2: #0f0f16; --card: #13131c; --card2: #181822;
+  --border: #22222e; --accent: #b8f548; --accent-dim: rgba(184,245,72,0.12);
+  --accent2: #48c8f5; --text: #eeeef5; --muted: #6b6b88; --muted2: #9999b8;
+  --radius: 16px; --radius-sm: 10px;
+  --safe-top: env(safe-area-inset-top, 0px); --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --s-todo: #6b6b88; --s-progress: #48c8f5; --s-waiting: #f5a548; --s-paid: #b8f548;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.5; min-height: 100vh; padding-bottom: calc(80px + var(--safe-bottom)); overflow-x: hidden; }
+.header { position: sticky; top: 0; z-index: 100; background: rgba(8,8,13,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: calc(var(--safe-top) + 14px) 20px 14px; display: flex; align-items: center; justify-content: space-between; }
+.header-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--accent); letter-spacing: -0.02em; }
+.header-logo span { color: var(--text); }
+.header-sub { font-size: 0.72rem; color: var(--muted); margin-top: 1px; }
+.btn-add { width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: #08080d; border: none; font-size: 1.4rem; font-weight: 300; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: opacity .15s; }
+.btn-add:active { opacity: .7; }
+.toolbar { padding: 12px 16px; display: flex; gap: 10px; align-items: center; }
+.search-wrap { flex: 1; position: relative; }
+.search-wrap input { width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.88rem; padding: 9px 12px 9px 34px; outline: none; transition: border-color .15s; }
+.search-wrap input::placeholder { color: var(--muted); }
+.search-wrap input:focus { border-color: var(--muted2); }
+.search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 14px; pointer-events: none; }
+.filter-btn { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--muted2); font-size: 0.78rem; font-weight: 500; padding: 9px 12px; cursor: pointer; white-space: nowrap; font-family: 'DM Sans', sans-serif; transition: all .15s; }
+.filter-btn.active { background: var(--accent-dim); border-color: rgba(184,245,72,.35); color: var(--accent); }
+.stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 0 16px 14px; }
+.stat-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; text-align: center; }
+.stat-num { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.2rem; line-height: 1; }
+.stat-label { font-size: 0.65rem; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: .05em; }
+.stat-card.s-todo .stat-num { color: var(--s-todo); }
+.stat-card.s-progress .stat-num { color: var(--s-progress); }
+.stat-card.s-waiting .stat-num { color: var(--s-waiting); }
+.stat-card.s-paid .stat-num { color: var(--s-paid); }
+.clients-list { padding: 0 16px; display: flex; flex-direction: column; gap: 10px; }
+.client-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color .2s; }
+.client-card:active { border-color: var(--muted); }
+.client-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 10px; cursor: pointer; }
+.client-info { flex: 1; min-width: 0; }
+.client-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.client-meta { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+.client-summary { display: flex; gap: 5px; align-items: center; flex-wrap: wrap; margin-top: 6px; }
+.app-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.app-dot.todo { background: var(--s-todo); } .app-dot.progress { background: var(--s-progress); } .app-dot.waiting { background: var(--s-waiting); } .app-dot.paid { background: var(--s-paid); }
+.client-earned { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: var(--accent); flex-shrink: 0; }
+.chevron { color: var(--muted); font-size: 0.8rem; margin-left: 8px; transition: transform .2s; flex-shrink: 0; }
+.client-card.open .chevron { transform: rotate(180deg); }
+.app-rows { display: none; padding: 0 16px 14px; flex-direction: column; gap: 6px; border-top: 1px solid var(--border); padding-top: 10px; }
+.client-card.open .app-rows { display: flex; }
+.app-row { display: flex; align-items: center; gap: 10px; background: var(--card2); border-radius: var(--radius-sm); padding: 8px 12px; }
+.app-name { flex: 1; font-size: 0.85rem; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-amount { font-size: 0.78rem; color: var(--muted2); flex-shrink: 0; margin-right: 6px; }
+.status-select { background: transparent; border: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 600; cursor: pointer; flex-shrink: 0; padding: 4px 8px; border-radius: 6px; -webkit-appearance: none; text-align: center; }
+.status-select.todo { background: rgba(107,107,136,0.15); color: var(--s-todo); } .status-select.progress { background: rgba(72,200,245,0.12); color: var(--s-progress); } .status-select.waiting { background: rgba(245,165,72,0.12); color: var(--s-waiting); } .status-select.paid { background: rgba(184,245,72,0.12); color: var(--s-paid); }
+.app-note-wrap { width: 100%; margin-top: 4px; }
+.app-note { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--muted2); font-family: 'DM Sans', sans-serif; font-size: 0.75rem; padding: 5px 8px; outline: none; resize: none; min-height: 28px; }
+.app-note:focus { border-color: var(--muted); } .app-note::placeholder { color: var(--muted); }
+.client-actions { display: flex; gap: 8px; padding: 0 16px 14px; border-top: 1px solid var(--border); padding-top: 10px; }
+.client-card.open .client-actions { display: flex; } .client-actions { display: none; }
+.btn-sm { flex: 1; padding: 8px; border-radius: var(--radius-sm); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--card2); color: var(--muted2); transition: all .15s; }
+.btn-sm:active { opacity: .7; } .btn-sm.danger { color: #ff6b6b; border-color: rgba(255,107,107,.2); background: rgba(255,107,107,.06); }
+.earnings-banner { margin: 0 16px 14px; background: var(--accent-dim); border: 1px solid rgba(184,245,72,.2); border-radius: var(--radius); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; }
+.earnings-label { font-size: 0.78rem; color: var(--muted2); text-transform: uppercase; letter-spacing: .08em; }
+.earnings-amount { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; color: var(--accent); }
+.earnings-sub { font-size: 0.72rem; color: var(--muted); margin-top: 1px; }
+.empty-state { text-align: center; padding: 60px 24px; color: var(--muted); }
+.empty-icon { font-size: 3rem; margin-bottom: 12px; }
+.empty-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--muted2); margin-bottom: 6px; }
+.empty-sub { font-size: 0.85rem; line-height: 1.5; }
+.modal-overlay { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: flex-end; justify-content: center; }
+.modal-overlay.open { display: flex; }
+.modal { background: var(--card); border-radius: 24px 24px 0 0; border: 1px solid var(--border); border-bottom: none; width: 100%; max-width: 540px; padding: 20px 20px calc(20px + var(--safe-bottom)); max-height: 90vh; overflow-y: auto; animation: slide-up .25s ease; }
+@keyframes slide-up { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.modal-handle { width: 36px; height: 4px; border-radius: 2px; background: var(--border); margin: 0 auto 18px; }
+.modal-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 18px; }
+.field-label { font-size: 0.75rem; font-weight: 600; color: var(--muted2); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 6px; }
+.field-input { width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.95rem; padding: 11px 14px; outline: none; margin-bottom: 14px; transition: border-color .15s; }
+.field-input:focus { border-color: var(--muted2); } .field-input::placeholder { color: var(--muted); }
+.apps-check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+.app-check-item { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; display: flex; align-items: center; gap: 8px; cursor: pointer; transition: all .15s; user-select: none; }
+.app-check-item.selected { background: var(--accent-dim); border-color: rgba(184,245,72,.35); }
+.app-check-icon { font-size: 1.1rem; flex-shrink: 0; }
+.app-check-name { font-size: 0.85rem; font-weight: 500; flex: 1; }
+.app-check-bonus { font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.btn-primary { width: 100%; padding: 13px; background: var(--accent); color: #08080d; border: none; border-radius: var(--radius-sm); font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: opacity .15s; }
+.btn-primary:active { opacity: .8; }
+.toast { position: fixed; bottom: calc(90px + var(--safe-bottom)); left: 50%; transform: translateX(-50%) translateY(20px); background: var(--card2); border: 1px solid var(--border); color: var(--text); font-size: 0.82rem; font-weight: 500; padding: 10px 18px; border-radius: 99px; opacity: 0; transition: all .25s; pointer-events: none; white-space: nowrap; z-index: 400; }
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.section-label { padding: 6px 16px 8px; font-size: 0.7rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+.view-toggle { display: flex; gap: 4px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 3px; }
+.view-btn { padding: 5px 12px; border-radius: 7px; border: none; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; background: transparent; color: var(--muted); transition: all .15s; }
+.view-btn.active { background: var(--card2); color: var(--text); }
+.table-wrap { padding: 0 16px 20px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { width: 100%; border-collapse: collapse; min-width: 520px; }
+thead th { font-size: 0.68rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; position: sticky; top: 0; background: var(--bg); }
+thead th.app-col { text-align: center; min-width: 62px; }
+tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: var(--card); }
+tbody td { padding: 9px 10px; font-size: 0.83rem; vertical-align: middle; }
+.td-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+.td-phone { font-size: 0.75rem; color: var(--muted); }
+.td-count { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--muted2); text-align: center; }
+.td-earned { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--accent); text-align: right; white-space: nowrap; }
+.td-app { text-align: center; }
+.tbl-status { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: .04em; padding: 3px 7px; border-radius: 99px; white-space: nowrap; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; -webkit-appearance: none; text-align: center; }
+.tbl-status.todo { background: rgba(107,107,136,0.18); color: var(--s-todo); } .tbl-status.progress { background: rgba(72,200,245,0.14); color: var(--s-progress); } .tbl-status.waiting { background: rgba(245,165,72,0.14); color: var(--s-waiting); } .tbl-status.paid { background: rgba(184,245,72,0.14); color: var(--s-paid); } .tbl-status.empty { background: var(--card2); color: var(--border); font-size: 0.7rem; }
+.install-banner { margin: 0 16px 12px; background: var(--card2); border: 1px solid rgba(72,200,245,.2); border-radius: var(--radius-sm); padding: 10px 14px; display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: var(--muted2); }
+.install-banner strong { color: var(--accent2); }
+.install-banner .close-banner { margin-left: auto; color: var(--muted); cursor: pointer; font-size: 1rem; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <div class="header-logo">Goat<span>Link</span></div>
+    <div class="header-sub">Gestionale Clienti</div>
+  </div>
+  <button class="btn-add" onclick="openAddModal()">+</button>
+</div>
+<div class="install-banner" id="install-banner">
+  <span>📲</span>
+  <span><strong>Salva offline:</strong> Safari → Condividi → Aggiungi a schermata Home</span>
+  <span class="close-banner" onclick="dismissBanner()">✕</span>
+</div>
+<div class="toolbar">
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="Cerca cliente..." oninput="renderAll()">
+  </div>
+  <div class="view-toggle">
+    <button class="view-btn active" id="vbtn-cards" onclick="setView('cards')">Cards</button>
+    <button class="view-btn" id="vbtn-table" onclick="setView('table')">Tabella</button>
+  </div>
+  <button class="filter-btn" id="filter-btn" onclick="toggleFilter()">Filtro</button>
+</div>
+<div id="filter-chips" style="display:none; padding:0 16px 10px; gap:6px; flex-wrap:wrap;">
+  <button class="filter-btn" data-filter="all" onclick="setFilter('all')">Tutti</button>
+  <button class="filter-btn" data-filter="todo" onclick="setFilter('todo')">Da fare</button>
+  <button class="filter-btn" data-filter="progress" onclick="setFilter('progress')">In corso</button>
+  <button class="filter-btn" data-filter="waiting" onclick="setFilter('waiting')">Attesa bonus</button>
+  <button class="filter-btn" data-filter="paid" onclick="setFilter('paid')">Pagate</button>
+</div>
+<div class="stats-bar" id="stats-bar"></div>
+<div class="earnings-banner">
+  <div>
+    <div class="earnings-label">Commissioni maturate</div>
+    <div class="earnings-amount" id="total-earned">0€</div>
+    <div class="earnings-sub" id="total-pending">0€ in attesa</div>
+  </div>
+  <div style="font-size:2rem">💰</div>
+</div>
+<div class="section-label" id="list-label">Clienti</div>
+<div class="clients-list" id="clients-list"></div>
+<div class="table-wrap" id="table-wrap" style="display:none">
+  <table><thead id="table-head"></thead><tbody id="table-body"></tbody></table>
+</div>
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="modal-title">Nuovo Cliente</div>
+    <div class="field-label">Nome</div>
+    <input class="field-input" id="field-name" type="text" placeholder="Es. Marco Rossi">
+    <div class="field-label">Telefono (opzionale)</div>
+    <input class="field-input" id="field-phone" type="tel" placeholder="Es. 333 1234567">
+    <div class="field-label">App da attivare</div>
+    <div class="apps-check-grid" id="apps-check-grid"></div>
+    <button class="btn-primary" id="modal-save-btn" onclick="saveClient()">Salva Cliente</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const APPS=[{id:'bbva',name:'BBVA',icon:'🏦',bonus:10,label:'10€'},{id:'coinbase',name:'Coinbase',icon:'🪙',bonus:20,label:'20€'},{id:'buddybank',name:'Buddybank',icon:'💙',bonus:50,label:'50€'},{id:'bybit',name:'Bybit',icon:'📈',bonus:45,label:'45€'},{id:'isybank',name:'Isybank',icon:'🟢',bonus:30,label:'30€'},{id:'tinaba',name:'Tinaba',icon:'💜',bonus:10,label:'10€'},{id:'bitstack',name:'Bitstack',icon:'₿',bonus:10,label:'10€ BTC'}];
+const STATUS={todo:{label:'Da fare',class:'todo'},progress:{label:'In corso',class:'progress'},waiting:{label:'Attesa bonus',class:'waiting'},paid:{label:'Pagata',class:'paid'}};
+let clients=[],editingId=null,activeFilter='all',openCards=new Set(),currentView='cards';
+function save(){localStorage.setItem('gl_clients',JSON.stringify(clients));}
+function load(){try{const r=localStorage.getItem('gl_clients');if(r)clients=JSON.parse(r);}catch(e){clients=[];}}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2);}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
+function clientEarned(c){return c.apps.filter(a=>a.status==='paid').reduce((s,a)=>s+(APPS.find(x=>x.id===a.id)?.bonus||0),0);}
+function clientPending(c){return c.apps.filter(a=>a.status==='waiting').reduce((s,a)=>s+(APPS.find(x=>x.id===a.id)?.bonus||0),0);}
+function toggleFilter(){const ch=document.getElementById('filter-chips');const o=ch.style.display==='flex';ch.style.display=o?'none':'flex';document.getElementById('filter-btn').classList.toggle('active',!o);}
+function setFilter(f){activeFilter=f;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===f));renderAll();}
+function renderStats(){const c={todo:0,progress:0,waiting:0,paid:0};clients.forEach(cl=>cl.apps.forEach(a=>{if(c[a.status]!==undefined)c[a.status]++;}));document.getElementById('stats-bar').innerHTML=Object.entries(c).map(([k,v])=>`<div class="stat-card s-${k}"><div class="stat-num">${v}</div><div class="stat-label">${STATUS[k].label}</div></div>`).join('');}
+function renderEarnings(){const e=clients.reduce((s,c)=>s+clientEarned(c),0);const p=clients.reduce((s,c)=>s+clientPending(c),0);document.getElementById('total-earned').textContent=e+'€';document.getElementById('total-pending').textContent=p+'€ in attesa';}
+function setView(v){currentView=v;document.getElementById('vbtn-cards').classList.toggle('active',v==='cards');document.getElementById('vbtn-table').classList.toggle('active',v==='table');document.getElementById('clients-list').style.display=v==='cards'?'flex':'none';document.getElementById('table-wrap').style.display=v==='table'?'block':'none';document.getElementById('list-label').style.display=v==='cards'?'':'none';renderAll();}
+function renderTable(filtered){document.getElementById('table-head').innerHTML=`<tr><th>Cliente</th><th style="text-align:center">App</th>${APPS.map(a=>`<th class="app-col">${a.icon} ${a.name}</th>`).join('')}<th style="text-align:right">Guadagnato</th></tr>`;if(!filtered.length){document.getElementById('table-body').innerHTML=`<tr><td colspan="${3+APPS.length}" style="text-align:center;padding:40px;color:var(--muted)">Nessun cliente</td></tr>`;return;}document.getElementById('table-body').innerHTML=filtered.map(c=>{const cells=APPS.map(app=>{const ca=c.apps.find(a=>a.id===app.id);if(!ca)return`<td class="td-app"><span class="tbl-status empty">—</span></td>`;return`<td class="td-app"><select class="tbl-status ${ca.status}" onchange="updateStatus('${c.id}','${app.id}',this.value,this)">${Object.entries(STATUS).map(([k,v])=>`<option value="${k}" ${ca.status===k?'selected':''}>${v.label}</option>`).join('')}</select></td>`;}).join('');const earned=clientEarned(c);const done=c.apps.filter(a=>a.status==='paid').length;return`<tr><td><div class="td-name">${escHtml(c.name)}</div>${c.phone?`<div class="td-phone">${escHtml(c.phone)}</div>`:''}</td><td class="td-count">${done}/${c.apps.length}</td>${cells}<td class="td-earned">${earned>0?earned+'€':'—'}</td></tr>`;}).join('');}
+function renderAll(){renderStats();renderEarnings();const q=document.getElementById('search-input').value.toLowerCase();let filtered=clients.filter(c=>{const mq=!q||c.name.toLowerCase().includes(q)||(c.phone||'').includes(q);if(!mq)return false;if(activeFilter==='all')return true;return c.apps.some(a=>a.status===activeFilter);});document.getElementById('list-label').textContent=`${filtered.length} cliente${filtered.length!==1?'i':''}`;const list=document.getElementById('clients-list');if(filtered.length===0){list.innerHTML=`<div class="empty-state"><div class="empty-icon">🐐</div><div class="empty-title">${clients.length===0?'Nessun cliente ancora':'Nessun risultato'}</div><div class="empty-sub">${clients.length===0?'Tocca + in alto a destra per aggiungere il primo cliente.':'Prova a cambiare il filtro o la ricerca.'}</div></div>`;return;}if(currentView==='table'){renderTable(filtered);return;}list.innerHTML=filtered.map(c=>renderClientCard(c)).join('');openCards.forEach(id=>{const card=document.getElementById('card-'+id);if(card)card.classList.add('open');});}
+function renderClientCard(c){const earned=clientEarned(c);const dots=c.apps.map(a=>`<span class="app-dot ${a.status}"></span>`).join('');const rows=c.apps.map(a=>{const app=APPS.find(x=>x.id===a.id);if(!app)return'';return`<div class="app-row"><span style="font-size:1.1rem">${app.icon}</span><span class="app-name">${app.name}</span><span class="app-amount">${app.label}</span><select class="status-select ${a.status}" onchange="updateStatus('${c.id}','${a.id}',this.value,this)" onclick="event.stopPropagation()">${Object.entries(STATUS).map(([k,v])=>`<option value="${k}" ${a.status===k?'selected':''}>${v.label}</option>`).join('')}</select></div><div class="app-note-wrap"><textarea class="app-note" rows="1" placeholder="Note..." onchange="updateNote('${c.id}','${a.id}',this.value)" onclick="event.stopPropagation()">${a.note||''}</textarea></div>`;}).join('');const date=c.createdAt?new Date(c.createdAt).toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit',year:'2-digit'}):'';return`<div class="client-card" id="card-${c.id}"><div class="client-header" onclick="toggleCard('${c.id}')"><div class="client-info"><div class="client-name">${escHtml(c.name)}</div><div class="client-meta">${c.phone?'📱 '+escHtml(c.phone)+' &nbsp;•&nbsp; ':''}${c.apps.length} app${date?' &nbsp;•&nbsp; '+date:''}</div><div class="client-summary">${dots}</div></div><div style="display:flex;align-items:center;gap:6px;flex-shrink:0">${earned>0?`<span class="client-earned">${earned}€</span>`:''}<span class="chevron">▼</span></div></div><div class="app-rows">${rows}</div><div class="client-actions"><button class="btn-sm" onclick="editClient('${c.id}');event.stopPropagation()">✏️ Modifica</button><button class="btn-sm danger" onclick="deleteClient('${c.id}');event.stopPropagation()">🗑 Elimina</button></div></div>`;}
+function escHtml(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function toggleCard(id){const card=document.getElementById('card-'+id);if(!card)return;const o=card.classList.contains('open');if(o){card.classList.remove('open');openCards.delete(id);}else{card.classList.add('open');openCards.add(id);}}
+function updateStatus(clientId,appId,newStatus,selectEl){const c=clients.find(x=>x.id===clientId);if(!c)return;const a=c.apps.find(x=>x.id===appId);if(!a)return;a.status=newStatus;selectEl.className=(currentView==='table'?'tbl-status ':'status-select ')+newStatus;save();renderStats();renderEarnings();const card=document.getElementById('card-'+clientId);if(card){const s=card.querySelector('.client-summary');if(s)s.innerHTML=c.apps.map(ap=>`<span class="app-dot ${ap.status}"></span>`).join('');const e=card.querySelector('.client-earned');if(e){e.textContent=clientEarned(c)+'€';}}if(newStatus==='paid')showToast('💰 Commissione registrata!');}
+function updateNote(clientId,appId,note){const c=clients.find(x=>x.id===clientId);if(!c)return;const a=c.apps.find(x=>x.id===appId);if(!a)return;a.note=note;save();}
+function buildAppsGrid(sel=[]){document.getElementById('apps-check-grid').innerHTML=APPS.map(app=>`<div class="app-check-item ${sel.includes(app.id)?'selected':''}" id="chk-${app.id}" onclick="toggleApp('${app.id}')"><span class="app-check-icon">${app.icon}</span><div style="flex:1;min-width:0"><div class="app-check-name">${app.name}</div><div class="app-check-bonus">${app.label}</div></div></div>`).join('');}
+function toggleApp(id){document.getElementById('chk-'+id).classList.toggle('selected');}
+function openAddModal(){editingId=null;document.getElementById('modal-title').textContent='Nuovo Cliente';document.getElementById('modal-save-btn').textContent='Salva Cliente';document.getElementById('field-name').value='';document.getElementById('field-phone').value='';buildAppsGrid([]);document.getElementById('modal-overlay').classList.add('open');setTimeout(()=>document.getElementById('field-name').focus(),300);}
+function editClient(id){const c=clients.find(x=>x.id===id);if(!c)return;editingId=id;document.getElementById('modal-title').textContent='Modifica Cliente';document.getElementById('modal-save-btn').textContent='Salva Modifiche';document.getElementById('field-name').value=c.name;document.getElementById('field-phone').value=c.phone||'';buildAppsGrid(c.apps.map(a=>a.id));document.getElementById('modal-overlay').classList.add('open');}
+function closeModal(e){if(e&&e.target!==document.getElementById('modal-overlay'))return;document.getElementById('modal-overlay').classList.remove('open');}
+function saveClient(){const name=document.getElementById('field-name').value.trim();if(!name){showToast('⚠️ Inserisci il nome');return;}const phone=document.getElementById('field-phone').value.trim();const sel=APPS.filter(app=>document.getElementById('chk-'+app.id)?.classList.contains('selected')).map(app=>app.id);if(editingId){const c=clients.find(x=>x.id===editingId);if(!c)return;c.name=name;c.phone=phone;sel.forEach(id=>{if(!c.apps.find(a=>a.id===id))c.apps.push({id,status:'todo',note:'']);});c.apps=c.apps.filter(a=>sel.includes(a.id));showToast('✅ Cliente aggiornato');}else{clients.unshift({id:uid(),name,phone,createdAt:Date.now(),apps:sel.map(id=>({id,status:'todo',note:''}))});showToast('✅ Cliente aggiunto');}save();document.getElementById('modal-overlay').classList.remove('open');renderAll();}
+function deleteClient(id){if(!confirm('Eliminare questo cliente?'))return;clients=clients.filter(c=>c.id!==id);openCards.delete(id);save();renderAll();showToast('🗑 Cliente eliminato');}
+function dismissBanner(){document.getElementById('install-banner').style.display='none';localStorage.setItem('gl_banner','1');}
+load();if(localStorage.getItem('gl_banner'))document.getElementById('install-banner').style.display='none';
+renderAll();
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&document.getElementById('modal-overlay').classList.contains('open'))saveClient();});
+</script>
+</body>
+</html>
