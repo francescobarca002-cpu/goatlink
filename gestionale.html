@@ -118,6 +118,24 @@ tbody td{padding:10px 12px;font-size:.78rem;vertical-align:middle}
 .tag-ig{background:rgba(245,72,135,.15);color:#f54887}
 .tag-tt{background:rgba(72,184,245,.15);color:var(--blue)}
 .tag-wh{background:rgba(72,245,120,.15);color:#48f578}
+/* IMPEGNI */
+.impegno-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;margin-bottom:8px;display:flex;align-items:flex-start;gap:14px;transition:border-color .15s}
+.impegno-card:hover{border-color:var(--border2)}
+.impegno-card.alta{border-left:3px solid var(--red)}
+.impegno-card.media{border-left:3px solid var(--orange)}
+.impegno-card.bassa{border-left:3px solid var(--blue)}
+.impegno-card.completato{opacity:.45;filter:grayscale(.5)}
+.impegno-check{width:18px;height:18px;border-radius:4px;border:1.5px solid var(--border2);cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;transition:all .15s;background:transparent}
+.impegno-check:hover{border-color:var(--accent)}
+.impegno-check.done{background:var(--accent);border-color:var(--accent);color:#000}
+.impegno-body{flex:1;min-width:0}
+.impegno-title{font-family:'Syne',sans-serif;font-weight:600;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.impegno-title.done{text-decoration:line-through;color:var(--muted)}
+.impegno-meta{font-size:.68rem;color:var(--muted2);margin-top:3px;display:flex;gap:10px;flex-wrap:wrap}
+.impegno-scad{font-size:.68rem;font-weight:600}
+.impegno-scad.red{color:var(--red)}.impegno-scad.orange{color:var(--orange)}.impegno-scad.muted{color:var(--muted2)}
+.imp-empty{text-align:center;padding:28px;color:var(--muted);font-size:.82rem;background:var(--card);border:1px dashed var(--border);border-radius:var(--radius)}
+
 /* URGENTI */
 .urgency-card{background:var(--card);border:1px solid rgba(245,72,72,.3);border-radius:var(--radius);padding:16px 20px;margin-bottom:10px;display:flex;align-items:center;gap:16px;transition:border-color .2s}
 .urgency-card:hover{border-color:rgba(245,72,72,.5)}
@@ -187,12 +205,22 @@ tbody td{padding:10px 12px;font-size:.78rem;vertical-align:middle}
     <!-- URGENTI -->
     <div class="page active" id="page-urgenti">
       <div class="stats-grid stats-grid-4" id="urgenti-stats"></div>
+
+      <!-- IMPEGNI LIBERI -->
+      <div style="margin-bottom:20px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;color:var(--text)">📌 Impegni</div>
+          <button class="btn btn-accent" style="font-size:.72rem;padding:5px 12px" onclick="openImpegnoModal()">+ Aggiungi</button>
+        </div>
+        <div id="impegni-list"></div>
+      </div>
+
       <div style="margin-bottom:16px">
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;color:var(--red);margin-bottom:12px">⚠️ Scadenze entro 48h</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;color:var(--red);margin-bottom:12px">⚠️ Clienti — scadenza entro 48h</div>
         <div id="urgenti-48h"></div>
       </div>
       <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;color:var(--orange);margin-bottom:12px">⏳ Scadenze entro 7 giorni</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;color:var(--orange);margin-bottom:12px">⏳ Clienti — scadenza entro 7 giorni</div>
         <div id="urgenti-7d"></div>
       </div>
     </div>
@@ -418,6 +446,29 @@ tbody td{padding:10px 12px;font-size:.78rem;vertical-align:middle}
   </div>
 </div>
 
+<!-- MODAL IMPEGNO -->
+<div class="overlay" id="overlay-impegno">
+  <div class="modal" style="width:460px">
+    <div class="modal-title" id="impegno-modal-title">Nuovo Impegno</div>
+    <div class="field"><label>Titolo *</label><input id="imp-titolo" type="text" placeholder="Es. Chiamare Marco, Inviare contratto..."></div>
+    <div class="field-row">
+      <div class="field"><label>Data / Scadenza</label><input id="imp-data" type="date"></div>
+      <div class="field"><label>Priorità</label>
+        <select id="imp-priorita">
+          <option value="alta">🔴 Alta</option>
+          <option value="media" selected>🟠 Media</option>
+          <option value="bassa">🔵 Bassa</option>
+        </select>
+      </div>
+    </div>
+    <div class="field"><label>Note</label><textarea id="imp-note" rows="2" placeholder="Dettagli..."></textarea></div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('overlay-impegno')">Annulla</button>
+      <button class="btn btn-accent" onclick="saveImpegno()">Salva</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
@@ -433,10 +484,10 @@ var APPS=[
 var SL={todo:'Da fare',progress:'In corso',waiting:'Attesa',paid:'Pagata'};
 var SKEYS=['todo','progress','waiting','paid'];
 
-var state={clients:[],trades:[],social:{},goals:[],movimenti:[],editClientId:null,filterAnno:'all'};
+var state={clients:[],trades:[],social:{},goals:[],movimenti:[],impegni:[],editClientId:null,filterAnno:'all'};
 
 function save(){try{localStorage.setItem('gl_crm_v2',JSON.stringify(state));}catch(e){}}
-function load(){try{var r=localStorage.getItem('gl_crm_v2');if(r){var d=JSON.parse(r);state.clients=d.clients||[];state.trades=d.trades||[];state.social=d.social||{};state.goals=d.goals||[];state.movimenti=d.movimenti||[];}}catch(e){}}
+function load(){try{var r=localStorage.getItem('gl_crm_v2');if(r){var d=JSON.parse(r);state.clients=d.clients||[];state.trades=d.trades||[];state.social=d.social||{};state.goals=d.goals||[];state.movimenti=d.movimenti||[];state.impegni=d.impegni||[];}}catch(e){}}
 function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2);}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function fmtN(v){return v&&Number(v)>0?Number(v).toLocaleString('it-IT'):'—';}
@@ -447,11 +498,92 @@ function getApp(id){for(var i=0;i<APPS.length;i++)if(APPS[i].id===id)return APPS
 function getClient(id){for(var i=0;i<state.clients.length;i++)if(state.clients[i].id===id)return state.clients[i];return null;}
 function clientEarned(c){var s=0;for(var i=0;i<c.apps.length;i++)if(c.apps[i].status==='paid'){var a=getApp(c.apps[i].id);if(a)s+=a.bonus;}return s;}
 
+// ── IMPEGNI ──
+function openImpegnoModal(){
+  document.getElementById('imp-titolo').value='';
+  document.getElementById('imp-data').value=new Date().toISOString().split('T')[0];
+  document.getElementById('imp-priorita').value='media';
+  document.getElementById('imp-note').value='';
+  document.getElementById('overlay-impegno').classList.add('open');
+  setTimeout(function(){document.getElementById('imp-titolo').focus();},100);
+}
+function saveImpegno(){
+  var titolo=document.getElementById('imp-titolo').value.trim();
+  if(!titolo){showToast('⚠️ Inserisci il titolo');return;}
+  state.impegni.unshift({
+    id:uid(),titolo:titolo,
+    data:document.getElementById('imp-data').value,
+    priorita:document.getElementById('imp-priorita').value,
+    note:document.getElementById('imp-note').value.trim(),
+    done:false,createdAt:Date.now()
+  });
+  save();closeModal('overlay-impegno');renderImpegni();showToast('✅ Impegno aggiunto');
+}
+function toggleImpegno(id){
+  var imp=state.impegni.find(function(x){return x.id===id;});
+  if(!imp)return;
+  imp.done=!imp.done;
+  save();renderImpegni();
+}
+function delImpegno(id){
+  state.impegni=state.impegni.filter(function(x){return x.id!==id;});
+  save();renderImpegni();showToast('🗑 Eliminato');
+}
+function renderImpegni(){
+  var now=Date.now();
+  var ms48=48*3600*1000;
+  var ms7d=7*24*3600*1000;
+
+  // Ordina: non completati prima (per priorità + data), poi completati
+  var attivi=state.impegni.filter(function(x){return !x.done;});
+  var fatti=state.impegni.filter(function(x){return x.done;});
+  var priMap={alta:0,media:1,bassa:2};
+  attivi.sort(function(a,b){
+    var pd=(priMap[a.priorita]||1)-(priMap[b.priorita]||1);
+    if(pd!==0)return pd;
+    if(a.data&&b.data)return new Date(a.data)-new Date(b.data);
+    return 0;
+  });
+  var list=attivi.concat(fatti);
+
+  var el=document.getElementById('impegni-list');
+  if(!list.length){
+    el.innerHTML='<div class="imp-empty">Nessun impegno — clicca "+ Aggiungi" per iniziare</div>';
+    return;
+  }
+
+  el.innerHTML=list.map(function(imp){
+    var scadHtml='';
+    if(imp.data&&!imp.done){
+      var exp=new Date(imp.data).getTime()+86400000-1;
+      var diff=exp-now;
+      var cls=diff<0?'red':diff<=ms48?'red':diff<=ms7d?'orange':'muted';
+      var label=diff<0?'SCADUTO':msToLabel(diff);
+      scadHtml='<span class="impegno-scad '+cls+'">⏰ '+esc(imp.data)+' ('+label+')</span>';
+    } else if(imp.data&&imp.done){
+      scadHtml='<span class="impegno-scad muted">'+esc(imp.data)+'</span>';
+    }
+    var priLabel={alta:'🔴 Alta',media:'🟠 Media',bassa:'🔵 Bassa'};
+    return '<div class="impegno-card '+esc(imp.priorita)+(imp.done?' completato':'')+'">'
+      +'<div class="impegno-check'+(imp.done?' done':'')+'" onclick="toggleImpegno(\''+imp.id+'\')">'+(imp.done?'✓':'')+'</div>'
+      +'<div class="impegno-body">'
+      +'<div class="impegno-title'+(imp.done?' done':'')+'">'+esc(imp.titolo)+'</div>'
+      +'<div class="impegno-meta">'
+      +(priLabel[imp.priorita]?'<span>'+priLabel[imp.priorita]+'</span>':'')
+      +scadHtml
+      +(imp.note?'<span style="color:var(--muted)">'+esc(imp.note)+'</span>':'')
+      +'</div></div>'
+      +'<button class="btn-icon" onclick="delImpegno(\''+imp.id+'\')" style="flex-shrink:0">🗑</button>'
+      +'</div>';
+  }).join('');
+}
+
 // ── URGENTI ──
 function msToHMS(ms){var h=Math.floor(ms/3600000),m=Math.floor((ms%3600000)/60000);return h+'h '+String(m).padStart(2,'0')+'m';}
 function msToLabel(ms){if(ms<=0)return'SCADUTO';var d=Math.floor(ms/86400000);var h=Math.floor((ms%86400000)/3600000);if(d>0)return d+'g '+h+'h';return msToHMS(ms);}
 
 function renderUrgenti(){
+  renderImpegni();
   var now=Date.now();
   var ms48=48*3600*1000;
   var ms7d=7*24*3600*1000;
