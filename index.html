@@ -601,34 +601,28 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
     <p class="section-sub">Tutti verificati. Tutti gratuiti. Tutti pagati.</p>
   </div>
   <div class="cards-grid">
- 
+
+    <!-- 1. BBVA -->
     <div class="card" onclick="openModal('bbva')">
       <img src="logos/bbva.png" class="card-logo" alt="BBVA" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>🏦</div>'">
       <div class="card-name">BBVA</div>
-      <div class="card-bonus">10€</div>
+      <div class="card-bonus">20€</div>
       <div class="card-meta">⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
       <div class="card-tag star">⭐ Consigliato per iniziare &nbsp;•&nbsp; Pagato in 2 giorni</div>
       <button class="card-btn">Apri la guida →</button>
     </div>
- 
-    <div class="card" onclick="openModal('buddy')">
-      <img src="logos/buddybank.png" class="card-logo" alt="Buddybank" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>💙</div>'">
-      <div class="card-name">Buddybank</div>
-      <div class="card-bonus">50€</div>
-      <div class="card-meta">⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
-      <div class="card-tag fire">🔥 Bonus più alto &nbsp;•&nbsp; Pagato in 7–14 giorni</div>
+
+    <!-- 2. REVOLUT -->
+    <div class="card" onclick="openModal('revolut')">
+      <div class="card-logo-placeholder">💳</div>
+      <div class="card-name">Revolut</div>
+      <div class="card-bonus">15€</div>
+      <div class="card-meta">💳 Fintech &nbsp;•&nbsp; ⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
+      <div class="card-tag star">⭐ Spesa min. 20€ &nbsp;•&nbsp; Bonus in 2 giorni</div>
       <button class="card-btn">Apri la guida →</button>
     </div>
- 
-    <div class="card" onclick="openModal('bybit')">
-      <img src="logos/bybit.png" class="card-logo" alt="Bybit" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>📈</div>'">
-      <div class="card-name">Bybit</div>
-      <div class="card-bonus">45€</div>
-      <div class="card-meta">📈 Crypto &nbsp;•&nbsp; ⏱ 15 minuti &nbsp;•&nbsp; 🟢 Facile</div>
-      <div class="card-tag">⚡ Pagato in 2–7 giorni</div>
-      <button class="card-btn">Apri la guida →</button>
-    </div>
- 
+
+    <!-- 3. COINBASE -->
     <div class="card" onclick="openModal('coinbase')">
       <img src="logos/coinbase.png" class="card-logo" alt="Coinbase" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>🪙</div>'">
       <div class="card-name">Coinbase</div>
@@ -637,9 +631,28 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <div class="card-tag">💰 Pagato in 2–30 giorni</div>
       <button class="card-btn">Apri la guida →</button>
     </div>
- 
 
+    <!-- 4. BUDDYBANK -->
+    <div class="card" onclick="openModal('buddy')">
+      <img src="logos/buddybank.png" class="card-logo" alt="Buddybank" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>💙</div>'">
+      <div class="card-name">Buddybank</div>
+      <div class="card-bonus">50€</div>
+      <div class="card-meta">⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
+      <div class="card-tag fire">🔥 Bonus più alto &nbsp;•&nbsp; Pagato in 7–14 giorni</div>
+      <button class="card-btn">Apri la guida →</button>
+    </div>
 
+    <!-- 5. BYBIT -->
+    <div class="card" onclick="openModal('bybit')">
+      <img src="logos/bybit.png" class="card-logo" alt="Bybit" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>📈</div>'">
+      <div class="card-name">Bybit</div>
+      <div class="card-bonus">25€</div>
+      <div class="card-meta">📈 Crypto &nbsp;•&nbsp; ⏱ 15 minuti &nbsp;•&nbsp; 🟢 Facile</div>
+      <div class="card-tag">⚡ Pagato in 2–7 giorni</div>
+      <button class="card-btn">Apri la guida →</button>
+    </div>
+
+    <!-- 6. TINABA -->
     <div class="card" onclick="openModal('tinaba')">
       <img src="logos/tinaba.png" class="card-logo" alt="Tinaba" onerror="this.outerHTML='<div class=\'card-logo-placeholder\'>💜</div>'">
       <div class="card-name">Tinaba</div>
@@ -649,25 +662,13 @@ src="https://www.facebook.com/tr?id=2363189274169436&ev=PageView&noscript=1"
       <button class="card-btn">Apri la guida →</button>
     </div>
 
-    <!-- BITSTACK — NUOVO -->
+    <!-- 7. BITSTACK -->
     <div class="card" onclick="openModal('bitstack')">
       <div class="card-logo-placeholder">₿</div>
       <div class="card-name">Bitstack</div>
       <div class="card-bonus">10€ BTC</div>
       <div class="card-meta">₿ Bitcoin &nbsp;•&nbsp; ⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
       <div class="card-tag star">⭐ 5€ dall'app + 5€ da noi &nbsp;•&nbsp; Acquisto min. 100€</div>
-      <button class="card-btn">Apri la guida →</button>
-    </div>
-
-
-    <!-- 7. REVOLUT -->
-    <div class="card" onclick="openModal('revolut')">
-      <div class="card-step-num">7</div>
-      <div class="card-logo-placeholder">💳</div>
-      <div class="card-name">Revolut</div>
-      <div class="card-bonus">15€</div>
-      <div class="card-meta">💳 Fintech &nbsp;•&nbsp; ⏱ 10 minuti &nbsp;•&nbsp; 🟢 Facile</div>
-      <div class="card-tag star">⭐ Spesa min. 20€ &nbsp;•&nbsp; Bonus in 2 giorni</div>
       <button class="card-btn">Apri la guida →</button>
     </div>
 
