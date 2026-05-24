@@ -278,59 +278,17 @@ tbody td{padding:9px 12px;font-size:.78rem;vertical-align:middle}
 
     <!-- TRADING -->
     <div class="page" id="page-trading">
-      <!-- KPI row -->
       <div class="stats-grid g5" id="trade-stats"></div>
-
-      <!-- Visual row: capital bar + equity curve + win/loss donut -->
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px">
-
-        <!-- Capital investito vs guadagno -->
-        <div class="card-box" style="padding:16px">
-          <div style="font-size:.72rem;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px">💶 Capitale &amp; Profitto</div>
-          <div id="trade-capital-display"></div>
+      <div class="card-box">
+        <div class="card-hdr">
+          <div class="card-hdr-title">Operazioni</div>
+          <button class="btn btn-accent" onclick="openModal('trade')">+ Trade</button>
         </div>
-
-        <!-- Equity curve mini -->
-        <div class="card-box" style="padding:16px">
-          <div style="font-size:.72rem;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">📈 Equity Curve</div>
-          <svg id="trade-equity-svg" viewBox="0 0 260 80" style="width:100%;height:80px"></svg>
-          <div style="display:flex;justify-content:space-between;margin-top:4px" id="trade-equity-labels"></div>
-        </div>
-
-        <!-- Distribuzione P&L per strumento -->
-        <div class="card-box" style="padding:16px">
-          <div style="font-size:.72rem;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">🏆 Top strumenti</div>
-          <div id="trade-instruments"></div>
-        </div>
-      </div>
-
-      <!-- Tabella operazioni + journal side by side -->
-      <div style="display:grid;grid-template-columns:3fr 2fr;gap:14px">
-        <div class="card-box">
-          <div class="card-hdr">
-            <div class="card-hdr-title">Operazioni</div>
-            <div style="display:flex;gap:6px;align-items:center">
-              <select id="trade-filter-tipo" style="background:var(--card2);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:inherit;font-size:.72rem;padding:4px 8px;outline:none">
-                <option value="all">Tutti</option><option value="LONG">LONG</option><option value="SHORT">SHORT</option>
-              </select>
-              <button class="btn btn-accent" onclick="openModal('trade')">+ Trade</button>
-            </div>
-          </div>
-          <div style="overflow-x:auto">
-          <table><thead><tr>
-            <th>Data</th><th>Strumento</th><th>Tipo</th><th>Investito</th>
-            <th>Entrata</th><th>Uscita</th><th class="tc">P&amp;L</th><th class="tc">R%</th><th></th>
-          </tr></thead><tbody id="trade-tbody"></tbody></table>
-          </div>
-        </div>
-
-        <!-- Journal -->
-        <div class="card-box">
-          <div class="card-hdr">
-            <div class="card-hdr-title">📓 Journal</div>
-            <div id="trade-journal-count" style="font-size:.67rem;color:var(--muted)"></div>
-          </div>
-          <div id="trade-journal" style="max-height:380px;overflow-y:auto;padding:10px 12px"></div>
+        <div style="overflow-x:auto">
+        <table><thead><tr>
+          <th>Data</th><th>Strumento</th><th>Tipo</th><th>Piattaforma</th>
+          <th>Entrata</th><th>Uscita</th><th>Qty</th><th class="tc">P&amp;L</th><th></th>
+        </tr></thead><tbody id="trade-tbody"></tbody></table>
         </div>
       </div>
     </div>
@@ -513,16 +471,13 @@ tbody td{padding:9px 12px;font-size:.78rem;vertical-align:middle}
 
 <div class="overlay" id="ov-trade" onclick="closeOv(event,'ov-trade')">
   <div class="modal">
-    <div class="modal-title" id="trade-modal-title">Nuovo Trade</div>
+    <div class="modal-title">Nuovo Trade</div>
     <div class="field-row"><div class="field"><label>Data</label><input id="t-data" type="date"></div><div class="field"><label>Strumento</label><input id="t-str" type="text" placeholder="Es. BTC/USD, SPY"></div></div>
     <div class="field-row"><div class="field"><label>Tipo</label><select id="t-tipo"><option value="LONG">LONG</option><option value="SHORT">SHORT</option></select></div><div class="field"><label>Piattaforma</label><input id="t-piatt" type="text" placeholder="IBKR, Bybit..."></div></div>
-    <div class="field-row"><div class="field"><label>Capitale investito €</label><input id="t-invested" type="number" step="0.01" placeholder="Es. 500"></div><div class="field"><label>Qty / Contratti</label><input id="t-qty" type="number" step="0.01" placeholder="0"></div></div>
-    <div class="field-row"><div class="field"><label>Prezzo entrata</label><input id="t-in" type="number" step="0.0001" placeholder="0.00"></div><div class="field"><label>Prezzo uscita</label><input id="t-out" type="number" step="0.0001" placeholder="0.00"></div></div>
-    <div class="field-row"><div class="field"><label>P&L € (risultato netto)</label><input id="t-pnl" type="number" step="0.01" placeholder="es. 45 o -20"></div><div class="field"><label>Emozione (1-10)</label><input id="t-feel" type="number" min="1" max="10" placeholder="7"></div></div>
-    <div class="field"><label>Strategia / Setup</label><input id="t-strategy" type="text" placeholder="Es. Breakout, Mean reversion, News play..."></div>
-    <div class="field"><label>📓 Note journal — cosa hai visto, perché sei entrato/uscito</label><textarea id="t-note" rows="3" placeholder="Es. Setup sui massimi di ieri, break con volume, uscito troppo presto..."></textarea></div>
-    <div class="field"><label>✅ Lezione imparata</label><input id="t-lesson" type="text" placeholder="Cosa faresti diversamente?"></div>
-    <div class="modal-footer"><button class="btn" onclick="closeModal('ov-trade')">Annulla</button><button class="btn btn-accent" id="t-save-btn" onclick="saveTrade()">Salva</button></div>
+    <div class="field-row"><div class="field"><label>Entrata</label><input id="t-in" type="number" step="0.0001" placeholder="0.00"></div><div class="field"><label>Uscita</label><input id="t-out" type="number" step="0.0001" placeholder="0.00"></div></div>
+    <div class="field-row"><div class="field"><label>Qty</label><input id="t-qty" type="number" step="0.01" placeholder="0"></div><div class="field"><label>P&L €</label><input id="t-pnl" type="number" step="0.01" placeholder="es. 45 o -20"></div></div>
+    <div class="field"><label>Note</label><textarea id="t-note" rows="2" placeholder="Strategia, motivazione..."></textarea></div>
+    <div class="modal-footer"><button class="btn" onclick="closeModal('ov-trade')">Annulla</button><button class="btn btn-accent" onclick="saveTrade()">Salva</button></div>
   </div>
 </div>
 
@@ -664,7 +619,7 @@ var state={
   montLavori:[],montSpese:[],
   finGoals:[],movimenti:[],
   tolc:{score:20.75,target:'',nextDate:'',sede:'',note:'',materie:[],sessioni:[]},
-  editClientId:null,editTradeId:null,filterAnno:'all'
+  editClientId:null,filterAnno:'all'
 };
 
 function save(){try{localStorage.setItem('frahub_v1',JSON.stringify(state));}catch(e){}}
@@ -678,6 +633,38 @@ function getClient(id){for(var i=0;i<state.clients.length;i++)if(state.clients[i
 function clientEarned(c){var s=0;for(var i=0;i<c.apps.length;i++)if(c.apps[i].status==='paid'){var a=getApp(c.apps[i].id);if(a)s+=a.bonus;}return s;}
 
 function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2000);}
+
+// ── MODAL ──
+function openModal(type){
+  var map={
+    'client':'ov-client','trade':'ov-trade','obiettivo':'ov-obiettivo',
+    'workout':'ov-workout','workout-pr':'ov-workout-pr',
+    'mont-lavoro':'ov-mont-lavoro','mont-spesa':'ov-mont-spesa',
+    'fin-goal':'ov-fin-goal','tolc-materia':'ov-tolc-materia','tolc-sessione':'ov-tolc-sessione'
+  };
+  var id=map[type];if(!id)return;
+  if(type==='client'){
+    state.editClientId=null;
+    document.getElementById('client-title').textContent='Nuovo Cliente';
+    document.getElementById('c-save').textContent='Salva';
+    document.getElementById('c-name').value='';document.getElementById('c-phone').value='';
+    document.getElementById('c-note').value='';document.getElementById('c-scad').value='';
+    document.getElementById('c-anno').value='2026';
+    buildAppsGrid([]);
+  }
+  if(type==='trade'){
+    document.getElementById('t-data').value=new Date().toISOString().split('T')[0];
+    ['t-str','t-piatt','t-in','t-out','t-qty','t-pnl','t-note'].forEach(function(x){document.getElementById(x).value='';});
+  }
+  if(type==='workout'){document.getElementById('wo-data').value=new Date().toISOString().split('T')[0];}
+  if(type==='mont-spesa'){document.getElementById('ms-data').value=new Date().toISOString().split('T')[0];}
+  if(type==='tolc-sessione'){document.getElementById('ts-data').value=new Date().toISOString().split('T')[0];}
+  document.getElementById(id).classList.add('open');
+  setTimeout(function(){var inp=document.querySelector('#'+id+' input[type=text],#'+id+' input[type=number]');if(inp)inp.focus();},100);
+}
+function closeModal(id){document.getElementById(id).classList.remove('open');}
+function closeOv(e,id){if(e.target===document.getElementById(id))closeModal(id);}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.overlay.open').forEach(function(el){el.classList.remove('open');});});
 
 // ── APPS GRID ──
 function buildAppsGrid(sel){
@@ -867,301 +854,35 @@ document.getElementById('c-save').addEventListener('click',saveClient);
 // ── TRADING ──
 function renderTrading(){
   var trades=state.trades;
-  var tipo=document.getElementById('trade-filter-tipo');
-  var fTipo=tipo?tipo.value:'all';
-  var filtered=fTipo==='all'?trades:trades.filter(function(t){return t.tipo===fTipo;});
-
-  var tot=0,wins=0,totalInvested=0,totalPnl=0;
-  trades.forEach(function(t){
-    var p=Number(t.pnl||0);
-    tot+=p;
-    totalPnl+=p;
-    totalInvested+=Number(t.invested||0);
-    if(p>0)wins++;
-  });
+  var tot=0,wins=0;
+  trades.forEach(function(t){var p=Number(t.pnl||0);tot+=p;if(p>0)wins++;});
   var wr=trades.length?Math.round(wins/trades.length*100):0;
   var best=trades.reduce(function(m,t){return Math.max(m,Number(t.pnl||0));},0);
   var worst=trades.reduce(function(m,t){return Math.min(m,Number(t.pnl||0));},0);
-  var roiPct=totalInvested>0?((totalPnl/totalInvested)*100):0;
-
   document.getElementById('trade-stats').innerHTML=
-    '<div class="stat-box '+(tot>=0?'c-green':'c-red')+'"><div class="stat-val">'+(tot>=0?'+':'')+tot.toFixed(0)+'€</div><div class="stat-lbl">P&amp;L Netto</div></div>'+
-    '<div class="stat-box c-blue"><div class="stat-val">'+totalInvested.toFixed(0)+'€</div><div class="stat-lbl">Investito totale</div></div>'+
-    '<div class="stat-box '+(roiPct>=0?'c-accent':'c-red')+'"><div class="stat-val">'+(roiPct>=0?'+':'')+roiPct.toFixed(1)+'%</div><div class="stat-lbl">ROI medio</div></div>'+
+    '<div class="stat-box '+(tot>=0?'c-green':'c-red')+'"><div class="stat-val">'+(tot>=0?'+':'')+tot.toFixed(0)+'€</div><div class="stat-lbl">P&L Totale</div></div>'+
     '<div class="stat-box c-accent"><div class="stat-val">'+wr+'%</div><div class="stat-lbl">Win rate</div></div>'+
-    '<div class="stat-box"><div class="stat-val">'+trades.length+'</div><div class="stat-lbl">Operazioni</div></div>';
-
-  // ── CAPITAL DISPLAY ──
-  var capEl=document.getElementById('trade-capital-display');
-  if(capEl){
-    var maxBar=Math.max(totalInvested,Math.abs(totalPnl),1);
-    var invPct=Math.min(100,(totalInvested/maxBar)*100);
-    var pnlPct=Math.min(100,(Math.abs(totalPnl)/maxBar)*100);
-    var pnlColor=totalPnl>=0?'var(--green)':'var(--red)';
-    var pnlSign=totalPnl>=0?'+':'';
-    capEl.innerHTML=
-      '<div style="margin-bottom:14px">'
-        +'<div style="display:flex;justify-content:space-between;margin-bottom:4px">'
-          +'<span style="font-size:.72rem;color:var(--muted2)">Capitale usato</span>'
-          +'<span style="font-size:.82rem;font-weight:700;color:var(--blue)">'+totalInvested.toFixed(0)+'€</span>'
-        +'</div>'
-        +'<div style="background:var(--bg2);border-radius:99px;height:8px;overflow:hidden">'
-          +'<div style="height:100%;border-radius:99px;background:linear-gradient(90deg,var(--blue),var(--purple));width:'+invPct+'%;transition:width .5s ease"></div>'
-        +'</div>'
-      +'</div>'
-      +'<div style="margin-bottom:14px">'
-        +'<div style="display:flex;justify-content:space-between;margin-bottom:4px">'
-          +'<span style="font-size:.72rem;color:var(--muted2)">Profitto netto</span>'
-          +'<span style="font-size:.82rem;font-weight:700;color:'+pnlColor+'">'+pnlSign+totalPnl.toFixed(2)+'€</span>'
-        +'</div>'
-        +'<div style="background:var(--bg2);border-radius:99px;height:8px;overflow:hidden">'
-          +'<div style="height:100%;border-radius:99px;background:linear-gradient(90deg,'+pnlColor+','+pnlColor+');opacity:.85;width:'+pnlPct+'%;transition:width .5s ease"></div>'
-        +'</div>'
-      +'</div>'
-      +'<div style="display:flex;justify-content:space-between;align-items:center;background:var(--card2);border-radius:10px;padding:10px 12px">'
-        +'<div style="text-align:center">'
-          +'<div style="font-weight:800;font-size:1.2rem;color:'+(roiPct>=0?'var(--green)':'var(--red)')+'">'+pnlSign+roiPct.toFixed(1)+'%</div>'
-          +'<div style="font-size:.6rem;color:var(--muted);margin-top:2px">ROI</div>'
-        +'</div>'
-        +'<div style="text-align:center">'
-          +'<div style="font-weight:800;font-size:1.2rem;color:var(--accent)">'+wr+'%</div>'
-          +'<div style="font-size:.6rem;color:var(--muted);margin-top:2px">Win Rate</div>'
-        +'</div>'
-        +'<div style="text-align:center">'
-          +'<div style="font-weight:800;font-size:1.2rem;color:var(--orange)">'+(best>0?'+':'')+best.toFixed(0)+'€</div>'
-          +'<div style="font-size:.6rem;color:var(--muted);margin-top:2px">Best</div>'
-        +'</div>'
-        +'<div style="text-align:center">'
-          +'<div style="font-weight:800;font-size:1.2rem;color:var(--red)">'+worst.toFixed(0)+'€</div>'
-          +'<div style="font-size:.6rem;color:var(--muted);margin-top:2px">Worst</div>'
-        +'</div>'
-      +'</div>';
-  }
-
-  // ── EQUITY CURVE ──
-  var svgEl=document.getElementById('trade-equity-svg');
-  var lblEl=document.getElementById('trade-equity-labels');
-  if(svgEl){
-    var sorted2=trades.slice().sort(function(a,b){return new Date(a.data)-new Date(b.data);});
-    var cumArr=[0];
-    sorted2.forEach(function(t){cumArr.push(cumArr[cumArr.length-1]+Number(t.pnl||0));});
-    if(cumArr.length>1){
-      var minV=Math.min.apply(null,cumArr),maxV=Math.max.apply(null,cumArr);
-      var range=maxV-minV||1;
-      var W=260,H=80,PAD=6;
-      var pts=cumArr.map(function(v,i){
-        var x=PAD+(i/(cumArr.length-1))*(W-PAD*2);
-        var y=H-PAD-((v-minV)/range)*(H-PAD*2);
-        return x+','+y;
-      });
-      var lastVal=cumArr[cumArr.length-1];
-      var lineColor=lastVal>=0?'#48f578':'#f54848';
-      var areaPts=pts.join(' ')+' '+(W-PAD)+','+(H-PAD)+' '+PAD+','+(H-PAD);
-      svgEl.innerHTML=
-        '<defs><linearGradient id="eq-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="'+lineColor+'" stop-opacity=".3"/><stop offset="100%" stop-color="'+lineColor+'" stop-opacity="0"/></linearGradient></defs>'
-        +'<polygon points="'+areaPts+'" fill="url(#eq-grad)"/>'
-        +'<polyline points="'+pts.join(' ')+'" fill="none" stroke="'+lineColor+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'
-        +'<circle cx="'+(PAD+(cumArr.length-1)/(cumArr.length-1||1)*(W-PAD*2))+'" cy="'+(H-PAD-((lastVal-minV)/range)*(H-PAD*2))+'" r="3" fill="'+lineColor+'"/>';
-      if(lblEl){
-        lblEl.innerHTML='<span style="font-size:.6rem;color:var(--muted)">'+esc(sorted2[0]&&sorted2[0].data||'')+'</span>'
-          +'<span style="font-size:.67rem;font-weight:700;color:'+lineColor+'">'+(lastVal>=0?'+':'')+lastVal.toFixed(0)+'€</span>'
-          +'<span style="font-size:.6rem;color:var(--muted)">'+esc(sorted2[sorted2.length-1]&&sorted2[sorted2.length-1].data||'')+'</span>';
-      }
-    }else{
-      svgEl.innerHTML='<text x="130" y="44" text-anchor="middle" font-size="11" fill="#5a5a78">Aggiungi trade per vedere la curva</text>';
-      if(lblEl)lblEl.innerHTML='';
-    }
-  }
-
-  // ── TOP STRUMENTI ──
-  var instrEl=document.getElementById('trade-instruments');
-  if(instrEl){
-    var instrMap={};
-    trades.forEach(function(t){
-      var s=t.str||'?';
-      if(!instrMap[s])instrMap[s]={pnl:0,n:0,invested:0};
-      instrMap[s].pnl+=Number(t.pnl||0);
-      instrMap[s].n++;
-      instrMap[s].invested+=Number(t.invested||0);
-    });
-    var instrArr=Object.keys(instrMap).map(function(k){return{name:k,pnl:instrMap[k].pnl,n:instrMap[k].n,invested:instrMap[k].invested};});
-    instrArr.sort(function(a,b){return Math.abs(b.pnl)-Math.abs(a.pnl);});
-    var top=instrArr.slice(0,4);
-    if(!top.length){instrEl.innerHTML='<div style="color:var(--muted);font-size:.78rem;padding:10px;text-align:center">Nessun dato</div>';}
-    else{
-      var maxAbs=Math.max.apply(null,top.map(function(x){return Math.abs(x.pnl);}));
-      instrEl.innerHTML=top.map(function(x){
-        var pct=maxAbs>0?Math.round(Math.abs(x.pnl)/maxAbs*100):0;
-        var col=x.pnl>=0?'var(--green)':'var(--red)';
-        var sign=x.pnl>=0?'+':'';
-        return '<div style="margin-bottom:10px">'
-          +'<div style="display:flex;justify-content:space-between;margin-bottom:3px">'
-            +'<span style="font-size:.75rem;font-weight:600">'+esc(x.name)+'</span>'
-            +'<span style="font-size:.72rem;font-weight:700;color:'+col+'">'+sign+x.pnl.toFixed(0)+'€</span>'
-          +'</div>'
-          +'<div style="background:var(--bg2);border-radius:99px;height:5px;overflow:hidden">'
-            +'<div style="height:100%;border-radius:99px;background:'+col+';width:'+pct+'%;opacity:.8;transition:width .4s ease"></div>'
-          +'</div>'
-          +'<div style="font-size:.6rem;color:var(--muted);margin-top:2px">'+x.n+' trade'+(x.invested>0?' · '+x.invested.toFixed(0)+'€ inv.':'')+'</div>'
-        +'</div>';
-      }).join('');
-    }
-  }
-
-  // ── TABELLA ──
-  if(!filtered.length){document.getElementById('trade-tbody').innerHTML='<tr class="empty-row"><td colspan="9">Nessun trade — clicca + Trade</td></tr>';}
-  else{
-    var sortedF=filtered.slice().sort(function(a,b){return new Date(b.data)-new Date(a.data);});
-    document.getElementById('trade-tbody').innerHTML=sortedF.map(function(t){
-      var p=Number(t.pnl||0),col=p>0?'var(--paid)':p<0?'var(--red)':'var(--muted2)';
-      var inv=Number(t.invested||0);
-      var roi=inv>0?((p/inv)*100):null;
-      var roiStr=roi!==null?'<span style="font-size:.67rem;color:'+col+'">'+(roi>=0?'+':'')+roi.toFixed(1)+'%</span>':'<span style="color:var(--muted)">—</span>';
-      return '<tr style="cursor:pointer" onclick="openJournalEntry(\''+t.id+'\')">'
-        +'<td>'+esc(t.data||'—')+'</td>'
-        +'<td style="font-weight:600">'+esc(t.str||'—')+'</td>'
-        +'<td><span class="pill '+(t.tipo==='LONG'?'paid':'progress')+'">'+esc(t.tipo)+'</span></td>'
-        +'<td style="color:var(--blue);font-weight:600">'+(inv>0?inv.toFixed(0)+'€':'—')+'</td>'
-        +'<td>'+esc(t.in||'—')+'</td><td>'+esc(t.out||'—')+'</td>'
-        +'<td class="tc" style="font-weight:700;color:'+col+'">'+(p>=0?'+':'')+p.toFixed(2)+'€</td>'
-        +'<td class="tc">'+roiStr+'</td>'
-        +'<td style="white-space:nowrap">'
-          +(t.note||t.lesson?'<button class="btn-icon" title="Journal" onclick="event.stopPropagation();openJournalEntry(\''+t.id+'\')">📓</button>':'')
-          +' <button class="btn-icon" onclick="event.stopPropagation();editTrade(\''+t.id+'\')">✏️</button>'
-          +' <button class="btn-icon" onclick="event.stopPropagation();delTrade(\''+t.id+'\')">🗑</button>'
-        +'</td></tr>';
-    }).join('');
-  }
-
-  // ── JOURNAL SIDEBAR ──
-  renderJournal();
-}
-
-function renderJournal(){
-  var jEl=document.getElementById('trade-journal');
-  var cntEl=document.getElementById('trade-journal-count');
-  if(!jEl)return;
-  var withNote=state.trades.filter(function(t){return t.note||t.lesson||t.strategy;});
-  var sorted=withNote.slice().sort(function(a,b){return new Date(b.data)-new Date(a.data);});
-  if(cntEl)cntEl.textContent=sorted.length+' entr'+(sorted.length===1?'y':'ies');
-  if(!sorted.length){
-    jEl.innerHTML='<div style="text-align:center;padding:32px 12px;color:var(--muted)"><div style="font-size:1.8rem;margin-bottom:8px">📓</div><div style="font-size:.78rem">Aggiungi note ai trade<br>per costruire il tuo journal</div></div>';
-    return;
-  }
-  jEl.innerHTML=sorted.map(function(t){
-    var p=Number(t.pnl||0);
-    var pColor=p>0?'var(--green)':p<0?'var(--red)':'var(--muted2)';
-    var pSign=p>=0?'+':'';
-    var feelEmoji=['','😰','😟','😕','😐','🙂','😊','😁','🤩','💪','🔥'];
-    var fe=Number(t.feel||0);
-    return '<div style="border-bottom:1px solid var(--border);padding:10px 0" id="je-'+t.id+'">'
-      +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">'
-        +'<div style="display:flex;align-items:center;gap:6px">'
-          +'<span style="font-size:.78rem;font-weight:700;color:var(--text)">'+esc(t.str||'?')+'</span>'
-          +'<span class="pill '+(t.tipo==='LONG'?'paid':'progress')+'" style="font-size:.55rem">'+esc(t.tipo)+'</span>'
-        +'</div>'
-        +'<span style="font-size:.78rem;font-weight:700;color:'+pColor+'">'+pSign+p.toFixed(2)+'€</span>'
-      +'</div>'
-      +'<div style="font-size:.63rem;color:var(--muted);margin-bottom:6px">'+esc(t.data||'')+(t.piatt?' · '+esc(t.piatt):'')+(t.strategy?' · <span style="color:var(--orange)">'+esc(t.strategy)+'</span>':'')+(fe>0?' · '+feelEmoji[Math.min(fe,10)]+' '+fe+'/10':'')+'</div>'
-      +(t.note?'<div style="font-size:.75rem;color:var(--muted2);line-height:1.5;margin-bottom:4px;background:var(--card2);border-left:2px solid var(--border2);padding:6px 8px;border-radius:0 6px 6px 0">'+esc(t.note)+'</div>':'')
-      +(t.lesson?'<div style="font-size:.72rem;color:var(--accent);margin-top:4px">💡 '+esc(t.lesson)+'</div>':'')
-    +'</div>';
+    '<div class="stat-box"><div class="stat-val">'+trades.length+'</div><div class="stat-lbl">Operazioni</div></div>'+
+    '<div class="stat-box c-green"><div class="stat-val">'+(best>0?'+':'')+best.toFixed(0)+'€</div><div class="stat-lbl">Miglior trade</div></div>'+
+    '<div class="stat-box c-red"><div class="stat-val">'+worst.toFixed(0)+'€</div><div class="stat-lbl">Peggior trade</div></div>';
+  if(!trades.length){document.getElementById('trade-tbody').innerHTML='<tr class="empty-row"><td colspan="9">Nessun trade — clicca + Trade</td></tr>';return;}
+  var sorted=trades.slice().sort(function(a,b){return new Date(b.data)-new Date(a.data);});
+  document.getElementById('trade-tbody').innerHTML=sorted.map(function(t){
+    var p=Number(t.pnl||0),col=p>0?'var(--paid)':p<0?'var(--red)':'var(--muted2)';
+    return '<tr><td>'+esc(t.data||'—')+'</td><td style="font-weight:600">'+esc(t.str||'—')+'</td>'
+      +'<td><span class="pill '+(t.tipo==='LONG'?'paid':'progress')+'">'+esc(t.tipo)+'</span></td>'
+      +'<td><div class="cell-sub">'+esc(t.piatt||'—')+'</div></td>'
+      +'<td>'+esc(t.in||'—')+'</td><td>'+esc(t.out||'—')+'</td><td>'+esc(t.qty||'—')+'</td>'
+      +'<td class="tc" style="font-weight:700;color:'+col+'">'+fmtE(p)+'</td>'
+      +'<td><button class="btn-icon" onclick="delTrade(\''+t.id+'\')">🗑</button></td></tr>';
   }).join('');
 }
-
-function openJournalEntry(id){
-  // scroll journal sidebar to entry
-  var el=document.getElementById('je-'+id);
-  if(el)el.scrollIntoView({behavior:'smooth',block:'nearest'});
-}
-
-function openModal(type){
-  var map={
-    'client':'ov-client','trade':'ov-trade','obiettivo':'ov-obiettivo',
-    'workout':'ov-workout','workout-pr':'ov-workout-pr',
-    'mont-lavoro':'ov-mont-lavoro','mont-spesa':'ov-mont-spesa',
-    'fin-goal':'ov-fin-goal','tolc-materia':'ov-tolc-materia','tolc-sessione':'ov-tolc-sessione',
-    'tolc-log':'ov-tolc-log'
-  };
-  var id=map[type];if(!id)return;
-  if(type==='client'){
-    state.editClientId=null;
-    document.getElementById('client-title').textContent='Nuovo Cliente';
-    document.getElementById('c-save').textContent='Salva';
-    document.getElementById('c-name').value='';document.getElementById('c-phone').value='';
-    document.getElementById('c-note').value='';document.getElementById('c-scad').value='';
-    document.getElementById('c-anno').value='2026';
-    buildAppsGrid([]);
-  }
-  if(type==='trade'){
-    state.editTradeId=null;
-    document.getElementById('trade-modal-title').textContent='Nuovo Trade';
-    document.getElementById('t-save-btn').textContent='Salva';
-    document.getElementById('t-data').value=new Date().toISOString().split('T')[0];
-    ['t-str','t-piatt','t-in','t-out','t-qty','t-pnl','t-note','t-invested','t-feel','t-strategy','t-lesson'].forEach(function(x){document.getElementById(x).value='';});
-  }
-  if(type==='workout'){document.getElementById('wo-data').value=new Date().toISOString().split('T')[0];}
-  if(type==='mont-spesa'){document.getElementById('ms-data').value=new Date().toISOString().split('T')[0];}
-  if(type==='tolc-sessione'){document.getElementById('ts-data').value=new Date().toISOString().split('T')[0];}
-  if(type==='tolc-log'){document.getElementById('tl-data').value=new Date().toISOString().split('T')[0];}
-  document.getElementById(id).classList.add('open');
-  setTimeout(function(){var inp=document.querySelector('#'+id+' input[type=text],#'+id+' input[type=number]');if(inp)inp.focus();},100);
-}
-function closeModal(id){document.getElementById(id).classList.remove('open');}
-function closeOv(e,id){if(e.target===document.getElementById(id))closeModal(id);}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.overlay.open').forEach(function(el){el.classList.remove('open');});});
-
 function saveTrade(){
   var str=document.getElementById('t-str').value.trim();if(!str){showToast('⚠️ Inserisci strumento');return;}
-  var obj={
-    id:state.editTradeId||uid(),
-    data:document.getElementById('t-data').value,
-    str:str,
-    tipo:document.getElementById('t-tipo').value,
-    piatt:document.getElementById('t-piatt').value,
-    invested:document.getElementById('t-invested').value,
-    in:document.getElementById('t-in').value,
-    out:document.getElementById('t-out').value,
-    qty:document.getElementById('t-qty').value,
-    pnl:document.getElementById('t-pnl').value,
-    feel:document.getElementById('t-feel').value,
-    strategy:document.getElementById('t-strategy').value,
-    note:document.getElementById('t-note').value,
-    lesson:document.getElementById('t-lesson').value
-  };
-  if(state.editTradeId){
-    var idx=state.trades.findIndex(function(t){return t.id===state.editTradeId;});
-    if(idx>=0)state.trades[idx]=obj;
-    showToast('✅ Trade aggiornato');
-  }else{
-    state.trades.unshift(obj);
-    showToast('✅ Trade salvato');
-  }
-  state.editTradeId=null;
-  save();closeModal('ov-trade');renderTrading();
-}
-function editTrade(id){
-  var t=state.trades.find(function(x){return x.id===id;});if(!t)return;
-  state.editTradeId=id;
-  document.getElementById('trade-modal-title').textContent='Modifica Trade';
-  document.getElementById('t-save-btn').textContent='Salva modifiche';
-  document.getElementById('t-data').value=t.data||'';
-  document.getElementById('t-str').value=t.str||'';
-  document.getElementById('t-tipo').value=t.tipo||'LONG';
-  document.getElementById('t-piatt').value=t.piatt||'';
-  document.getElementById('t-invested').value=t.invested||'';
-  document.getElementById('t-in').value=t.in||'';
-  document.getElementById('t-out').value=t.out||'';
-  document.getElementById('t-qty').value=t.qty||'';
-  document.getElementById('t-pnl').value=t.pnl||'';
-  document.getElementById('t-feel').value=t.feel||'';
-  document.getElementById('t-strategy').value=t.strategy||'';
-  document.getElementById('t-note').value=t.note||'';
-  document.getElementById('t-lesson').value=t.lesson||'';
-  document.getElementById('ov-trade').classList.add('open');
+  state.trades.unshift({id:uid(),data:document.getElementById('t-data').value,str:str,tipo:document.getElementById('t-tipo').value,piatt:document.getElementById('t-piatt').value,in:document.getElementById('t-in').value,out:document.getElementById('t-out').value,qty:document.getElementById('t-qty').value,pnl:document.getElementById('t-pnl').value,note:document.getElementById('t-note').value});
+  save();closeModal('ov-trade');renderTrading();showToast('✅ Trade salvato');
 }
 function delTrade(id){if(!confirm('Eliminare?'))return;state.trades=state.trades.filter(function(t){return t.id!==id;});save();renderTrading();}
-document.getElementById('trade-filter-tipo').addEventListener('change',function(){renderTrading();});
 
 // ── SOCIAL ──
 function autoSaveSocial(){
@@ -1236,12 +957,12 @@ function delObiettivo(id){if(!confirm('Eliminare?'))return;state.obiettivi=state
 
 // ── TOLC ──
 var TOLC_PIANO=[
-  {sett:1,titolo:'Basi matematica',ore:'60 min mat + 30 min logica',argomenti:['Percentuali e proporzioni','Equazioni 1° grado','Disequazioni','Frazioni e potenze'],risorse:'youmath.it'},
-  {sett:2,titolo:'Geometria e algebra',ore:'60 min mat + 30 min logica',argomenti:['Geometria base','Equazioni 2° grado','Sistemi di equazioni'],risorse:'youmath.it'},
-  {sett:3,titolo:'Argomenti avanzati',ore:'60 min mat + 30 min simulazione',argomenti:['Probabilità','Funzioni e grafici','Progressioni'],risorse:'youmath.it + tolc.cisia.eu'},
-  {sett:4,titolo:'Simulazioni intensive',ore:'45 min sim + 45 min correzione',argomenti:['Simulazione completa ogni giorno','Correzione errori matematica'],risorse:'tolc.cisia.eu'},
-  {sett:5,titolo:'Solo simulazioni',ore:'45 min sim + 45 min correzione',argomenti:['Simulazione completa','Revisione errori'],risorse:'tolc.cisia.eu'},
-  {sett:6,titolo:'Scarico e mantenimento',ore:'30 min max',argomenti:['Simulazione ogni 2 giorni','Solo logica e comprensione','Ultimi 3 gg: niente matematica'],risorse:'Ripasso leggero'},
+  {sett:1,titolo:'Aritmetica e Algebra',ore:'60 min mat + 30 min logica',argomenti:['Frazioni e percentuali','Potenze e radici','Polinomi','Equazioni I e II grado','Disequazioni I e II grado'],risorse:'youmath.it — teoria + esercizi'},
+  {sett:2,titolo:'Geometria + Funzioni',ore:'60 min mat + 30 min logica',argomenti:['Equazione della retta','Parallelismo e perpendicolarità','Aree e volumi','Esponenziali e logaritmi'],risorse:'youmath.it'},
+  {sett:3,titolo:'Statistica + Prime simulazioni',ore:'45 min mat + 45 min simulazione',argomenti:['Statistica base (media, mediana, moda)','Probabilità elementare','Prime simulazioni complete su CISIA'],risorse:'youmath.it + tolc.cisia.eu'},
+  {sett:4,titolo:'Simulazioni intensive',ore:'45 min sim + 45 min correzione',argomenti:['Simulazione completa ogni giorno','Correzione errori matematica','Rinforzo argomenti sbagliati'],risorse:'tolc.cisia.eu — test ufficiali CISIA'},
+  {sett:5,titolo:'Solo simulazioni',ore:'45 min sim + 45 min correzione',argomenti:['Simulazione completa','Analisi errori ricorrenti','Revisione SOLO argomenti sbagliati'],risorse:'tolc.cisia.eu'},
+  {sett:6,titolo:'Scarico — ultimi giorni',ore:'30 min max',argomenti:['Logica e comprensione del testo','Zero matematica ultimi 2 giorni','Giorno esame: solo riposo'],risorse:'Ripasso leggero — non sovraccaricare'},
 ];
 function getTolcWeek(){
   if(!state.tolc.nextDate)return 1;
