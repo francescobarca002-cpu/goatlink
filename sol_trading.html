@@ -144,13 +144,13 @@ canvas{border-radius:6px}
         <span>📈 Prezzo SOL — ultimi 90 giorni</span>
         <span id="chart-ma-legend" style="font-size:.65rem;color:var(--muted2)"></span>
       </div>
-      <canvas id="priceChart" height="180"></canvas>
+      <canvas id="priceChart" height="180" style="width:100%;display:block"></canvas>
     </div>
 
     <!-- MACD CHART -->
     <div class="chart-card">
       <div class="chart-title">MACD</div>
-      <canvas id="macdChart" height="100"></canvas>
+      <canvas id="macdChart" height="100" style="width:100%;display:block"></canvas>
     </div>
 
     <!-- INDICATORS TABLE -->
@@ -259,17 +259,17 @@ async function fetchAll() {
 // ── COINGECKO PRICE ──
 async function fetchPrice() {
   try {
-    // Dati correnti
-    const r1 = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd&include_24hr_change=true&include_24hr_vol=true&include_market_cap=true&include_high_24h=true&include_low_24h=true');
+    // Dati correnti via /coins/solana per avere high/low 24h
+    const r1 = await fetch('https://api.coingecko.com/api/v3/coins/solana?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false');
     const d1 = await r1.json();
-    const sol = d1.solana;
+    const mkt = d1.market_data;
     state.current = {
-      price: sol.usd,
-      change24h: sol.usd_24h_change,
-      vol24h: sol.usd_24h_vol,
-      mc: sol.usd_market_cap,
-      high24h: sol.usd_24h_high,
-      low24h: sol.usd_24h_low
+      price: mkt.current_price.usd,
+      change24h: mkt.price_change_percentage_24h || 0,
+      vol24h: mkt.total_volume.usd || 0,
+      mc: mkt.market_cap.usd || 0,
+      high24h: mkt.high_24h.usd || mkt.current_price.usd,
+      low24h: mkt.low_24h.usd || mkt.current_price.usd
     };
 
     // Storico 90 giorni
@@ -289,6 +289,8 @@ async function fetchFearGreed() {
     state.fg = d.data;
   } catch(e) {
     console.error('FG fetch error:', e);
+    // Fallback neutro
+    state.fg = [{value:'50',value_classification:'Neutral'},{value:'50',value_classification:'Neutral'}];
   }
 }
 
@@ -469,10 +471,13 @@ function render() {
   renderStats();
   renderIndicators();
   renderSentiment();
-  renderChart();
-  renderMACDChart();
   updateBtcDom();
   updateEthBtc();
+  // Delay chart render per assicurare dimensioni DOM corrette
+  setTimeout(function() {
+    renderChart();
+    renderMACDChart();
+  }, 50);
 }
 
 function renderPrice() {
@@ -654,7 +659,8 @@ function renderChart() {
   if (!state.prices.length) return;
   var canvas = document.getElementById('priceChart');
   var ctx = canvas.getContext('2d');
-  canvas.width = canvas.offsetWidth || 700;
+  var parent = canvas.parentElement;
+  canvas.width = (parent ? parent.clientWidth - 28 : 700) || 700;
   canvas.height = 180;
 
   var prices = state.prices.map(p => p.price);
@@ -746,7 +752,8 @@ function renderMACDChart() {
   if (!state.indicators.macd) return;
   var canvas = document.getElementById('macdChart');
   var ctx = canvas.getContext('2d');
-  canvas.width = canvas.offsetWidth || 700;
+  var parent = canvas.parentElement;
+  canvas.width = (parent ? parent.clientWidth - 28 : 700) || 700;
   canvas.height = 100;
 
   var hist = state.indicators.macd.hist;
