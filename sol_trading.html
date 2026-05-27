@@ -111,6 +111,7 @@ canvas{border-radius:6px}
 /* ERROR */
 .error-box{background:rgba(245,72,72,.08);border:1px solid rgba(245,72,72,.2);border-radius:8px;padding:12px;color:var(--red);font-size:.78rem;margin-bottom:10px}
 
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
@@ -123,7 +124,7 @@ canvas{border-radius:6px}
   <div class="price-hero">
     <div class="sol-price" id="sol-price">—</div>
     <div class="sol-change" id="sol-change">—</div>
-    <div class="last-update" id="last-update">Aggiornamento...</div>
+    <div style="display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite"></div><div class="last-update" id="last-update">Aggiornamento...</div></div>
   </div>
   <button class="btn-refresh" onclick="fetchAll()">↻ Aggiorna</button>
 </div>
@@ -144,13 +145,13 @@ canvas{border-radius:6px}
         <span>📈 Prezzo SOL — ultimi 90 giorni</span>
         <span id="chart-ma-legend" style="font-size:.65rem;color:var(--muted2)"></span>
       </div>
-      <canvas id="priceChart" height="180"></canvas>
+      <canvas id="priceChart" height="180" style="width:100%;display:block"></canvas>
     </div>
 
     <!-- MACD CHART -->
     <div class="chart-card">
       <div class="chart-title">MACD</div>
-      <canvas id="macdChart" height="100"></canvas>
+      <canvas id="macdChart" height="100" style="width:100%;display:block"></canvas>
     </div>
 
     <!-- INDICATORS TABLE -->
@@ -224,7 +225,7 @@ canvas{border-radius:6px}
     <div class="sim-card">
       <div class="sim-title">🎯 Simulatore P&L</div>
       <div class="field"><label>Capitale (€)</label><input type="number" id="sim-cap" value="1000" placeholder="1000"></div>
-      <div class="field"><label>Prezzo entrata ($)</label><input type="number" id="sim-entry" placeholder="Prezzo attuale" step="0.01"></div>
+      <div class="field"><label>Prezzo entrata ($)</label><input type="number" id="sim-entry" placeholder="Prezzo attuale" step="0.01" oninput="this.dataset.userSet='1'"></div>
       <div class="field"><label>Target uscita ($)</label><input type="number" id="sim-target" placeholder="Target" step="0.01"></div>
       <div class="field"><label>Stop loss ($)</label><input type="number" id="sim-stop" placeholder="Stop loss" step="0.01"></div>
       <button class="btn-calc" onclick="calcSim()">Calcola</button>
@@ -250,26 +251,27 @@ async function fetchAll() {
   calcIndicators();
   render();
   document.getElementById('last-update').textContent = 'Aggiornato: ' + new Date().toLocaleTimeString('it-IT');
-  // Auto-fill simulatore
-  if (state.current && !document.getElementById('sim-entry').value) {
-    document.getElementById('sim-entry').value = state.current.price.toFixed(2);
+  // Auto-fill simulatore con prezzo corrente se non modificato dall'utente
+  var simEntry = document.getElementById('sim-entry');
+  if (state.current && simEntry && !simEntry.dataset.userSet) {
+    simEntry.value = state.current.price.toFixed(2);
   }
 }
 
 // ── COINGECKO PRICE ──
 async function fetchPrice() {
   try {
-    // Dati correnti
-    const r1 = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd&include_24hr_change=true&include_24hr_vol=true&include_market_cap=true&include_high_24h=true&include_low_24h=true');
+    // Dati correnti via /coins/solana per avere high/low 24h
+    const r1 = await fetch('https://api.coingecko.com/api/v3/coins/solana?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false');
     const d1 = await r1.json();
-    const sol = d1.solana;
+    const mkt = d1.market_data;
     state.current = {
-      price: sol.usd,
-      change24h: sol.usd_24h_change,
-      vol24h: sol.usd_24h_vol,
-      mc: sol.usd_market_cap,
-      high24h: sol.usd_24h_high,
-      low24h: sol.usd_24h_low
+      price: mkt.current_price.usd,
+      change24h: mkt.price_change_percentage_24h || 0,
+      vol24h: mkt.total_volume.usd || 0,
+      mc: mkt.market_cap.usd || 0,
+      high24h: mkt.high_24h.usd || mkt.current_price.usd,
+      low24h: mkt.low_24h.usd || mkt.current_price.usd
     };
 
     // Storico 90 giorni
@@ -289,6 +291,8 @@ async function fetchFearGreed() {
     state.fg = d.data;
   } catch(e) {
     console.error('FG fetch error:', e);
+    // Fallback neutro
+    state.fg = [{value:'50',value_classification:'Neutral'},{value:'50',value_classification:'Neutral'}];
   }
 }
 
@@ -469,10 +473,13 @@ function render() {
   renderStats();
   renderIndicators();
   renderSentiment();
-  renderChart();
-  renderMACDChart();
   updateBtcDom();
   updateEthBtc();
+  // Delay chart render per assicurare dimensioni DOM corrette
+  setTimeout(function() {
+    renderChart();
+    renderMACDChart();
+  }, 50);
 }
 
 function renderPrice() {
@@ -654,7 +661,8 @@ function renderChart() {
   if (!state.prices.length) return;
   var canvas = document.getElementById('priceChart');
   var ctx = canvas.getContext('2d');
-  canvas.width = canvas.offsetWidth || 700;
+  var parent = canvas.parentElement;
+  canvas.width = (parent ? parent.clientWidth - 28 : 700) || 700;
   canvas.height = 180;
 
   var prices = state.prices.map(p => p.price);
@@ -746,7 +754,8 @@ function renderMACDChart() {
   if (!state.indicators.macd) return;
   var canvas = document.getElementById('macdChart');
   var ctx = canvas.getContext('2d');
-  canvas.width = canvas.offsetWidth || 700;
+  var parent = canvas.parentElement;
+  canvas.width = (parent ? parent.clientWidth - 28 : 700) || 700;
   canvas.height = 100;
 
   var hist = state.indicators.macd.hist;
@@ -871,11 +880,55 @@ function calcAltseasonBanner() {
 }
 
 // ── INIT ──
-// Pre-fill simulator with current price when available
-window.addEventListener('resize', () => { if (state.prices.length) { renderChart(); renderMACDChart(); }});
+// Resize con debounce
+var resizeTimer;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    if (state.prices.length) { renderChart(); renderMACDChart(); }
+  }, 150);
+});
+
+// Countdown display
+function startCountdown() {
+  var left = 30;
+  var el = document.getElementById('last-update');
+  clearInterval(window._cdTimer);
+  window._cdTimer = setInterval(function() {
+    left--;
+    if (left <= 0) { left = 30; fetchPriceOnly(); }
+    if (el) el.textContent = 'Prezzo: ' + left + 's | Storico: ogni 5min';
+  }, 1000);
+}
+
+// Fetch prezzo veloce ogni 30 secondi
+async function fetchPriceOnly() {
+  try {
+    var r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd&include_24hr_change=true&include_24hr_vol=true&include_market_cap=true&include_high_24h=true&include_low_24h=true');
+    var d = await r.json();
+    var sol = d.solana;
+    if (state.current) {
+      state.current.price = sol.usd;
+      state.current.change24h = sol.usd_24h_change || 0;
+      state.current.vol24h = sol.usd_24h_vol || 0;
+      state.current.mc = sol.usd_market_cap || 0;
+    }
+    renderPrice();
+    renderStats();
+    // Flash prezzo
+    var pe = document.getElementById('sol-price');
+    if (pe) { pe.style.color = 'var(--accent)'; setTimeout(function(){ pe.style.color = ''; }, 400); }
+    // Auto-fill sim
+    var se = document.getElementById('sim-entry');
+    if (se && !se.dataset.userSet) se.value = sol.usd.toFixed(2);
+  } catch(e) { console.error('Quick fetch:', e); }
+}
+
+// Avvio
 fetchAll();
 updateEthBtc();
-// Auto-refresh every 5 minutes
+setTimeout(startCountdown, 3000);
+// Refresh completo ogni 5 minuti
 setInterval(fetchAll, 300000);
 </script>
 </body>
