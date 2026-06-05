@@ -1,0 +1,26 @@
+GOATLINK — VERSIONE A PROVA DI ERRORE
+======================================
+Tutti i file stanno nello STESSO livello (nessuna sottocartella).
+Cosi' il caricamento non puo' rompere la struttura: e' impossibile sbagliare.
+
+SU GITHUB (repo collegato a Vercel)
+-----------------------------------
+1. Apri il tuo repo su github.com.
+2. Cancella i file vecchi:
+   - Per la cartella "bonus": aprila, elimina i file dentro, cosi' sparisce.
+   - In alternativa lascia stare: i nuovi file la ignorano comunque.
+   Il file importante e' che la HOME e le guide siano in radice.
+3. "Add file" -> "Upload files".
+4. Trascina TUTTI i file di questa cartella (NON la cartella, i file dentro).
+5. "Commit changes".
+
+Vercel ricostruisce da solo in 1-2 minuti.
+
+VERIFICA
+--------
+Apri goatlink.it con CTRL+F5.
+- La home mostra i bonus.
+- Clicchi una card -> si apre la guida (es. goatlink.it/buddybank.html).
+
+Se una guida non si apre, controlla che il file (es. buddybank.html)
+sia presente in radice nel repo.
