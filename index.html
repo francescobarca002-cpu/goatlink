@@ -302,7 +302,7 @@
 
 <section class="hero">
   <div class="wrap">
-    <span class="pill"><span class="pulse"></span> Verificati · aggiornati maggio 2026</span>
+    <span class="pill"><span class="pulse"></span> Verificati · aggiornati <span id="badge-mese">giugno 2026</span></span>
     <h1 class="tech"><span class="l1">BONUS REALI.</span><br><span class="l2 glitch" data-text="SPIEGATI BENE.">SPIEGATI BENE.</span></h1>
     <p class="lead">GoatLink raccoglie le promozioni referral ufficiali di banche, fintech e crypto. Ogni guida è verificata e spiegata passo-passo.</p>
     <p class="note">I bonus sono finanziati dalle aziende. Per te nessun costo: paghi solo l'eventuale deposito minimo indicato.</p>
@@ -381,7 +381,7 @@
     <div class="cols">
       <div>
         <div class="logo" style="margin-bottom:12px">GOAT<span class="a">LINK</span></div>
-        <div class="disclaimer">GoatLink raccoglie promozioni ufficiali di terze parti, finanziate direttamente dalle aziende. Non siamo affiliati con i marchi citati. I prodotti finanziari e crypto comportano rischi; le informazioni su questo sito non costituiscono consulenza finanziaria o fiscale. Aggiornato: maggio 2026.</div>
+        <div class="disclaimer">GoatLink raccoglie promozioni ufficiali di terze parti, finanziate direttamente dalle aziende. Non siamo affiliati con i marchi citati. I prodotti finanziari e crypto comportano rischi; le informazioni su questo sito non costituiscono consulenza finanziaria o fiscale. Aggiornato: giugno 2026.</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px">
         <a href="privacy.html">Privacy Policy</a>
@@ -463,6 +463,14 @@ if(expired.length){
 
 document.querySelectorAll('.faq-q').forEach(q=>q.onclick=()=>q.parentNode.classList.toggle('open'));
 requestAnimationFrame(()=>document.body.classList.add('animate'));
+
+// Badge "aggiornati [mese]" sempre al mese corrente
+(function(){
+  const mesi=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+  const ora=new Date();
+  const el=document.getElementById('badge-mese');
+  if(el) el.textContent = mesi[ora.getMonth()] + ' ' + ora.getFullYear();
+})();
 
 // ===== SWAG JS =====
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
