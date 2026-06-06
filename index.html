@@ -208,6 +208,15 @@
 
   /* ===== SWAG LAYER ===== */
 
+  /* Sezione "Tornano presto" — card spente */
+  .grid-soon .card-expired .card-inner{filter:grayscale(.7) brightness(.82);opacity:.85;transition:.25s}
+  .grid-soon .card-expired:hover .card-inner{filter:grayscale(.2) brightness(.95);opacity:1}
+  .grid-soon .card-expired{filter:none}
+  .badge.ended{background:linear-gradient(90deg,#6d6a92,#4a4870)!important;color:#ececf6!important;box-shadow:none!important;animation:none!important}
+  .go-soon{color:var(--gold)!important;cursor:pointer}
+  .grid-soon .amount{background:linear-gradient(90deg,#9a98bd,#6d6a92)!important;-webkit-background-clip:text;background-clip:text}
+  .sec.soon{opacity:.96}
+
   /* orbs fluttuanti dietro l'hero */
   .orb{position:fixed;border-radius:50%;filter:blur(70px);z-index:-2;pointer-events:none;opacity:.32;mix-blend-mode:screen}
   .orb.o1{width:420px;height:420px;background:var(--magenta);top:-80px;left:-120px;animation:drift1 18s ease-in-out infinite}
@@ -322,6 +331,15 @@
   </div>
 </section>
 
+<section class="sec soon" id="tornano-presto" style="display:none">
+  <div class="wrap">
+    <div class="eyebrow">/// Archivio promo</div>
+    <h2 class="tech">Tornano presto</h2>
+    <p class="sub">Promo terminate che spesso vengono riproposte. Fatti avvisare quando ripartono.</p>
+    <div class="grid grid-soon" id="grid-soon"></div>
+  </div>
+</section>
+
 <section class="sec how" id="come-funziona">
   <div class="wrap">
     <div class="eyebrow">/// Il processo</div>
@@ -423,6 +441,24 @@ function render(){
   grid.innerHTML = list.map(card).join('');
 }
 render();
+
+// ===== Sezione "Tornano presto" (bonus scaduti) =====
+const expired = BONUSES.filter(b => bonusStatus(b) === 'expired');
+function cardSoon(b){
+  return `<a class="card card-expired" href="${b.slug}.html"><div class="card-inner"><span class="shine"></span>
+    <span class="badge ended">Terminata</span>
+    <div class="card-top">
+      <div class="brand">${icon(b)}<div><div class="nm">${b.name}</div><div class="cat">${b.category}</div></div></div>
+      <div class="amount">${b.amountLabel}<small>era ${b.payout}</small></div>
+    </div>
+    <div class="desc">${b.summary}</div>
+    <div class="go go-soon" onclick="event.preventDefault();window.location.href='https://wa.me/393421619836?text=${encodeURIComponent('Avvisami quando torna '+b.name)}'">🔔 Avvisami quando torna <span class="arr">→</span></div>
+  </div></a>`;
+}
+if(expired.length){
+  document.getElementById('grid-soon').innerHTML = expired.map(cardSoon).join('');
+  document.getElementById('tornano-presto').style.display = '';
+}
 
 document.querySelectorAll('.faq-q').forEach(q=>q.onclick=()=>q.parentNode.classList.toggle('open'));
 requestAnimationFrame(()=>document.body.classList.add('animate'));
