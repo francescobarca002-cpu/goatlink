@@ -214,7 +214,8 @@
   .grid-soon .card-expired{filter:none}
   .badge.ended{background:linear-gradient(90deg,#6d6a92,#4a4870)!important;color:#ececf6!important;box-shadow:none!important;animation:none!important}
   .go-soon{color:var(--gold)!important;cursor:pointer}
-  .grid-soon .amount{background:linear-gradient(90deg,#9a98bd,#6d6a92)!important;-webkit-background-clip:text;background-clip:text}
+  .grid-soon .amount{background:none!important;-webkit-text-fill-color:#c4c2dd!important;color:#c4c2dd!important;-webkit-background-clip:initial!important;background-clip:initial!important}
+  .grid-soon .amount small{color:var(--ink-faint)!important}
   .sec.soon{opacity:.96}
 
   /* orbs fluttuanti dietro l'hero */
@@ -487,7 +488,7 @@ if(window.matchMedia('(hover:hover) and (pointer:fine)').matches && !reduce){
   const dot=document.querySelector('.cursor-dot'), ring=document.querySelector('.cursor-ring');
   let mx=0,my=0,rx=0,ry=0;
   addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
-  (function loop(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+  (function loop(){rx+=(mx-rx)*.35;ry+=(my-ry)*.35;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
   const hot='a,button,.chip,.card,.faq-q';
   document.addEventListener('mouseover',e=>{if(e.target.closest(hot))document.body.classList.add('cursor-hot');});
   document.addEventListener('mouseout',e=>{if(e.target.closest(hot))document.body.classList.remove('cursor-hot');});
