@@ -414,29 +414,17 @@ const BONUSES = [
     amountLabel: "10 USDC",
     minutes: 15,
     difficulty: "Medio",
-    badge: "Promo flash",
+    badge: null,
     payout: "Voucher entro 48h",
     deposit: "Deposito + trading min. 50€",
-    expires: "2026-06-15",   // data realistica futura per il prototipo
-    updated: "2026-05-29",
+    expires: "2026-06-11",   // promo dismessa il 12/06 (data del prototipo mai verificata): pagina in pausa
+    updated: "2026-06-12",
     featured: false,
-    summary: "Promo a tempo: deposita e fai trading per almeno 50€, poi clicca «Partecipa alla campagna». 10 USDC via voucher entro 48h.",
+    summary: "10 USDC con deposito e trading min. 50€. Promo terminata.",
     code: null,
-    steps: [
-      "Registrati su Binance tramite il link GoatLink.",
-      "Completa la verifica identità (KYC).",
-      "Deposita almeno 50€ equivalenti (USDT, BTC, ETH o fiat).",
-      "Fai trading per almeno 50€ equivalenti.",
-      "Clicca di nuovo sul link e seleziona <strong>«Partecipa alla campagna»</strong> (fondamentale).",
-      "Apri la Reward Box nel Centro Ricompense: il voucher arriva entro 48h."
-    ],
-    rules_ok: [
-      "Accedi sempre dalla pagina promo tramite il link GoatLink"
-    ],
-    rules_ko: [
-      "Non cliccare «Partecipa alla campagna»: il bonus non si attiva anche se hai i requisiti",
-      "Aspettare troppo: il voucher scade entro 21 giorni dalla distribuzione"
-    ]
+    steps: [],
+    rules_ok: [],
+    rules_ko: []
   },
   // ---- Scaduti: restano nei dati ma con expires nel passato ----
   {
