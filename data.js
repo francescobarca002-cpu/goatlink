@@ -100,7 +100,7 @@ const BONUSES = [
     updated: "2026-06-08",
     featured: false,
     summary: "Sconto di 15€ sul primo trasferimento internazionale da almeno 150€ con Skrill Money Transfer, usando il codice promo. Invitando fino a 50 amici puoi arrivare a 750€.",
-    code: "nicoloi18",
+    code: null,
     steps: [
       "Apri Skrill Money Transfer da <strong>web</strong> (non dall'app) e crea l'account.",
       "Accedi e imposta un <strong>trasferimento internazionale</strong> verso un conto bancario compatibile.",
@@ -139,7 +139,7 @@ const BONUSES = [
     updated: "2026-06-08",
     featured: false,
     summary: "Apri un nuovo conto Fineco col codice amico entro il 30/06 e fai 5 operazioni di trading entro il 31/08. 50€ di bonus. Invitando fino a 20 amici l'anno puoi arrivare a 1.000€.",
-    code: "AA6612948",
+    code: null,
     steps: [
       "Apri un <strong>nuovo conto Fineco</strong> e inserisci il codice amico durante l'iscrizione.",
       "Completa l'apertura del conto entro il <strong>30/06/2026</strong>.",
@@ -177,7 +177,7 @@ const BONUSES = [
     updated: "2026-05-28",
     featured: true,
     summary: "Apri il conto Buddybank, inserisci il codice amico e fai un pagamento da almeno 10€ con la carta MyOne. 50€ accreditati entro 7–14 giorni.",
-    code: "B2601MD29S8CUL",
+    code: null,
     steps: [
       "Richiedi la carta di debito <strong>MyOne</strong> e seleziona <strong>solo digitale</strong>.",
       "Inserisci <strong>subito</strong> il codice amico (non potrai inserirlo dopo).",
