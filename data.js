@@ -319,7 +319,7 @@ const BONUSES = [
     updated: "2026-05-28",
     featured: false,
     summary: "Scarica l'app, inserisci il codice promo Passaparola e fai una spesa di qualsiasi importo. 10€ entro 2 giorni lavorativi.",
-    code: "1E550060F05890",
+    code: null,
     steps: [
       "Scarica l'app BBVA.",
       "Al quarto passaggio inserisci il codice promo.",
@@ -352,7 +352,7 @@ const BONUSES = [
     updated: "2026-05-25",
     featured: false,
     summary: "Registrati come nuovo utente, inserisci il codice referral e ricarica almeno 20€ entro 30 giorni. Bonus 10€ cumulabile con gli inviti.",
-    code: "QJSX3Q",
+    code: null,
     steps: [
       "Scarica l'app Tinaba e registrati come nuovo utente.",
       "Inserisci il codice referral durante la registrazione.",
@@ -456,7 +456,7 @@ const BONUSES = [
     updated: "2026-05-15",
     featured: false,
     summary: "30€ in Buono Amazon, senza deposito. Promo terminata.",
-    code: "L7I1TUWQOI",
+    code: null,
     steps: [],
     rules_ok: [],
     rules_ko: []
