@@ -1,139 +1,476 @@
 // ============================================================
-// Contenuti editoriali per pagina bonus: FAQ + Pro/Contro + verdetto.
-// Servono per il long-tail SEO e per i rich results (FAQPage schema).
-// Modifica qui i testi; build.js li unisce ai dati di data.js per slug.
+// GoatLink — SORGENTE UNICA DI VERITÀ
+// Modifica SOLO questo file per aggiornare l'intero sito.
+// Le card in home e le pagine guida leggono tutte da qui.
 // ============================================================
 
-const CONTENT = {
-  fineco: {
-    verdict: "50€ con una banca italiana solida e conosciuta. Il metodo consigliato (5 operazioni di trading) è furbo perché non richiede accredito stipendio né di tenere grossi importi sul conto: bastano piccole operazioni a mercato aperto. Da tenere d'occhio le scadenze, che sono più articolate del solito, e la conferma del bonus a novembre da non dimenticare.",
-    pros: ["50€ con una banca italiana affidabile", "Il metodo dei 5 trade non richiede stipendio né grossi importi", "Inviti molto remunerativi: fino a 1.000€ l'anno con 20 amici"],
-    cons: ["Più scadenze da rispettare (apertura, trade, conferma)", "Le operazioni vanno fatte solo a mercato aperto", "Va ricordata la conferma del bonus tra il 2 e il 30 novembre 2026"],
-    faq: [
-      {q: "Come si ottengono i 50€ di Fineco?", a: "Apri un nuovo conto col codice amico entro il 30/06/2026, poi fai 5 operazioni di trading entro il 31/08/2026. Il bonus va confermato nell'area riservata a partire dal 02/11/2026."},
-      {q: "Devo accreditare lo stipendio per il bonus Fineco?", a: "No. Il metodo consigliato è quello delle 5 operazioni di trading, che non richiede accredito stipendio o pensione né di mantenere grossi importi sul conto."},
-      {q: "Quando devo confermare il bonus Fineco?", a: "Fineco rende disponibile la conferma nell'area riservata dal 02/11/2026, e va confermata entro il 30/11/2026. Se non confermi entro quella data il bonus potrebbe non essere riconosciuto."},
-      {q: "Quanti amici posso invitare con Fineco?", a: "50€ per ogni amico valido, fino a un massimo di 20 inviti all'anno: quindi fino a 1.000€ annui. Attenzione: i 20 inviti sono il totale annuo, non per singola promo."}
-    ]
-  },
-  skrill: {
-    verdict: "Attenzione a cosa è davvero: qui i 15€ non sono denaro netto in tasca, ma uno sconto sulle commissioni di un trasferimento internazionale che devi comunque voler fare. Mandi 150€ all'estero e ne paghi circa 135 — il vantaggio reale è quel risparmio. Ha senso se hai già un motivo per trasferire denaro cross-border; la parte interessante sono gli inviti, che possono valere fino a 750€.",
-    pros: ["Sconto immediato di 15€ sul primo trasferimento", "Inviti molto remunerativi: 15€ per amico, fino a 750€", "Nessuna scadenza nota: promo attiva finché disponibile"],
-    cons: ["Non è denaro netto: è uno sconto su un trasferimento da almeno 150€", "Devi avere un reale motivo per fare un trasferimento internazionale", "Va fatto da web (non dall'app) e con un conto di ricezione compatibile"],
-    faq: [
-      {q: "Il bonus Skrill sono 15€ gratis?", a: "Non esattamente: sono 15€ di sconto sul primo trasferimento internazionale da almeno 150€. Trasferisci 150€ pagandone circa 135, quindi il vantaggio reale è il risparmio di 15€."},
-      {q: "Dove si inserisce il codice promo Skrill?", a: "Durante il trasferimento, nel campo «Codice promozionale» — non in fase di creazione dell'account. Verifica che lo sconto sia applicato prima di confermare."},
-      {q: "Quali conti posso usare con Skrill Money Transfer?", a: "In partenza Revolut o qualsiasi conto bancario; in ricezione un conto bancario reale supportato da Skrill. Non vanno bene IBAN lituani né exchange con IBAN proprio."},
-      {q: "Quanto posso guadagnare con gli inviti Skrill?", a: "15€ per ogni amico valido, fino a un massimo di 50 amici: quindi potenzialmente fino a 750€ da usare su trasferimenti successivi."}
-    ]
-  },
-  trading212: {
-    verdict: "Azione gratis dal valore variabile (8€–100€) per aver aperto un conto Invest e depositato appena 10€. Trading 212 è una piattaforma nota per investire in azioni ed ETF. Il bello è il sistema di inviti: fino a 5 amici validi possono portarti a 500€. L'unico limite è che il premio non è fisso e il valore ha un blocco di 30 giorni.",
-    pros: ["Deposito minimo bassissimo (10€)", "Procedura semplice e veloce, adatta ai principianti", "Inviti molto remunerativi: fino a 500€ con 5 amici"],
-    cons: ["Premio non fisso: le azioni di valore alto sono più rare", "Il valore del premio è bloccato 30 giorni prima del prelievo", "Promo a tempo: termina il 9 luglio 2026"],
-    faq: [
-      {q: "Quanto vale il premio di Trading 212?", a: "Un'azione gratis dal valore variabile tra 8€ e 100€. Non è fisso: le azioni di valore più alto sono meno frequenti."},
-      {q: "Quale conto devo aprire su Trading 212?", a: "Un conto Invest. I conti CFD e Cash ISA non sono validi per questa promo."},
-      {q: "Quanto devo depositare per il bonus Trading 212?", a: "Almeno 10€ entro 10 giorni dalla registrazione. Completati i requisiti, ricevi l'azione premio entro circa 3 giorni lavorativi."},
-      {q: "Quanto posso guadagnare con gli inviti?", a: "Un'azione da 8€ a 100€ per ogni amico valido, fino a un massimo di 5 amici premiati: quindi potenzialmente fino a 500€."},
-      {q: "Posso prelevare subito il premio?", a: "Puoi ricevere e anche vendere l'azione, ma il valore economico collegato ha un blocco prelievo di 30 giorni."}
-    ]
-  },
-  kast: {
-    verdict: "Bonus fintech crypto da 20$ di benvenuto, con un sistema di inviti e reward extra che cresce con la spesa. KAST è una piattaforma con carta legata a stablecoin e account globali. Adatto a chi vuole un bonus scalabile, ma valuta sempre le commissioni e il fatto che i premi restano bloccati 14 giorni.",
-    pros: ["20$ di benvenuto completando la soglia base da 100$", "20$ per ogni amico valido che inviti", "Reward extra cumulativi fino a 250$ alle soglie di spesa più alte"],
-    cons: ["I premi restano Locked per 14 giorni prima di essere riscattabili", "Soglia di spesa da raggiungere entro 45 giorni dal KYC", "Prodotto legato a stablecoin: valuta natura dello strumento e commissioni"],
-    faq: [
-      {q: "Quanto si guadagna con KAST?", a: "20$ di benvenuto completando la soglia base da 100$ di spesa. In più, 20$ per ogni amico valido che inviti, e reward extra crescenti alle soglie di spesa più alte."},
-      {q: "Quanto tempo ho per completare la promo KAST?", a: "Entro 45 giorni dal completamento del KYC. I premi, una volta ottenuti, restano bloccati (Locked) per 14 giorni, poi diventano riscattabili (Redeemable)."},
-      {q: "Come funzionano i reward extra di KAST?", a: "Sono cumulativi in base alla spesa totale: fino a 20$ a 100$, fino a 50$ a 600$, fino a 100$ a 1.600$, fino a 250$ a 6.600$. Sulle soglie alte attenzione alle commissioni."},
-      {q: "Come funzionano gli inviti KAST?", a: "Dopo aver completato la tua promo puoi invitare altri dal tuo link. Per ogni amico valido che raggiunge la soglia base da 100$, ricevi 20$."}
-    ]
-  },
-  buddybank: {
-    verdict: "Il bonus più alto della lista (50€) per uno sforzo minimo: un solo pagamento da 10€. Buddybank è la banca digitale di Unicredit, quindi solida. Il punto delicato è inserire il codice amico al momento giusto e fare il pagamento nel modo corretto (carta, non IBAN).",
-    pros: ["Importo alto (50€) per pochi minuti di lavoro", "Un solo pagamento da 10€, nessun deposito vincolato", "Banca del gruppo Unicredit, conto a canone zero il primo anno"],
-    cons: ["Il codice amico va inserito subito, non si può aggiungere dopo", "Il pagamento deve risultare come carta Mastercard, non come addebito su conto"],
-    faq: [
-      {q: "Quanto si guadagna con il bonus Buddybank?", a: "50€, accreditati entro 7–14 giorni dopo aver fatto un pagamento singolo da almeno 10€ con la carta MyOne."},
-      {q: "Dove si inserisce il codice amico Buddybank?", a: "Durante l'apertura del conto, prima di completarla. Non è possibile inserirlo dopo aver aperto il conto, quindi è il passaggio da non saltare."},
-      {q: "Il conto Buddybank ha costi?", a: "Il piano base è a canone zero. Per il bonus non è richiesto alcun deposito vincolato: serve solo un pagamento da 10€ con la carta."},
-      {q: "Quanto tempo serve per ricevere il bonus Buddybank?", a: "In genere tra 7 e 14 giorni dopo il pagamento qualificante con la carta MyOne."}
-    ]
-  },
-  bybit: {
-    verdict: "Bonus crypto tra i più alti (fino a 45€), ma richiede un deposito di 100€ sul conto Spot. Adatto a chi è già a suo agio con un exchange. La regola d'oro: deposita su Spot e non muovere nulla finché il bonus non arriva.",
-    pros: ["Importo elevato fino a 45€", "Bybit EU è regolamentata", "Accredito relativamente rapido (2–7 giorni)"],
-    cons: ["Richiede 100€ di deposito (recuperabili dopo)", "Spostare i fondi tra sotto-conti invalida il bonus", "Prodotto crypto: il valore degli asset può variare"],
-    faq: [
-      {q: "Quanto serve depositare per il bonus Bybit?", a: "Almeno 100€ sul conto Spot entro 7 giorni dalla registrazione. Il deposito è tuo e potrai prelevarlo dopo aver ricevuto il bonus."},
-      {q: "Dove arriva il bonus Bybit?", a: "Nel Rewards Hub dell'app (icona regalo in alto a destra), entro 2–7 giorni. Se compare un voucher, va riscattato."},
-      {q: "Posso perdere il bonus Bybit?", a: "Sì, se depositi sul conto sbagliato (Derivatives o Earn invece di Spot), se sposti fondi tra sotto-conti o se prelevi prima di ricevere il bonus."}
-    ]
-  },
-  coinbase: {
-    verdict: "Bonus da 20€ su una delle piattaforme crypto più note e semplici da usare. Richiede un piccolo deposito e un trade, entrambi da 21€. È più macchinoso di un bonus bancario, ma Coinbase è molto guidata e adatta ai principianti.",
-    pros: ["Piattaforma molto semplice per chi inizia con le crypto", "Deposito basso (21€)", "Trucco Coinbase One per azzerare le commissioni"],
-    cons: ["Il trade deve essere su Coinbase base, non Advanced o Prime", "Accredito lento (15–30 giorni)", "Prodotto crypto: il valore può variare"],
-    faq: [
-      {q: "Come si ottiene il bonus Coinbase da 20€?", a: "Da nuovo utente: iscriviti col link, completa la verifica, deposita almeno 21€ e fai un trade da almeno 21€ entro 90 giorni, solo su Coinbase base."},
-      {q: "Quanto costa fare il trade su Coinbase?", a: "Ci sono commissioni, ma attivando la prova gratuita di Coinbase One per la prima settimana le commissioni si azzerano. Ricordati di disdire entro 7 giorni."},
-      {q: "Quando arriva il bonus Coinbase?", a: "Generalmente entro 15–30 giorni dal trade qualificante."}
-    ]
-  },
-  revolut: {
-    verdict: "Bonus da 15€ con una delle fintech più diffuse in Europa. Niente deposito: bastano 3 spese da 5€ con la carta entro 30 giorni. Comodo perché le spese possono essere acquisti reali che faresti comunque.",
-    pros: ["Nessun deposito, solo 3 piccole spese reali", "Carta Standard gratuita, anche virtuale", "Accredito veloce (2 giorni)"],
-    cons: ["Servono 3 spese separate da 5€ ciascuna", "Annullare un acquisto può bloccare o stornare il bonus", "Niente scommesse, gift card o cambio valuta come spese valide"],
-    faq: [
-      {q: "Quante spese servono per il bonus Revolut?", a: "Almeno 3 spese da 5€ ciascuna entro 30 giorni dall'apertura del conto. Vanno bene acquisti reali, anche online."},
-      {q: "La carta Revolut ha costi?", a: "La carta Standard è gratuita, spedizione inclusa. Puoi usare anche la carta virtuale per le spese."},
-      {q: "Quando arriva il bonus Revolut?", a: "Entro circa 2 giorni lavorativi dopo aver completato le 3 spese richieste."}
-    ]
-  },
-  bbva: {
-    verdict: "Il bonus più semplice per iniziare: 10€ con una sola spesa di qualsiasi importo. BBVA è una grande banca internazionale e il conto offre molte funzioni gratuite. Ideale come primo bonus per prendere confidenza.",
-    pros: ["Una sola spesa di qualsiasi importo", "Accredito veloce (2 giorni)", "Conto ricco di funzioni gratuite (bonifici, F24, PagoPA)"],
-    cons: ["Importo contenuto (10€)", "Apple Pay a volte non si attiva subito"],
-    faq: [
-      {q: "Come funziona il bonus BBVA da 10€?", a: "Scarica l'app, inserisci il codice promo Passaparola al quarto passaggio, accetta i termini e fai una spesa di qualsiasi importo. Ricevi 10€ entro 2 giorni."},
-      {q: "Quali spese non valgono per il bonus BBVA?", a: "Conti gioco, scommesse, ricariche e buoni regalo non sono considerate spese valide."},
-      {q: "Il conto BBVA è gratuito?", a: "Sì, con numerose operazioni gratuite incluse come bonifici, PagoPA, CBILL, F24 e bollo auto."}
-    ]
-  },
-  tinaba: {
-    verdict: "Bonus da 10€ con una fintech italiana legata a Banca Profilo. Richiede una ricarica di 20€, ma il bonus è cumulabile con gli inviti: ogni amico che porti vale altri 10€. Buono se vuoi anche fare passaparola.",
-    pros: ["Bonus cumulabile: 10€ per ogni amico invitato", "Fintech italiana collegata a Banca Profilo", "Solo 20€ di ricarica, recuperabili"],
-    cons: ["Importo base contenuto (10€)", "Il codice va inserito durante la registrazione", "Accredito fino a 30 giorni"],
-    faq: [
-      {q: "Come si ottiene il bonus Tinaba?", a: "Registrati come nuovo utente, inserisci il codice referral durante la registrazione e ricarica almeno 20€ entro 30 giorni. Ricevi 10€."},
-      {q: "Il bonus Tinaba è cumulabile?", a: "Sì. Oltre ai 10€ iniziali, guadagni altri 10€ per ogni amico che si iscrive con il tuo codice."}
-    ]
-  },
-  bitstack: {
-    verdict: "10€ in Bitcoin (5€ dall'app + 5€ extra da GoatLink) acquistando 100€ di BTC, anche in più volte. Bitstack è pensata per accumulare Bitcoin in automatico ed è adatta ai principianti. Ricorda: l'acquisto è in BTC, il cui valore oscilla.",
-    pros: ["10€ totali in Bitcoin (5€ app + 5€ GoatLink)", "I 100€ possono essere acquisti piccoli e ricorrenti", "Piattaforma regolamentata in Europa, semplice per chi inizia"],
-    cons: ["Devi acquistare 100€ in BTC, il cui valore può variare", "Obbligatorio usare il link referral", "L'extra GoatLink richiede di inviare lo screenshot su WhatsApp"],
-    faq: [
-      {q: "Come si arriva a 10€ con Bitstack?", a: "Ricevi 5€ in BTC dall'app dopo aver acquistato 100€ di Bitcoin, più 5€ extra da GoatLink inviando lo screenshot del bonus su WhatsApp."},
-      {q: "Devo comprare 100€ in una volta sola su Bitstack?", a: "No. Puoi raggiungere i 100€ anche con piccoli acquisti ricorrenti entro 180 giorni."}
-    ]
-  },
-  binance: {
-    verdict: "Promo flash a tempo: 10 USDC con deposito e trading da 50€. Il passaggio cruciale, spesso dimenticato, è cliccare «Partecipa alla campagna» dal link: senza quello il bonus non parte anche se hai fatto tutto il resto.",
-    pros: ["Exchange crypto più grande al mondo", "Bonus rapido (voucher entro 48h)", "Requisiti relativamente bassi (50€)"],
-    cons: ["Promo a tempo, fino a esaurimento pool", "Va cliccato «Partecipa alla campagna», altrimenti niente bonus", "Il voucher scade entro 21 giorni; prodotto crypto volatile"],
-    faq: [
-      {q: "Perché non ho ricevuto il bonus Binance?", a: "Quasi sempre perché non è stato cliccato «Partecipa alla campagna» dal link dopo aver soddisfatto i requisiti. È il passaggio che attiva il bonus."},
-      {q: "Quando scade la promo Binance?", a: "È una promo flash valida fino alla data indicata sulla pagina o fino a esaurimento del pool ricompense. Conviene non aspettare."}
-    ]
-  },
-  isybank: {
-    verdict: "Promo terminata. Era un buono Amazon da 30€ senza deposito, offerto da Isybank (gruppo Intesa Sanpaolo). Iscriviti su WhatsApp per essere avvisato se torna.",
-    pros: [],
-    cons: [],
-    faq: []
-  }
-};
+const TODAY = new Date(); // usato per calcolare automaticamente lo stato "scaduto"
 
-if (typeof module !== "undefined") module.exports = { CONTENT };
+const BONUSES = [
+  {
+    slug: "kast",
+    name: "KAST",
+    category: "Crypto",
+    logo: "logos/kast.png",
+    emoji: "💳",
+    amount: 20,
+    currency: "$",
+    amountLabel: "20$",
+    minutes: 15,
+    difficulty: "Medio",
+    badge: "Nuovo",
+    payout: "Premi sbloccati in 14 giorni",
+    deposit: "Soglia spesa 100$",
+    expires: null,
+    updated: "2026-06-06",
+    featured: true,
+    summary: "Iscriviti, completa il KYC e usa la carta KAST fino alla soglia di 100$. 20$ di benvenuto, più 20$ per ogni amico invitato e reward extra alle soglie più alte.",
+    code: null,
+    steps: [
+      "Iscriviti a KAST tramite il link dedicato (obbligatorio per il bonus).",
+      "Crea l'account e completa la verifica identità (KYC).",
+      "Attiva e aggiungi la carta KAST.",
+      "Usa la carta KAST fino a raggiungere la soglia di spesa di <strong>100$</strong> entro 45 giorni dal KYC.",
+      "Ricevi <strong>20$ di benvenuto</strong>: i premi restano bloccati 14 giorni, poi diventano riscattabili."
+    ],
+    rules_ok: [
+      "Dopo aver completato la promo puoi invitare altri e ricevere 20$ per ogni amico valido che raggiunge la soglia da 100$.",
+      "Reward extra cumulativi alle soglie più alte: fino a 50$ a 600$ di spesa, fino a 100$ a 1.600$, fino a 250$ a 6.600$.",
+      "Tempo per completare: entro 45 giorni dal KYC."
+    ],
+    rules_ko: [
+      "Registrarsi senza il link dedicato (perdi il bonus).",
+      "Aspettarsi i premi subito: restano Locked per 14 giorni prima di diventare Redeemable.",
+      "Prodotto fintech legato a stablecoin: valuta sempre commissioni e natura dello strumento."
+    ]
+  },
+  {
+    slug: "trading212",
+    name: "Trading 212",
+    category: "Fintech",
+    logo: "logos/trading212.png",
+    emoji: "📈",
+    amount: 50,
+    currency: "€",
+    amountLabel: "8€–100€",
+    minutes: 15,
+    difficulty: "Facile",
+    badge: "Promo flash",
+    payout: "Premio in ~3 giorni",
+    deposit: "Deposito min. 10€",
+    expires: "2026-07-09",
+    updated: "2026-06-08",
+    featured: true,
+    summary: "Apri un conto Invest, completa il KYC e deposita almeno 10€ entro 10 giorni. Ricevi un'azione gratis da 8€ a 100€. Invitando fino a 5 amici puoi arrivare a 500€.",
+    code: null,
+    steps: [
+      "Apri Trading 212 e crea un <strong>nuovo account</strong> (devi essere nuovo utente).",
+      "Apri un <strong>conto Invest</strong> (i conti CFD e Cash ISA non valgono per la promo).",
+      "Completa la verifica identità (KYC).",
+      "Deposita almeno <strong>10€ entro 10 giorni</strong> dalla registrazione.",
+      "Completati i requisiti, ricevi l'azione premio (valore da 8€ a 100€)."
+    ],
+    rules_ok: [
+      "Dopo aver aperto il conto puoi invitare altri: un'azione da 8€ a 100€ per ogni amico valido, fino a 5 amici (massimo 500€).",
+      "Il premio arriva entro circa 3 giorni lavorativi dal completamento dei requisiti.",
+      "Puoi anche vendere l'azione ricevuta."
+    ],
+    rules_ko: [
+      "Aprire un conto CFD o Cash ISA invece di Invest (non valgono)",
+      "Non essere un nuovo utente Trading 212",
+      "Account doppi o registrazioni anomale",
+      "Il valore del premio ha un blocco prelievo di 30 giorni: non è subito prelevabile"
+    ]
+  },
+  {
+    slug: "skrill",
+    name: "Skrill Money Transfer",
+    category: "Fintech",
+    logo: "logos/skrill.png",
+    emoji: "💸",
+    amount: 15,
+    currency: "€",
+    amountLabel: "15€",
+    minutes: 15,
+    difficulty: "Medio",
+    badge: null,
+    payout: "Sconto sul trasferimento",
+    deposit: "Trasferimento min. 150€",
+    expires: null,
+    updated: "2026-06-08",
+    featured: false,
+    summary: "Sconto di 15€ sul primo trasferimento internazionale da almeno 150€ con Skrill Money Transfer, usando il codice promo. Invitando fino a 50 amici puoi arrivare a 750€.",
+    code: "nicoloi18",
+    steps: [
+      "Apri Skrill Money Transfer da <strong>web</strong> (non dall'app) e crea l'account.",
+      "Accedi e imposta un <strong>trasferimento internazionale</strong> verso un conto bancario compatibile.",
+      "Inserisci come importo almeno <strong>150€</strong>.",
+      "Durante il trasferimento, nel campo <strong>Codice promozionale</strong>, inserisci il codice.",
+      "Controlla che il vantaggio da 15€ sia applicato <strong>prima</strong> di confermare.",
+      "Completa il trasferimento: sul conto di destinazione arriva l'importo pieno."
+    ],
+    rules_ok: [
+      "Il codice va inserito durante il trasferimento, NON in fase di creazione account.",
+      "Conto di partenza: Revolut o qualsiasi conto bancario. Ricezione: un conto bancario reale supportato da Skrill.",
+      "Dopo un trasferimento valido puoi invitare altri: 15€ per amico, fino a 50 amici (max 750€)."
+    ],
+    rules_ko: [
+      "Usare l'app invece del web",
+      "Inserire il codice durante la creazione account invece che nel trasferimento",
+      "Completare il trasferimento senza aver verificato che lo sconto sia applicato",
+      "Conti con IBAN lituano, exchange con IBAN proprio o soluzioni simili (non validi)"
+    ]
+  },
+  {
+    slug: "fineco",
+    name: "Fineco",
+    category: "Banca",
+    logo: "logos/fineco.png",
+    emoji: "🏦",
+    amount: 50,
+    currency: "€",
+    amountLabel: "50€",
+    minutes: 15,
+    difficulty: "Medio",
+    badge: null,
+    payout: "Conferma da novembre",
+    deposit: "5 operazioni di trading",
+    expires: "2026-06-30",
+    updated: "2026-06-08",
+    featured: false,
+    summary: "Apri un nuovo conto Fineco col codice amico entro il 30/06 e fai 5 operazioni di trading entro il 31/08. 50€ di bonus. Invitando fino a 20 amici l'anno puoi arrivare a 1.000€.",
+    code: "AA6612948",
+    steps: [
+      "Apri un <strong>nuovo conto Fineco</strong> e inserisci il codice amico durante l'iscrizione.",
+      "Completa l'apertura del conto entro il <strong>30/06/2026</strong>.",
+      "Entra nella sezione trading una volta attivato il conto.",
+      "Fai <strong>5 operazioni di trading</strong> entro il <strong>31/08/2026</strong>.",
+      "Da <strong>02/11/2026</strong> conferma il bonus nell'area riservata, entro il 30/11/2026.",
+      "Ricevi 50€."
+    ],
+    rules_ok: [
+      "Il metodo dei 5 trade non richiede accredito stipendio né grossi importi sul conto.",
+      "Le operazioni di trading vanno fatte a mercato aperto: giorni lavorativi, in orario, no weekend.",
+      "Dopo l'apertura puoi invitare altri: 50€ per amico valido, fino a 20 inviti l'anno (max 1.000€ annui)."
+    ],
+    rules_ko: [
+      "Aprire il conto senza il codice amico corretto (il bonus potrebbe non essere riconosciuto)",
+      "Provare le operazioni a mercato chiuso (potrebbero non essere eseguite)",
+      "Dimenticare di confermare il bonus entro il 30/11/2026",
+      "Ricorda: 20 inviti sono il totale annuo, non per ogni promo"
+    ]
+  },
+  {
+    slug: "buddybank",
+    name: "Buddybank",
+    category: "Banca",
+    logo: "logos/buddybank.png",
+    amount: 50,
+    currency: "€",
+    amountLabel: "50€",
+    minutes: 10,
+    difficulty: "Facile",
+    badge: "Bonus più alto",
+    payout: "Pagato in 7–14 giorni",
+    deposit: "Pagamento singolo da 10€",
+    expires: null,                 // null = a tempo indeterminato
+    updated: "2026-05-28",
+    featured: true,
+    summary: "Apri il conto Buddybank, inserisci il codice amico e fai un pagamento da almeno 10€ con la carta MyOne. 50€ accreditati entro 7–14 giorni.",
+    code: "B2601MD29S8CUL",
+    steps: [
+      "Richiedi la carta di debito <strong>MyOne</strong> e seleziona <strong>solo digitale</strong>.",
+      "Inserisci <strong>subito</strong> il codice amico (non potrai inserirlo dopo).",
+      "Completa l'apertura del conto.",
+      "Entro 30 giorni fai <strong>un singolo pagamento da almeno 10€</strong> con la carta MyOne.",
+      "Ricevi 50€."
+    ],
+    rules_ok: [
+      "Online: scegli «carta di debito/credito» e inserisci i dati della carta. Deve comparire «Mastercard + ultime 4 cifre»."
+    ],
+    rules_ko: [
+      "Pagamenti con IBAN, bonifici o giroconti",
+      "Ricariche verso altre carte o ricariche telefoniche da app",
+      "Siti di scommesse o gioco",
+      "Più pagamenti per arrivare a 10€ — fai un singolo pagamento da 10€"
+    ]
+  },
+  {
+    slug: "bybit",
+    name: "Bybit",
+    category: "Crypto",
+    logo: "logos/bybit.png",
+    amount: 45,
+    currency: "€",
+    amountLabel: "fino a 45€",
+    minutes: 15,
+    difficulty: "Facile",
+    badge: null,
+    payout: "Pagato in 2–7 giorni",
+    deposit: "Deposito min. 100€",
+    expires: null,
+    updated: "2026-05-27",
+    featured: false,
+    summary: "Registrati, completa il KYC e deposita almeno 100€ sul conto Spot. Bonus fino a 45€ accreditato nel Rewards Hub entro 2–7 giorni.",
+    code: null,
+    steps: [
+      "Registrati tramite il link dedicato (usa l'email che userai sempre).",
+      "Completa la verifica identità (KYC): documento + selfie, 5–10 minuti.",
+      "Deposita almeno <strong>100€ sul conto Spot</strong> entro 7 giorni (bonifico SEPA gratuito o carta).",
+      "Non spostare i fondi tra sotto-conti e non prelevare durante l'attesa.",
+      "Ricevi il bonus entro 2–7 giorni nel <strong>Rewards Hub</strong> (icona regalo)."
+    ],
+    rules_ok: [
+      "Piattaforma Bybit EU, regolamentata",
+      "Dopo aver ricevuto il bonus puoi prelevare liberamente"
+    ],
+    rules_ko: [
+      "Depositare su Derivatives o Earn invece che su Spot",
+      "Trasferire fondi tra sotto-conti (invalida il bonus)",
+      "Prelevare il deposito prima di ricevere il bonus"
+    ]
+  },
+  {
+    slug: "coinbase",
+    name: "Coinbase",
+    category: "Crypto",
+    logo: "logos/coinbase.png",
+    amount: 20,
+    currency: "€",
+    amountLabel: "20€",
+    minutes: 15,
+    difficulty: "Medio",
+    badge: null,
+    payout: "Pagato in 15–30 giorni",
+    deposit: "Deposito + trade min. 21€",
+    expires: null,
+    updated: "2026-05-26",
+    featured: false,
+    summary: "Nuovo utente: iscriviti, completa il KYC, deposita almeno 21€ e fai un trade da almeno 21€ entro 90 giorni. Bonus 20€.",
+    code: null,
+    steps: [
+      "Iscriviti come <strong>nuovo utente</strong> tramite il link ufficiale.",
+      "Completa la verifica identità (KYC).",
+      "Deposita almeno 21€ (consigliati 22–23€ per coprire le commissioni).",
+      "Fai un trade da almeno 21€ entro 90 giorni — <strong>solo su Coinbase base</strong>, non Advanced né Prime.",
+      "Bonus in arrivo entro 15–30 giorni."
+    ],
+    rules_ok: [
+      "Esempio valido: deposita 22€, compra 21€ di BTC, poi rivendili.",
+      "Coinbase One è gratis la prima settimana e azzera le commissioni (ricordati di disdire entro 7 giorni)."
+    ],
+    rules_ko: [
+      "Account multipli — Coinbase verifica tutto e blocca i bonus",
+      "Operazioni su Advanced o Prime (non valide)"
+    ]
+  },
+  {
+    slug: "revolut",
+    name: "Revolut",
+    category: "Fintech",
+    logo: "logos/revolut.png",
+    emoji: "💳",
+    amount: 15,
+    currency: "€",
+    amountLabel: "15€",
+    minutes: 10,
+    difficulty: "Facile",
+    badge: null,
+    payout: "Pagato in 2 giorni",
+    deposit: "3 spese da 5€",
+    expires: null,
+    updated: "2026-05-28",
+    featured: false,
+    summary: "Apri il conto, ordina la carta Standard gratuita e fai 3 spese da 5€ ciascuna entro 30 giorni. 15€ accreditati in 2 giorni.",
+    code: null,
+    steps: [
+      "Registrati tramite il link referral (obbligatorio).",
+      "Inserisci il numero di telefono nella prima schermata.",
+      "Completa la verifica identità (documento + selfie).",
+      "Ordina la carta <strong>Standard gratuita</strong> e attivala all'arrivo.",
+      "Fai almeno <strong>3 spese da 5€</strong> ciascuna entro 30 giorni.",
+      "Ricevi 15€ entro 2 giorni lavorativi."
+    ],
+    rules_ok: [
+      "Va bene sia la carta fisica che quella virtuale, anche acquisti online",
+      "Esempi: 3 caffè al bar, piccola spesa, acquisti su Amazon in giorni diversi"
+    ],
+    rules_ko: [
+      "Gioco d'azzardo e scommesse",
+      "Acquisto di gift card o buoni",
+      "Trasferimenti, cambio valuta, prelievi ATM",
+      "Annullare gli acquisti dopo averli fatti (Revolut può stornare il bonus)"
+    ]
+  },
+  {
+    slug: "bbva",
+    name: "BBVA",
+    category: "Banca",
+    logo: "logos/bbva.png",
+    amount: 10,
+    currency: "€",
+    amountLabel: "10€",
+    minutes: 10,
+    difficulty: "Facile",
+    badge: "Consigliato per iniziare",
+    payout: "Pagato in 2 giorni",
+    deposit: "1 spesa di qualsiasi importo",
+    expires: null,
+    updated: "2026-05-28",
+    featured: false,
+    summary: "Scarica l'app, inserisci il codice promo Passaparola e fai una spesa di qualsiasi importo. 10€ entro 2 giorni lavorativi.",
+    code: "1E550060F05890",
+    steps: [
+      "Scarica l'app BBVA.",
+      "Al quarto passaggio inserisci il codice promo.",
+      "Accetta i termini della promo <strong>Passaparola</strong>.",
+      "Ricarica il conto e fai una spesa di qualsiasi importo.",
+      "Ricevi 10€ entro 2 giorni lavorativi."
+    ],
+    rules_ok: [
+      "Bonifici e operazioni gratuiti, PagoPA, CBILL, F24, bollo auto",
+      "Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta"
+    ],
+    rules_ko: [
+      "Conti gioco, scommesse, ricariche o buoni regalo"
+    ]
+  },
+  {
+    slug: "tinaba",
+    name: "Tinaba",
+    category: "Fintech",
+    logo: "logos/tinaba.png",
+    amount: 10,
+    currency: "€",
+    amountLabel: "10€",
+    minutes: 10,
+    difficulty: "Facile",
+    badge: null,
+    payout: "Bonus in 30 giorni",
+    deposit: "Ricarica min. 20€",
+    expires: null,
+    updated: "2026-05-25",
+    featured: false,
+    summary: "Registrati come nuovo utente, inserisci il codice referral e ricarica almeno 20€ entro 30 giorni. Bonus 10€ cumulabile con gli inviti.",
+    code: "QJSX3Q",
+    steps: [
+      "Scarica l'app Tinaba e registrati come nuovo utente.",
+      "Inserisci il codice referral durante la registrazione.",
+      "Attiva il conto.",
+      "Ricarica almeno 20€ entro 30 giorni dall'iscrizione.",
+      "Ricevi 10€ di bonus."
+    ],
+    rules_ok: [
+      "Bonus cumulabile: altri 10€ per ogni amico che inviti con il tuo codice"
+    ],
+    rules_ko: [
+      "Account già esistente (serve essere nuovo utente)",
+      "Codice non inserito durante la registrazione"
+    ]
+  },
+  {
+    slug: "bitstack",
+    name: "Bitstack",
+    category: "Crypto",
+    logo: "logos/bitstack.png",
+    emoji: "₿",
+    amount: 10,
+    currency: "€",
+    amountLabel: "10€ in BTC",
+    minutes: 10,
+    difficulty: "Facile",
+    badge: null,
+    payout: "Accredito app in 7 giorni",
+    deposit: "Acquisto min. 100€",
+    expires: null,
+    updated: "2026-05-24",
+    featured: false,
+    summary: "Iscriviti col link referral e acquista almeno 100€ di BTC entro 180 giorni. 5€ dall'app + 5€ da GoatLink via screenshot = 10€ in Bitcoin.",
+    code: null,
+    steps: [
+      "Scarica l'app Bitstack (iOS / Android).",
+      "Registrati tramite il link dedicato (obbligatorio).",
+      "Completa la verifica identità (KYC): documento + selfie.",
+      "Acquista almeno <strong>100€ di BTC</strong> entro 180 giorni (anche con piccoli acquisti ricorrenti).",
+      "Ricevi 5€ in BTC dall'app entro 7 giorni lavorativi.",
+      "Manda lo screenshot su WhatsApp e ricevi altri 5€ extra da GoatLink."
+    ],
+    rules_ok: [
+      "Piattaforma regolamentata in Europa, ideale per principianti"
+    ],
+    rules_ko: [
+      "Registrarsi senza il link referral (perdi il bonus)",
+      "Account duplicati o dati condivisi"
+    ]
+  },
+  {
+    slug: "binance",
+    name: "Binance",
+    category: "Crypto",
+    logo: "logos/binance.png",
+    emoji: "🟡",
+    amount: 10,
+    currency: " USDC",
+    amountLabel: "10 USDC",
+    minutes: 15,
+    difficulty: "Medio",
+    badge: "Promo flash",
+    payout: "Voucher entro 48h",
+    deposit: "Deposito + trading min. 50€",
+    expires: "2026-06-15",   // data realistica futura per il prototipo
+    updated: "2026-05-29",
+    featured: false,
+    summary: "Promo a tempo: deposita e fai trading per almeno 50€, poi clicca «Partecipa alla campagna». 10 USDC via voucher entro 48h.",
+    code: null,
+    steps: [
+      "Registrati su Binance tramite il link GoatLink.",
+      "Completa la verifica identità (KYC).",
+      "Deposita almeno 50€ equivalenti (USDT, BTC, ETH o fiat).",
+      "Fai trading per almeno 50€ equivalenti.",
+      "Clicca di nuovo sul link e seleziona <strong>«Partecipa alla campagna»</strong> (fondamentale).",
+      "Apri la Reward Box nel Centro Ricompense: il voucher arriva entro 48h."
+    ],
+    rules_ok: [
+      "Accedi sempre dalla pagina promo tramite il link GoatLink"
+    ],
+    rules_ko: [
+      "Non cliccare «Partecipa alla campagna»: il bonus non si attiva anche se hai i requisiti",
+      "Aspettare troppo: il voucher scade entro 21 giorni dalla distribuzione"
+    ]
+  },
+  // ---- Scaduti: restano nei dati ma con expires nel passato ----
+  {
+    slug: "isybank",
+    name: "Isybank",
+    category: "Banca",
+    logo: "logos/isybank.png",
+    amount: 30,
+    currency: "€",
+    amountLabel: "30€ Amazon",
+    minutes: 10,
+    difficulty: "Facile",
+    badge: null,
+    payout: "Buono Amazon",
+    deposit: "Senza deposito",
+    expires: "2026-05-15",
+    updated: "2026-05-15",
+    featured: false,
+    summary: "30€ in Buono Amazon, senza deposito. Promo terminata.",
+    code: "L7I1TUWQOI",
+    steps: [],
+    rules_ok: [],
+    rules_ko: []
+  }
+];
+
+// Calcola lo stato in automatico in base alla data di scadenza
+function bonusStatus(b) {
+  if (!b.expires) return "active";
+  const exp = new Date(b.expires + "T23:59:59");
+  return exp >= TODAY ? "active" : "expired";
+}
+
+if (typeof window !== "undefined") {
+  window.BONUSES = BONUSES;
+  window.bonusStatus = bonusStatus;
+}

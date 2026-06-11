@@ -1,4 +1,18 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.goatlink.it/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.goatlink.it/</loc><lastmod>2026-06-10</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.goatlink.it/kast.html</loc><lastmod>2026-06-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/trading212.html</loc><lastmod>2026-06-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/skrill.html</loc><lastmod>2026-06-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/fineco.html</loc><lastmod>2026-06-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/buddybank.html</loc><lastmod>2026-05-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/bybit.html</loc><lastmod>2026-05-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/coinbase.html</loc><lastmod>2026-05-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/revolut.html</loc><lastmod>2026-05-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/bbva.html</loc><lastmod>2026-05-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/tinaba.html</loc><lastmod>2026-05-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/bitstack.html</loc><lastmod>2026-05-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/binance.html</loc><lastmod>2026-05-29</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.goatlink.it/isybank.html</loc><lastmod>2026-05-15</lastmod><priority>0.3</priority></url>
+  <url><loc>https://www.goatlink.it/chi-siamo.html</loc><lastmod>2026-06-10</lastmod><priority>0.6</priority></url>
+</urlset>
