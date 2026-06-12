@@ -171,12 +171,12 @@ const BONUSES = [
     minutes: 10,
     difficulty: "Facile",
     badge: "Bonus più alto",
-    payout: "Pagato in 7–14 giorni",
+    payout: "Entro 90 giorni lavorativi",
     deposit: "Pagamento singolo da 10€",
-    expires: null,                 // null = a tempo indeterminato
-    updated: "2026-05-28",
+    expires: "2026-07-20",         // fine promo "buddy Club 100" (20/01–20/07/2026)
+    updated: "2026-06-12",
     featured: true,
-    summary: "Apri il conto Buddybank, inserisci il codice amico e fai un pagamento da almeno 10€ con la carta MyOne. 50€ accreditati entro 7–14 giorni.",
+    summary: "Apri il conto Buddybank, inserisci il codice amico e fai un pagamento da almeno 10€ con la carta MyOne. 50€ accreditati entro 90 giorni lavorativi. Promo valida fino al 20/07/2026.",
     code: null,
     steps: [
       "Richiedi la carta di debito <strong>MyOne</strong> e seleziona <strong>solo digitale</strong>.",
@@ -244,7 +244,7 @@ const BONUSES = [
     payout: "Pagato in 15–30 giorni",
     deposit: "Deposito + trade min. 21€",
     expires: null,
-    updated: "2026-05-26",
+    updated: "2026-06-12",
     featured: false,
     summary: "Nuovo utente: iscriviti, completa il KYC, deposita almeno 21€ e fai un trade da almeno 21€ entro 90 giorni. Bonus 20€.",
     code: null,
@@ -313,21 +313,22 @@ const BONUSES = [
     minutes: 10,
     difficulty: "Facile",
     badge: "Consigliato per iniziare",
-    payout: "Pagato in 2 giorni",
+    payout: "Pagato in pochi giorni",
     deposit: "1 spesa di qualsiasi importo",
     expires: null,
-    updated: "2026-05-28",
+    updated: "2026-06-12",
     featured: false,
-    summary: "Scarica l'app, inserisci il codice promo Passaparola e fai una spesa di qualsiasi importo. 10€ entro 2 giorni lavorativi.",
+    summary: "Scarica l'app, inserisci il codice promo Passaparola e fai una spesa di qualsiasi importo. 10€ in genere entro pochi giorni lavorativi.",
     code: null,
     steps: [
       "Scarica l'app BBVA.",
       "Al quarto passaggio inserisci il codice promo.",
       "Accetta i termini della promo <strong>Passaparola</strong>.",
       "Ricarica il conto e fai una spesa di qualsiasi importo.",
-      "Ricevi 10€ entro 2 giorni lavorativi."
+      "Ricevi 10€, in genere entro pochi giorni lavorativi."
     ],
     rules_ok: [
+      "Cumulabile: aprendo il conto entro il 30/06/2026 hai anche il 3% di remunerazione sul saldo e il 3% di cashback sugli acquisti per i primi 6 mesi",
       "Bonifici e operazioni gratuiti, PagoPA, CBILL, F24, bollo auto",
       "Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta"
     ],
@@ -383,7 +384,7 @@ const BONUSES = [
     payout: "Accredito app in 7 giorni",
     deposit: "Acquisto min. 100€",
     expires: null,
-    updated: "2026-05-24",
+    updated: "2026-06-12",
     featured: false,
     summary: "Iscriviti col link referral e acquista almeno 100€ di BTC entro 180 giorni. 5€ dall'app + 5€ da GoatLink via screenshot = 10€ in Bitcoin.",
     code: null,
