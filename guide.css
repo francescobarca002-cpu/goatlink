@@ -122,3 +122,15 @@ main{padding:26px 0 60px}
 .g-faq-item summary::after{content:"+";font-family:"Orbitron";color:var(--cyan);font-size:1.3rem;transition:.2s}
 .g-faq-item[open] summary::after{transform:rotate(45deg);color:var(--magenta)}
 .g-faq-item div{padding:0 20px 18px;color:var(--ink-dim);font-size:.92rem}
+
+/* Box canale Telegram */
+.g-tg{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  background:linear-gradient(135deg,rgba(95,213,224,.08),rgba(197,119,216,.08));border:1px solid var(--line);
+  border-radius:var(--radius);padding:20px 24px;margin:34px 0 6px}
+.g-tg-txt b{display:block;font-family:"Orbitron";font-size:.95rem;letter-spacing:.03em;margin-bottom:5px;
+  background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-tg-txt span{color:var(--ink-dim);font-size:.92rem}
+.g-tg-btn{font-family:"Orbitron";font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;
+  color:#070611;padding:13px 24px;border-radius:10px;background:linear-gradient(90deg,var(--cyan),var(--magenta));
+  box-shadow:0 0 22px rgba(197,119,216,.28);transition:transform .15s,box-shadow .25s}
+.g-tg-btn:hover{transform:translateY(-2px);box-shadow:0 0 32px rgba(95,213,224,.38)}
