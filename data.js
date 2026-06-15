@@ -435,20 +435,35 @@ const BONUSES = [
     logo: "logos/isybank.png",
     amount: 30,
     currency: "€",
-    amountLabel: "30€ Amazon",
+    amountLabel: "30€",
     minutes: 10,
     difficulty: "Facile",
     badge: null,
-    payout: "Buono Amazon",
+    payout: "Gift card 30€ a scelta",
     deposit: "Senza deposito",
-    expires: "2026-05-15",
-    updated: "2026-05-15",
+    expires: "2026-09-30",
+    updated: "2026-06-15",
     featured: false,
-    summary: "30€ in Buono Amazon, senza deposito. Promo terminata.",
+    summary: "Apri un nuovo Piano isybank col codice amico e aderisci a isyToken Collection. Ricevi 7.600 isyToken, pari a una gift card da 30€ a scelta (Amazon, Tezenis, Q8 e altre). Anche chi invita riceve 7.600 isyToken per ogni amico valido.",
     code: null,
-    steps: [],
-    rules_ok: [],
-    rules_ko: []
+    steps: [
+      "Scarica l'app isybank e apri un <strong>nuovo Piano valido</strong> (isyLight, isySmart o isyPrime — non il conto base né isyOn).",
+      "Completa l'apertura del Piano entro il <strong>15/09/2026</strong>.",
+      "Entra nella sezione <strong>isyReward</strong> e aderisci a <strong>isyToken Collection</strong>.",
+      "Inserisci il <strong>codice amico</strong> entro 15 giorni dall'apertura del Piano e comunque entro il <strong>30/09/2026</strong>.",
+      "Ricevi <strong>7.600 isyToken</strong>, riscattabili dal catalogo isyReward in una gift card da 30€ a scelta (Amazon, Tezenis, Q8, Calzedonia, UCI Cinemas e altre)."
+    ],
+    rules_ok: [
+      "Per ottenere i 7.600 isyToken bastano apertura del Piano + adesione a isyToken Collection + inserimento del codice: nessuna spesa minima né accredito stipendio richiesti.",
+      "Anche chi invita riceve 7.600 isyToken per ogni amico valido, fino a 100 amici.",
+      "Il codice amico te lo diamo su WhatsApp: scrivici e te lo passiamo."
+    ],
+    rules_ko: [
+      "Essere già titolari di un Piano isybank aperto prima del 15/06/2026 (esclusi dalla promo)",
+      "Aprire solo il conto base o il Piano isyOn (non validi per l'iniziativa)",
+      "Inserire il codice oltre i 15 giorni dall'apertura o dopo il 30/09/2026",
+      "È un'operazione a premi: si ricevono isyToken da riscattare a catalogo, non denaro contante. Premi soggetti a disponibilità."
+    ]
   }
 ];
 
