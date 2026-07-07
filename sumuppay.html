@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Come ottenere il bonus SumUp Pay da 10€","description":"Scarica l'app SumUp Pay, completa la verifica identità, inserisci il codice amico dalla sezione profilo e fai 3 pagamenti con la carta per almeno 10€ totali entro 30 giorni. Ricevi 10€ di bonus.","totalTime":"PT10M","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"0"},"step":[{"@type":"HowToStep","position":1,"text":"Scarica l'app SumUp Pay e registrati come nuovo utente."},{"@type":"HowToStep","position":2,"text":"Completa la verifica identità (KYC) con documento e selfie."},{"@type":"HowToStep","position":3,"text":"Inserisci il codice amico dalla sezione profilo/premi dell'app, dopo la registrazione."},{"@type":"HowToStep","position":4,"text":"Attiva la Mastercard virtuale gratuita e aggiungila ad Apple Pay o Google Pay."},{"@type":"HowToStep","position":5,"text":"Fai almeno 3 pagamenti con la carta per un totale di almeno 10€, entro 30 giorni dall'iscrizione."},{"@type":"HowToStep","position":6,"text":"Ricevi 10€ di bonus entro 30 giorni dalle 3 transazioni."}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Basta iscriversi per avere i 10€?","acceptedAnswer":{"@type":"Answer","text":"No. Per sbloccare il bonus di benvenuto servono la verifica identità, l'inserimento del codice amico e 3 pagamenti con la carta per un totale di almeno 10€ entro 30 giorni dall'iscrizione."}},{"@type":"Question","name":"Dove inserisco il codice amico?","acceptedAnswer":{"@type":"Answer","text":"Il codice va inserito dopo la registrazione e la verifica, dalla sezione profilo/premi dell'app (account → premi → codici). Non si inserisce durante la creazione dell'account."}},{"@type":"Question","name":"Quando arriva il bonus?","acceptedAnswer":{"@type":"Answer","text":"Il bonus da 10€ viene in genere accreditato entro 30 giorni dal completamento delle 3 transazioni valide."}},{"@type":"Question","name":"Serve la carta fisica?","acceptedAnswer":{"@type":"Answer","text":"No. SumUp Pay offre una Mastercard virtuale gratuita: puoi usarla subito tramite Apple Pay o Google Pay per fare i pagamenti richiesti."}}]}</script>
 </head>
-<body>
+<body data-bonus="SumUp Pay">
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
@@ -126,4 +126,5 @@
 <script>
 function copyCode(e){const c=document.getElementById('code').textContent;navigator.clipboard.writeText(c);e.target.textContent='Copiato ✓';setTimeout(()=>e.target.textContent='Copia',1500);}
 </script>
+<script src="wa-message.js"></script>
 </body></html>

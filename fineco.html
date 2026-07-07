@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Come ottenere il bonus Fineco da 50€","description":"Apri un nuovo conto Fineco col codice amico entro il 14/07/2026 (prorogato) e fai 5 operazioni di trading entro il 31/08. 50€ di bonus. Invitando fino a 20 amici l'anno puoi arrivare a 1.000€.","totalTime":"PT15M","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"0"},"step":[{"@type":"HowToStep","position":1,"text":"Apri un nuovo conto Fineco e inserisci il codice amico durante l'iscrizione."},{"@type":"HowToStep","position":2,"text":"Completa l'apertura del conto entro il 14/07/2026 (data prorogata)."},{"@type":"HowToStep","position":3,"text":"Entra nella sezione trading una volta attivato il conto."},{"@type":"HowToStep","position":4,"text":"Fai 5 operazioni di trading entro il 31/08/2026."},{"@type":"HowToStep","position":5,"text":"Da 02/11/2026 conferma il bonus nell'area riservata, entro il 30/11/2026."},{"@type":"HowToStep","position":6,"text":"Ricevi 50€ (al netto della ritenuta del 26%)."}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Come si ottengono i 50€ di Fineco?","acceptedAnswer":{"@type":"Answer","text":"Apri un nuovo conto col codice amico entro il 14/07/2026 (scadenza prorogata dal 30/06), poi fai 5 operazioni di trading entro il 31/08/2026. Il bonus va confermato nell'area riservata a partire dal 02/11/2026."}},{"@type":"Question","name":"Devo accreditare lo stipendio per il bonus Fineco?","acceptedAnswer":{"@type":"Answer","text":"No. Il regolamento prevede 4 strade alternative (stipendio/pensione, versamento di 20.000€, 5 operazioni di trading o 2.500€ di spesa con carta): basta soddisfarne una sola. Il metodo consigliato resta quello delle 5 operazioni di trading, perché non richiede accredito stipendio, pensione né grossi importi sul conto."}},{"@type":"Question","name":"Quando devo confermare il bonus Fineco?","acceptedAnswer":{"@type":"Answer","text":"Fineco rende disponibile la conferma nell'area riservata dal 02/11/2026, e va confermata entro il 30/11/2026. Se non confermi entro quella data il bonus potrebbe non essere riconosciuto."}},{"@type":"Question","name":"Quanti amici posso invitare con Fineco?","acceptedAnswer":{"@type":"Answer","text":"50€ per ogni amico valido, fino a un massimo di 20 inviti all'anno: quindi fino a 1.000€ annui. Attenzione: i 20 inviti sono il totale annuo, non per singola promo."}}]}</script>
 </head>
-<body>
+<body data-bonus="Fineco">
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
@@ -123,4 +123,5 @@
 <script>
 function copyCode(e){const c=document.getElementById('code').textContent;navigator.clipboard.writeText(c);e.target.textContent='Copiato ✓';setTimeout(()=>e.target.textContent='Copia',1500);}
 </script>
+<script src="wa-message.js"></script>
 </body></html>

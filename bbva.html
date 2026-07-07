@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Come ottenere il bonus BBVA da 10€","description":"Scarica l'app, inserisci il codice promo Passaparola e fai una spesa di qualsiasi importo. 10€ in genere entro pochi giorni lavorativi.","totalTime":"PT10M","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"0"},"step":[{"@type":"HowToStep","position":1,"text":"Scarica l'app BBVA."},{"@type":"HowToStep","position":2,"text":"Al quarto passaggio inserisci il codice promo."},{"@type":"HowToStep","position":3,"text":"Accetta i termini della promo Passaparola."},{"@type":"HowToStep","position":4,"text":"Ricarica il conto e fai una spesa di qualsiasi importo."},{"@type":"HowToStep","position":5,"text":"Ricevi 10€, in genere entro pochi giorni lavorativi."}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Come funziona il bonus BBVA da 10€?","acceptedAnswer":{"@type":"Answer","text":"Scarica l'app, inserisci il codice promo Passaparola al quarto passaggio, accetta i termini e fai una spesa di qualsiasi importo. Ricevi 10€, in genere entro pochi giorni lavorativi."}},{"@type":"Question","name":"Quali spese non valgono per il bonus BBVA?","acceptedAnswer":{"@type":"Answer","text":"Conti gioco, scommesse, ricariche e buoni regalo non sono considerate spese valide."}},{"@type":"Question","name":"Il conto BBVA è gratuito?","acceptedAnswer":{"@type":"Answer","text":"Sì, con numerose operazioni gratuite incluse come bonifici, PagoPA, CBILL, F24 e bollo auto."}}]}</script>
 </head>
-<body>
+<body data-bonus="BBVA">
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
@@ -119,4 +119,5 @@
 <script>
 function copyCode(e){const c=document.getElementById('code').textContent;navigator.clipboard.writeText(c);e.target.textContent='Copiato ✓';setTimeout(()=>e.target.textContent='Copia',1500);}
 </script>
+<script src="wa-message.js"></script>
 </body></html>

@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Come ottenere il bonus Bybit da fino a 45€","description":"Registrati, completa il KYC e deposita almeno 100€ sul conto Spot. Bonus fino a 45€ accreditato nel Rewards Hub entro 2–7 giorni.","totalTime":"PT15M","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"0"},"step":[{"@type":"HowToStep","position":1,"text":"Registrati tramite il link dedicato (usa l'email che userai sempre)."},{"@type":"HowToStep","position":2,"text":"Completa la verifica identità (KYC): documento + selfie, 5–10 minuti."},{"@type":"HowToStep","position":3,"text":"Deposita almeno 100€ sul conto Spot entro 7 giorni (bonifico SEPA gratuito o carta)."},{"@type":"HowToStep","position":4,"text":"Non spostare i fondi tra sotto-conti e non prelevare durante l'attesa."},{"@type":"HowToStep","position":5,"text":"Ricevi il bonus entro 2–7 giorni nel Rewards Hub (icona regalo)."}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quanto serve depositare per il bonus Bybit?","acceptedAnswer":{"@type":"Answer","text":"Almeno 100€ sul conto Spot entro 7 giorni dalla registrazione. Il deposito è tuo e potrai prelevarlo dopo aver ricevuto il bonus."}},{"@type":"Question","name":"Dove arriva il bonus Bybit?","acceptedAnswer":{"@type":"Answer","text":"Nel Rewards Hub dell'app (icona regalo in alto a destra), entro 2–7 giorni. Se compare un voucher, va riscattato."}},{"@type":"Question","name":"Posso perdere il bonus Bybit?","acceptedAnswer":{"@type":"Answer","text":"Sì, se depositi sul conto sbagliato (Derivatives o Earn invece di Spot), se sposti fondi tra sotto-conti o se prelevi prima di ricevere il bonus."}}]}</script>
 </head>
-<body>
+<body data-bonus="Bybit">
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
@@ -123,4 +123,5 @@
 <script>
 function copyCode(e){const c=document.getElementById('code').textContent;navigator.clipboard.writeText(c);e.target.textContent='Copiato ✓';setTimeout(()=>e.target.textContent='Copia',1500);}
 </script>
+<script src="wa-message.js"></script>
 </body></html>

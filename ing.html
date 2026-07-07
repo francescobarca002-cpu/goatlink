@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Come ottenere il bonus ING da 50€","description":"Apri Conto Corrente Arancio Più e Carta di Debito Mastercard col codice amico entro il 25/07/2026, spendi almeno 150€ con la carta entro il 30/09/2026 e ricevi 50€ di cashback.","totalTime":"PT10M","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"0"},"step":[{"@type":"HowToStep","position":1,"text":"Apri il Conto Corrente Arancio Più esclusivamente dal sito ing.it inserendo il codice amico, entro il 25/07/2026."},{"@type":"HowToStep","position":2,"text":"Richiedi la Carta di Debito Mastercard entro il 25/07/2026."},{"@type":"HowToStep","position":3,"text":"Attiva la Carta di Debito Mastercard."},{"@type":"HowToStep","position":4,"text":"Spendi almeno 150€ con la carta, in una o più transazioni, entro il 30/09/2026."},{"@type":"HowToStep","position":5,"text":"Ricevi 50€ di cashback sul Conto Corrente Arancio entro il 30/11/2026."}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quanto si guadagna con il bonus amici ING?","acceptedAnswer":{"@type":"Answer","text":"50€ di cashback per chi apre il conto con il codice amico (e 50€ anche per chi invita). Ogni 10 amici che completano tutti i passaggi, chi invita riceve 250€ extra, fino a un massimo di 1.250€."}},{"@type":"Question","name":"Quale conto e quale carta devo scegliere?","acceptedAnswer":{"@type":"Answer","text":"È obbligatorio aprire il Conto Corrente Arancio Più e richiedere la Carta di Debito Mastercard, esclusivamente tramite il sito ing.it. Senza questi prodotti il bonus non viene riconosciuto."}},{"@type":"Question","name":"Quanto devo spendere con la carta?","acceptedAnswer":{"@type":"Answer","text":"Devi attivare la Carta di Debito Mastercard e spendere almeno 150€, in una o più transazioni, entro il 30/09/2026."}},{"@type":"Question","name":"Quando arriva il cashback?","acceptedAnswer":{"@type":"Answer","text":"L'accredito dei 50€ avviene sul Conto Corrente Arancio entro e non oltre il 30/11/2026, una volta completate tutte le condizioni."}}]}</script>
 </head>
-<body>
+<body data-bonus="ING">
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
@@ -126,4 +126,5 @@
 <script>
 function copyCode(e){const c=document.getElementById('code').textContent;navigator.clipboard.writeText(c);e.target.textContent='Copiato ✓';setTimeout(()=>e.target.textContent='Copia',1500);}
 </script>
+<script src="wa-message.js"></script>
 </body></html>

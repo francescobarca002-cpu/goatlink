@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Come ottenere il bonus Revolut da 15€","description":"Apri il conto, ordina la carta Standard gratuita e fai 3 spese da 5€ ciascuna entro 30 giorni. 15€ accreditati in 2 giorni.","totalTime":"PT10M","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"0"},"step":[{"@type":"HowToStep","position":1,"text":"Registrati tramite il link referral (obbligatorio)."},{"@type":"HowToStep","position":2,"text":"Inserisci il numero di telefono nella prima schermata."},{"@type":"HowToStep","position":3,"text":"Completa la verifica identità (documento + selfie)."},{"@type":"HowToStep","position":4,"text":"Ordina la carta Standard gratuita e attivala all'arrivo."},{"@type":"HowToStep","position":5,"text":"Fai almeno 3 spese da 5€ ciascuna entro 30 giorni."},{"@type":"HowToStep","position":6,"text":"Ricevi 15€ entro 2 giorni lavorativi."}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quante spese servono per il bonus Revolut?","acceptedAnswer":{"@type":"Answer","text":"Almeno 3 spese da 5€ ciascuna entro 30 giorni dall'apertura del conto. Vanno bene acquisti reali, anche online."}},{"@type":"Question","name":"La carta Revolut ha costi?","acceptedAnswer":{"@type":"Answer","text":"La carta Standard è gratuita, spedizione inclusa. Puoi usare anche la carta virtuale per le spese."}},{"@type":"Question","name":"Quando arriva il bonus Revolut?","acceptedAnswer":{"@type":"Answer","text":"Entro circa 2 giorni lavorativi dopo aver completato le 3 spese richieste."}}]}</script>
 </head>
-<body>
+<body data-bonus="Revolut">
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
@@ -123,4 +123,5 @@
 <script>
 function copyCode(e){const c=document.getElementById('code').textContent;navigator.clipboard.writeText(c);e.target.textContent='Copiato ✓';setTimeout(()=>e.target.textContent='Copia',1500);}
 </script>
+<script src="wa-message.js"></script>
 </body></html>

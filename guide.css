@@ -134,3 +134,11 @@ main{padding:26px 0 60px}
   color:#070611;padding:13px 24px;border-radius:10px;background:linear-gradient(90deg,var(--cyan),var(--magenta));
   box-shadow:0 0 22px rgba(197,119,216,.28);transition:transform .15s,box-shadow .25s}
 .g-tg-btn:hover{transform:translateY(-2px);box-shadow:0 0 32px rgba(95,213,224,.38)}
+
+/* ============ Manifesto home ============ */
+.g-manifesto{margin:48px auto;padding:30px 28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);backdrop-filter:blur(6px)}
+.g-manifesto h2{font-size:1.4rem;font-weight:700;margin-bottom:16px}
+.g-manifesto p{color:var(--ink-dim);font-size:1.05rem;margin-bottom:14px}
+.g-manifesto-cta-line{color:var(--ink);font-weight:500}
+.g-manifesto-actions{margin:22px 0 6px}
+.g-manifesto-sign{font-family:"Orbitron",sans-serif;font-size:.82rem;color:var(--ink-faint);letter-spacing:.04em;margin-top:8px}

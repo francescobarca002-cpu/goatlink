@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Come ottenere il bonus KAST da 20$","description":"Iscriviti, completa il KYC e usa la carta KAST fino alla soglia di 100$. 20$ di benvenuto, più 20$ per ogni amico invitato e reward extra alle soglie più alte.","totalTime":"PT15M","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"0"},"step":[{"@type":"HowToStep","position":1,"text":"Iscriviti a KAST tramite il link dedicato (obbligatorio per il bonus)."},{"@type":"HowToStep","position":2,"text":"Crea l'account e completa la verifica identità (KYC)."},{"@type":"HowToStep","position":3,"text":"Attiva e aggiungi la carta KAST."},{"@type":"HowToStep","position":4,"text":"Usa la carta KAST fino a raggiungere la soglia di spesa di 100$ entro 45 giorni dal KYC."},{"@type":"HowToStep","position":5,"text":"Ricevi 20$ di benvenuto: i premi restano bloccati 14 giorni, poi diventano riscattabili."}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quanto si guadagna con KAST?","acceptedAnswer":{"@type":"Answer","text":"20$ di benvenuto completando la soglia base da 100$ di spesa. In più, 20$ per ogni amico valido che inviti, e reward extra crescenti alle soglie di spesa più alte."}},{"@type":"Question","name":"Quanto tempo ho per completare la promo KAST?","acceptedAnswer":{"@type":"Answer","text":"Entro 45 giorni dal completamento del KYC. I premi, una volta ottenuti, restano bloccati (Locked) per 14 giorni, poi diventano riscattabili (Redeemable)."}},{"@type":"Question","name":"Come funzionano i reward extra di KAST?","acceptedAnswer":{"@type":"Answer","text":"Sono cumulativi in base alla spesa totale: fino a 20$ a 100$, fino a 50$ a 600$, fino a 100$ a 1.600$, fino a 250$ a 6.600$. Sulle soglie alte attenzione alle commissioni."}},{"@type":"Question","name":"Come funzionano gli inviti KAST?","acceptedAnswer":{"@type":"Answer","text":"Dopo aver completato la tua promo puoi invitare altri dal tuo link. Per ogni amico valido che raggiunge la soglia base da 100$, ricevi 20$."}}]}</script>
 </head>
-<body>
+<body data-bonus="KAST">
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
@@ -127,4 +127,5 @@
 <script>
 function copyCode(e){const c=document.getElementById('code').textContent;navigator.clipboard.writeText(c);e.target.textContent='Copiato ✓';setTimeout(()=>e.target.textContent='Copia',1500);}
 </script>
+<script src="wa-message.js"></script>
 </body></html>

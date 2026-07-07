@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Come ottenere il bonus Isybank da 30€","description":"Apri un nuovo Piano isybank col codice amico e aderisci a isyToken Collection: ricevi 7.600 isyToken, pari a una gift card da 30€ a scelta.","totalTime":"PT10M","estimatedCost":{"@type":"MonetaryAmount","currency":"EUR","value":"0"},"step":[{"@type":"HowToStep","position":1,"text":"Scarica l'app isybank e apri un nuovo Piano valido (isyLight, isySmart o isyPrime — non il conto base né isyOn)."},{"@type":"HowToStep","position":2,"text":"Completa l'apertura del Piano entro il 15/09/2026."},{"@type":"HowToStep","position":3,"text":"Entra nella sezione isyReward e aderisci a isyToken Collection."},{"@type":"HowToStep","position":4,"text":"Inserisci il codice amico entro 15 giorni dall'apertura del Piano e comunque entro il 30/09/2026."},{"@type":"HowToStep","position":5,"text":"Ricevi 7.600 isyToken, riscattabili dal catalogo isyReward in una gift card da 30€ a scelta (Amazon, Tezenis, Q8, Calzedonia, UCI Cinemas e altre)."}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Come si ottengono i 30€ con Isybank?","acceptedAnswer":{"@type":"Answer","text":"Apri un nuovo Piano isybank valido (isyLight, isySmart o isyPrime), aderisci a isyToken Collection nella sezione isyReward e inserisci il codice amico entro 15 giorni dall'apertura e comunque entro il 30/09/2026. Ricevi 7.600 isyToken, riscattabili in una gift card da 30€ a scelta."}},{"@type":"Question","name":"Ricevo 30€ in contanti?","acceptedAnswer":{"@type":"Answer","text":"No. isybank è un'operazione a premi: si ricevono 7.600 isyToken (punti), che dal catalogo isyReward valgono una gift card da 30€ a scelta tra Amazon, Tezenis, Q8, Calzedonia, UCI Cinemas e altre. Non è denaro contante. I premi sono soggetti a disponibilità."}},{"@type":"Question","name":"Serve un deposito o l'accredito dello stipendio?","acceptedAnswer":{"@type":"Answer","text":"No. Per ottenere i 7.600 isyToken bastano l'apertura del Piano, l'adesione a isyToken Collection e l'inserimento del codice amico: nessuna spesa minima né accredito stipendio richiesti per questa parte."}},{"@type":"Question","name":"Chi è escluso dalla promo Isybank?","acceptedAnswer":{"@type":"Answer","text":"Chi è già titolare di un Piano isybank aperto prima del 15/06/2026 e chi apre solo il conto base o il Piano isyOn, che non sono validi per l'iniziativa."}}]}</script>
 </head>
-<body>
+<body data-bonus="Isybank">
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
@@ -128,4 +128,5 @@
 <script>
 function copyCode(e){const c=document.getElementById('code').textContent;navigator.clipboard.writeText(c);e.target.textContent='Copiato ✓';setTimeout(()=>e.target.textContent='Copia',1500);}
 </script>
+<script src="wa-message.js"></script>
 </body></html>
