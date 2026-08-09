@@ -1,15 +1,11 @@
 // ============================================================
-// GoatLink — dati bonus
-// Aggiornato il 5 agosto 2026.
-//
-// ATTENZIONE: index.html contiene una PROPRIA copia di questo array,
-// incorporata nel tag <script> in fondo alla pagina. Le due copie
-// erano andate fuori sincrono. Se modifichi qui, modifica anche lì
-// — oppure, meglio, cancella l'array da index.html e aggiungi
-// <script src="data.js"></script> prima dello script della pagina.
+// GoatLink — SORGENTE UNICA DI VERITÀ
+// Modifica SOLO questo file per aggiornare l'intero sito.
+// ATTENZIONE: index.html contiene una copia di questo array al suo
+// interno. Se cambi qui, cambia anche lì, o i due file divergono.
 // ============================================================
 
-const TODAY = new Date();
+const TODAY = new Date(); // usato per calcolare automaticamente lo stato "scaduto"
 
 const BONUSES = [
   {
@@ -45,12 +41,6 @@ const BONUSES = [
       "L'acquisto deve passare dal Bitpanda Broker ed essere di almeno 50€: validi crypto, azioni, ETF, ETC, M-Token / metalli.",
       "L'asset acquistato è rivendibile subito: non stai spendendo i 50€.",
       "Inviti: 15€ a te e 15€ all'amico per ogni amico valido."
-    ],
-    "rules_ko": [
-      "Operazioni non valide: swap tra asset, Bitpanda Fusion, Leverage, Margin Trading, Cash Plus",
-      "Non essere un nuovo utente Bitpanda",
-      "Account doppi o registrazioni anomale",
-      "Promozione terminata il 25/06/2026"
     ]
   },
   {
@@ -75,10 +65,11 @@ const BONUSES = [
     "summary": "Nuova edizione lanciata il 31/07/2026. Apri il Conto Online con la carta di debito Visa entro il 31/08 e ricevi 50€ in Buono Regalo Amazon.it. Ci sono scaglioni aggiuntivi legati allo stipendio e all'uso della carta.",
     "code": null,
     "steps": [
-      "Apri il <strong>Conto Online Crédit Agricole</strong> dall'invito e inserisci il codice promozionale nel form di apertura.",
-      "Completa la <strong>richiesta di apertura</strong> del conto e della <strong>Carta Visa Debit</strong> entro il <strong>31/08/2026</strong>.",
+      "Apri il <strong>Conto Online Crédit Agricole</strong> dall'invito. Serve essere <strong>nuovo correntista</strong> del Gruppo Crédit Agricole Italia.",
+      "Inserisci il codice promozionale <strong>nel form di apertura</strong>: se apri senza, il bonus può non essere riconosciuto e non si recupera dopo.",
+      "Nella stessa richiesta sottoscrivi la <strong>Carta Visa Debit</strong>: senza carta la promo non parte. Tutto entro il <strong>31/08/2026</strong>.",
       "Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per posta).",
-      "Fai almeno <strong>1 transazione</strong> di qualsiasi importo con la carta.",
+      "Fai almeno <strong>1 transazione</strong> con la carta, di qualsiasi importo. <strong>I prelievi non contano</strong>, e nemmeno le spese stornate o annullate.",
       "Ricevi <strong>50€ in Buono Regalo Amazon.it</strong>."
     ],
     "rules_ok": [
@@ -87,12 +78,11 @@ const BONUSES = [
       "Esistono scaglioni aggiuntivi: +100€ con accredito stipendio o pensione e fino a +100€ in base all'utilizzo della carta. Importi e tempistiche nel regolamento ufficiale dell'edizione di agosto.",
       "Se accrediti lo stipendio, il bonifico deve avere <strong>causale ABI 27, SALA o PENS</strong>: con una causale generica la banca non lo riconosce."
     ],
-    "rules_ko": [
-      "Aprire senza inserire il codice nel form (il bonus potrebbe non essere riconosciuto)",
-      "Aprire il conto senza sottoscrivere la carta di debito Visa",
-      "Completare la richiesta dopo il 31/08/2026",
-      "Contare prelievi o spese stornate/annullate come transazione valida",
-      "Non essere un nuovo correntista del Gruppo Crédit Agricole Italia"
+    "why": "Basta una transazione con la carta Visa, di qualsiasi importo, e il buono arriva senza fare altro.",
+    "pros": [
+      "Una sola spesa, importo libero",
+      "Scaglioni extra con stipendio",
+      "Conto online a zero spese"
     ]
   },
   {
@@ -117,10 +107,10 @@ const BONUSES = [
     "summary": "Apri il Conto Corrente Arancio Più entro il 07/09 con il codice WELCOME, richiedi una carta e spendi 300€ entro il 30/11. 100€ di cashback, nessun deposito da lasciare fermo.",
     "code": "WELCOME",
     "steps": [
-      "Apri il <strong>Conto Corrente Arancio Più</strong> dal sito ing.it entro il <strong>07/09/2026</strong>.",
-      "Dopo i dati personali compare il campo «codice promozionale»: inserisci <strong>WELCOME</strong>. Non si può aggiungere dopo.",
-      "Richiedi la <strong>carta di debito o di credito</strong> entro il 07/09, durante l'apertura oppure dopo dall'Area Riservata.",
-      "Spendi almeno <strong>300€</strong> con la carta entro il <strong>30/11/2026</strong>, in una o più volte, anche con Apple Pay o Google Pay.",
+      "Apri il <strong>Conto Corrente Arancio Più</strong> dal sito ing.it entro il <strong>07/09/2026</strong>. Attenzione a non aprire l'<strong>Arancio Light</strong>: non è valido per la promo.",
+      "Dopo i dati personali compare il campo «codice promozionale»: inserisci <strong>WELCOME</strong>. Se lo salti non è più aggiungibile dopo.",
+      "Richiedi la carta di debito o di credito <strong>entro il 07/09/2026</strong>, durante l'apertura oppure dall'Area Riservata. Oltre quella data non vale.",
+      "Spendi almeno <strong>300€</strong> con la carta entro il <strong>30/11/2026</strong>, in una o più volte, anche con Apple Pay o Google Pay. Sotto i 300€ il cashback non scatta.",
       "Ricevi <strong>100€ di cashback</strong> sul conto."
     ],
     "rules_ok": [
@@ -130,12 +120,12 @@ const BONUSES = [
       "Carte Mastercard a canone zero, bonifici SEPA anche istantanei, F24, MAV, RAV, CBILL, pagoPA e prelievi a 0€.",
       "La carta di debito arriva subito in versione digitale: la usi mentre aspetti quella fisica."
     ],
-    "rules_ko": [
-      "Aprire il <strong>Conto Corrente Arancio Light</strong>: non è valido per la promo, serve il Più",
-      "Dimenticare il codice WELCOME durante l'apertura (non è recuperabile dopo)",
-      "Richiedere la carta dopo il 07/09/2026",
-      "Fermarsi sotto i 300€ di spesa entro il 30/11/2026",
-      "I depositi sono garantiti dal sistema olandese, non dal FITD italiano: stessa copertura di 100.000€, fondo diverso"
+    "why": "È il bonus più alto in circolazione e non chiede di lasciare fermo un euro: i 300€ di spesa sono quelli che faresti comunque.",
+    "pros": [
+      "100€, nessuno paga di più",
+      "Zero capitale immobilizzato",
+      "Canone azzerabile con stipendio o under 30",
+      "Carta digitale attiva subito"
     ]
   },
   {
@@ -171,12 +161,6 @@ const BONUSES = [
       "Oltre ai 5 trade, il regolamento ammette anche altre 3 strade (basta una sola): accredito stipendio/pensione entro il 31/08, versamento di 20.000€ mantenuto fino al 30/09, oppure spesa con carta per 2.500€ entro il 31/08.",
       "Le operazioni vanno fatte a mercato aperto, in giorni lavorativi, su titoli quotati sui mercati ammessi (Italia, USA, Canada, Germania, Francia).",
       "Dopo l'apertura puoi invitare altri: 50€ per amico valido, fino a 20 inviti l'anno (max 1.000€ annui)."
-    ],
-    "rules_ko": [
-      "Aprire il conto senza il codice amico corretto (il bonus potrebbe non essere riconosciuto)",
-      "Provare le operazioni a mercato chiuso o su strumenti esclusi come CFD",
-      "Dimenticare di confermare il bonus entro il 30/11/2026",
-      "Promozione chiusa: la finestra di apertura si è chiusa il 14/07/2026"
     ]
   },
   {
@@ -201,10 +185,12 @@ const BONUSES = [
     "code": null,
     "steps": [
       "Richiedi la carta di debito <strong>MyOne</strong> e seleziona <strong>solo digitale</strong>.",
-      "Inserisci <strong>subito</strong> il codice amico (non potrai inserirlo dopo).",
+      "Inserisci <strong>subito</strong> il codice amico: a conto aperto non si può più.",
       "Completa l'apertura del conto.",
-      "Entro 30 giorni spendi almeno <strong>10€</strong> con la carta MyOne o la Genius Pay.",
-      "Ricevi 50€ entro 90 giorni lavorativi dalla transazione valida."
+      "Entro 30 giorni spendi almeno <strong>10€</strong> con la carta MyOne o la Genius Pay. Deve essere un pagamento con carta: <strong>bonifici, giroconti e pagamenti via IBAN non contano</strong>, come non contano ricariche verso altre carte, ricariche telefoniche da app e siti di gioco o scommesse.",
+      "Non ridurti all'ultimo giorno utile: per i controlli fa fede la <strong>data valuta</strong>, non quella dell'acquisto.",
+      "Tieni il saldo disponibile ≥ 0 fino all'accredito: non svuotare il conto mentre aspetti.",
+      "Ricevi <strong>50€</strong> entro 90 giorni lavorativi dalla transazione valida."
     ],
     "rules_ok": [
       "La promo vale sia sul conto <strong>Genius buddy</strong> sia sulla carta ricaricabile <strong>Genius Pay</strong>.",
@@ -213,12 +199,11 @@ const BONUSES = [
       "Al momento dell'accredito il saldo disponibile deve essere ≥ 0: non svuotare il conto mentre aspetti il bonus.",
       "In più c'è la promo <strong>«Remunerazione conto buddy 4%»</strong>: 4% lordo sulla giacenza media fino a 50.000€ fino al 31/12/2026, ma il conto va aperto entro il <strong>31/08/2026</strong>."
     ],
-    "rules_ko": [
-      "Pagamenti con IBAN, bonifici o giroconti",
-      "Ricariche verso altre carte o ricariche telefoniche da app",
-      "Siti di scommesse o gioco",
-      "Fare la spesa all'ultimo giorno utile: per i controlli fa fede la data valuta",
-      "Il 4% è riservato a chi al <strong>31/05/2026</strong> non era già titolare di alcun rapporto con la Banca"
+    "why": "Tutto il settore la dava per scaduta a luglio: è prorogata al 20 gennaio 2027, quindi non devi correre.",
+    "pros": [
+      "Un pagamento da 10€ e finisce lì",
+      "Aperta fino a gennaio 2027",
+      "In più 4% sulla giacenza"
     ]
   },
   {
@@ -244,19 +229,19 @@ const BONUSES = [
     "steps": [
       "Registrati tramite il link dedicato (usa l'email che userai sempre).",
       "Completa la verifica identità (KYC): documento + selfie, 5–10 minuti.",
-      "Deposita almeno <strong>100€ sul conto Spot</strong> entro 7 giorni (bonifico SEPA gratuito o carta).",
-      "Non spostare i fondi tra sotto-conti e non prelevare durante l'attesa.",
+      "Deposita almeno <strong>100€ sul conto Spot</strong> entro 7 giorni (bonifico SEPA gratuito o carta). Su <strong>Derivatives o Earn il deposito non conta</strong>.",
+      "Non spostare fondi tra sotto-conti e non prelevare il deposito prima dell'accredito: entrambe le cose invalidano il bonus.",
       "Ricevi il bonus entro 2–7 giorni nel <strong>Rewards Hub</strong> (icona regalo)."
     ],
     "rules_ok": [
       "L'entità con cui apri il conto è <strong>Bybit EU</strong>, autorizzata MiCA dall'autorità austriaca (FMA) e operativa in Italia in passaporto europeo: è un soggetto diverso da Bybit globale.",
       "Dopo aver ricevuto il bonus puoi prelevare liberamente"
     ],
-    "rules_ko": [
-      "Depositare su Derivatives o Earn invece che su Spot",
-      "Trasferire fondi tra sotto-conti (invalida il bonus)",
-      "Prelevare il deposito prima di ricevere il bonus",
-      "Le cripto-attività non hanno un fondo di garanzia tipo FITD: il rischio di mercato sui 100€ resta tuo"
+    "why": "L'importo più alto tra le crypto, in cambio di 100€ da depositare sul conto Spot.",
+    "pros": [
+      "Fino a 45€, il massimo del settore",
+      "Entità Bybit EU autorizzata MiCA",
+      "Prelievo libero dopo l'accredito"
     ]
   },
   {
@@ -280,22 +265,22 @@ const BONUSES = [
     "summary": "Nuovo utente: iscriviti, completa il KYC, deposita almeno 21€ e fai un trade da almeno 21€ entro 90 giorni. Bonus 20€ in Bitcoin.",
     "code": null,
     "steps": [
-      "Iscriviti come <strong>nuovo utente</strong> tramite il link ufficiale.",
+      "Iscriviti come <strong>nuovo utente</strong> tramite il link ufficiale. Un solo account: Coinbase incrocia i dati e blocca i bonus sui doppioni.",
       "Completa la verifica identità (KYC).",
-      "Deposita almeno 21€ (consigliati 22–23€ per coprire le commissioni).",
-      "Fai un trade da almeno 21€ entro 90 giorni — <strong>solo su Coinbase base</strong>, non Advanced né Prime.",
-      "Bonus in arrivo entro 15–30 giorni."
+      "Deposita almeno 21€ — metti <strong>22–23€</strong>, così le commissioni di deposito (circa 1–1,50€) non ti fanno scendere sotto la soglia.",
+      "Fai un trade da almeno <strong>21€</strong> entro 90 giorni, <strong>solo su Coinbase base</strong>: le operazioni su Advanced e Prime non valgono.",
+      "Ricevi il bonus entro 15–30 giorni. Arriva <strong>in Bitcoin</strong>: il controvalore in euro si muove finché non lo vendi."
     ],
     "rules_ok": [
       "Esempio valido: deposita 22€, compra 21€ di BTC, poi rivendili.",
       "Coinbase One è gratis la prima settimana e azzera le commissioni (ricordati di disdire entro 7 giorni).",
       "L'Italia è tra i paesi idonei sia per chi invita sia per chi viene invitato."
     ],
-    "rules_ko": [
-      "Account multipli — Coinbase verifica tutto e blocca i bonus",
-      "Operazioni su Advanced o Prime (non valide)",
-      "Il bonus arriva <strong>in Bitcoin</strong>: il valore oscilla finché non lo vendi, e le commissioni di deposito (circa 1–1,50€) riducono il netto",
-      "Le offerte «gira la ruota» e i bonus fino a 200$ che trovi in giro sono riservati agli Stati Uniti e non sono cumulabili con il programma di invito"
+    "why": "L'ingresso più pulito al mondo crypto: depositi 21€, compri, e quei 21€ restano tuoi.",
+    "pros": [
+      "Importo fermo da mesi",
+      "Verifica identità in pochi minuti",
+      "Prima settimana senza commissioni"
     ]
   },
   {
@@ -320,23 +305,23 @@ const BONUSES = [
     "summary": "Apri il conto, ordina la carta Standard gratuita e fai 3 spese da 5€ ciascuna entro 30 giorni. 15€ accreditati in 2 giorni.",
     "code": null,
     "steps": [
-      "Registrati tramite il link referral (obbligatorio).",
+      "Registrati tramite il link referral (obbligatorio). Prima di partire <strong>controlla l'offerta sulla pagina che si apre</strong>: Revolut ruota le campagne ogni poche settimane e gli importi cambiano.",
       "Inserisci il numero di telefono nella prima schermata.",
       "Completa la verifica identità (documento + selfie).",
       "Ordina la carta <strong>Standard gratuita</strong> e attivala all'arrivo.",
-      "Fai almeno <strong>3 spese da 5€</strong> ciascuna entro 30 giorni.",
-      "Ricevi 15€ entro 2 giorni lavorativi."
+      "Fai almeno <strong>3 spese da 5€</strong> ciascuna entro 30 giorni. <strong>Non contano</strong> gioco e scommesse, gift card e buoni, trasferimenti, cambio valuta e prelievi ATM.",
+      "Non annullare gli acquisti dopo averli fatti: Revolut può stornare il bonus.",
+      "Ricevi <strong>15€</strong> entro 2 giorni lavorativi."
     ],
     "rules_ok": [
       "Va bene sia la carta fisica che quella virtuale, anche acquisti online",
       "Esempi: 3 caffè al bar, piccola spesa, acquisti su Amazon in giorni diversi"
     ],
-    "rules_ko": [
-      "Gioco d'azzardo e scommesse",
-      "Acquisto di gift card o buoni",
-      "Trasferimenti, cambio valuta, prelievi ATM",
-      "Annullare gli acquisti dopo averli fatti (Revolut può stornare il bonus)",
-      "Revolut ruota le campagne ogni poche settimane e gli importi cambiano: verifica sempre l'offerta sulla pagina che si apre dal link prima di iniziare"
+    "why": "Tre spese da 5€ e hai finito. Controlla l'offerta sulla pagina che si apre: Revolut cambia campagna spesso.",
+    "pros": [
+      "Tre spese piccole in 30 giorni",
+      "Accredito in 2 giorni",
+      "Carta virtuale immediata"
     ]
   },
   {
@@ -363,8 +348,9 @@ const BONUSES = [
       "Scarica l'app BBVA.",
       "Al quarto passaggio inserisci il codice promo.",
       "Accetta i termini della promo <strong>Passaparola</strong>.",
-      "Ricarica il conto e fai una spesa di qualsiasi importo.",
-      "Ricevi 10€, in genere entro pochi giorni lavorativi."
+      "Ricarica il conto e fai una spesa di qualsiasi importo. <strong>Non valgono</strong> conti gioco e scommesse, ricariche e buoni regalo.",
+      "Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta.",
+      "Ricevi <strong>10€</strong>, in genere entro pochi giorni lavorativi."
     ],
     "rules_ok": [
       "Cumulabile con il <strong>cashback 3%</strong>: fino a 50€ complessivi, calcolato sui primi 280€ di acquisti di ogni mese per i primi 6 mesi. Il conto va sottoscritto entro il <strong>30/09/2026</strong>.",
@@ -372,9 +358,11 @@ const BONUSES = [
       "Bonifici e operazioni gratuiti, PagoPA, CBILL, F24, bollo auto",
       "Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta"
     ],
-    "rules_ko": [
-      "Conti gioco, scommesse, ricariche o buoni regalo",
-      "Pensare che il 3% sia il tasso del conto: dura sei mesi, poi scende"
+    "why": "La più facile del sito: una spesa qualsiasi, senza soglie, e il bonus arriva in pochi giorni.",
+    "pros": [
+      "Nessun importo minimo di spesa",
+      "Cumulabile con il cashback 3%",
+      "Bonifici e F24 gratuiti"
     ]
   },
   {
@@ -398,19 +386,20 @@ const BONUSES = [
     "summary": "Registrati come nuovo utente, inserisci il codice referral e ricarica almeno 20€ entro 30 giorni. Bonus 10€ cumulabile con gli inviti.",
     "code": null,
     "steps": [
-      "Scarica l'app Tinaba e registrati come nuovo utente.",
-      "Inserisci il codice referral durante la registrazione.",
+      "Scarica l'app Tinaba e registrati come <strong>nuovo utente</strong>: con un account già esistente la promo non parte.",
+      "Inserisci il codice referral <strong>durante la registrazione</strong>: dopo non è più inseribile.",
       "Attiva il conto.",
-      "Ricarica almeno 20€ entro 30 giorni dall'iscrizione.",
-      "Ricevi 10€ di bonus."
+      "Ricarica almeno <strong>20€</strong> entro 30 giorni dall'iscrizione. Non aspettare l'ultimo momento: le iniziative Tinaba hanno un montepremi e possono chiudere in anticipo una volta esaurito.",
+      "Ricevi <strong>10€</strong> di bonus."
     ],
     "rules_ok": [
       "Bonus cumulabile: 20€ a te per ogni amico che inviti con il tuo codice"
     ],
-    "rules_ko": [
-      "Account già esistente (serve essere nuovo utente)",
-      "Codice non inserito durante la registrazione",
-      "Le iniziative Tinaba hanno un montepremi: possono chiudersi in anticipo rispetto alla data annunciata, una volta esaurito"
+    "why": "Dieci minuti dal divano, senza spendere niente: registrazione, codice, ricarica da 20€.",
+    "pros": [
+      "Nessuna spesa da fare",
+      "Solo una ricarica da 20€",
+      "Cumulabile con gli inviti"
     ]
   },
   {
@@ -436,20 +425,20 @@ const BONUSES = [
     "code": null,
     "steps": [
       "Scarica l'app Bitstack (iOS / Android).",
-      "Registrati tramite il link dedicato (obbligatorio).",
+      "Registrati <strong>tramite il link dedicato</strong>: senza, il bonus non viene assegnato. Un solo account, niente dati condivisi.",
       "Completa la verifica identità (KYC): documento + selfie.",
-      "Acquista almeno <strong>100€ di BTC</strong> entro 180 giorni (anche con piccoli acquisti ricorrenti).",
-      "Ricevi 5€ in BTC dall'app entro 7 giorni lavorativi."
+      "Acquista almeno <strong>100€ di BTC</strong> entro 180 giorni, anche con piccoli acquisti ricorrenti. Sui 100€ le commissioni (0,49–1,49%) valgono circa 1,50€.",
+      "Ricevi <strong>5€ in BTC</strong> dall'app entro 7 giorni lavorativi."
     ],
     "rules_ok": [
       "Società francese con licenza MiCA rilasciata dall'AMF il 30/06/2025: è tra i pochi operatori crypto con posizione regolamentare piena e verificabile.",
       "Puoi trasferire i BTC su un wallet esterno se preferisci la self-custody."
     ],
-    "rules_ko": [
-      "Registrarsi senza il link referral (perdi il bonus)",
-      "Account duplicati o dati condivisi",
-      "Fare il conto solo sul bonus: su 100€ di acquisto le commissioni (0,49–1,49%) valgono circa 1,50€, quindi il netto reale è intorno ai 3,50€",
-      "Stai comprando un asset volatile: il rischio di mercato sui 100€ è interamente tuo e non c'è alcun fondo di garanzia"
+    "why": "Il modo meno brusco per comprare il primo bitcoin: accumula sugli arrotondamenti invece che in un colpo solo.",
+    "pros": [
+      "Licenza MiCA rilasciata dall'AMF",
+      "BTC trasferibili su wallet tuo",
+      "Acquisti ricorrenti anche piccoli"
     ]
   },
   {
@@ -473,11 +462,11 @@ const BONUSES = [
     "summary": "Apri un nuovo Piano isybank col codice amico e aderisci a isyToken Collection. Ricevi 7.600 isyToken, pari a una gift card da 30€ a scelta (Amazon, Tezenis, Q8 e altre). Anche chi invita riceve 7.600 isyToken per ogni amico valido.",
     "code": null,
     "steps": [
-      "Scarica l'app isybank e apri un <strong>nuovo Piano valido</strong> (isyLight, isySmart o isyPrime — non il conto base né isyONe).",
-      "Completa l'apertura del Piano entro il <strong>15/09/2026</strong>.",
+      "Scarica l'app isybank e apri un <strong>nuovo Piano valido</strong>: isyLight, isySmart o isyPrime. Il solo conto base, il Piano isyONe e la sola carta prepagata <strong>non valgono</strong>.",
+      "Completa l'apertura entro il <strong>15/09/2026</strong>. L'iniziativa è per chi apre un nuovo Piano dal 15/06/2026: chi era già cliente prima è escluso.",
       "Entra nella sezione <strong>isyReward</strong> e aderisci a <strong>isyToken Collection</strong>.",
-      "Inserisci il <strong>codice amico</strong> entro 15 giorni dall'apertura del Piano e comunque entro il <strong>30/09/2026</strong>.",
-      "Ricevi <strong>7.600 isyToken</strong>, riscattabili dal catalogo isyReward in una gift card da 30€ a scelta (Amazon, Tezenis, Q8, Calzedonia, UCI Cinemas e altre)."
+      "Inserisci il <strong>codice amico</strong> entro 15 giorni dall'apertura del Piano e comunque entro il <strong>30/09/2026</strong>. Sono due scadenze diverse: vale quella che scade prima.",
+      "Ricevi <strong>7.600 isyToken</strong> e riscattali dal catalogo isyReward in una gift card da 30€ a scelta (Amazon, Tezenis, Q8, Calzedonia, UCI Cinemas e altre)."
     ],
     "rules_ok": [
       "Per ottenere i 7.600 isyToken bastano apertura del Piano + adesione a isyToken Collection + inserimento del codice: nessuna spesa minima né accredito stipendio richiesti.",
@@ -486,12 +475,77 @@ const BONUSES = [
       "Anche chi invita riceve 7.600 isyToken per ogni amico valido, fino a 100 amici.",
       "Il codice amico te lo diamo su WhatsApp: scrivici e te lo passiamo."
     ],
-    "rules_ko": [
-      "Essere già clienti isybank: l'iniziativa è per chi apre un nuovo Piano dal 15/06/2026",
-      "Aprire solo il conto base o il Piano isyONe, o avere la sola carta prepagata (non validi per l'iniziativa)",
-      "Confondere le due date: il Piano va aperto entro il <strong>15/09</strong>, il codice entro 15 giorni dall'apertura e comunque entro il <strong>30/09</strong>",
-      "È un'operazione a premi: si ricevono isyToken da riscattare a catalogo, non denaro contante. Premi soggetti a disponibilità."
+    "why": "Non chiede né deposito né spesa minima: apri il Piano, metti il codice, prendi i token.",
+    "pros": [
+      "Nessuna spesa richiesta",
+      "isyLight è gratuito e basta",
+      "Struttura Intesa Sanpaolo"
     ]
+  },
+  {
+    "slug": "traderepublic",
+    "name": "Trade Republic",
+    "category": "Trading",
+    "logo": "logos/traderepublic.png",
+    "emoji": "📈",
+    "amount": 10,
+    "currency": "€",
+    "amountLabel": "10€ in azioni",
+    "minutes": 12,
+    "difficulty": "Medio",
+    "badge": "Nuovo",
+    "payout": "Azione entro pochi giorni",
+    "deposit": "100€ + 2 investimenti",
+    "expires": null,
+    "updated": "2026-08-09",
+    "featured": false,
+    "countInTotal": false,
+    "source": null,
+    "summary": "Apri il conto dal link invito, deposita 100€ e fai due investimenti entro 21 giorni. Ricevi un'azione da 10€. Attenzione: Trade Republic personalizza le condizioni dentro l'app e in alcune campagne dà il 3% sulla liquidità per tre mesi al posto dei 10€.",
+    "code": null,
+    "steps": [
+      "Apri Trade Republic dal link invito: il <strong>numero di telefono</strong> inserito nella pagina di invito deve essere lo stesso con cui apri il conto, altrimenti l'invito non si aggancia.",
+      "Completa la verifica identità (documento + selfie).",
+      "<strong>Leggi le condizioni che l'app mostra a te</strong>: sono personalizzate e possono chiedere 2 o 3 investimenti, oppure dare il 3% sulla liquidità al posto dei 10€.",
+      "Deposita almeno <strong>100€</strong> entro <strong>21 giorni</strong> dalla registrazione.",
+      "Fai gli investimenti richiesti entro gli stessi 21 giorni: bastano importi minimi, la commissione è 1€ a operazione.",
+      "Ricevi l'azione da <strong>10€</strong>. Il deposito resta tuo e lo puoi riprelevare."
+    ],
+    "rules_ok": [
+      "Trade Republic è una banca tedesca vigilata da BaFin e Bundesbank, con CONSOB come autorità dello Stato ospitante in Italia.",
+      "La liquidità non investita è coperta dalla garanzia dei depositi fino a 100.000€.",
+      "L'azione ricevuta si può vendere subito; il prelievo del controvalore può avere un periodo di attesa."
+    ],
+    "why": "Banca tedesca vigilata da BaFin, con CONSOB in Italia: è il modo più solido per iniziare a investire poco.",
+    "pros": [
+      "Depositi garantiti fino a 100.000€",
+      "Azioni frazionate da pochi euro",
+      "Piani di accumulo senza commissioni"
+    ]
+  },
+  {
+    "slug": "trading212",
+    "name": "Trading 212",
+    "category": "Trading",
+    "logo": "logos/trading212.png",
+    "emoji": "📊",
+    "amount": 0,
+    "currency": "€",
+    "amountLabel": "8€–100€",
+    "minutes": 15,
+    "difficulty": "Facile",
+    "badge": null,
+    "payout": "Azione entro 72 ore",
+    "deposit": "Deposito min. 10€",
+    "expires": "2026-07-09",
+    "updated": "2026-08-09",
+    "featured": false,
+    "countInTotal": false,
+    "source": null,
+    "summary": "Un'azione omaggio da 8€ a 100€ con deposito minimo di 10€. L'ultima campagna si è chiusa il 09/07/2026: Trading 212 lavora a finestre, quindi la promo torna ma con date e regolamento nuovi ogni volta.",
+    "code": null,
+    "steps": [],
+    "rules_ok": []
   }
 ];
 
