@@ -211,37 +211,40 @@ const BONUSES = [
     "name": "Bybit",
     "category": "Crypto",
     "logo": "logos/bybit.png",
-    "amount": 45,
+    "amount": 50,
     "currency": "€",
-    "amountLabel": "fino a 45€",
-    "minutes": 15,
+    "amountLabel": "50€ + 10€ con la carta",
+    "minutes": 20,
     "difficulty": "Medio",
-    "badge": null,
+    "badge": "Bonus raddoppiato",
     "payout": "Pagato in 2–7 giorni",
     "deposit": "Deposito min. 100€",
     "expires": null,
-    "updated": "2026-08-05",
+    "updated": "2026-08-15",
     "featured": false,
     "countInTotal": false,
     "source": null,
-    "summary": "Registrati, completa il KYC e deposita almeno 100€ sul conto Spot. Bonus fino a 45€ accreditato nel Rewards Hub entro 2–7 giorni.",
+    "summary": "Bybit ha raddoppiato il bonus invito: <strong>50€</strong> all'invitato depositando 100€ sul conto Spot, più <strong>10€ extra</strong> ordinando la Bybit Card e ricaricandola con 100 USDC. Bybit indica in app un numero limitato di posti (circa 1.000): verificato in app il 15/08/2026, può chiudersi senza preavviso.",
     "code": null,
     "steps": [
-      "Registrati tramite il link dedicato (usa l'email che userai sempre).",
+      "Registrati tramite il link dedicato all'entità <strong>Bybit EU</strong> (usa l'email che userai sempre).",
       "Completa la verifica identità (KYC): documento + selfie, 5–10 minuti.",
       "Deposita almeno <strong>100€ sul conto Spot</strong> entro 7 giorni (bonifico SEPA gratuito o carta). Su <strong>Derivatives o Earn il deposito non conta</strong>.",
-      "Non spostare fondi tra sotto-conti e non prelevare il deposito prima dell'accredito: entrambe le cose invalidano il bonus.",
-      "Ricevi il bonus entro 2–7 giorni nel <strong>Rewards Hub</strong> (icona regalo)."
+      "<strong>Aspetta l'accredito dei 50€</strong> nel <strong>Rewards Hub</strong> (icona regalo), 2–7 giorni. Fino a quel momento non spostare fondi tra sotto-conti e non prelevare il deposito: entrambe le cose invalidano il bonus.",
+      "<strong>Solo dopo aver ricevuto i 50€</strong>: ordina la Bybit Card <strong>virtuale</strong> (gratuita, la fisica costa 5€) e ricaricala con almeno <strong>100 USDC</strong> per sbloccare i <strong>10€</strong> di Card bonus."
     ],
     "rules_ok": [
       "L'entità con cui apri il conto è <strong>Bybit EU</strong>, autorizzata MiCA dall'autorità austriaca (FMA) e operativa in Italia in passaporto europeo: è un soggetto diverso da Bybit globale.",
-      "Dopo aver ricevuto il bonus puoi prelevare liberamente"
+      "Dopo aver ricevuto il bonus puoi prelevare liberamente.",
+      "La Bybit Card non ha canone annuale né costi di inattività, e la versione virtuale è gratuita: per i 10€ è sufficiente quella.",
+      "I 100 USDC della ricarica carta restano tuoi: il Card bonus è aggiuntivo, non è uno sconto sulla spesa.",
+      "Pagando con la carta si converte crypto in euro con una commissione dello <strong>0,9%</strong>, e la conversione è fiscalmente una cessione: va dichiarata come le altre operazioni crypto."
     ],
-    "why": "L'importo più alto tra le crypto, in cambio di 100€ da depositare sul conto Spot.",
+    "why": "Bybit ha raddoppiato il bonus invito, da 25€ a 50€, ma i posti sono circa 1.000: è la promo del sito con la finestra più stretta.",
     "pros": [
-      "Fino a 45€, il massimo del settore",
+      "50€ invece di 25: bonus raddoppiato",
       "Entità Bybit EU autorizzata MiCA",
-      "Prelievo libero dopo l'accredito"
+      "10€ extra con la carta virtuale gratuita"
     ]
   },
   {
