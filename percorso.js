@@ -14,21 +14,29 @@
 window.GL = (function () {
   'use strict';
 
-  /* ---- CONFIGURAZIONE ----
+  /* ---- CONFIGURAZIONE ----------------------------------------
      ambiente: 'dev' oppure 'prod'.
-     Le chiavi qui sotto sono di goatlink-dev. Se questo file finisce
-     su goatlink.it con ambiente 'dev', il login si spegne da solo:
-     meglio l'area riservata disattivata che il sito pubblico che
-     scrive nel database di prova. */
+     Con ambiente diverso da 'prod' il login si spegne da solo su
+     goatlink.it: meglio l'area riservata disattivata che il sito
+     pubblico che scrive in un database di prova.
+
+     UNICA RIGA DA COMPILARE: la chiave qui sotto.
+     Supabase → Project Settings → API Keys → Publishable key.
+     Comincia con "sb_publishable_". Se prendi quella sbagliata:
+       - "anon" / eyJ...  funziona ma è il formato vecchio, in
+         dismissione entro fine 2026: usalo solo se il progetto
+         non offre la publishable
+       - "secret" / "service_role"  NON deve MAI finire qui:
+         scavalca la RLS e chiunque legga il sorgente del sito
+         avrebbe accesso a tutti i dati di tutti
+     La publishable invece è pubblica per costruzione: sta in chiaro
+     nella pagina ed è corretto così, a proteggere i dati è la RLS. */
   var CFG = {
-    ambiente: 'dev',
-    url:  'https://roimjwbnnmlmhzxpxpgi.supabase.co',
-    anon: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJvaW1qd2Jubm1sbWh6eHB4cGdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcwNDk0ODksImV4cCI6MjEwMjYyNTQ4OX0.W72eAlYOSYD9Wxs3LFoYaWoV4suwPGdziatjgmkPkOo'
-                // chiave anon/public: sta in chiaro nel sorgente ed è
-                // corretto così, a proteggere i dati è la RLS.
-                // La service_role non deve MAI finire qui.
+    ambiente: 'prod',
+    url:    'https://jxfpmegkiikrottporkc.supabase.co',
+    chiave: 'sb_publishable_7xERMF7ETWUdH4UluD__Dg_gWuNPu8I'
   };
-  /* --------------------------------------------------------- */
+  /* ------------------------------------------------------------ */
 
   var KEY = 'gl_percorso_v2';
   var KEY_V1 = 'gl_percorso_v1';          // formato precedente, migrato al volo
@@ -103,7 +111,24 @@ window.GL = (function () {
   /* ---------- Supabase ---------- */
 
   function configurato() {
-    if (!(CFG.url && CFG.anon)) return false;
+    if (!(CFG.url && CFG.chiave)) return false;
+    // Chiave non ancora incollata: meglio login spento che login rotto.
+    if (/INCOLLA/i.test(CFG.chiave)) {
+      if (!avvisato) {
+        avvisato = true;
+        console.error('GoatLink: manca la chiave in percorso.js. ' +
+          'Area riservata disattivata, il salvataggio locale funziona.');
+      }
+      return false;
+    }
+    // Guardia contro l'errore piu costoso: la chiave che scavalca la RLS.
+    if (/^sb_secret_/i.test(CFG.chiave) || /"role"\s*:\s*"service_role"/i.test(
+          (function(){ try { return atob(String(CFG.chiave).split('.')[1] || ''); }
+                       catch(e){ return ''; } })())) {
+      console.error('GoatLink: in percorso.js c\'e una chiave di servizio. ' +
+        'Login disattivato. Sostituiscila con la publishable e revocala su Supabase.');
+      return false;
+    }
     // Salvagente: chiavi di prova su dominio pubblico = login spento.
     if (CFG.ambiente !== 'prod' && /(^|\.)goatlink\.it$/i.test(location.hostname)) {
       if (!avvisato) {
@@ -121,7 +146,7 @@ window.GL = (function () {
   function client() {
     if (sb) return sb;
     if (!disponibile()) return null;
-    sb = window.supabase.createClient(CFG.url, CFG.anon, {
+    sb = window.supabase.createClient(CFG.url, CFG.chiave, {
       auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
     });
     return sb;
