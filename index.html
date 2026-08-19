@@ -95,7 +95,23 @@
     background:linear-gradient(90deg,var(--cyan),var(--magenta));
     box-shadow:0 0 22px rgba(197,119,216,.3);transition:transform .15s, box-shadow .2s}
   .nav-cta:hover{transform:translateY(-1px);box-shadow:0 0 30px rgba(95,213,224,.4)}
-  @media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
+  .nav-area{color:var(--cyan)!important;white-space:nowrap}
+  .nav-area .lungo{display:inline}
+  .nav-area .corto{display:none}
+  @media(max-width:760px){
+    .nav-links a:not(.nav-cta):not(.nav-area){display:none}
+    .nav-links{gap:14px}
+    .nav-area{font-family:"Orbitron";font-weight:600;font-size:.7rem;letter-spacing:.06em;
+      border:1px solid rgba(95,213,224,.4);border-radius:8px;padding:9px 12px}
+    .nav-area .lungo{display:none}
+    .nav-area .corto{display:inline}
+    .nav-cta{padding:10px 15px;font-size:.72rem}
+  }
+  @media(max-width:400px){
+    .nav-cta{display:none}
+    .nav-area .lungo{display:inline}
+    .nav-area .corto{display:none}
+  }
 
   /* HERO */
   .hero{padding:90px 0 60px;position:relative}
@@ -590,7 +606,7 @@
         <a href="#perche">Chi sono</a>
         <a href="#faq">FAQ</a>
         <a href="#percorso" id="nav-percorso" style="display:none">Il mio percorso</a>
-        <a href="area.html">Area riservata</a>
+        <a href="area.html" class="nav-area"><span class="lungo">Area riservata</span><span class="corto">Area</span></a>
         <a href="https://www.instagram.com/goatlink.it" target="_blank" rel="noopener" class="nav-ig" aria-label="Instagram">Instagram</a>
         <a class="nav-cta" href="#bonus">Vedi i bonus</a>
       </div>
@@ -772,6 +788,7 @@
       <div style="display:flex;flex-direction:column;gap:8px">
         <a href="chi-siamo.html">Chi siamo</a>
         <a href="termini.html">Termini e Condizioni</a>
+        <a href="area.html">Area riservata</a>
         <a href="privacy.html">Privacy &amp; Cookie</a>
         <a href="#bonus">Bonus attivi</a>
         <a href="https://www.instagram.com/goatlink.it" target="_blank" rel="noopener">Instagram</a>
