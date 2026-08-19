@@ -9,7 +9,7 @@ const TODAY = new Date(); // usato per calcolare automaticamente lo stato "scadu
 
 const BONUSES = [
   {
-    "slug": "bitpanda",
+    "slug": "bitpanda", "capitale": 50,
     "name": "Bitpanda",
     "category": "Crypto",
     "logo": "logos/bitpanda.png",
@@ -44,7 +44,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "creditagricole",
+    "slug": "creditagricole", "capitale": 0,
     "name": "Crédit Agricole",
     "category": "Banca",
     "logo": "logos/creditagricole.png",
@@ -86,7 +86,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "ing",
+    "slug": "ing", "capitale": 0,
     "name": "ING",
     "category": "Banca",
     "logo": "logos/ing.png",
@@ -129,7 +129,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "fineco",
+    "slug": "fineco", "capitale": 20000,
     "name": "Fineco",
     "category": "Banca",
     "logo": "logos/fineco.png",
@@ -164,7 +164,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "buddybank",
+    "slug": "buddybank", "capitale": 0,
     "name": "Buddybank",
     "category": "Banca",
     "logo": "logos/buddybank.png",
@@ -207,7 +207,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "bybit",
+    "slug": "bybit", "capitale": 100,
     "name": "Bybit",
     "category": "Crypto",
     "logo": "logos/bybit.png",
@@ -248,7 +248,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "coinbase",
+    "slug": "coinbase", "capitale": 21,
     "name": "Coinbase",
     "category": "Crypto",
     "logo": "logos/coinbase.png",
@@ -287,7 +287,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "revolut",
+    "slug": "revolut", "capitale": 0,
     "name": "Revolut",
     "category": "Fintech",
     "logo": "logos/revolut.png",
@@ -328,7 +328,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "bbva",
+    "slug": "bbva", "capitale": 0,
     "name": "BBVA",
     "category": "Banca",
     "logo": "logos/bbva.png",
@@ -369,7 +369,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "tinaba",
+    "slug": "tinaba", "capitale": 20,
     "name": "Tinaba",
     "category": "Fintech",
     "logo": "logos/tinaba.png",
@@ -406,7 +406,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "bitstack",
+    "slug": "bitstack", "capitale": 100,
     "name": "Bitstack",
     "category": "Crypto",
     "logo": "logos/bitstack.png",
@@ -445,7 +445,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "isybank",
+    "slug": "isybank", "capitale": 0,
     "name": "Isybank",
     "category": "Banca",
     "logo": "logos/isybank.png",
@@ -486,7 +486,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "traderepublic",
+    "slug": "traderepublic", "capitale": 100,
     "name": "Trade Republic",
     "category": "Trading",
     "logo": "logos/traderepublic.png",
@@ -527,7 +527,7 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "trading212",
+    "slug": "trading212", "capitale": 10,
     "name": "Trading 212",
     "category": "Trading",
     "logo": "logos/trading212.png",
