@@ -598,6 +598,11 @@
 
 
   /* --- video ospitato sul sito --- */
+  #corso{margin:0 0 30px;padding:18px 18px 6px;border-radius:var(--radius);
+    border:1px solid rgba(95,213,224,.28);background:rgba(95,213,224,.05)}
+  #corso .ch{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 4px}
+  #corso .ch h3{font-family:"Orbitron";font-size:.9rem;font-weight:700;color:var(--cyan);margin:0}
+  #corso .ch span{font-size:.8rem;color:var(--ink-faint)}
   #video .vbox{margin-top:22px;max-width:860px;border:1px solid var(--line);border-radius:16px;
     overflow:hidden;background:#000;box-shadow:0 0 44px rgba(95,213,224,.08)}
   #video video{display:block;width:100%;height:auto;background:#000}
@@ -732,6 +737,10 @@
     <h2 class="tech">Scegli il tuo bonus</h2>
     <p class="sub">Tutti verificati, tutti ufficiali. In ordine di difficoltà: parti dai più semplici, poi sali.</p>
     <p class="sub" style="font-size:.82rem;color:var(--ink-faint);border-left:2px solid var(--line);padding-left:12px">Contenuto promozionale · GoatLink riceve una commissione dai partner sui link di questa pagina. Per te nessun costo e il tuo bonus non cambia.</p>
+    <div id="corso" style="display:none">
+      <div class="ch"><h3>In corso</h3><span>Conti aperti, requisiti da completare</span></div>
+      <div class="grid" id="grid-corso"></div>
+    </div>
     <div class="filters" id="filters"></div>
     <div class="legend">
       <span><i class="d d1"></i><b>Facile</b> — registrazione + una spesa piccola</span>
@@ -934,20 +943,26 @@ function scadBox(b){
   const cosa = b.promemoria.cosa || 'Completa i requisiti della promozione';
   if(!sc) return `<div class="scad"><b>In corso</b> ${cosa}.</div>`;
   const gg = sc.giorni;
-  const cls = sc.scaduta ? ' ko' : (gg <= 5 ? ' urg' : '');
-  const testa = sc.scaduta
-      ? 'Tempo scaduto'
-      : (gg === 0 ? 'Ultimo giorno' : (gg === 1 ? 'Resta 1 giorno' : 'Restano ' + gg + ' giorni'));
   const quando = new Date(sc.data + 'T00:00:00').toLocaleDateString('it-IT',{day:'numeric',month:'long'});
-  const coda = sc.scaduta
-      ? `Il termine era il ${quando}. Se pensi di essere in regola, scrivici e controlliamo insieme.`
-      : `${cosa} entro il ${quando}.`;
+  const cls = sc.scaduta ? ' ko' : (gg <= 5 ? ' urg' : '');
+  let testa, coda;
+  if(sc.scaduta){
+    testa = 'Tempo scaduto';
+    coda  = `Il termine era il ${quando}. Se pensi di essere in regola, scrivici e controlliamo insieme.`;
+  } else if(gg > 30){
+    // Un conto alla rovescia a tre cifre non dice niente: sopra il mese vale la data.
+    testa = 'Hai tempo';
+    coda  = `${cosa} entro il ${quando}.`;
+  } else {
+    testa = gg === 0 ? 'Ultimo giorno' : (gg === 1 ? 'Resta 1 giorno' : 'Restano ' + gg + ' giorni');
+    coda  = `${cosa} entro il ${quando}.`;
+  }
   return `<div class="scad${cls}"><b>${testa}</b> ${coda}${sc.incerta
       ? ' <i>Data da confermare sul regolamento ufficiale.</i>' : ''}</div>`;
 }
 
 function card(b){
-  const exp = b.expires ? `<span class="expires-tag">⚠ Scade il ${new Date(b.expires).toLocaleDateString('it-IT',{day:'numeric',month:'short'})}</span>` : '';
+  const exp = (b.expires && st(b) !== 'aperto') ? `<span class="expires-tag">⚠ Scade il ${new Date(b.expires).toLocaleDateString('it-IT',{day:'numeric',month:'short'})}</span>` : '';
   const pros = (b.pros||[]).map(x=>`<li>${x}</li>`).join('');
   const pc = (b.why || pros) ? `<div class="why">
       <h4>Perché ${b.name}</h4>
@@ -965,8 +980,8 @@ function card(b){
       <div class="desc">${b.summary}</div>
       ${exp}
     </a>
-    ${pc}
     ${scadBox(b)}
+    ${pc}
     <a class="go" href="${b.slug}.html">Apri la guida <span class="arr">→</span></a>
     ${trackBar(b)}
   </div></article>`;
@@ -999,21 +1014,31 @@ document.querySelectorAll('#sortbar .chip').forEach(btn=>{
 function render(){
   const rn = document.getElementById('risk-note');
   if(rn) rn.style.display = (current === 'Trading') ? '' : 'none';
-  // 'todo' e 'aperto' stanno entrambi nella griglia: il secondo e' in corso,
-  // non concluso, e deve restare sotto gli occhi finche' non scade.
-  const daFare = b => st(b)==='todo' || st(b)==='aperto';
-  const aperti = active.filter(b => daFare(b) && !(capOff && b.capitale > 0));
+  // I bonus con il conto gia' aperto salgono in un blocco proprio in cima,
+  // fuori dai filtri: sono gli unici con una scadenza che corre davvero,
+  // e non devono sparire perche' l'utente ha selezionato un'altra categoria.
+  const inCorso = active.filter(b => st(b)==='aperto');
+  const boxCorso = document.getElementById('corso');
+  boxCorso.style.display = inCorso.length ? '' : 'none';
+  if(inCorso.length){
+    document.getElementById('grid-corso').innerHTML = sortList(inCorso).map(card).join('');
+  }
+  const aperti = active.filter(b => st(b)==='todo' && !(capOff && b.capitale > 0));
   const list = sortList(current==='Tutti'?aperti:aperti.filter(b=>b.category===current));
   if(!list.length){
     const inCat = current==='Tutti' ? active : active.filter(b=>b.category===current);
     if(inCat.length){
       // La categoria esiste: l'elenco è vuoto per scelta dell'utente, non per assenza di promo.
-      const perCap = inCat.filter(b => daFare(b) && b.capitale > 0).length;
+      const perCap = inCat.filter(b => st(b)==='todo' && b.capitale > 0).length;
+      const inCorsoQui = inCat.filter(b => st(b)==='aperto').length;
       grid.innerHTML = `<div class="all-done">
-        <h3 class="tech">${perCap ? 'Nessuno a capitale zero qui' : 'Hai chiuso tutto'}</h3>
+        <h3 class="tech">${perCap ? 'Nessuno a capitale zero qui'
+          : (inCorsoQui ? 'Non resta niente da iniziare' : 'Hai chiuso tutto')}</h3>
         <p>${perCap
           ? 'I bonus rimasti in questa sezione chiedono di muovere dei soldi, che poi restano tuoi. Togli il filtro per vederli.'
-          : 'Non resta niente da fare in questa sezione. Le promo nuove arrivano di continuo: sul canale WhatsApp le segnaliamo appena verificate.'}</p>
+          : (inCorsoQui
+            ? 'Le promozioni di questa sezione le hai gi\u00e0 aperte tutte: le trovi qui sopra in <b>In corso</b>, con la scadenza da rispettare.'
+            : 'Non resta niente da fare in questa sezione. Le promo nuove arrivano di continuo: sul canale WhatsApp le segnaliamo appena verificate.')}</p>
         <a class="btn btn-ghost" href="${perCap ? '#' : 'https://whatsapp.com/channel/0029Vb8bdwD72WTyKrvBWZ1W'}"
            ${perCap ? 'onclick="event.preventDefault();document.getElementById(\'cap-off\').click()"' : ''}>${perCap ? 'Mostra anche quelli' : 'Avvisami sui nuovi →'}</a>
       </div>`;
