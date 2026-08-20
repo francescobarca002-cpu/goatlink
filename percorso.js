@@ -40,7 +40,10 @@ window.GL = (function () {
 
   var KEY = 'gl_percorso_v2';
   var KEY_V1 = 'gl_percorso_v1';          // formato precedente, migrato al volo
-  var STATI = { fatto: 1, cliente: 1 };
+  var STATI = { aperto: 1, fatto: 1, cliente: 1 };
+  // Avanzamento: non si torna indietro da soli. Serve a risolvere i conflitti
+  // fra dispositivi: se uno dice 'aperto' e l'altro 'fatto', vince 'fatto'.
+  var RANGO = { aperto: 1, fatto: 2 };
 
   var stato = {};
   var utente = null;
@@ -65,6 +68,10 @@ window.GL = (function () {
         if (STATI[v]) out[k] = { s: v, d: null };
       } else if (v && typeof v === 'object' && STATI[v.s]) {
         out[k] = { s: v.s, d: typeof v.d === 'string' ? v.d : null };
+        // a = data in cui il conto e' stato aperto. Sopravvive al passaggio
+        // ad altri stati: serve ai promemoria e a sapere quanto ci ha messo
+        // davvero il bonus ad arrivare.
+        if (typeof v.a === 'string') out[k].a = v.a;
       }
     });
     return out;
@@ -102,8 +109,17 @@ window.GL = (function () {
         out[k] = { s: a.s, d: date[0] || null };
         return;
       }
-      // stati in conflitto: vince il segno più recente, a parità il remoto
-      out[k] = (a.d || '') > (b.d || '') ? a : b;
+      // Stati in conflitto. Fra 'aperto' e 'fatto' vince il piu' avanzato:
+      // un bonus incassato non torna in attesa perche' un altro dispositivo
+      // e' rimasto indietro. Negli altri casi vince il segno piu' recente.
+      if (RANGO[a.s] && RANGO[b.s]) {
+        out[k] = RANGO[a.s] >= RANGO[b.s] ? a : b;
+      } else {
+        out[k] = (a.d || '') > (b.d || '') ? a : b;
+      }
+      // la data di apertura non si perde, da qualunque ramo arrivi
+      var ap = a.a || b.a || (a.s === 'aperto' ? a.d : null) || (b.s === 'aperto' ? b.d : null);
+      if (ap && out[k]) out[k].a = ap;
     });
     return out;
   }
@@ -200,9 +216,52 @@ window.GL = (function () {
     return v && v.d ? v.d : null;
   }
 
+  // Data in cui l'utente ha dichiarato di aver aperto il conto, se c'e'.
+  function apertoIl(slug) {
+    var v = stato[slug];
+    if (!v) return null;
+    return v.a || (v.s === 'aperto' ? v.d : null);
+  }
+
+  // Calcolo puro, senza effetti: lo usano index.html e area.html.
+  // prom = blocco `promemoria` della promo, dal = data di apertura (YYYY-MM-DD).
+  // Torna null se non c'e' una scadenza calcolabile.
+  function scadenza(prom, dal) {
+    if (!prom) return null;
+    var date = [];
+    if (prom.entro) date.push(prom.entro);
+    if (prom.giorni && dal) {
+      var t = new Date(dal + 'T00:00:00Z');
+      if (!isNaN(t)) {
+        t.setUTCDate(t.getUTCDate() + prom.giorni);
+        date.push(t.toISOString().slice(0, 10));
+      }
+    }
+    if (!date.length) return null;
+    date.sort();
+    var limite = date[0];                       // vince la scadenza piu' vicina
+    var ms = new Date(limite + 'T23:59:59Z') - new Date(oggi() + 'T00:00:00Z');
+    return {
+      data: limite,
+      giorni: Math.floor(ms / 86400000),        // negativo = gia' scaduta
+      scaduta: ms < 0,
+      incerta: !!prom.daVerificare
+    };
+  }
+
   function set(slug, s) {
+    var prec = stato[slug];
     if (s === 'todo') delete stato[slug];
-    else if (STATI[s]) stato[slug] = { s: s, d: oggi() };
+    else if (STATI[s]) {
+      var nuovo = { s: s, d: oggi() };
+      // Se il conto risultava gia' aperto, quella data resta: senza,
+      // segnare "Preso" cancellerebbe l'unico dato che dice quanto
+      // ci ha messo il bonus ad arrivare.
+      var ap = (prec && (prec.a || (prec.s === 'aperto' ? prec.d : null))) ||
+               (s === 'aperto' ? nuovo.d : null);
+      if (ap) nuovo.a = ap;
+      stato[slug] = nuovo;
+    }
     else return;
     salvaLocale();
     pushRitardato();
@@ -311,6 +370,8 @@ window.GL = (function () {
   return {
     st: st,
     quando: quando,
+    apertoIl: apertoIl,
+    scadenza: scadenza,
     set: set,
     azzera: azzera,
     tutto: tutto,
