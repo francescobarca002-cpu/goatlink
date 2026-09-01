@@ -69,26 +69,26 @@ const BONUSES = [
     "amountLabel": "50€",
     "minutes": 15,
     "difficulty": "Facile",
-    "badge": "In scadenza",
+    "badge": "Prorogata",
     "payout": "Buono Regalo Amazon.it",
     "deposit": "1 transazione + carta Visa",
-    "expires": "2026-08-31",
-    "updated": "2026-08-05",
+    "expires": "2026-11-02",
+    "updated": "2026-09-01",
     "featured": true,
     "countInTotal": true,
     "source": "https://www.credit-agricole.it/privati/conti/promozioni",
-    "summary": "Nuova edizione lanciata il 31/07/2026. Apri il Conto Online con la carta di debito Visa entro il 31/08 e ricevi 50€ in Buono Regalo Amazon.it. Ci sono scaglioni aggiuntivi legati allo stipendio e all'uso della carta.",
+    "summary": "Apri il Conto Online con la carta di debito Visa entro il 02/11/2026 e ricevi 50€ in Buono Regalo Amazon.it. Ci sono scaglioni aggiuntivi legati allo stipendio e all'uso della carta.",
     "code": null,
     "steps": [
       "Apri il <strong>Conto Online Crédit Agricole</strong> dall'invito. Serve essere <strong>nuovo correntista</strong> del Gruppo Crédit Agricole Italia.",
       "Inserisci il codice promozionale <strong>nel form di apertura</strong>: se apri senza, il bonus può non essere riconosciuto e non si recupera dopo.",
-      "Nella stessa richiesta sottoscrivi la <strong>Carta Visa Debit</strong>: senza carta la promo non parte. Tutto entro il <strong>31/08/2026</strong>.",
+      "Nella stessa richiesta sottoscrivi la <strong>Carta Visa Debit</strong>: senza carta la promo non parte. Tutto entro il <strong>02/11/2026</strong>.",
       "Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per posta).",
       "Fai almeno <strong>1 transazione</strong> con la carta, di qualsiasi importo. <strong>I prelievi non contano</strong>, e nemmeno le spese stornate o annullate.",
       "Ricevi <strong>50€ in Buono Regalo Amazon.it</strong>."
     ],
     "rules_ok": [
-      "L'operazione a premi «Invita un amico in Crédit Agricole – Agosto 2026» è valida dal 31/07 al 31/10/2026, ma la finestra per chiedere l'apertura del conto si chiude il <strong>31/08</strong>.",
+      "L'operazione a premi «Invita un amico in Crédit Agricole – Agosto 2026» è valida dal 31/07/2026 al 03/01/2027, e la finestra per chiedere l'apertura del conto si chiude il <strong>02/11/2026</strong>.",
       "La Carta Visa Debit è obbligatoria: sceglila in fase di apertura.",
       "Esistono scaglioni aggiuntivi: +100€ con accredito stipendio o pensione e fino a +100€ in base all'utilizzo della carta. Importi e tempistiche nel regolamento ufficiale dell'edizione di agosto.",
       "Se accrediti lo stipendio, il bonifico deve avere <strong>causale ABI 27, SALA o PENS</strong>: con una causale generica la banca non lo riconosce."
@@ -498,47 +498,6 @@ const BONUSES = [
       "Nessuna spesa richiesta",
       "isyLight è gratuito e basta",
       "Struttura Intesa Sanpaolo"
-    ]
-  },
-  {
-    "slug": "traderepublic", "capitale": 100,
-    "name": "Trade Republic",
-    "category": "Trading",
-    "logo": "logos/traderepublic.png",
-    "emoji": "📈",
-    "amount": 10,
-    "currency": "€",
-    "amountLabel": "10€ in azioni",
-    "minutes": 12,
-    "difficulty": "Medio",
-    "badge": "Nuovo",
-    "payout": "Azione entro pochi giorni",
-    "deposit": "100€ + 2 investimenti",
-    "expires": null,
-    "updated": "2026-08-09",
-    "featured": false,
-    "countInTotal": false,
-    "source": null,
-    "summary": "Apri il conto dal link invito, deposita 100€ e fai due investimenti entro 21 giorni. Ricevi un'azione da 10€. Attenzione: Trade Republic personalizza le condizioni dentro l'app e in alcune campagne dà il 3% sulla liquidità per tre mesi al posto dei 10€.",
-    "code": null,
-    "steps": [
-      "Apri Trade Republic dal link invito: il <strong>numero di telefono</strong> inserito nella pagina di invito deve essere lo stesso con cui apri il conto, altrimenti l'invito non si aggancia.",
-      "Completa la verifica identità (documento + selfie).",
-      "<strong>Leggi le condizioni che l'app mostra a te</strong>: sono personalizzate e possono chiedere 2 o 3 investimenti, oppure dare il 3% sulla liquidità al posto dei 10€.",
-      "Deposita almeno <strong>100€</strong> entro <strong>21 giorni</strong> dalla registrazione.",
-      "Fai gli investimenti richiesti entro gli stessi 21 giorni: bastano importi minimi, la commissione è 1€ a operazione.",
-      "Ricevi l'azione da <strong>10€</strong>. Il deposito resta tuo e lo puoi riprelevare."
-    ],
-    "rules_ok": [
-      "Trade Republic è una banca tedesca vigilata da BaFin e Bundesbank, con CONSOB come autorità dello Stato ospitante in Italia.",
-      "La liquidità non investita è coperta dalla garanzia dei depositi fino a 100.000€.",
-      "L'azione ricevuta si può vendere subito; il prelievo del controvalore può avere un periodo di attesa."
-    ],
-    "why": "Banca tedesca vigilata da BaFin, con CONSOB in Italia: è il modo più solido per iniziare a investire poco.",
-    "pros": [
-      "Depositi garantiti fino a 100.000€",
-      "Azioni frazionate da pochi euro",
-      "Piani di accumulo senza commissioni"
     ]
   },
   {
