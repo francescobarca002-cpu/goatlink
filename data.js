@@ -1,8 +1,23 @@
 // ============================================================
 // GoatLink — SORGENTE UNICA DI VERITÀ
-// Modifica SOLO questo file per aggiornare l'intero sito.
-// ATTENZIONE: index.html contiene una copia di questo array al suo
-// interno. Se cambi qui, cambia anche lì, o i due file divergono.
+//
+// Questo file lo carica index.html: modificarlo qui aggiorna la
+// home. Non esistono altre copie dell'array.
+//
+// Le pagine guida (ing.html, bbva.html, ...) restano scritte a mano:
+// se cambi un importo o una scadenza qui, controlla anche la guida
+// corrispondente.
+//
+// Campi che contano:
+//   countInTotal  entra nel totale garantito mostrato in home.
+//                 true solo per i bonus che non chiedono di
+//                 immobilizzare capitale.
+//   capitale      euro da muovere (0 = nessuno). Governa il filtro
+//                 "Nascondi quelli che chiedono di muovere soldi".
+//   expires       oltre questa data la promo passa da sola in
+//                 "Tornano presto". Lasciare null se non scade.
+//   updated       data dell'ultima verifica: la piu' recente di
+//                 queste alimenta la data mostrata in home.
 // ============================================================
 
 const TODAY = new Date(); // usato per calcolare automaticamente lo stato "scaduto"
