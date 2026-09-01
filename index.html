@@ -643,7 +643,6 @@
         <a href="#perche">Chi sono</a>
         <a href="#faq">FAQ</a>
         <a href="#percorso" id="nav-percorso" style="display:none">Il mio percorso</a>
-        <a href="area.html" class="nav-area"><span class="lungo">Area riservata</span><span class="corto">Area</span></a>
         <a href="https://www.instagram.com/goatlink.it" target="_blank" rel="noopener" class="nav-ig" aria-label="Instagram">Instagram</a>
         <a class="nav-cta" href="#bonus">Vedi i bonus</a>
       </div>
@@ -853,7 +852,6 @@
       <div style="display:flex;flex-direction:column;gap:8px">
         <a href="chi-siamo.html">Chi siamo</a>
         <a href="termini.html">Termini e Condizioni</a>
-        <a href="area.html">Area riservata</a>
         <a href="privacy.html">Privacy &amp; Cookie</a>
         <a href="#bonus">Bonus attivi</a>
         <a href="https://www.instagram.com/goatlink.it" target="_blank" rel="noopener">Instagram</a>
@@ -867,7 +865,6 @@
 
 <a class="help-fab" href="https://wa.me/393793719306">💬 Assistenza</a>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="percorso.js"></script>
 <script>
 // Dati incorporati: pagina autosufficiente, funziona ovunque.
@@ -1066,14 +1063,11 @@ function render(){
 /* ===== HUD + sezioni personali ===== */
 const hudEl = document.getElementById('percorso-hud');
 
-// Tre situazioni diverse, tre promesse diverse: non prometterne una sbagliata.
+// Una sola promessa, ed e' vera: il percorso non lascia il dispositivo.
 function notaSalvataggio(){
-  if(G.utente())
-    return 'Salvato nella tua area riservata (' + G.email() + '): lo ritrovi su qualsiasi dispositivo.';
-  if(G.attivo())
-    return 'Lo segni tu e resta su questo dispositivo. Su iPhone Safari cancella i dati dei siti '
-         + 'dopo una settimana di inattivit\u00e0: <a href="area.html">accedi con la tua email</a> e non lo perdi pi\u00f9.';
-  return 'Lo segni tu. Resta su questo dispositivo: GoatLink non lo riceve, non lo verifica e non lo collega a nessun dato tuo.';
+  return 'Lo segni tu e resta su questo dispositivo: GoatLink non lo riceve, non lo verifica e non lo '
+       + 'collega a nessun dato tuo. Su iPhone Safari cancella i dati dei siti dopo una settimana di '
+       + 'inattivit\u00e0: se ci tieni, tieni da parte il codice di trasferimento qui sotto.';
 }
 
 function renderPercorso(){
@@ -1114,10 +1108,10 @@ function renderPercorso(){
     <div class="hbar"><span style="width:${perc}%"></span></div>
     <div class="hud-foot">
       <span class="hnote">${notaSalvataggio()}</span>
-      ${G.utente() ? '' : '<button type="button" class="hlink" id="p-sync">Trasferisci su un altro dispositivo</button>'}
+      <button type="button" class="hlink" id="p-sync">Trasferisci su un altro dispositivo</button>
       <button type="button" class="hlink mut" id="p-reset">Azzera</button>
     </div>
-    <div class="sync" id="p-sync-box" hidden${G.utente() ? ' style="display:none"' : ''}>
+    <div class="sync" id="p-sync-box" hidden>
       <small>Copia questo codice e incollalo su un altro dispositivo per ritrovare il tuo percorso. Contiene solo i bonus che hai segnato.</small>
       <textarea id="p-out" rows="2" readonly onclick="this.select()"></textarea>
       <div class="row">
