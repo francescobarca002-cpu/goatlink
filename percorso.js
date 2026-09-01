@@ -1,57 +1,25 @@
 /* ============================================================
    GoatLink — stato del percorso
-   Unico posto in cui vive lo stato: lo usano index.html e area.html.
+   Unico posto in cui vive lo stato: lo usa index.html.
 
    Come funziona:
-   - lo stato sta SEMPRE in localStorage (funziona anche senza account)
-   - se l'utente è loggato, viene anche sincronizzato su Supabase
-   - senza chiavi configurate qui sotto, il file funziona lo stesso:
-     salvataggio solo locale, area riservata disattivata
+   - lo stato sta SOLO in localStorage, su questo dispositivo
+   - nessun account, nessun server, nessuna dipendenza esterna
+   - per passare da un dispositivo all'altro c'e' il codice di
+     trasferimento (esporta/importa)
 
-   Sul server finisce solo quello che l'utente dichiara.
-   Mai riconciliare con le conversioni affiliate: quella è un'altra cosa.
+   Niente di quello che l'utente segna qui lascia il browser.
+   Mai riconciliare con le conversioni affiliate: quella e' un'altra cosa.
    ============================================================ */
 window.GL = (function () {
   'use strict';
 
-  /* ---- CONFIGURAZIONE ----------------------------------------
-     ambiente: 'dev' oppure 'prod'.
-     Con ambiente diverso da 'prod' il login si spegne da solo su
-     goatlink.it: meglio l'area riservata disattivata che il sito
-     pubblico che scrive in un database di prova.
-
-     UNICA RIGA DA COMPILARE: la chiave qui sotto.
-     Supabase → Project Settings → API Keys → Publishable key.
-     Comincia con "sb_publishable_". Se prendi quella sbagliata:
-       - "anon" / eyJ...  funziona ma è il formato vecchio, in
-         dismissione entro fine 2026: usalo solo se il progetto
-         non offre la publishable
-       - "secret" / "service_role"  NON deve MAI finire qui:
-         scavalca la RLS e chiunque legga il sorgente del sito
-         avrebbe accesso a tutti i dati di tutti
-     La publishable invece è pubblica per costruzione: sta in chiaro
-     nella pagina ed è corretto così, a proteggere i dati è la RLS. */
-  var CFG = {
-    ambiente: 'prod',
-    url:    'https://jxfpmegkiikrottporkc.supabase.co',
-    chiave: 'sb_publishable_7xERMF7ETWUdH4UluD__Dg_gWuNPu8I'
-  };
-  /* ------------------------------------------------------------ */
-
   var KEY = 'gl_percorso_v2';
   var KEY_V1 = 'gl_percorso_v1';          // formato precedente, migrato al volo
   var STATI = { aperto: 1, fatto: 1, cliente: 1 };
-  // Avanzamento: non si torna indietro da soli. Serve a risolvere i conflitti
-  // fra dispositivi: se uno dice 'aperto' e l'altro 'fatto', vince 'fatto'.
-  var RANGO = { aperto: 1, fatto: 2 };
 
   var stato = {};
-  var utente = null;
-  var sb = null;
   var ascoltatori = [];
-  var timerPush = null;
-  var avvisato = false;
-  var statoSync = 'locale';               // locale | attesa | sincronizzato | errore
 
   function oggi() { return new Date().toISOString().slice(0, 10); }
 
@@ -69,8 +37,8 @@ window.GL = (function () {
       } else if (v && typeof v === 'object' && STATI[v.s]) {
         out[k] = { s: v.s, d: typeof v.d === 'string' ? v.d : null };
         // a = data in cui il conto e' stato aperto. Sopravvive al passaggio
-        // ad altri stati: serve ai promemoria e a sapere quanto ci ha messo
-        // davvero il bonus ad arrivare.
+        // ad altri stati: serve al conto alla rovescia e a sapere quanto ci
+        // ha messo davvero il bonus ad arrivare.
         if (typeof v.a === 'string') out[k].a = v.a;
       }
     });
@@ -89,114 +57,6 @@ window.GL = (function () {
 
   function salvaLocale() {
     try { localStorage.setItem(KEY, JSON.stringify(stato)); } catch (e) {}
-  }
-
-  /* ---------- fusione locale + remoto ----------
-     Serve al primo login: chi ha già segnato dei bonus da anonimo
-     non deve perderli. A parità, vince il remoto. */
-  function fondi(locale, remoto) {
-    var out = {}, viste = {};
-    [locale, remoto].forEach(function (src) {
-      Object.keys(src).forEach(function (k) { viste[k] = 1; });
-    });
-    Object.keys(viste).forEach(function (k) {
-      var a = locale[k], b = remoto[k];
-      if (!a) { out[k] = b; return; }
-      if (!b) { out[k] = a; return; }
-      if (a.s === b.s) {
-        // stesso stato: tengo la data più vecchia, è quella vera
-        var date = [a.d, b.d].filter(Boolean).sort();
-        out[k] = { s: a.s, d: date[0] || null };
-        return;
-      }
-      // Stati in conflitto. Fra 'aperto' e 'fatto' vince il piu' avanzato:
-      // un bonus incassato non torna in attesa perche' un altro dispositivo
-      // e' rimasto indietro. Negli altri casi vince il segno piu' recente.
-      if (RANGO[a.s] && RANGO[b.s]) {
-        out[k] = RANGO[a.s] >= RANGO[b.s] ? a : b;
-      } else {
-        out[k] = (a.d || '') > (b.d || '') ? a : b;
-      }
-      // la data di apertura non si perde, da qualunque ramo arrivi
-      var ap = a.a || b.a || (a.s === 'aperto' ? a.d : null) || (b.s === 'aperto' ? b.d : null);
-      if (ap && out[k]) out[k].a = ap;
-    });
-    return out;
-  }
-
-  /* ---------- Supabase ---------- */
-
-  function configurato() {
-    if (!(CFG.url && CFG.chiave)) return false;
-    // Chiave non ancora incollata: meglio login spento che login rotto.
-    if (/INCOLLA/i.test(CFG.chiave)) {
-      if (!avvisato) {
-        avvisato = true;
-        console.error('GoatLink: manca la chiave in percorso.js. ' +
-          'Area riservata disattivata, il salvataggio locale funziona.');
-      }
-      return false;
-    }
-    // Guardia contro l'errore piu costoso: la chiave che scavalca la RLS.
-    if (/^sb_secret_/i.test(CFG.chiave) || /"role"\s*:\s*"service_role"/i.test(
-          (function(){ try { return atob(String(CFG.chiave).split('.')[1] || ''); }
-                       catch(e){ return ''; } })())) {
-      console.error('GoatLink: in percorso.js c\'e una chiave di servizio. ' +
-        'Login disattivato. Sostituiscila con la publishable e revocala su Supabase.');
-      return false;
-    }
-    // Salvagente: chiavi di prova su dominio pubblico = login spento.
-    if (CFG.ambiente !== 'prod' && /(^|\.)goatlink\.it$/i.test(location.hostname)) {
-      if (!avvisato) {
-        avvisato = true;
-        console.error('GoatLink: chiavi "' + CFG.ambiente + '" su dominio pubblico. ' +
-          'Area riservata disattivata per non scrivere nel database di prova. ' +
-          'Metti le chiavi di goatlink-prod e ambiente: "prod" in percorso.js.');
-      }
-      return false;
-    }
-    return true;
-  }
-  function disponibile() { return configurato() && !!window.supabase; }
-
-  function client() {
-    if (sb) return sb;
-    if (!disponibile()) return null;
-    sb = window.supabase.createClient(CFG.url, CFG.chiave, {
-      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
-    });
-    return sb;
-  }
-
-  function pull() {
-    var c = client();
-    if (!c || !utente) return Promise.resolve(null);
-    return c.from('percorsi').select('stato').eq('user_id', utente.id).maybeSingle()
-      .then(function (r) {
-        if (r.error) throw r.error;
-        return r.data ? normalizza(r.data.stato) : {};
-      });
-  }
-
-  function push() {
-    var c = client();
-    if (!c || !utente) return Promise.resolve();
-    statoSync = 'attesa'; avvisa();
-    return c.from('percorsi').upsert(
-      { user_id: utente.id, stato: stato }, { onConflict: 'user_id' }
-    ).then(function (r) {
-      statoSync = r.error ? 'errore' : 'sincronizzato';
-      avvisa();
-    }, function () { statoSync = 'errore'; avvisa(); });
-  }
-
-  // Il salvataggio locale è immediato; quello remoto aspetta un attimo,
-  // così chi spunta cinque bonus di fila fa una scrittura sola.
-  function pushRitardato() {
-    if (!utente) return;
-    clearTimeout(timerPush);
-    statoSync = 'attesa'; 
-    timerPush = setTimeout(push, 900);
   }
 
   /* ---------- eventi ---------- */
@@ -223,7 +83,7 @@ window.GL = (function () {
     return v.a || (v.s === 'aperto' ? v.d : null);
   }
 
-  // Calcolo puro, senza effetti: lo usano index.html e area.html.
+  // Calcolo puro, senza effetti.
   // prom = blocco `promemoria` della promo, dal = data di apertura (YYYY-MM-DD).
   // Torna null se non c'e' una scadenza calcolabile.
   function scadenza(prom, dal) {
@@ -264,20 +124,20 @@ window.GL = (function () {
     }
     else return;
     salvaLocale();
-    pushRitardato();
     avvisa();
   }
 
   function azzera() {
     stato = {};
     salvaLocale();
-    pushRitardato();
     avvisa();
   }
 
   function tutto() { return JSON.parse(JSON.stringify(stato)); }
 
-  /* codice di trasferimento: resta utile a chi non vuole l'account */
+  /* ---------- codice di trasferimento ----------
+     Senza account, questo e' l'unico modo di passare il percorso
+     da un dispositivo all'altro. Non e' un ripiego: e' la funzione. */
   function esporta() {
     return btoa(unescape(encodeURIComponent(JSON.stringify(stato))));
   }
@@ -287,85 +147,12 @@ window.GL = (function () {
     if (!Object.keys(n).length) throw new Error('vuoto');
     stato = n;
     salvaLocale();
-    pushRitardato();
     avvisa();
-  }
-
-  /* ---------- autenticazione ---------- */
-
-  function login(email) {
-    var c = client();
-    if (!c) return Promise.reject(new Error('non configurato'));
-    return c.auth.signInWithOtp({
-      email: String(email).trim(),
-      options: { emailRedirectTo: location.origin + '/area.html' }
-    }).then(function (r) {
-      if (r.error) throw r.error;
-      return true;
-    });
-  }
-
-  function logout() {
-    var c = client();
-    if (!c) return Promise.resolve();
-    return c.auth.signOut().then(function () {
-      utente = null;
-      statoSync = 'locale';
-      avvisa();
-    });
-  }
-
-  // Cancella l'account sul server. Lo stato locale lo lasciamo:
-  // l'utente ha chiesto di sparire dal server, non di perdere il
-  // promemoria sul proprio telefono. Per quello c'è azzera().
-  function cancellaAccount() {
-    var c = client();
-    if (!c || !utente) return Promise.reject(new Error('non loggato'));
-    return c.rpc('cancella_account').then(function (r) {
-      if (r.error) throw r.error;
-      return c.auth.signOut();
-    }).then(function () {
-      utente = null;
-      statoSync = 'locale';
-      avvisa();
-    });
   }
 
   /* ---------- avvio ---------- */
 
   stato = leggiLocale();
-
-  function agganciaSessione(sessione) {
-    var nuovo = sessione && sessione.user ? sessione.user : null;
-    var eraLoggato = !!utente;
-    utente = nuovo;
-
-    if (!utente) {
-      statoSync = 'locale';
-      avvisa();
-      return;
-    }
-    if (eraLoggato) { avvisa(); return; }
-
-    // primo aggancio della sessione: fondo il locale con il remoto
-    statoSync = 'attesa'; avvisa();
-    pull().then(function (remoto) {
-      stato = fondi(stato, remoto || {});
-      salvaLocale();
-      avvisa();
-      return push();
-    }).catch(function () { statoSync = 'errore'; avvisa(); });
-  }
-
-  if (disponibile()) {
-    var c = client();
-    c.auth.getSession().then(function (r) {
-      agganciaSessione(r && r.data ? r.data.session : null);
-    });
-    c.auth.onAuthStateChange(function (_evento, sessione) {
-      agganciaSessione(sessione);
-    });
-  }
 
   return {
     st: st,
@@ -377,14 +164,17 @@ window.GL = (function () {
     tutto: tutto,
     esporta: esporta,
     importa: importa,
-    login: login,
-    logout: logout,
-    cancellaAccount: cancellaAccount,
-    utente: function () { return utente; },
-    email: function () { return utente ? utente.email : null; },
-    sync: function () { return statoSync; },
-    attivo: configurato,       // login previsto dalla configurazione
-    pronto: disponibile,       // libreria caricata e chiavi presenti
-    onChange: function (f) { ascoltatori.push(f); }
+    onChange: function (f) { ascoltatori.push(f); },
+
+    /* ---- compatibilita' ----
+       L'area riservata non esiste piu'. Queste restano solo perche'
+       altre pagine del sito potrebbero ancora chiamarle: rispondono
+       sempre "nessun account" invece di far esplodere la pagina.
+       Si possono togliere quando tutte le pagine sono state ripulite. */
+    utente: function () { return null; },
+    email:  function () { return null; },
+    sync:   function () { return 'locale'; },
+    attivo: function () { return false; },
+    pronto: function () { return false; }
   };
 })();
