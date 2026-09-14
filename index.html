@@ -76,8 +76,6 @@
   a{color:inherit;text-decoration:none}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
   .tech{font-family:"Orbitron",sans-serif;letter-spacing:.02em}
-  .glow-c{text-shadow:0 0 18px rgba(38,240,255,.6)}
-  .glow-m{text-shadow:0 0 18px rgba(197,119,216,.35)}
 
   /* NAV */
   header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
@@ -95,22 +93,13 @@
     background:linear-gradient(90deg,var(--cyan),var(--magenta));
     box-shadow:0 0 22px rgba(197,119,216,.3);transition:transform .15s, box-shadow .2s}
   .nav-cta:hover{transform:translateY(-1px);box-shadow:0 0 30px rgba(95,213,224,.4)}
-  .nav-area{color:var(--cyan)!important;white-space:nowrap}
-  .nav-area .lungo{display:inline}
-  .nav-area .corto{display:none}
   @media(max-width:760px){
-    .nav-links a:not(.nav-cta):not(.nav-area){display:none}
+    .nav-links a:not(.nav-cta){display:none}
     .nav-links{gap:14px}
-    .nav-area{font-family:"Orbitron";font-weight:600;font-size:.7rem;letter-spacing:.06em;
-      border:1px solid rgba(95,213,224,.4);border-radius:8px;padding:9px 12px}
-    .nav-area .lungo{display:none}
-    .nav-area .corto{display:inline}
     .nav-cta{padding:10px 15px;font-size:.72rem}
   }
   @media(max-width:400px){
     .nav-cta{display:none}
-    .nav-area .lungo{display:inline}
-    .nav-area .corto{display:none}
   }
 
   /* HERO */
@@ -137,11 +126,6 @@
   .btn-ghost{background:transparent;border:1px solid var(--cyan);color:var(--cyan);box-shadow:none}
   .btn-ghost:hover{background:rgba(95,213,224,.06);box-shadow:0 0 24px rgba(95,213,224,.22)}
 
-  .stat-row{display:flex;gap:18px;margin-top:54px;flex-wrap:wrap}
-  .stat{border:1px solid var(--line);border-radius:12px;padding:16px 22px;background:var(--panel);backdrop-filter:blur(8px);position:relative;overflow:hidden}
-  .stat::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
-  .stat .n{font-family:"Orbitron";font-size:1.7rem;font-weight:800;background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .stat .l{font-size:.74rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
 
   /* SECTION HEADING */
   .sec{padding:70px 0;position:relative}
@@ -406,8 +390,6 @@
     -webkit-background-clip:text;background-clip:text;color:transparent}
   .od-eur{background:linear-gradient(180deg,var(--cyan),var(--gold));
     -webkit-background-clip:text;background-clip:text;color:transparent;margin-left:.06em}
-  .odo.done{animation:odoPop .5s ease}
-  @keyframes odoPop{40%{filter:drop-shadow(0 0 52px rgba(197,119,216,.55))}}
 
   /* --- righe che si accumulano --- */
   .vault-feed{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;min-height:30px}
@@ -537,16 +519,6 @@
   .all-done p{color:var(--ink-dim);font-size:.88rem;max-width:52ch;margin:0 auto 16px;line-height:1.55}
 
   /* --- video ospitato sul sito --- */
-  #corso{margin:0 0 30px;padding:18px 18px 6px;border-radius:var(--radius);
-    border:1px solid rgba(95,213,224,.28);background:rgba(95,213,224,.05)}
-  #corso .ch{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 4px}
-  #corso .ch h3{font-family:"Orbitron";font-size:.9rem;font-weight:700;color:var(--cyan);margin:0}
-  #corso .ch span{font-size:.8rem;color:var(--ink-faint)}
-  #video .vbox{margin-top:22px;max-width:860px;border:1px solid var(--line);border-radius:16px;
-    overflow:hidden;background:#000;box-shadow:0 0 44px rgba(95,213,224,.08)}
-  #video video{display:block;width:100%;height:auto;background:#000}
-  #video .vnote{margin-top:12px;font-size:.78rem;color:var(--ink-faint)}
-
   /* --- recensioni --- */
   #recensioni .rgrid{display:grid;gap:16px;margin-top:24px;
     grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
@@ -750,12 +722,12 @@
     <h2 class="tech">FAQ</h2>
     <p class="sub">Quello che è utile sapere prima di iniziare.</p>
     <div style="margin-top:32px;max-width:800px">
-      <div class="faq-item"><button class="faq-q">È legale ricevere questi bonus?<span class="pm">+</span></button><div class="faq-a"><div>Sì. I bonus referral sono campagne di marketing ufficiali finanziate dalle banche e dalle piattaforme. GoatLink le raccoglie e spiega come ottenerle.</div></div></div>
-      <div class="faq-item"><button class="faq-q">Ci sono costi nascosti?<span class="pm">+</span></button><div class="faq-a"><div>No. Non ci sono abbonamenti né spese verso GoatLink. Alcuni bonus richiedono un deposito o una spesa minima, sempre indicati chiaramente sulla pagina del bonus.</div></div></div>
-      <div class="faq-item"><button class="faq-q">Devo dichiarare i bonus al fisco?<span class="pm">+</span></button><div class="faq-a"><div>GoatLink non è un consulente fiscale. La gestione fiscale dipende dalla tua situazione: in caso di dubbi, verifica con un professionista.</div></div></div>
-      <div class="faq-item"><button class="faq-q">I bonus crypto comportano rischi?<span class="pm">+</span></button><div class="faq-a"><div>I prodotti crypto comportano rischi legati alla volatilità: il valore può oscillare. I bonus restano reali, ma valuta sempre la natura dello strumento prima di investire. Non è consulenza finanziaria.</div></div></div>
-      <div class="faq-item"><button class="faq-q">Posso fare tutti i bonus?<span class="pm">+</span></button><div class="faq-a"><div>Sì, uno alla volta o in parallelo. Sulla home trovi il totale aggiornato in automatico in base alle promo attive.</div></div></div>
-      <div class="faq-item"><button class="faq-q">Le guide vengono aggiornate?<span class="pm">+</span></button><div class="faq-a"><div>Sì. Ogni guida riporta la data dell'ultimo aggiornamento. I bonus scaduti vengono spostati o rimossi automaticamente.</div></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">È legale ricevere questi bonus?<span class="pm">+</span></button><div class="faq-a"><div>Sì. I bonus referral sono campagne di marketing ufficiali finanziate dalle banche e dalle piattaforme. GoatLink le raccoglie e spiega come ottenerle.</div></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Ci sono costi nascosti?<span class="pm">+</span></button><div class="faq-a"><div>No. Non ci sono abbonamenti né spese verso GoatLink. Alcuni bonus richiedono un deposito o una spesa minima, sempre indicati chiaramente sulla pagina del bonus.</div></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Devo dichiarare i bonus al fisco?<span class="pm">+</span></button><div class="faq-a"><div>GoatLink non è un consulente fiscale. La gestione fiscale dipende dalla tua situazione: in caso di dubbi, verifica con un professionista.</div></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">I bonus crypto comportano rischi?<span class="pm">+</span></button><div class="faq-a"><div>I prodotti crypto comportano rischi legati alla volatilità: il valore può oscillare. I bonus restano reali, ma valuta sempre la natura dello strumento prima di investire. Non è consulenza finanziaria.</div></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Posso fare tutti i bonus?<span class="pm">+</span></button><div class="faq-a"><div>Sì, uno alla volta o in parallelo. Sulla home trovi il totale aggiornato in automatico in base alle promo attive.</div></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Le guide vengono aggiornate?<span class="pm">+</span></button><div class="faq-a"><div>Sì. Ogni guida riporta la data dell'ultimo aggiornamento. I bonus scaduti vengono spostati o rimossi automaticamente.</div></div></div>
     </div>
   </div>
 </section>
@@ -796,17 +768,11 @@ let capOff = false;
 
 const grid = document.getElementById('grid');
 const filtersEl = document.getElementById('filters');
-const active = BONUSES.filter(b => bonusStatus(b) === 'active');
-
-// Totale onesto: solo promo che un nuovo cliente ottiene senza immobilizzare capitale
-// e senza importi variabili. Il flag countInTotal governa l'inclusione.
-// Conta nel totale solo gli importi garantiti in euro.
-// Se il dato ha il flag countInTotal lo usa; altrimenti ripiega su euro > 0.
-function counted(b){
-  return (b.countInTotal !== undefined) ? !!b.countInTotal : (b.currency === '€' && b.amount > 0);
-}
-const countedList = active.filter(counted);
-const totalEur = countedList.reduce((s,b)=>s+b.amount,0);
+// Attivi, conteggiati nel totale e somma: definiti una volta sola in data.js.
+// Qui non si ricalcola niente, cosi' la regola non puo' divergere.
+const active = activeBonuses();
+const countedList = countedBonuses();
+const totalEur = totalGuaranteed();
 const statCount = document.getElementById('stat-count');
 if(statCount) statCount.textContent = active.length;
 
@@ -826,7 +792,7 @@ cats.forEach(c=>{
 });
 
 function icon(b){
-  if(b.logo) return `<div class="ic"><img src="${b.logo}" alt="${b.name}" onerror="this.parentNode.textContent='${b.emoji||'🏦'}'"></div>`;
+  if(b.logo) return `<div class="ic"><img src="${b.logo}" alt="${b.name}" width="46" height="46" loading="lazy" decoding="async" onerror="this.parentNode.textContent='${b.emoji||'🏦'}'"></div>`;
   return `<div class="ic">${b.emoji||'🏦'}</div>`;
 }
 function card(b){
@@ -936,7 +902,10 @@ if(expired.length){
   document.getElementById('tornano-presto').style.display = '';
 }
 
-document.querySelectorAll('.faq-q').forEach(q=>q.onclick=()=>q.parentNode.classList.toggle('open'));
+document.querySelectorAll('.faq-q').forEach(q=>q.onclick=()=>{
+  const aperto = q.parentNode.classList.toggle('open');
+  q.setAttribute('aria-expanded', aperto ? 'true' : 'false');
+});
 requestAnimationFrame(()=>document.body.classList.add('animate'));
 
 // Date di aggiornamento: derivate dal catalogo, mai dal calendario.

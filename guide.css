@@ -46,7 +46,7 @@ main{padding:26px 0 60px}
 
 .g-meta{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0;font-size:.8rem;color:var(--ink-dim)}
 .g-meta span{background:var(--panel);border:1px solid var(--line);padding:6px 12px;border-radius:8px;backdrop-filter:blur(6px)}
-.d-Facile{color:var(--lime)}.d-Medio{color:var(--gold)}
+.d-Facile{color:var(--lime)}.d-Medio{color:var(--gold)}.d-Impegnativo{color:var(--magenta)}
 .g-meta .exp{color:var(--gold)}
 
 .g-summary{font-size:1.1rem;color:var(--ink-dim);border-left:2px solid var(--cyan);padding-left:16px;margin:10px 0 14px}
@@ -74,6 +74,9 @@ main{padding:26px 0 60px}
 .g-rules h3{font-family:"Orbitron";font-size:.95rem;margin-bottom:14px;font-weight:600}
 .g-rules.ok{border-color:rgba(168,217,106,.3)}
 .g-rules.ko{border-color:rgba(224,138,138,.3)}
+.g-rules.warn{border-color:rgba(224,192,113,.35);background:linear-gradient(180deg,rgba(224,192,113,.05),var(--panel))}
+.g-rules p{font-size:.9rem;color:var(--ink-dim)}
+.g-trick-risk{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:var(--ink-faint);font-size:.86rem}
 .g-rules ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .g-rules li{font-size:.9rem;color:var(--ink-dim);padding-left:16px;position:relative}
 .g-rules li::before{content:"–";position:absolute;left:0;color:var(--ink-faint)}
@@ -136,9 +139,3 @@ main{padding:26px 0 60px}
 .g-tg-btn:hover{transform:translateY(-2px);box-shadow:0 0 32px rgba(95,213,224,.38)}
 
 /* ============ Manifesto home ============ */
-.g-manifesto{margin:48px auto;padding:30px 28px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);backdrop-filter:blur(6px)}
-.g-manifesto h2{font-size:1.4rem;font-weight:700;margin-bottom:16px}
-.g-manifesto p{color:var(--ink-dim);font-size:1.05rem;margin-bottom:14px}
-.g-manifesto-cta-line{color:var(--ink);font-weight:500}
-.g-manifesto-actions{margin:22px 0 6px}
-.g-manifesto-sign{font-family:"Orbitron",sans-serif;font-size:.82rem;color:var(--ink-faint);letter-spacing:.04em;margin-top:8px}

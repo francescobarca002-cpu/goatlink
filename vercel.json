@@ -1,4 +1,26 @@
 {
   "cleanUrls": false,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/binance.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/naga.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/skrill.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sumuppay.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }
