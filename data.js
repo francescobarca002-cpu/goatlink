@@ -743,23 +743,71 @@ const BONUSES = [
     "category": "Trading",
     "logo": "logos/trading212.png",
     "emoji": "📊",
-    "amount": 0,
+    "amount": 8,
     "currency": "€",
     "amountLabel": "8€–100€",
     "minutes": 15,
     "difficulty": "Facile",
-    "badge": null,
-    "payout": "Azione entro 72 ore",
+    "badge": "Nuova edizione",
+    "payout": "Azione entro 3 giorni lavorativi",
     "deposit": "Deposito min. 10€",
-    "expires": "2026-07-09",
-    "updated": "2026-08-09",
+    "expires": "2026-11-03",
+    "updated": "2026-09-21",
     "featured": false,
     "countInTotal": false,
-    "source": null,
-    "summary": "Un'azione omaggio da 8€ a 100€ con deposito minimo di 10€. L'ultima campagna si è chiusa il 09/07/2026: Trading 212 lavora a finestre, quindi la promo torna ma con date e regolamento nuovi ogni volta.",
+    "source": "https://helpcentre.trading212.com/hc/en-us/articles/360007291258-Invite-Your-Friends-Get-Free-Fractional-Shares",
+    "summary": "È tornata: apri un conto Invest dal link di un amico entro il <strong>3 novembre</strong>, verifica l'identità e deposita entro 10 giorni. Ricevi un'azione scelta a caso che vale da 8€ a 100€.",
     "code": null,
-    "steps": [],
-    "rules_ok": []
+    "steps": [
+      "Procurati il <strong>link di invito</strong>. Lo può dare solo chi ha già un conto Trading 212 Invest: scrivici su WhatsApp e te lo passiamo in privato.",
+      "Registrati dal link e apri un <strong>conto Invest</strong>. Il conto CFD non vale per la promo.",
+      "Completa la <strong>verifica dell'identità</strong>.",
+      "Deposita almeno <strong>10€ entro 10 giorni</strong> dalla creazione del conto.",
+      "Entro <strong>3 giorni lavorativi</strong> ricevi l'azione premio, scelta a caso con un valore fra 8€ e 100€.",
+      "Puoi venderla subito. Il contante che ne ricavi si preleva dopo <strong>30 giorni</strong> dall'accredito."
+    ],
+    "rules_ok": [
+      "La campagna «Invita un amico» è attiva dal <strong>21/09/2026 al 03/11/2026</strong>. Il conto va aperto dentro queste date.",
+      "L'azione è gratis: il suo valore può salire o scendere, ma riscattarla non ti fa perdere niente.",
+      "Il deposito resta tuo. Il blocco di 30 giorni riguarda solo il valore dell'azione premio.",
+      "Se ti sei registrato senza passare dal link, puoi ancora partecipare inserendo l'ID di invito dal menu dei codici promozionali, subito dopo l'apertura del conto.",
+      "Anche chi ti invita riceve un'azione, fino a 5 per campagna. Te lo diciamo perché è giusto tu lo sappia: non cambia niente di quello che prendi tu."
+    ],
+    "rules_ko": [
+      "<strong>Solo nuovi clienti.</strong> Se hai già avuto un conto Invest su Trading 212 non partecipi.",
+      "<strong>10 giorni e basta.</strong> Verifica e deposito vanno chiusi entro 10 giorni dalla creazione del conto: se sfori, l'azione non arriva.",
+      "Il deposito minimo lo fissa Trading 212 paese per paese. Prima di depositare controlla la cifra nella sezione delle azioni gratuite del menu ☰.",
+      "I 100€ sono il tetto, non quello che ti aspetta. Il valore è estratto a caso: ragiona sugli 8€ e considera il resto fortuna.",
+      "Vendere l'azione non accorcia il blocco: il contante resta fermo 30 giorni dall'accredito in ogni caso.",
+      "Il regolamento lascia a te ogni implicazione fiscale del premio."
+    ],
+    "seo_title": "Bonus Trading 212: azione gratis da 8€ a 100€ (Invita un amico) — guida 2026 | GoatLink",
+    "faq": [
+      {"q": "Quanto vale il bonus Trading 212?",
+       "a": "Un'azione frazionata gratuita scelta a caso, con un valore fra 8€ e 100€. La ricevi tu che apri il conto e ne riceve una anche chi ti ha invitato."},
+      {"q": "Entro quando devo aprire il conto?",
+       "a": "La campagna in corso va dal <strong>21 settembre al 3 novembre 2026</strong>. Da quando crei il conto hai poi 10 giorni per completare verifica e deposito."},
+      {"q": "Quanto devo depositare?",
+       "a": "Il minimo lo decide Trading 212 per ogni paese e lo trovi in app, nella sezione delle azioni gratuite: controllalo prima di depositare. Il deposito resta tuo e lo puoi usare come vuoi."},
+      {"q": "Quando arriva l'azione e quando posso prelevarla?",
+       "a": "Entro 3 giorni lavorativi da quando hai verificato il conto e fatto il deposito. Puoi venderla subito, ma il contante si preleva solo dopo 30 giorni dall'accredito, anche se vendi prima."},
+      {"q": "Posso perdere soldi?",
+       "a": "Con l'azione premio no: è gratis, e anche se il suo valore scende non ci rimetti. Se invece usi il deposito per comprare altro, quello è un investimento vero e il rischio di mercato è tuo."},
+      {"q": "Mi sono registrato senza il link, ho perso il bonus?",
+       "a": "Non per forza. Subito dopo l'apertura del conto puoi inserire l'ID di invito dal menu dei codici promozionali. È la stessa strada che Trading 212 indica quando il link non ha funzionato."},
+      {"q": "Dove trovo un link di invito?",
+       "a": "Te lo dà una persona che ha già un conto Trading 212 Invest. Sul sito non ne pubblichiamo nessuno: scrivici su WhatsApp e te lo passiamo in privato."},
+      {"q": "Perché la promo a volte sparisce?",
+       "a": "Trading 212 lavora a campagne con date di inizio e fine. Fra una campagna e l'altra i link di invito non danno nessun premio, poi la promo riparte con regole e date nuove."}
+    ],
+    "why": "Chiede solo un piccolo deposito, che resta tuo, e pochi minuti da telefono. In cambio il premio è un'estrazione fra 8€ e 100€ e il contante resta fermo 30 giorni.",
+    "pros": [
+      "Deposito minimo, e resta tuo",
+      "Azione in 3 giorni lavorativi",
+      "Vendibile subito",
+      "Nessuna spesa con carta",
+      "Pochi minuti da telefono"
+    ]
   }
 ];
 
