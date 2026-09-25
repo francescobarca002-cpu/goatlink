@@ -808,6 +808,87 @@ const BONUSES = [
       "Nessuna spesa con carta",
       "Pochi minuti da telefono"
     ]
+  },
+  {
+    "slug": "myfin", "capitale": 11,
+    "name": "MyFin",
+    "category": "Fintech",
+    "logo": "logos/myfin.png",
+    "emoji": "💳",
+    "amount": 10,
+    "currency": "€",
+    "amountLabel": "10€",
+    "minutes": 15,
+    "difficulty": "Facile",
+    "badge": "Ultimi giorni",
+    "payout": "Sul conto entro 72 ore",
+    "deposit": "Spesa con carta oltre 10€",
+    "expires": "2026-09-30",
+    "updated": "2026-09-25",
+    "featured": false,
+    "countInTotal": true,
+    "source": "https://www.myfin.bg/docs/en/referral.pdf",
+    "seo_title": "Bonus MyFin 10€ (codice amico) — guida 2026 | GoatLink",
+    "summary": "Registrati su MyFin con il codice di un amico entro il <strong>30 settembre</strong>, verifica l'identità e paga con la carta virtuale un acquisto sopra i 10€. Ricevi 10€ sul conto entro 72 ore.",
+    "code": null,
+    "steps": [
+      "Procurati il <strong>codice invito</strong>. Lo può dare solo chi ha già un conto MyFin: scrivici su WhatsApp e te lo passiamo in privato.",
+      "Scarica l'app MyFin e registrati inserendo il <strong>codice</strong>. Il piano Standard è gratuito e per il bonus basta.",
+      "Completa la <strong>verifica dell'identità</strong> con un documento. Può richiedere qualche ora e non arriva sempre una notifica: se riesci a caricare il conto, la verifica è passata.",
+      "Crea la <strong>carta virtuale</strong>, gratuita, e carica sul conto almeno <strong>11€</strong> da un altro conto tuo.",
+      "Paga con la carta MyFin un <strong>acquisto sopra i 10€</strong> da un negozio, online o in fisico. Per esempio un buono regalo da 11€.",
+      "Ricevi <strong>10€</strong> sul conto MyFin entro <strong>72 ore</strong> dal completamento dei passaggi."
+    ],
+    "rules_ok": [
+      "La campagna «Invite a Friend» è attiva dal <strong>01/09/2026 al 30/09/2026</strong>. Registrazione, verifica e acquisto vanno chiusi dentro queste date.",
+      "L'acquisto non è una spesa persa: compri una cosa che ti serve o un buono che userai.",
+      "I 10€ arrivano sul conto a tuo nome: li puoi spendere con la carta o trasferire su un altro conto.",
+      "Anche chi ti invita riceve 10€. Te lo diciamo perché è giusto tu lo sappia: non cambia niente di quello che prendi tu."
+    ],
+    "rules_ko": [
+      "<strong>Solo il primo profilo.</strong> Il bonus spetta una volta sola, sul primo profilo registrato e verificato.",
+      "<strong>Ricariche e depositi non valgono.</strong> Ricaricare un altro conto o un wallet con la carta MyFin (Trading 212, Revolut, PayPal e simili) non conta come acquisto. Lo stesso per money transfer, prelievi e siti di scommesse.",
+      "<strong>Serve un acquisto vero.</strong> Conta solo il pagamento di beni o servizi a un esercente. In caso di contestazione MyFin può chiederti la fattura o la ricevuta: conservala.",
+      "<strong>Sopra i 10€, non 10€.</strong> Il regolamento chiede un importo maggiore di 10€: con 10€ esatti rischi di restare fuori.",
+      "Sul piano Standard un bonifico SEPA in uscita costa 0,28€: tienine conto se vuoi spostare i 10€ altrove."
+    ],
+    "faq": [
+      {
+        "q": "Quanto vale il bonus MyFin?",
+        "a": "10€ sul conto MyFin, a te che ti registri con il codice. Ne riceve 10 anche chi ti ha invitato."
+      },
+      {
+        "q": "Entro quando devo fare tutto?",
+        "a": "La campagna in corso va dal <strong>1° al 30 settembre 2026</strong>. Registrazione, verifica e acquisto vanno chiusi entro il 30."
+      },
+      {
+        "q": "Posso usare il deposito su Trading 212 come spesa?",
+        "a": "No. Il regolamento esclude le ricariche di altri conti e wallet fatte con la carta MyFin, compresi i depositi su broker e app di pagamento. Serve un acquisto di beni o servizi da un negozio."
+      },
+      {
+        "q": "Che acquisto posso fare?",
+        "a": "Qualsiasi pagamento sopra i 10€ a un esercente, online o in negozio: una spesa che dovevi comunque fare o un buono regalo. Tieni la ricevuta."
+      },
+      {
+        "q": "Quanto costa MyFin?",
+        "a": "Il piano Standard è gratuito e comprende una carta virtuale. Paghi solo alcune operazioni, per esempio 0,28€ per un bonifico SEPA in uscita."
+      },
+      {
+        "q": "Dove trovo un codice invito?",
+        "a": "Te lo dà una persona che ha già un conto MyFin. Sul sito non ne pubblichiamo nessuno: scrivici su WhatsApp e te lo passiamo in privato."
+      },
+      {
+        "q": "Perché la promo a volte sparisce?",
+        "a": "MyFin lavora a campagne mensili con date di inizio e fine. Fra una campagna e l'altra il codice non dà nessun premio, poi la promo riparte con regole e date nuove."
+      }
+    ],
+    "why": "Conto gratuito con carta virtuale, e il bonus arriva in 72 ore. Ti chiede solo un acquisto sopra i 10€ che puoi comunque usare.",
+    "pros": [
+      "Piano Standard gratuito",
+      "Carta virtuale inclusa",
+      "Bonus in 72 ore",
+      "Nessun deposito da immobilizzare"
+    ]
   }
 ];
 
