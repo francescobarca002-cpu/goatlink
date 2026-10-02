@@ -18,7 +18,15 @@
 //                 "Tornano presto". Lasciare null se non scade.
 //   updated       data dell'ultima verifica: la piu' recente di
 //                 queste alimenta la data mostrata in home.
+//
+// CATALOGO_VERIFICATO  data dell'ultima revisione del catalogo nel
+//                 suo insieme (schede tolte, aggiunte, ricontrollate
+//                 in blocco). Va aggiornata A MANO solo quando la
+//                 revisione c'e' stata davvero. La home mostra la
+//                 piu' recente tra questa e gli "updated" delle schede.
 // ============================================================
+
+const CATALOGO_VERIFICATO = "2026-10-01"; // tolti Bybit e Bitstack
 
 const TODAY = new Date(); // usato per calcolare automaticamente lo stato "scaduto"
 
