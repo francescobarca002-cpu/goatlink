@@ -565,7 +565,7 @@
 
 <section class="hero">
   <div class="wrap">
-    <span class="pill"><span class="pulse"></span> Verificati · aggiornati <span id="badge-mese">giugno 2026</span></span>
+    <span class="pill"><span class="pulse"></span> Verificati · aggiornati <span id="badge-mese">ottobre 2026</span></span>
     <h1 class="tech">
       <span class="rvl"><span class="l1">BONUS REALI.</span></span>
       <span class="rvl"><span class="l2 glitch" data-text="SPIEGATI BENE.">SPIEGATI BENE.</span></span>
@@ -896,7 +896,9 @@ requestAnimationFrame(()=>document.body.classList.add('animate'));
   const mesi=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
   const oggi=new Date().toISOString().slice(0,10);
   const attive=(typeof BONUSES!=='undefined'?BONUSES:[]).filter(b=>!b.expires||b.expires>=oggi);
-  const date=attive.map(b=>b.updated).filter(Boolean).sort();
+  const date=attive.map(b=>b.updated).filter(Boolean);
+  if(typeof CATALOGO_VERIFICATO!=='undefined' && CATALOGO_VERIFICATO) date.push(CATALOGO_VERIFICATO);
+  date.sort();
   const ultima=date.length?date[date.length-1]:null;
   if(!ultima) return;
   const [a,m,g]=ultima.split('-').map(Number);
