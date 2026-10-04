@@ -127,3 +127,64 @@ var GL_TRACKING = {
   };
   document.head.appendChild(cc);
 })();
+
+// ============================================================
+// FONTE DEI CONTATTI WHATSAPP
+// Le campagne usano link con ?utm_source=...&utm_campaign=...
+// La fonte resta in memoria per la visita (sessionStorage, nessun
+// dato personale) e viene aggiunta in coda al messaggio WhatsApp
+// precompilato, es. "Ciao! Vorrei il codice per il bonus BBVA [ig-ottobre]".
+// Cosi' ogni contatto arriva gia' etichettato e i clienti portati dalle
+// campagne si contano senza mescolarli con gli altri.
+// In piu' ogni click su WhatsApp diventa un evento GA4
+// ("contatto_whatsapp" / "canale_whatsapp"), inviato secondo il consenso.
+// ============================================================
+(function () {
+  var KEY = "gl_fonte";
+  var fonte = null;
+  try {
+    var q = new URLSearchParams(location.search);
+    var s = q.get("utm_source"), c = q.get("utm_campaign");
+    if (s) {
+      fonte = (s + (c ? "-" + c : "")).toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 40);
+      sessionStorage.setItem(KEY, fonte);
+    } else {
+      fonte = sessionStorage.getItem(KEY);
+    }
+  } catch (e) { /* storage non disponibile: nessuna etichetta */ }
+
+  function nomeBonus() {
+    var o = document.body && document.body.getAttribute("data-bonus");
+    if (o) return o.trim();
+    var h1 = document.querySelector(".g-hero h1");
+    return h1 ? h1.textContent.replace(/^Bonus\s+/i, "").replace(/\s+\d.*$/, "").trim() : "home";
+  }
+
+  function etichetta(a) {
+    if (!fonte) return;
+    var href = a.getAttribute("href") || "";
+    var tag = " [" + fonte + "]";
+    var i = href.indexOf("?text=");
+    if (i === -1) {
+      a.setAttribute("href", href + "?text=" + encodeURIComponent("Ciao! Vorrei una mano con un bonus" + tag));
+      return;
+    }
+    var testo = decodeURIComponent(href.slice(i + 6).replace(/\+/g, " "));
+    if (testo.indexOf(tag) !== -1) return;
+    a.setAttribute("href", href.slice(0, i) + "?text=" + encodeURIComponent(testo + tag));
+  }
+
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me/"], a[href*="whatsapp.com/channel"]') : null;
+    if (!a) return;
+    var canale = a.href.indexOf("whatsapp.com/channel") !== -1;
+    if (!canale) etichetta(a);
+    if (typeof window.gtag === "function") {
+      gtag("event", canale ? "canale_whatsapp" : "contatto_whatsapp", {
+        bonus: nomeBonus(),
+        fonte: fonte || "diretto",
+        pagina: location.pathname
+      });
+    }
+  }, true);
+})();
