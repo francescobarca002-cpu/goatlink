@@ -1,6 +1,6 @@
 /* GoatLink — scadenza automatica delle guide.
    Ogni guida porta la scadenza della promo in <body data-expires="AAAA-MM-GG">
-   (scritta da aggiorna_home.py prendendola da data.js). Passata quella data,
+   (scritta da genera_sito.py prendendola da data.js). Passata quella data,
    la guida mostra da sola l'avviso "promo terminata", come fa la home, senza
    che qualcuno debba ricordarsi di modificarla. */
 (function () {
