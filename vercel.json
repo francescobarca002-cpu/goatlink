@@ -21,6 +21,16 @@
       "source": "/sumuppay.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/bybit.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/bitstack.html",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
