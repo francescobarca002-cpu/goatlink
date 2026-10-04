@@ -62,6 +62,19 @@ def main():
         if n != 1:
             sys.exit(f"Elemento non trovato in index.html: {schema}")
     pagina.write_text(html, encoding="utf-8")
+
+    # Scadenza nelle guide: <body data-expires="..."> uguale a data.js.
+    # wa-message.js la legge e, passata la data, mostra da solo l'avviso.
+    for b in bonus:
+        guida = ROOT / f"{b['slug']}.html"
+        if not guida.exists():
+            continue
+        testo = guida.read_text(encoding="utf-8")
+        nuovo = re.sub(r' data-expires="[^"]*"', "", testo)
+        if b.get("expires"):
+            nuovo = re.sub(r"<body([^>]*)>", lambda x: f'<body{x.group(1)} data-expires="{b["expires"]}">', nuovo, count=1)
+        if nuovo != testo:
+            guida.write_text(nuovo, encoding="utf-8")
     print(f"{len(attive)} promo attive, totale {totale}€, aggiornato {g} {MESI[m - 1]} {a}")
 
 

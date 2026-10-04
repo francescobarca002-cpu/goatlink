@@ -279,10 +279,10 @@ const BONUSES = [
     "amount": 50,
     "currency": "€",
     "amountLabel": "50€",
-    "boost": { "amount": 80, "amountLabel": "80€", "until": "2026-11-16" },
+    "boost": { "amount": 80, "amountLabel": "80€", "until": "2026-11-16", "badge": "Bonus maggiorato" },
     "minutes": 10,
     "difficulty": "Facile",
-    "badge": "Bonus maggiorato",
+    "badge": null,
     "payout": "Entro 90 giorni, prelevabile",
     "deposit": "Ricarica 11€ + spesa da 10€",
     "expires": "2027-01-20",
@@ -305,7 +305,7 @@ const BONUSES = [
       "Ricevi il bonus <strong>entro 90 giorni</strong> dalla transazione valida, direttamente sul conto e prelevabile."
     ],
     "rules_ok": [
-      "Fino al <strong>4 ottobre 2026</strong> il bonus di benvenuto è maggiorato a <strong>80€</strong>. Dal 5 ottobre torna a 50€: la promozione resta aperta fino al 20/01/2027, cambia solo l'importo.",
+      "Fino al <strong>16 novembre 2026</strong> il bonus di benvenuto è maggiorato a <strong>80€</strong> (prorogato dal 4 ottobre). Dal 17 novembre torna a 50€: la promozione resta aperta fino al 20/01/2027, cambia solo l'importo.",
       "Il conto corrente è <strong>gratuito</strong>, e la carta MyOne virtuale è gratuita: per prendere il bonus non spendi nulla in canoni.",
       "Sono valide le transazioni su <strong>POS fisico</strong> (contactless o chip e PIN), su <strong>POS virtuale</strong> per gli acquisti online e i pagamenti tramite <strong>Apple Pay, Google Pay e Samsung Pay</strong>.",
       "I soldi arrivano <strong>cash sul conto</strong> e sono prelevabili: non è un buono né un cashback vincolato.",
@@ -322,7 +322,7 @@ const BONUSES = [
     ],
     "faq": [
       {"q": "Quanto vale davvero il bonus Buddybank adesso?",
-       "a": "80€ per chi apre entro il <strong>4 ottobre 2026</strong>, poi 50€. La promozione resta comunque aperta fino al 20 gennaio 2027: cambia solo l'importo, non i requisiti."},
+       "a": "80€ per chi apre entro il <strong>16 novembre 2026</strong>, poi 50€. La promozione resta comunque aperta fino al 20 gennaio 2027: cambia solo l'importo, non i requisiti."},
       {"q": "Quanto devo spendere per prenderlo?",
        "a": "Un solo pagamento da almeno 10€ con la carta MyOne, entro 30 giorni dall'apertura del conto. Il regolamento accetta anche più transazioni che sommate facciano 10€, ma un pagamento unico è la strada più pulita."},
       {"q": "Devo lasciare dei soldi fermi?",
@@ -338,9 +338,9 @@ const BONUSES = [
       {"q": "Il conto ha dei costi?",
        "a": "No. Il conto Genius buddy è gratuito e la carta MyOne in versione digitale è gratuita. La versione fisica ha un costo, ma per il bonus non serve."}
     ],
-    "why": "Il bonus più alto rispetto allo sforzo richiesto: un pagamento da 10€ e hai finito, e fino al 4 ottobre vale 80€ invece di 50€.",
+    "why": "Il bonus più alto rispetto allo sforzo richiesto: un pagamento da 10€ e hai finito, e fino al 16 novembre vale 80€ invece di 50€.",
     "pros": [
-      "80€ fino al 4 ottobre",
+      "80€ fino al 16 novembre",
       "Un pagamento da 10€ e basta",
       "Soldi cash, prelevabili",
       "Conto e carta virtuale gratuiti"
@@ -646,7 +646,7 @@ const BONUSES = [
     "code": null,
     "steps": [
       "Procurati il <strong>link di invito</strong>. Lo può dare solo chi ha già un conto Trading 212 Invest: scrivici su WhatsApp e te lo passiamo in privato.",
-      "Registrati dal link e apri un <strong>conto Invest</strong>. Il conto CFD non vale per la promo.",
+      "Registrati dal link e apri il <strong>conto Invest</strong>: è l'<strong>unico conto valido</strong> per il bonus. Con il conto CFD o altri tipi di conto l'azione non arriva.",
       "Completa la <strong>verifica dell'identità</strong>.",
       "Deposita almeno <strong>10€ entro 10 giorni</strong> dalla creazione del conto.",
       "Entro <strong>3 giorni lavorativi</strong> ricevi l'azione premio, scelta a caso con un valore fra 8€ e 100€.",
@@ -661,6 +661,7 @@ const BONUSES = [
     ],
     "rules_ko": [
       "<strong>Solo nuovi clienti.</strong> Se hai già avuto un conto Invest su Trading 212 non partecipi.",
+      "<strong>Solo conto Invest.</strong> È l'unico conto da aprire per il bonus: CFD e altri tipi di conto non danno diritto all'azione.",
       "<strong>10 giorni e basta.</strong> Verifica e deposito vanno chiusi entro 10 giorni dalla creazione del conto: se sfori, l'azione non arriva.",
       "Il deposito minimo lo fissa Trading 212 paese per paese. Prima di depositare controlla la cifra nella sezione delle azioni gratuite del menu ☰.",
       "I 100€ sono il tetto, non quello che ti aspetta. Il valore è estratto a caso: ragiona sugli 8€ e considera il resto fortuna.",
@@ -790,6 +791,7 @@ BONUSES.forEach(function(b){
   if (b.boost && bonusStatus({ expires: b.boost.until }) === "active") {
     b.amount = b.boost.amount;
     b.amountLabel = b.boost.amountLabel;
+    if (b.boost.badge) b.badge = b.boost.badge;
   }
 });
 
