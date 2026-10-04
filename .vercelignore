@@ -1,2 +1,4 @@
 # Strumenti interni: restano nel repository ma non vengono pubblicati sul sito.
 *.py
+__pycache__
+.github

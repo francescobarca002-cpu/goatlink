@@ -1,0 +1,48 @@
+# Controlli automatici di GoatLink.
+#  - A ogni modifica (push o pull request) lancia controlla_sito.py:
+#    se trova errori la modifica risulta rossa su GitHub e non va pubblicata.
+#  - Ogni mattina rigenera guide, sitemap e home da data.js, cosi' scadenze e
+#    maggiorazioni si aggiornano da sole anche nell'HTML. Se dopo la
+#    rigenerazione il controllo passa, pubblica; se non passa, il job fallisce
+#    e GitHub manda una mail: c'e' qualcosa da sistemare a mano.
+name: Controlli sito
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * *"   # 06:17 ora italiana (05:17 con l'ora solare)
+
+jobs:
+  controlla:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Controllo del sito
+        run: python3 controlla_sito.py
+
+  aggiorna:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Rigenera da data.js
+        run: python3 genera_sito.py
+      - name: Controllo del sito
+        run: python3 controlla_sito.py
+      - name: Pubblica se e' cambiato qualcosa
+        run: |
+          if git diff --quiet; then
+            echo "Niente da aggiornare oggi."
+          else
+            git config user.name "GoatLink bot"
+            git config user.email "actions@github.com"
+            git commit -am "Aggiornamento automatico del $(date +%F)"
+            git push
+          fi

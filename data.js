@@ -1,12 +1,14 @@
 // ============================================================
 // GoatLink — SORGENTE UNICA DI VERITÀ
 //
-// Questo file lo carica index.html: modificarlo qui aggiorna la
-// home. Non esistono altre copie dell'array.
-//
-// Le pagine guida (ing.html, bbva.html, ...) restano scritte a mano:
-// se cambi un importo o una scadenza qui, controlla anche la guida
-// corrispondente.
+// Tutto il contenuto dei bonus sta qui. Da questo file:
+//   - la home (index.html) legge le schede quando si carica;
+//   - genera_sito.py produce le guide <slug>.html, la sitemap e i
+//     valori statici della home.
+// Le guide NON si modificano a mano: si cambia questo file e si
+// lancia  python genera_sito.py . Il controllo automatico
+// (controlla_sito.py, lanciato da GitHub a ogni modifica) blocca
+// le guide che non corrispondono a questo file.
 //
 // Campi che contano:
 //   countInTotal  entra nel totale garantito mostrato in home.
@@ -15,15 +17,22 @@
 //   capitale      euro da muovere (0 = nessuno). Governa il filtro
 //                 "Nascondi quelli che chiedono di muovere soldi".
 //   expires       oltre questa data la promo passa da sola in
-//                 "Tornano presto". Lasciare null se non scade.
-//   updated       data dell'ultima verifica: la piu' recente di
-//                 queste alimenta la data mostrata in home.
+//                 "Tornano presto" e la guida mostra l'avviso.
+//                 Lasciare null se non scade.
+//   updated       data dell'ultima verifica sulla fonte ufficiale:
+//                 la piu' recente alimenta la data mostrata in home.
+//   boost         maggiorazione a tempo {amount, amountLabel, until,
+//                 badge}: dopo "until" torna l'importo base.
+//   code          SEMPRE null: il codice amico non si pubblica online.
+//
+// Campi solo per la guida (facoltativi): seo_title, faq, trick,
+//   sezioni_prima / sezioni_dopo [{titolo, html}], cons,
+//   codice_box (false = niente riquadro codice), codice_etichetta,
+//   cta, cta_nota, categoria_etichetta, scadenza_etichetta.
 //
 // CATALOGO_VERIFICATO  data dell'ultima revisione del catalogo nel
-//                 suo insieme (schede tolte, aggiunte, ricontrollate
-//                 in blocco). Va aggiornata A MANO solo quando la
-//                 revisione c'e' stata davvero. La home mostra la
-//                 piu' recente tra questa e gli "updated" delle schede.
+//                 suo insieme. Va aggiornata A MANO solo quando la
+//                 revisione c'e' stata davvero.
 // ============================================================
 
 const CATALOGO_VERIFICATO = "2026-10-04"; // tolti Bybit e Bitstack; Tinaba scaduta; buddy prorogata
@@ -32,7 +41,8 @@ const TODAY = new Date(); // usato per calcolare automaticamente lo stato "scadu
 
 const BONUSES = [
   {
-    "slug": "bitpanda", "capitale": 50,
+    "slug": "bitpanda",
+    "capitale": 50,
     "name": "Bitpanda",
     "category": "Crypto",
     "logo": "logos/bitpanda.png",
@@ -63,11 +73,63 @@ const BONUSES = [
     "rules_ok": [
       "L'acquisto deve passare dal Bitpanda Broker ed essere di almeno 50€: validi crypto, azioni, ETF, ETC, M-Token / metalli.",
       "L'asset acquistato è rivendibile subito: non stai spendendo i 50€.",
+      "Controlla sempre il riepilogo prima di confermare: Bitpanda mostra prezzo finale e commissioni prima dell'ordine.",
       "Inviti: 15€ a te e 15€ all'amico per ogni amico valido."
-    ]
+    ],
+    "faq": [
+      {
+        "q": "Quanto vale il bonus di Bitpanda?",
+        "a": "15€ per chi si iscrive dall'invito e completa i requisiti. Chi invita riceve a sua volta 15€ per ogni amico valido. L'accredito avviene entro massimo 30 giorni."
+      },
+      {
+        "q": "Cosa devo comprare per ottenere il bonus Bitpanda?",
+        "a": "Un acquisto idoneo da almeno 50€ tramite Bitpanda Broker. Asset validi: crypto, azioni, ETF, ETC, M-Token / metalli. Non valgono swap tra asset, Bitpanda Fusion, Leverage, Margin Trading e Cash Plus."
+      },
+      {
+        "q": "Quanto devo depositare per il bonus Bitpanda?",
+        "a": "Almeno 50€ di deposito, oltre all'acquisto idoneo da almeno 50€ dal Broker. L'asset acquistato è rivendibile subito, quindi non lo stai spendendo."
+      },
+      {
+        "q": "Quanto posso guadagnare con gli inviti?",
+        "a": "15€ per ogni amico valido, e 15€ anche all'amico. Il regolamento non indica un numero massimo preciso di inviti. Servono registrazioni reali, account verificati e acquisto idoneo completato nel periodo promo."
+      },
+      {
+        "q": "Entro quando devo completare tutto?",
+        "a": "La promo termina il 25/06/2026 alle 23:59. Registrazione, verifica identità e acquisto idoneo da almeno 50€ vanno completati entro la scadenza. Il KYC può richiedere tempo, quindi non ridurti all'ultimo."
+      }
+    ],
+    "rules_ko": [
+      "Operazioni che non contano: swap tra asset, Bitpanda Fusion, Leverage, Margin Trading, Cash Plus",
+      "Non essere un nuovo utente Bitpanda",
+      "Account doppi o registrazioni anomale",
+      "Ridursi all'ultimo: il KYC può richiedere tempo e la promo scade il 25/06/2026 alle 23:59"
+    ],
+    "why": "15€ di bonus per aver aperto un conto, depositato 50€ e fatto un acquisto idoneo da 50€ dal Broker. L'asset comprato è rivendibile subito, quindi il costo reale è solo commissioni e spread (sotto i 2€ sugli asset più leggeri). Il sistema di inviti aggiunge 15€ per ogni amico valido, sia all'amico sia a chi invita. Da tenere a mente: KYC, deposito e acquisto vanno completati entro la scadenza e l'accredito può arrivare fino a 30 giorni dopo.",
+    "pros": [
+      "Bonus chiaro da 15€ con requisiti definiti",
+      "Asset rivendibile subito: costo reale = solo commissioni",
+      "Inviti remunerativi: 15€ a te e 15€ all'amico per ogni amico valido",
+      "Ampia scelta di asset idonei (crypto, azioni, ETF, ETC, metalli)"
+    ],
+    "cons": [
+      "Serve sia il deposito da 50€ sia un acquisto idoneo da 50€",
+      "Accredito bonus fino a 30 giorni",
+      "Operazioni non valide escluse (swap, Fusion, Leverage, Margin, Cash Plus)",
+      "Promo a tempo: termina il 25 giugno 2026"
+    ],
+    "sezioni_dopo": [
+      {
+        "titolo": "Commissioni su 50€: esempi pratici",
+        "html": "<p class=\"g-verdict-txt\">Comprando e rivendendo subito vanno considerati commissioni e spread (oltre ai movimenti di prezzo). Stime indicative su 50€, senza considerare oscillazioni. Il saldo teorico include il bonus da 15€. L'opzione più leggera risulta oro / M-Token Gold, seguita da Bitcoin.</p>\n      <div style=\"overflow-x:auto\">\n      <table style=\"width:100%;border-collapse:collapse;font-size:.92rem;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;backdrop-filter:blur(6px)\">\n        <thead><tr style=\"background:rgba(95,213,224,.08)\">\n          <th style=\"text-align:left;padding:12px 16px;font-family:'Orbitron';font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);border-bottom:1px solid var(--line)\">Asset</th>\n          <th style=\"text-align:left;padding:12px 16px;font-family:'Orbitron';font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);border-bottom:1px solid var(--line)\">Costo stimato</th>\n          <th style=\"text-align:left;padding:12px 16px;font-family:'Orbitron';font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);border-bottom:1px solid var(--line)\">Saldo teorico</th>\n        </tr></thead>\n        <tbody>\n          <tr><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink);font-weight:600\">Oro / M-Token Gold</td><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink-dim)\">~0,75€</td><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--lime);font-weight:600\">~64,25€</td></tr>\n          <tr><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink);font-weight:600\">Bitcoin</td><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink-dim)\">~0,99€</td><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink-dim)\">~64,00€</td></tr>\n          <tr><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink);font-weight:600\">Azioni / ETF / ETC</td><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink-dim)\">~2,00€</td><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink-dim)\">~63,00€</td></tr>\n          <tr><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink);font-weight:600\">Palladio</td><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink-dim)\">~1,98€</td><td style=\"padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink-dim)\">~63,00€</td></tr>\n          <tr><td style=\"padding:12px 16px;color:var(--ink);font-weight:600\">Argento / Platino</td><td style=\"padding:12px 16px;color:var(--ink-dim)\">~2,23€</td><td style=\"padding:12px 16px;color:var(--ink-dim)\">~62,77€</td></tr>\n        </tbody>\n      </table>\n      </div>"
+      }
+    ],
+    "codice_box": false,
+    "categoria_etichetta": "Fintech · Crypto",
+    "seo_title": "Bonus Bitpanda 15€ + 15€ all'amico (con invito) — guida 2026 | GoatLink"
   },
   {
-    "slug": "creditagricole", "capitale": 0,
+    "slug": "creditagricole",
+    "capitale": 0,
     "name": "Crédit Agricole",
     "category": "Banca",
     "logo": "logos/creditagricole.png",
@@ -106,10 +168,39 @@ const BONUSES = [
       "Una sola spesa, importo libero",
       "Scaglioni extra con stipendio",
       "Conto online a zero spese"
-    ]
+    ],
+    "faq": [
+      {
+        "q": "Quanto si guadagna con Crédit Agricole?",
+        "a": "50€ in Buono Regalo Amazon.it aprendo il Conto Online con la Carta Visa Debit. Ci sono scaglioni aggiuntivi: +100€ con accredito stipendio o pensione e fino a +100€ in base all'utilizzo della carta, con importi e tempistiche indicati nel regolamento dell'edizione di agosto."
+      },
+      {
+        "q": "Entro quando devo aprire il conto?",
+        "a": "La finestra per chiedere l'apertura si chiude il <strong>02/11/2026</strong>. L'operazione a premi «Invita un amico in Crédit Agricole – Agosto 2026» resta valida fino al 03/01/2027, ma senza richiesta entro il 02/11/2026 non si partecipa."
+      },
+      {
+        "q": "Quale carta devo scegliere?",
+        "a": "La <strong>Carta Visa Debit</strong>, obbligatoria per il bonus. Va selezionata in fase di apertura: senza carta la promozione non parte."
+      },
+      {
+        "q": "Cosa conta come transazione valida?",
+        "a": "Una sola transazione con la carta, di qualsiasi importo. Non contano i prelievi, né le spese stornate o annullate."
+      },
+      {
+        "q": "Cosa serve per l'extra stipendio?",
+        "a": "Un accredito con causale <strong>ABI 27, SALA o PENS</strong>. Con una causale generica, anche se il bonifico riporta la parola «stipendio», la banca non lo riconosce."
+      },
+      {
+        "q": "Chi è escluso dalla promozione?",
+        "a": "Chi è già correntista del Gruppo Crédit Agricole Italia. La promozione è riservata ai nuovi correntisti."
+      }
+    ],
+    "codice_etichetta": "Codice invito",
+    "seo_title": "Bonus Crédit Agricole 50€ in Buoni Amazon (codice invito) — guida 2026 | GoatLink"
   },
   {
-    "slug": "ing", "capitale": 0,
+    "slug": "ing",
+    "capitale": 0,
     "name": "ING",
     "category": "Banca",
     "logo": null,
@@ -162,26 +253,46 @@ const BONUSES = [
     },
     "seo_title": "Bonus ING 75€ Conto Corrente Arancio Più (codice amico) — guida 2026 | GoatLink",
     "faq": [
-      {"q": "Quanto vale il bonus ING oggi?",
-       "a": "75€ di cashback per chi apre il Conto Corrente Arancio Più con un codice amico. È la nuova campagna, l'Edizione V: la precedente da 100€ con il codice WELCOME si è chiusa il 7 settembre 2026."},
-      {"q": "Entro quando devo aprire il conto?",
-       "a": "Entro il <strong>2 novembre 2026</strong>. L'iniziativa resta valida fino al 31/12/2026, ma la richiesta di apertura con il codice amico va fatta entro il 2 novembre: dopo quella data non si partecipa più."},
-      {"q": "Quanto devo spendere e con quale carta?",
-       "a": "Almeno 250€ entro il 31/12/2026, con la Carta di Debito Mastercard e/o la Carta di Credito Mastercard Gold. Vale la somma di più transazioni e le due carte si sommano fra loro."},
-      {"q": "Quando arrivano i 75€?",
-       "a": "Sul Conto Corrente Arancio entro il <strong>31 gennaio 2027</strong>. Nella pratica spesso arrivano prima, ma quella è la data che la banca si impegna a rispettare."},
-      {"q": "Va bene il Conto Corrente Arancio Light?",
-       "a": "No. Il bonus da nuovo cliente richiede l'<strong>Arancio Più</strong>. Con il Light puoi partecipare solo come presentatore, cioè invitando altri con il tuo codice."},
-      {"q": "Conviene di più il codice amico o il codice UNDER30?",
-       "a": "Dipende da te. Il codice amico dà 75€ a te e 75€ a chi ti ha invitato. Il codice UNDER30, se hai meno di 30 anni, dà 100€ a te e niente all'altro. Se ne inserisce uno solo. Noi te lo diciamo lo stesso: 25€ in più in tasca tua sono 25€ in più, e la scelta è tua."},
-      {"q": "Il 4% sul Conto Arancio è compreso nel bonus?",
-       "a": "No, sono due cose diverse. Il 4% è un'iniziativa separata valida fino al 31/01/2027, che chiede di aprire anche il Conto Arancio e di mantenere un accredito mensile: se salti un mese il tasso promozionale si perde e non si recupera. Per i 75€ il Conto Arancio non serve."},
-      {"q": "Posso arrivare ai 250€ senza spendere davvero?",
-       "a": "Si può, comprando con la carta ING dei voucher Aircash o MuchBetter e riportandosi poi i soldi sul proprio conto. Il regolamento di questa edizione non pubblica un elenco di operazioni escluse, quindi non è vietato, ma resta una zona grigia e la banca fa controlli prima di pagare. Se hai comunque 250€ di spese normali da fare entro dicembre, quella è la strada senza discussioni."},
-      {"q": "Il conto ha un canone?",
-       "a": "5€ al mese, azzerati con l'accredito dello stipendio o con entrate da almeno 1.000€ al mese. Fino ai 30 anni il primo Conto Corrente Arancio Più è gratuito senza altre condizioni."},
-      {"q": "I soldi sul conto sono garantiti?",
-       "a": "Sì, fino a 100.000€, ma dal sistema di garanzia olandese e non dal FITD italiano: stessa copertura prevista in tutta l'UE, fondo diverso."}
+      {
+        "q": "Quanto vale il bonus ING oggi?",
+        "a": "75€ di cashback per chi apre il Conto Corrente Arancio Più con un codice amico. È la nuova campagna, l'Edizione V: la precedente da 100€ con il codice WELCOME si è chiusa il 7 settembre 2026."
+      },
+      {
+        "q": "Entro quando devo aprire il conto?",
+        "a": "Entro il <strong>2 novembre 2026</strong>. L'iniziativa resta valida fino al 31/12/2026, ma la richiesta di apertura con il codice amico va fatta entro il 2 novembre: dopo quella data non si partecipa più."
+      },
+      {
+        "q": "Quanto devo spendere e con quale carta?",
+        "a": "Almeno 250€ entro il 31/12/2026, con la Carta di Debito Mastercard e/o la Carta di Credito Mastercard Gold. Vale la somma di più transazioni e le due carte si sommano fra loro."
+      },
+      {
+        "q": "Quando arrivano i 75€?",
+        "a": "Sul Conto Corrente Arancio entro il <strong>31 gennaio 2027</strong>. Nella pratica spesso arrivano prima, ma quella è la data che la banca si impegna a rispettare."
+      },
+      {
+        "q": "Va bene il Conto Corrente Arancio Light?",
+        "a": "No. Il bonus da nuovo cliente richiede l'<strong>Arancio Più</strong>. Con il Light puoi partecipare solo come presentatore, cioè invitando altri con il tuo codice."
+      },
+      {
+        "q": "Conviene di più il codice amico o il codice UNDER30?",
+        "a": "Dipende da te. Il codice amico dà 75€ a te e 75€ a chi ti ha invitato. Il codice UNDER30, se hai meno di 30 anni, dà 100€ a te e niente all'altro. Se ne inserisce uno solo. Noi te lo diciamo lo stesso: 25€ in più in tasca tua sono 25€ in più, e la scelta è tua."
+      },
+      {
+        "q": "Il 4% sul Conto Arancio è compreso nel bonus?",
+        "a": "No, sono due cose diverse. Il 4% è un'iniziativa separata valida fino al 31/01/2027, che chiede di aprire anche il Conto Arancio e di mantenere un accredito mensile: se salti un mese il tasso promozionale si perde e non si recupera. Per i 75€ il Conto Arancio non serve."
+      },
+      {
+        "q": "Posso arrivare ai 250€ senza spendere davvero?",
+        "a": "Si può, comprando con la carta ING dei voucher Aircash o MuchBetter e riportandosi poi i soldi sul proprio conto. Il regolamento di questa edizione non pubblica un elenco di operazioni escluse, quindi non è vietato, ma resta una zona grigia e la banca fa controlli prima di pagare. Se hai comunque 250€ di spese normali da fare entro dicembre, quella è la strada senza discussioni."
+      },
+      {
+        "q": "Il conto ha un canone?",
+        "a": "5€ al mese, azzerati con l'accredito dello stipendio o con entrate da almeno 1.000€ al mese. Fino ai 30 anni il primo Conto Corrente Arancio Più è gratuito senza altre condizioni."
+      },
+      {
+        "q": "I soldi sul conto sono garantiti?",
+        "a": "Sì, fino a 100.000€, ma dal sistema di garanzia olandese e non dal FITD italiano: stessa copertura prevista in tutta l'UE, fondo diverso."
+      }
     ],
     "why": "È il bonus più alto del sito e non chiede di lasciare fermo un euro: i 250€ di spesa restano tuoi, cambia solo la carta con cui li paghi.",
     "pros": [
@@ -193,7 +304,8 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "fineco", "capitale": 0,
+    "slug": "fineco",
+    "capitale": 0,
     "name": "Fineco",
     "category": "Banca",
     "logo": "logos/fineco.png",
@@ -240,26 +352,46 @@ const BONUSES = [
     ],
     "seo_title": "Bonus Fineco 50€ Invita un amico (codice amico) — guida 2026 | GoatLink",
     "faq": [
-      {"q": "Quanto vale il bonus Fineco oggi?",
-       "a": "50€ sul conto corrente per chi apre con un Codice Amico, più altri 50€ a chi il codice te lo ha passato. È l’iniziativa «Invita un amico», riaperta il 15 settembre 2026 dopo la chiusura dell’edizione di luglio."},
-      {"q": "Entro quando devo aprire il conto?",
-       "a": "Entro il <strong>15 ottobre 2026</strong>. La finestra dura un mese esatto e non è stata prorogata al momento in cui scriviamo: le edizioni passate qualche volta lo sono state, ma non è una cosa su cui contare."},
-      {"q": "Cosa devo fare per sbloccare i 50€?",
-       "a": "Una cosa sola a scelta fra quattro, entro il <strong>4 gennaio 2027</strong>: accreditare stipendio o pensione, fare almeno 5 ordini trading in acquisto o vendita, oppure chiedere una carta di debito o credito e arrivare a 2.500€ di pagamenti. La quarta è trasferire almeno 20.000€ entro il 30/11/2026 e lasciarli lì fino al 4 gennaio."},
-      {"q": "Qual è la strada più economica se non ho lo stipendio?",
-       "a": "I 5 ordini. Fino ai 30 anni un ordine su azioni ed ETF Italia costa 2,95€: cinque ordini sono circa 15€ contro 50€ di bonus, e valgono anche le vendite, quindi puoi chiudere la posizione contando gli ordini di uscita. Stai però comprando strumenti veri: il rischio di mercato è tuo. La strada della carta chiede oltre 700€ al mese di spesa, quindi conviene solo se quella spesa la facevi comunque."},
-      {"q": "Quanto arriva davvero in conto?",
-       "a": "Il programma dice 50€ ed è quello che pubblichiamo. Sul bonus la banca applica la ritenuta del 26% prevista dall’art. 26 c. 2 del DPR 600/73, come ha fatto in tutte e tre le edizioni del 2026: l’accredito arriva al netto. Il regolamento di questa edizione non è ancora online; appena esce lo verifichiamo."},
-      {"q": "Quando arrivano i soldi?",
-       "a": "Nel 2027, e non in automatico. Dopo che hai completato la condizione, la banca mette a disposizione in area riservata un’integrazione contrattuale da firmare: solo dopo quella firma accredita il bonus. La finestra per firmare è chiusa e chi la salta perde tutto. Per questa edizione la data non è ancora pubblicata."},
-      {"q": "Dove trovo un Codice Amico?",
-       "a": "Te lo dà una persona che ha già il conto Fineco, dalla sua area riservata. Sul sito non ne pubblichiamo nessuno: scrivici su WhatsApp e te lo passiamo in privato."},
-      {"q": "Posso usare il codice amico insieme a un codice promozionale trading?",
-       "a": "No. Il campo del codice promozione è uno solo. Se ci metti uno di quei codici che regalano ordini gratuiti per qualche mese, il codice amico non ci sta e i 50€ non arrivano. Se fai molti ordini può convenirti l’altro: fatti il conto prima, perché dopo non si cambia."},
-      {"q": "Il conto ha un canone?",
-       "a": "Dipende dal profilo che scegli fra One, Classic e Max, e le condizioni complete stanno nei fogli informativi Fineco. Quello che vale per tutti sotto i 30 anni è la carta di debito a canone zero, il bollo gratis sotto i 5.000€ di giacenza media e le commissioni di trading ridotte."},
-      {"q": "I soldi sul conto sono garantiti?",
-       "a": "Sì, fino a 100.000€ dal Fondo Interbancario di Tutela dei Depositi. Fineco è una banca italiana vigilata direttamente dalla BCE, quindi qui la garanzia è quella italiana e non un fondo estero."}
+      {
+        "q": "Quanto vale il bonus Fineco oggi?",
+        "a": "50€ sul conto corrente per chi apre con un Codice Amico, più altri 50€ a chi il codice te lo ha passato. È l’iniziativa «Invita un amico», riaperta il 15 settembre 2026 dopo la chiusura dell’edizione di luglio."
+      },
+      {
+        "q": "Entro quando devo aprire il conto?",
+        "a": "Entro il <strong>15 ottobre 2026</strong>. La finestra dura un mese esatto e non è stata prorogata al momento in cui scriviamo: le edizioni passate qualche volta lo sono state, ma non è una cosa su cui contare."
+      },
+      {
+        "q": "Cosa devo fare per sbloccare i 50€?",
+        "a": "Una cosa sola a scelta fra quattro, entro il <strong>4 gennaio 2027</strong>: accreditare stipendio o pensione, fare almeno 5 ordini trading in acquisto o vendita, oppure chiedere una carta di debito o credito e arrivare a 2.500€ di pagamenti. La quarta è trasferire almeno 20.000€ entro il 30/11/2026 e lasciarli lì fino al 4 gennaio."
+      },
+      {
+        "q": "Qual è la strada più economica se non ho lo stipendio?",
+        "a": "I 5 ordini. Fino ai 30 anni un ordine su azioni ed ETF Italia costa 2,95€: cinque ordini sono circa 15€ contro 50€ di bonus, e valgono anche le vendite, quindi puoi chiudere la posizione contando gli ordini di uscita. Stai però comprando strumenti veri: il rischio di mercato è tuo. La strada della carta chiede oltre 700€ al mese di spesa, quindi conviene solo se quella spesa la facevi comunque."
+      },
+      {
+        "q": "Quanto arriva davvero in conto?",
+        "a": "Il programma dice 50€ ed è quello che pubblichiamo. Sul bonus la banca applica la ritenuta del 26% prevista dall’art. 26 c. 2 del DPR 600/73, come ha fatto in tutte e tre le edizioni del 2026: l’accredito arriva al netto. Il regolamento di questa edizione non è ancora online; appena esce lo verifichiamo."
+      },
+      {
+        "q": "Quando arrivano i soldi?",
+        "a": "Nel 2027, e non in automatico. Dopo che hai completato la condizione, la banca mette a disposizione in area riservata un’integrazione contrattuale da firmare: solo dopo quella firma accredita il bonus. La finestra per firmare è chiusa e chi la salta perde tutto. Per questa edizione la data non è ancora pubblicata."
+      },
+      {
+        "q": "Dove trovo un Codice Amico?",
+        "a": "Te lo dà una persona che ha già il conto Fineco, dalla sua area riservata. Sul sito non ne pubblichiamo nessuno: scrivici su WhatsApp e te lo passiamo in privato."
+      },
+      {
+        "q": "Posso usare il codice amico insieme a un codice promozionale trading?",
+        "a": "No. Il campo del codice promozione è uno solo. Se ci metti uno di quei codici che regalano ordini gratuiti per qualche mese, il codice amico non ci sta e i 50€ non arrivano. Se fai molti ordini può convenirti l’altro: fatti il conto prima, perché dopo non si cambia."
+      },
+      {
+        "q": "Il conto ha un canone?",
+        "a": "Dipende dal profilo che scegli fra One, Classic e Max, e le condizioni complete stanno nei fogli informativi Fineco. Quello che vale per tutti sotto i 30 anni è la carta di debito a canone zero, il bollo gratis sotto i 5.000€ di giacenza media e le commissioni di trading ridotte."
+      },
+      {
+        "q": "I soldi sul conto sono garantiti?",
+        "a": "Sì, fino a 100.000€ dal Fondo Interbancario di Tutela dei Depositi. Fineco è una banca italiana vigilata direttamente dalla BCE, quindi qui la garanzia è quella italiana e non un fondo estero."
+      }
     ],
     "why": "È l’unica promo del catalogo che ti lascia scegliere come sbloccarla, e ti dà quasi quattro mesi per farlo invece delle solite sei settimane. In cambio chiede pazienza: l’accredito arriva nel 2027 e va confermato con una firma.",
     "pros": [
@@ -271,7 +403,8 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "buddybank", "capitale": 11,
+    "slug": "buddybank",
+    "capitale": 11,
     "name": "Buddybank",
     "category": "Banca",
     "logo": "logos/buddybank.png",
@@ -279,7 +412,12 @@ const BONUSES = [
     "amount": 50,
     "currency": "€",
     "amountLabel": "50€",
-    "boost": { "amount": 80, "amountLabel": "80€", "until": "2026-11-16", "badge": "Bonus maggiorato" },
+    "boost": {
+      "amount": 80,
+      "amountLabel": "80€",
+      "until": "2026-11-16",
+      "badge": "Bonus maggiorato"
+    },
     "minutes": 10,
     "difficulty": "Facile",
     "badge": null,
@@ -321,22 +459,38 @@ const BONUSES = [
       "Registrandoti con <strong>SPID o CIEid</strong> la procedura si inceppa: usa la registrazione classica."
     ],
     "faq": [
-      {"q": "Quanto vale davvero il bonus Buddybank adesso?",
-       "a": "80€ per chi apre entro il <strong>16 novembre 2026</strong>, poi 50€. La promozione resta comunque aperta fino al 20 gennaio 2027: cambia solo l'importo, non i requisiti."},
-      {"q": "Quanto devo spendere per prenderlo?",
-       "a": "Un solo pagamento da almeno 10€ con la carta MyOne, entro 30 giorni dall'apertura del conto. Il regolamento accetta anche più transazioni che sommate facciano 10€, ma un pagamento unico è la strada più pulita."},
-      {"q": "Devo lasciare dei soldi fermi?",
-       "a": "No, ma il saldo disponibile deve restare pari o superiore a zero dall'apertura del conto fino a quando arriva il premio. In pratica carichi 11€, ne spendi 10 e il resto lo lasci lì: non svuotare il conto mentre aspetti."},
-      {"q": "Posso pagare con la carta virtuale prima che arrivi quella fisica?",
-       "a": "Sì, l'acquisto si può fare con la MyOne virtuale caricata su Apple Pay, Google Pay o Samsung Pay. Quello che non puoi fare, né con la virtuale né con la fisica, è una ricarica verso un'altra carta: quelle operazioni sono escluse dal regolamento."},
-      {"q": "Quando arriva il bonus?",
-       "a": "Entro 90 giorni lavorativi dalla transazione valida. Arriva cash sul conto ed è prelevabile."},
-      {"q": "Chi è escluso dalla promozione?",
-       "a": "I vecchi clienti buddybank, i dipendenti del Gruppo UniCredit e chi al 16 settembre 2024 era già cliente UniCredit o buddy con conto corrente, prepagata o carta ricaricabile con IBAN Genius Pay. È escluso anche chi ha chiuso uno di questi rapporti prima o durante il periodo, anche se poi lo ha riaperto."},
-      {"q": "Perché non devo usare SPID per registrarmi?",
-       "a": "Perché la registrazione con SPID o CIEid si blocca durante la procedura e costringe a ricominciare. Con la registrazione classica e la scansione dei documenti il percorso fila."},
-      {"q": "Il conto ha dei costi?",
-       "a": "No. Il conto Genius buddy è gratuito e la carta MyOne in versione digitale è gratuita. La versione fisica ha un costo, ma per il bonus non serve."}
+      {
+        "q": "Quanto vale davvero il bonus Buddybank adesso?",
+        "a": "80€ per chi apre entro il <strong>16 novembre 2026</strong>, poi 50€. La promozione resta comunque aperta fino al 20 gennaio 2027: cambia solo l'importo, non i requisiti."
+      },
+      {
+        "q": "Quanto devo spendere per prenderlo?",
+        "a": "Un solo pagamento da almeno 10€ con la carta MyOne, entro 30 giorni dall'apertura del conto. Il regolamento accetta anche più transazioni che sommate facciano 10€, ma un pagamento unico è la strada più pulita."
+      },
+      {
+        "q": "Devo lasciare dei soldi fermi?",
+        "a": "No, ma il saldo disponibile deve restare pari o superiore a zero dall'apertura del conto fino a quando arriva il premio. In pratica carichi 11€, ne spendi 10 e il resto lo lasci lì: non svuotare il conto mentre aspetti."
+      },
+      {
+        "q": "Posso pagare con la carta virtuale prima che arrivi quella fisica?",
+        "a": "Sì, l'acquisto si può fare con la MyOne virtuale caricata su Apple Pay, Google Pay o Samsung Pay. Quello che non puoi fare, né con la virtuale né con la fisica, è una ricarica verso un'altra carta: quelle operazioni sono escluse dal regolamento."
+      },
+      {
+        "q": "Quando arriva il bonus?",
+        "a": "Entro 90 giorni lavorativi dalla transazione valida. Arriva cash sul conto ed è prelevabile."
+      },
+      {
+        "q": "Chi è escluso dalla promozione?",
+        "a": "I vecchi clienti buddybank, i dipendenti del Gruppo UniCredit e chi al 16 settembre 2024 era già cliente UniCredit o buddy con conto corrente, prepagata o carta ricaricabile con IBAN Genius Pay. È escluso anche chi ha chiuso uno di questi rapporti prima o durante il periodo, anche se poi lo ha riaperto."
+      },
+      {
+        "q": "Perché non devo usare SPID per registrarmi?",
+        "a": "Perché la registrazione con SPID o CIEid si blocca durante la procedura e costringe a ricominciare. Con la registrazione classica e la scansione dei documenti il percorso fila."
+      },
+      {
+        "q": "Il conto ha dei costi?",
+        "a": "No. Il conto Genius buddy è gratuito e la carta MyOne in versione digitale è gratuita. La versione fisica ha un costo, ma per il bonus non serve."
+      }
     ],
     "why": "Il bonus più alto rispetto allo sforzo richiesto: un pagamento da 10€ e hai finito, e fino al 16 novembre vale 80€ invece di 50€.",
     "pros": [
@@ -347,7 +501,8 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "kast", "capitale": 105,
+    "slug": "kast",
+    "capitale": 105,
     "name": "KAST",
     "category": "Crypto",
     "logo": "logos/kast.png",
@@ -398,22 +553,38 @@ const BONUSES = [
       "rischio": "Qui non è zona grigia per silenzio del regolamento, è zona grigia contro un divieto scritto. Con 100$ di soglia e sette giorni di tempo, spendere davvero al supermercato o online costa meno del rischio di perdere il bonus o di vedersi bloccare la ricompensa."
     },
     "faq": [
-      {"q": "Quanto vale il bonus KAST?",
-       "a": "Dipende da quanto spendi con la carta: 20$ su 100$ di spesa, 50$ su 600$, 100$ su 1.600$ e 250$ su 6.600$. Il bonus è pagato in USDC."},
-      {"q": "Quanto devo depositare?",
-       "a": "Almeno 105€, in crypto oppure con bonifico. Il deposito non è una spesa: quei soldi restano sulla carta e li spendi tu."},
-      {"q": "Entro quando devo fare la spesa?",
-       "a": "Entro 7 giorni dalla registrazione per il bonus base da 20$. È la scadenza più stretta della promo: conviene registrarsi solo quando si è pronti a usare la carta."},
-      {"q": "Quando posso prelevare il bonus?",
-       "a": "La notifica arriva subito, ma il bonus diventa disponibile e prelevabile dopo 14 giorni."},
-      {"q": "KAST è regolamentata in Europa?",
-       "a": "KAST è una fintech di Singapore e si descrive come società tecnologica che si appoggia a istituti autorizzati, non come banca. Non risulta pubblicamente una sua autorizzazione europea, e dal 1° luglio 2026 il periodo transitorio del regolamento MiCA è chiuso. Se per te la posizione regolamentare è il criterio principale, Coinbase ha una licenza MiCA verificabile e la trovi in catalogo."},
-      {"q": "I miei soldi dove stanno?",
-       "a": "In custodia di KAST: la carta è custodial, quindi i fondi depositati sono nelle sue mani e non su un wallet controllato da te. È il motivo per cui conviene tenerci solo la somma che serve a spendere."},
-      {"q": "Perché il bonifico va fatto a una persona e non a un'azienda?",
-       "a": "Perché l'IBAN che KAST fornisce per i depositi in euro è intestato al tuo stesso nome, con nazione Malta. È una configurazione lecita ma insolita, e la banca di partenza può chiedere chiarimenti sull'operazione. Se preferisci evitare la trafila, il deposito in crypto non ha questo passaggio."},
-      {"q": "Che cashback ha la carta?",
-       "a": "1,5% sugli acquisti nel piano gratuito, fino a 2.000 dollari di spesa al mese. I piani a pagamento salgono, ma per il bonus non servono."}
+      {
+        "q": "Quanto vale il bonus KAST?",
+        "a": "Dipende da quanto spendi con la carta: 20$ su 100$ di spesa, 50$ su 600$, 100$ su 1.600$ e 250$ su 6.600$. Il bonus è pagato in USDC."
+      },
+      {
+        "q": "Quanto devo depositare?",
+        "a": "Almeno 105€, in crypto oppure con bonifico. Il deposito non è una spesa: quei soldi restano sulla carta e li spendi tu."
+      },
+      {
+        "q": "Entro quando devo fare la spesa?",
+        "a": "Entro 7 giorni dalla registrazione per il bonus base da 20$. È la scadenza più stretta della promo: conviene registrarsi solo quando si è pronti a usare la carta."
+      },
+      {
+        "q": "Quando posso prelevare il bonus?",
+        "a": "La notifica arriva subito, ma il bonus diventa disponibile e prelevabile dopo 14 giorni."
+      },
+      {
+        "q": "KAST è regolamentata in Europa?",
+        "a": "KAST è una fintech di Singapore e si descrive come società tecnologica che si appoggia a istituti autorizzati, non come banca. Non risulta pubblicamente una sua autorizzazione europea, e dal 1° luglio 2026 il periodo transitorio del regolamento MiCA è chiuso. Se per te la posizione regolamentare è il criterio principale, Coinbase ha una licenza MiCA verificabile e la trovi in catalogo."
+      },
+      {
+        "q": "I miei soldi dove stanno?",
+        "a": "In custodia di KAST: la carta è custodial, quindi i fondi depositati sono nelle sue mani e non su un wallet controllato da te. È il motivo per cui conviene tenerci solo la somma che serve a spendere."
+      },
+      {
+        "q": "Perché il bonifico va fatto a una persona e non a un'azienda?",
+        "a": "Perché l'IBAN che KAST fornisce per i depositi in euro è intestato al tuo stesso nome, con nazione Malta. È una configurazione lecita ma insolita, e la banca di partenza può chiedere chiarimenti sull'operazione. Se preferisci evitare la trafila, il deposito in crypto non ha questo passaggio."
+      },
+      {
+        "q": "Che cashback ha la carta?",
+        "a": "1,5% sugli acquisti nel piano gratuito, fino a 2.000 dollari di spesa al mese. I piani a pagamento salgono, ma per il bonus non servono."
+      }
     ],
     "why": "È l'unico modo semplice per spendere stablecoin nei negozi di tutti i giorni, e il bonus sale insieme alla spesa invece di fermarsi a una cifra fissa.",
     "pros": [
@@ -421,10 +592,12 @@ const BONUSES = [
       "Carta virtuale gratuita su Apple e Google Pay",
       "1,5% di cashback sul piano gratuito",
       "Inviti illimitati"
-    ]
+    ],
+    "scadenza_etichetta": "Senza scadenza"
   },
   {
-    "slug": "coinbase", "capitale": 21,
+    "slug": "coinbase",
+    "capitale": 21,
     "name": "Coinbase",
     "category": "Crypto",
     "logo": "logos/coinbase.png",
@@ -460,10 +633,28 @@ const BONUSES = [
       "Importo fermo da mesi",
       "Verifica identità in pochi minuti",
       "Prima settimana senza commissioni"
-    ]
+    ],
+    "faq": [
+      {
+        "q": "Come si ottiene il bonus Coinbase da 20€?",
+        "a": "Da nuovo utente: iscriviti col link, completa la verifica, deposita almeno 21€ e fai un acquisto da almeno 21€ entro 60 giorni dalla verifica, solo su Coinbase base."
+      },
+      {
+        "q": "Quanto costa fare il trade su Coinbase?",
+        "a": "Ci sono commissioni, ma attivando la prova gratuita di Coinbase One per la prima settimana le commissioni si azzerano. Ricordati di disdire entro 7 giorni."
+      },
+      {
+        "q": "Quando arriva il bonus Coinbase?",
+        "a": "Generalmente entro 15–30 giorni dal trade qualificante."
+      }
+    ],
+    "codice_box": false,
+    "seo_title": "Bonus Coinbase 20€ (codice referral) — guida 2026 | GoatLink",
+    "scadenza_etichetta": "A tempo indeterminato"
   },
   {
-    "slug": "revolut", "capitale": 0,
+    "slug": "revolut",
+    "capitale": 0,
     "name": "Revolut",
     "category": "Fintech",
     "logo": "logos/revolut.png",
@@ -501,10 +692,28 @@ const BONUSES = [
       "Tre spese piccole in 30 giorni",
       "Accredito in 2 giorni",
       "Carta virtuale immediata"
-    ]
+    ],
+    "faq": [
+      {
+        "q": "Quante spese servono per il bonus Revolut?",
+        "a": "Almeno 3 spese da 5€ ciascuna entro 30 giorni dall'apertura del conto. Vanno bene acquisti reali, anche online."
+      },
+      {
+        "q": "La carta Revolut ha costi?",
+        "a": "La carta Standard è gratuita, spedizione inclusa. Puoi usare anche la carta virtuale per le spese."
+      },
+      {
+        "q": "Quando arriva il bonus Revolut?",
+        "a": "Entro circa 2 giorni lavorativi dopo aver completato le 3 spese richieste."
+      }
+    ],
+    "codice_box": false,
+    "seo_title": "Bonus Revolut 15€ (codice referral) — guida 2026 | GoatLink",
+    "scadenza_etichetta": "A tempo indeterminato"
   },
   {
-    "slug": "bbva", "capitale": 0,
+    "slug": "bbva",
+    "capitale": 0,
     "name": "BBVA",
     "category": "Banca",
     "logo": "logos/bbva.png",
@@ -542,10 +751,27 @@ const BONUSES = [
       "Nessun importo minimo di spesa",
       "Cumulabile con il cashback 4%",
       "Bonifici e F24 gratuiti"
-    ]
+    ],
+    "faq": [
+      {
+        "q": "Come funziona il bonus BBVA da 10€?",
+        "a": "Scarica l'app, inserisci il codice promo Passaparola al quarto passaggio, accetta i termini e fai una spesa di qualsiasi importo. Ricevi 10€, in genere entro pochi giorni lavorativi."
+      },
+      {
+        "q": "Quali spese non valgono per il bonus BBVA?",
+        "a": "Conti gioco, scommesse, ricariche e buoni regalo non sono considerate spese valide."
+      },
+      {
+        "q": "Il conto BBVA è gratuito?",
+        "a": "Sì, con numerose operazioni gratuite incluse come bonifici, PagoPA, CBILL, F24 e bollo auto."
+      }
+    ],
+    "codice_etichetta": "Codice amico / promo",
+    "scadenza_etichetta": "A tempo indeterminato"
   },
   {
-    "slug": "tinaba", "capitale": 20,
+    "slug": "tinaba",
+    "capitale": 20,
     "name": "Tinaba",
     "category": "Fintech",
     "logo": "logos/tinaba.png",
@@ -579,10 +805,31 @@ const BONUSES = [
       "Nessuna spesa da fare",
       "Solo una ricarica da 20€",
       "Cumulabile con gli inviti"
-    ]
+    ],
+    "faq": [
+      {
+        "q": "Come si ottiene il bonus Tinaba?",
+        "a": "Registrati come nuovo utente, inserisci il codice referral durante la registrazione e ricarica almeno 20€ entro 30 giorni. Ricevi 10€."
+      },
+      {
+        "q": "Il bonus Tinaba è cumulabile?",
+        "a": "Sì. Oltre ai 10€ iniziali, guadagni altri 10€ per ogni amico che si iscrive con il tuo codice."
+      }
+    ],
+    "rules_ko": [
+      "Account già esistente (serve essere nuovo utente)",
+      "Codice non inserito durante la registrazione"
+    ],
+    "cons": [
+      "Importo base contenuto (10€)",
+      "Il codice va inserito durante la registrazione",
+      "Accredito fino a 30 giorni"
+    ],
+    "codice_etichetta": "Codice amico / promo"
   },
   {
-    "slug": "isybank", "capitale": 0,
+    "slug": "isybank",
+    "capitale": 0,
     "name": "Isybank",
     "category": "Banca",
     "logo": "logos/isybank.png",
@@ -621,10 +868,37 @@ const BONUSES = [
       "Nessuna spesa richiesta",
       "isyLight è gratuito e basta",
       "Struttura Intesa Sanpaolo"
-    ]
+    ],
+    "faq": [
+      {
+        "q": "Come si ottengono i 30€ con Isybank?",
+        "a": "Apri un nuovo Piano isybank valido (isyLight, isySmart o isyPrime), aderisci a isyToken Collection nella sezione isyReward e inserisci il codice amico entro 15 giorni dall'apertura e comunque entro il 15/10/2026. Ricevi 7.600 isyToken, riscattabili in una gift card da 30€ a scelta."
+      },
+      {
+        "q": "Ricevo 30€ in contanti?",
+        "a": "No. isybank è un'operazione a premi: si ricevono 7.600 isyToken (punti), che dal catalogo isyReward valgono una gift card da 30€ a scelta tra Amazon, Tezenis, Q8, Calzedonia, UCI Cinemas e altre. Non è denaro contante. I premi sono soggetti a disponibilità."
+      },
+      {
+        "q": "Serve un deposito o l'accredito dello stipendio?",
+        "a": "No. Per ottenere i 7.600 isyToken bastano l'apertura del Piano, l'adesione a isyToken Collection e l'inserimento del codice amico: nessuna spesa minima né accredito stipendio richiesti per questa parte."
+      },
+      {
+        "q": "Chi è escluso dalla promo Isybank?",
+        "a": "Chi è già titolare di un Piano isybank aperto prima del 15/06/2026 e chi apre solo il conto base o il Piano isyONe, che non sono validi per l'iniziativa."
+      }
+    ],
+    "sezioni_prima": [
+      {
+        "titolo": "Come funzionano gli isyToken",
+        "html": "<p class=\"g-verdict-txt\">isybank, la banca digitale del gruppo Intesa Sanpaolo, premia i nuovi clienti tramite <strong>isyToken Collection</strong>: un'operazione a premi in cui accumuli punti (gli <strong>isyToken</strong>) da riscattare a catalogo. Aprendo un nuovo Piano col codice amico ottieni <strong>7.600 isyToken</strong>. Dal catalogo ufficiale isyReward, 7.600 isyToken valgono una <strong>gift card da 30€ a scelta</strong>: Amazon, Tezenis, Q8 carburante, Calzedonia, Intimissimi, UCI Cinemas e altre. Non si tratta quindi di 30€ in contanti, ma di un premio del valore di 30€ che scegli tu dal catalogo. Anche tu, una volta dentro, puoi invitare altri e ricevere 7.600 isyToken per ogni amico valido, fino a 100 amici.</p>"
+      }
+    ],
+    "cta": "Ricevi il codice amico su WhatsApp →",
+    "cta_nota": "Il premio è erogato direttamente da isybank tramite isyToken Collection. GoatLink non chiede alcun pagamento."
   },
   {
-    "slug": "trading212", "capitale": 10,
+    "slug": "trading212",
+    "capitale": 10,
     "name": "Trading 212",
     "category": "Trading",
     "logo": "logos/trading212.png",
@@ -670,22 +944,38 @@ const BONUSES = [
     ],
     "seo_title": "Bonus Trading 212: azione gratis da 8€ a 100€ (Invita un amico) — guida 2026 | GoatLink",
     "faq": [
-      {"q": "Quanto vale il bonus Trading 212?",
-       "a": "Un'azione frazionata gratuita scelta a caso, con un valore fra 8€ e 100€. La ricevi tu che apri il conto e ne riceve una anche chi ti ha invitato."},
-      {"q": "Entro quando devo aprire il conto?",
-       "a": "La campagna in corso va dal <strong>21 settembre al 3 novembre 2026</strong>. Da quando crei il conto hai poi 10 giorni per completare verifica e deposito."},
-      {"q": "Quanto devo depositare?",
-       "a": "Il minimo lo decide Trading 212 per ogni paese e lo trovi in app, nella sezione delle azioni gratuite: controllalo prima di depositare. Il deposito resta tuo e lo puoi usare come vuoi."},
-      {"q": "Quando arriva l'azione e quando posso prelevarla?",
-       "a": "Entro 3 giorni lavorativi da quando hai verificato il conto e fatto il deposito. Puoi venderla subito, ma il contante si preleva solo dopo 30 giorni dall'accredito, anche se vendi prima."},
-      {"q": "Posso perdere soldi?",
-       "a": "Con l'azione premio no: è gratis, e anche se il suo valore scende non ci rimetti. Se invece usi il deposito per comprare altro, quello è un investimento vero e il rischio di mercato è tuo."},
-      {"q": "Mi sono registrato senza il link, ho perso il bonus?",
-       "a": "Non per forza. Subito dopo l'apertura del conto puoi inserire l'ID di invito dal menu dei codici promozionali. È la stessa strada che Trading 212 indica quando il link non ha funzionato."},
-      {"q": "Dove trovo un link di invito?",
-       "a": "Te lo dà una persona che ha già un conto Trading 212 Invest. Sul sito non ne pubblichiamo nessuno: scrivici su WhatsApp e te lo passiamo in privato."},
-      {"q": "Perché la promo a volte sparisce?",
-       "a": "Trading 212 lavora a campagne con date di inizio e fine. Fra una campagna e l'altra i link di invito non danno nessun premio, poi la promo riparte con regole e date nuove."}
+      {
+        "q": "Quanto vale il bonus Trading 212?",
+        "a": "Un'azione frazionata gratuita scelta a caso, con un valore fra 8€ e 100€. La ricevi tu che apri il conto e ne riceve una anche chi ti ha invitato."
+      },
+      {
+        "q": "Entro quando devo aprire il conto?",
+        "a": "La campagna in corso va dal <strong>21 settembre al 3 novembre 2026</strong>. Da quando crei il conto hai poi 10 giorni per completare verifica e deposito."
+      },
+      {
+        "q": "Quanto devo depositare?",
+        "a": "Il minimo lo decide Trading 212 per ogni paese e lo trovi in app, nella sezione delle azioni gratuite: controllalo prima di depositare. Il deposito resta tuo e lo puoi usare come vuoi."
+      },
+      {
+        "q": "Quando arriva l'azione e quando posso prelevarla?",
+        "a": "Entro 3 giorni lavorativi da quando hai verificato il conto e fatto il deposito. Puoi venderla subito, ma il contante si preleva solo dopo 30 giorni dall'accredito, anche se vendi prima."
+      },
+      {
+        "q": "Posso perdere soldi?",
+        "a": "Con l'azione premio no: è gratis, e anche se il suo valore scende non ci rimetti. Se invece usi il deposito per comprare altro, quello è un investimento vero e il rischio di mercato è tuo."
+      },
+      {
+        "q": "Mi sono registrato senza il link, ho perso il bonus?",
+        "a": "Non per forza. Subito dopo l'apertura del conto puoi inserire l'ID di invito dal menu dei codici promozionali. È la stessa strada che Trading 212 indica quando il link non ha funzionato."
+      },
+      {
+        "q": "Dove trovo un link di invito?",
+        "a": "Te lo dà una persona che ha già un conto Trading 212 Invest. Sul sito non ne pubblichiamo nessuno: scrivici su WhatsApp e te lo passiamo in privato."
+      },
+      {
+        "q": "Perché la promo a volte sparisce?",
+        "a": "Trading 212 lavora a campagne con date di inizio e fine. Fra una campagna e l'altra i link di invito non danno nessun premio, poi la promo riparte con regole e date nuove."
+      }
     ],
     "why": "Chiede solo un piccolo deposito, che resta tuo, e pochi minuti da telefono. In cambio il premio è un'estrazione fra 8€ e 100€ e il contante resta fermo 30 giorni.",
     "pros": [
@@ -697,7 +987,8 @@ const BONUSES = [
     ]
   },
   {
-    "slug": "myfin", "capitale": 11,
+    "slug": "myfin",
+    "capitale": 11,
     "name": "MyFin",
     "category": "Fintech",
     "logo": null,
@@ -775,7 +1066,8 @@ const BONUSES = [
       "Carta virtuale inclusa",
       "Bonus in 72 ore",
       "Nessun deposito da immobilizzare"
-    ]
+    ],
+    "cta": "Ricevi il codice ufficiale su WhatsApp →"
   }
 ];
 
