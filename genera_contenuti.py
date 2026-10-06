@@ -36,6 +36,12 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "contenuti"
 SITO = G.SITO
 BIO = f"{SITO}/?utm_source=ig&utm_campaign=bio"
+REPO = "https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti"
+
+
+def kit_link(slug):
+    """Link cliccabile al kit della promo (funziona anche nella issue e da telefono)."""
+    return f"[kit {slug}]({REPO}/promo/{slug}.md)"
 TRASPARENZA = ("Trasparenza: il codice che ti passiamo è un codice amico. Il tuo bonus non cambia, "
                "e chi lo condivide può ricevere il premio previsto per chi invita.")
 TRASPARENZA_BREVE = "Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia."
@@ -446,13 +452,13 @@ def piano(attive, tutte, oggi, nuove, finite, completo=True, ieri=None):
     righe = [f"## {GIORNI[d.weekday()].capitalize()} {G.data_it(oggi)}"]
     usate = set()
     for _, titolo, slug, cosa in ev:
-        righe.append(f"- **{titolo}** — {cosa}" + (f" → testi in `promo/{slug}.md`" if slug else ""))
+        righe.append(f"- **{titolo}** — {cosa}" + (f" → {kit_link(slug)}" if slug else ""))
         if slug:
             usate.add(slug)
     b, formato = promo_del_giorno(attive, oggi, usate | ({ieri} if ieri else set()))
     if b:
         orario = "19:00–20:30 (fascia migliore)" if d.weekday() in (1, 3) else "19:00"
-        righe.append(f"- **🎬 Contenuto del giorno: {b['name']}** — {formato}, pubblica alle {orario} → `promo/{b['slug']}.md`")
+        righe.append(f"- **🎬 Contenuto del giorno: {b['name']}** — {formato}, pubblica alle {orario} → {kit_link(b['slug'])}")
     if d.weekday() == 0:
         righe.append("- **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)")
     piano.scelta = b["slug"] if b else None
@@ -516,7 +522,7 @@ def main():
     if prima and prima.get("data") == oggi:
         scelta_ieri = prima.get("scelta_ieri")
     (OUT / "oggi.md").write_text(
-        f"# Cosa pubblicare oggi\n\n> Generato da data.js. Kit completi per ogni promo in `promo/`.\n\n"
+        f"# Cosa pubblicare oggi\n\n> Generato da data.js. [Calendario 14 giorni]({REPO}/calendario.md) · [Kit WhatsApp Business]({REPO}/whatsapp-business.md)\n\n"
         + piano(attive_ord, tutte, oggi, nuove, finite, ieri=scelta_ieri) + "\n", encoding="utf-8")
     scelta_oggi = piano.scelta
 

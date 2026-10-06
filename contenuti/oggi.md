@@ -1,9 +1,9 @@
 # Cosa pubblicare oggi
 
-> Generato da data.js. Kit completi per ogni promo in `promo/`.
+> Generato da data.js. [Calendario 14 giorni](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/calendario.md) · [Kit WhatsApp Business](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/whatsapp-business.md)
 
 ## Martedì 6 ottobre 2026
-- **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → `promo/ing.md`
+- **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
 
 ---
 
