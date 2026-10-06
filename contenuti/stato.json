@@ -1,0 +1,18 @@
+{
+ "data": "2026-10-06",
+ "attive": [
+  "bbva",
+  "buddybank",
+  "coinbase",
+  "creditagricole",
+  "fineco",
+  "ing",
+  "kast",
+  "revolut",
+  "trading212"
+ ],
+ "nuove": [],
+ "finite": [],
+ "scelta": "ing",
+ "scelta_ieri": null
+}

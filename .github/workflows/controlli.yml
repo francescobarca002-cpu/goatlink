@@ -5,6 +5,9 @@
 #    maggiorazioni si aggiornano da sole anche nell'HTML. Se dopo la
 #    rigenerazione il controllo passa, pubblica; se non passa, il job fallisce
 #    e GitHub manda una mail: c'e' qualcosa da sistemare a mano.
+#  - Nello stesso giro rigenera i contenuti social (contenuti/) e scrive il
+#    piano del giorno come commento nella issue "Cosa pubblicare oggi":
+#    arriva come notifica sull'app GitHub e per mail.
 name: Controlli sito
 
 on:
@@ -28,17 +31,21 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
       - name: Rigenera da data.js
-        run: python3 genera_sito.py
+        run: |
+          python3 genera_sito.py
+          python3 genera_contenuti.py
       - name: Controllo del sito
         run: python3 controlla_sito.py
       - name: Pubblica se e' cambiato qualcosa
         run: |
-          if git diff --quiet; then
+          git add -A contenuti
+          if git diff --cached --quiet && git diff --quiet; then
             echo "Niente da aggiornare oggi."
           else
             git config user.name "GoatLink bot"
@@ -46,3 +53,16 @@ jobs:
             git commit -am "Aggiornamento automatico del $(date +%F)"
             git push
           fi
+      - name: Piano del giorno nella issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create contenuti --color FFD400 --description "Piano contenuti quotidiano" --force
+          N=$(gh issue list --label contenuti --state open --json number --jq '.[0].number // empty')
+          if [ -z "$N" ]; then
+            URL=$(gh issue create --label contenuti --title "📅 Cosa pubblicare oggi" \
+              --body "Ogni mattina qui sotto arriva il piano del giorno, generato da data.js. Kit completi per ogni promo nella cartella contenuti/promo/.")
+            N=${URL##*/}
+          fi
+          { echo "@${{ github.repository_owner }} piano del giorno 👇"; echo; cat contenuti/oggi.md; } > /tmp/oggi.md
+          gh issue comment "$N" --body-file /tmp/oggi.md

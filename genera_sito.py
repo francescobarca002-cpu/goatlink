@@ -27,11 +27,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SITO = "https://www.goatlink.it"
-WA = "393793719306"
+WA = "393793719306"   # numero WhatsApp di GoatLink (prefisso 39, senza +): si cambia SOLO qui,
+                      # genera_sito.py lo riporta in tutte le pagine e in wa-message.js
 CANALE = "https://whatsapp.com/channel/0029Vb8bdwD72WTyKrvBWZ1W"
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 PAGINE_FISSE = ["chi-siamo.html", "privacy.html", "termini.html"]
+FILE_CON_NUMERO = ["index.html", *PAGINE_FISSE, "wa-message.js"]
 
 
 # ---------------------------------------------------------------- dati
@@ -284,6 +286,17 @@ def aggiorna_home(attive, data_home):
     return totale
 
 
+def allinea_numero():
+    """Porta il numero WhatsApp di WA nelle pagine scritte a mano e in wa-message.js."""
+    for nome in FILE_CON_NUMERO:
+        f = ROOT / nome
+        s = f.read_text(encoding="utf-8")
+        nuovo = re.sub(r"wa\.me/\d+", f"wa.me/{WA}", s)
+        nuovo = re.sub(r'var WA = "\d+"', f'var WA = "{WA}"', nuovo)
+        if nuovo != s:
+            f.write_text(nuovo, encoding="utf-8")
+
+
 def sitemap(tutte, data_home):
     righe = [f"  <url><loc>{SITO}/</loc><lastmod>{data_home}</lastmod><priority>1.0</priority></url>"]
     for b in sorted(tutte, key=lambda x: x["slug"]):
@@ -300,6 +313,7 @@ def main():
     ap.add_argument("--data", help="data AAAA-MM-GG da usare come oggi (prove)")
     oggi = ap.parse_args().data or datetime.date.today().isoformat()
     bonus, catalogo = leggi_dati()
+    allinea_numero()
     tutte = [stato(b, oggi) for b in bonus]
     for b in tutte:
         (ROOT / f"{b['slug']}.html").write_text(guida(b, tutte, oggi), encoding="utf-8")

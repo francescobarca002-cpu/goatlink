@@ -14,6 +14,8 @@ Cosa controlla:
   4. dati strutturati (JSON-LD) validi, meta description, anteprima, canonical
   5. nei testi delle promo attive nessuna scadenza gia' passata
      ("entro il 4 ottobre" quando il 4 ottobre e' passato)
+  6. un solo numero WhatsApp in tutto il sito (quello di genera_sito.py)
+     e nessun codice amico nei contenuti social (contenuti/)
 Non controlla che le promo siano ancora vere presso le banche: quello si
 verifica sulle fonti ufficiali (vedi la colonna "source" in data.js).
 """
@@ -192,6 +194,24 @@ def controlla_pagine(bonus):
             err(nome, f"canonical {can.group(1)} invece di {atteso}")
         if re.search(r'"code"\s*:\s*"[A-Z0-9]{6,}"', s):
             err(nome, "sembra contenere un codice amico")
+        for num in set(re.findall(r"wa\.me/(\d+)", s)) - {G.WA}:
+            err(nome, f"numero WhatsApp {num} diverso da quello di genera_sito.py ({G.WA}): lanciare python genera_sito.py")
+
+
+def controlla_contenuti(bonus, oggi):
+    """I contenuti social non devono mai contenere un codice amico."""
+    cartella = ROOT / "contenuti"
+    if not cartella.exists():
+        return
+    for f in cartella.rglob("*.md"):
+        s = f.read_text(encoding="utf-8")
+        for b in bonus:
+            if b.get("code") and b["code"] in s:
+                err(f"contenuti/{f.relative_to(cartella)}", f"contiene il codice di {b['slug']}")
+        if re.search(r"(?i:codice(?: amico| promo)?)\s*:\s*(?!\[CODICE\])[A-Z0-9]{5,}\b", s):
+            err(f"contenuti/{f.relative_to(cartella)}", "sembra contenere un codice amico al posto di [CODICE]")
+        if re.search(r"(?i)link di invito\s*:\s*(?!\[LINK\])\S*(https?://|www\.)", s):
+            err(f"contenuti/{f.relative_to(cartella)}", "sembra contenere un link di invito al posto di [LINK]")
 
 
 def main():
@@ -203,6 +223,7 @@ def main():
     controlla_scadenze_nei_testi(bonus, oggi)
     controlla_generati(bonus, catalogo, oggi)
     controlla_pagine(bonus)
+    controlla_contenuti(bonus, oggi)
     for a in avvisi:
         print("AVVISO ", a)
     for e in errori:

@@ -2,3 +2,7 @@
 *.py
 __pycache__
 .github
+
+# Contenuti social generati: restano su GitHub, non vanno sul sito.
+contenuti
+*.md
