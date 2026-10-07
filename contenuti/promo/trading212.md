@@ -1,6 +1,6 @@
 # Trading 212 — 8€–100€
 
-> Generato da data.js il 6 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 7 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 3 novembre · Trading · Deposito min. 10€ · paga: Azione entro 3 giorni lavorativi
 
 Link da usare (contano i clienti per canale):

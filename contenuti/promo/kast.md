@@ -1,6 +1,6 @@
 # KAST — 20$–250$
 
-> Generato da data.js il 6 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 7 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Crypto · Deposito min. 105€ · paga: Prelevabile dopo 14 giorni
 
 Link da usare (contano i clienti per canale):

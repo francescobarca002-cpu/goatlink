@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Martedì 6 ottobre 2026
-- **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
-
 ## Mercoledì 7 ottobre 2026
 - **🎬 Contenuto del giorno: KAST** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit kast](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/kast.md)
 
@@ -52,3 +49,7 @@
 - **⏳ ING scade tra 14 giorni (2 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
 - **🎬 Contenuto del giorno: KAST** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit kast](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/kast.md)
 - **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
+
+## Martedì 20 ottobre 2026
+- **⏳ Trading 212 scade tra 14 giorni (3 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
+- **🎬 Contenuto del giorno: Revolut** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
