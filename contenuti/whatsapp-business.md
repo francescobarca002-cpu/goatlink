@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 7 ottobre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 8 ottobre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -40,9 +40,9 @@ Ecco le promo attive oggi 👇
 • Revolut — 15€
 • Trading 212 — 8€–100€
 • BBVA — 10€
-• KAST — 20$–250$
 • Coinbase — 20€
 • Crédit Agricole — 50€
+• MyFin — 10€
 • Buddybank — 80€
 • ING — 75€
 • Fineco — 50€
@@ -132,29 +132,6 @@ Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/bbva.html
 ```
 
-### `/kast` — KAST 20$–250$
-
-Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
-
-```
-Ciao! 🐐 Ecco come ottenere il bonus *KAST* (20$–250$):
-
-1. Registrati dal link dedicato. Disattiva prima adblock ed eventuali antivirus e accetta i cookie: se il tracciamento non passa, l'invito non viene agganciato e il bonus non viene riconosciuto.
-2. Inserisci l'email, poi scarica l'app e accedi con la stessa email. Non rifare la registrazione dall'app: creeresti un secondo account senza invito.
-3. Completa la verifica identità (KYC) con scansione del documento e selfie. Vanno bene carta d'identità, passaporto o patente.
-4. Deposita almeno 105€. In crypto è immediato. Per il bonifico in euro devi prima attivare il conto e compilare un breve questionario.
-5. Genera la carta virtuale gratuita.
-6. Se paghi con bonifico, KAST ti dà un IBAN con nazione Malta e beneficiario il tuo nome e cognome: va impostato come bonifico a persona e non ad azienda, partendo da un conto intestato a te.
-7. Con la carta fai acquisti per almeno 100$ entro 7 giorni dalla registrazione: è la soglia del bonus base da 20$, ed è la scadenza più stretta di tutta la promo.
-8. Il bonus ti viene notificato subito, ma diventa disponibile e prelevabile dopo 14 giorni. Se spendi di più, sali di scaglione: 50$ su 600$ spesi, 100$ su 1.600$, 250$ su 6.600$.
-
-👉 Link di invito: [LINK]
-
-Ti chiede di muovere 105€, che restano tuoi. Il premio: prelevabile dopo 14 giorni.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/kast.html
-```
-
 ### `/coinbase` — Coinbase 20€
 
 Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
@@ -194,6 +171,27 @@ Ciao! 🐐 Ecco come ottenere il bonus *Crédit Agricole* (50€):
 Non devi lasciare soldi fermi. Il premio: buono Regalo Amazon.it.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/creditagricole.html
+```
+
+### `/myfin` — MyFin 10€
+
+Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
+
+```
+Ciao! 🐐 Ecco come ottenere il bonus *MyFin* (10€):
+
+1. Procurati il codice invito. Lo può dare solo chi ha già un conto MyFin: scrivici su WhatsApp e te lo passiamo in privato.
+2. Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard è gratuito e per il bonus basta.
+3. Completa la verifica dell'identità con un documento. Può richiedere qualche ora e non arriva sempre una notifica: se riesci a caricare il conto, la verifica è passata.
+4. Crea la carta virtuale, gratuita, e carica sul conto almeno 11€ da un altro conto tuo.
+5. Paga con la carta MyFin un acquisto sopra i 10€ da un negozio, online o in fisico. Per esempio un buono regalo da 11€.
+6. Ricevi 10€ sul conto MyFin entro 72 ore dal completamento dei passaggi.
+
+👉 Codice amico: [CODICE]
+
+Ti chiede di muovere 11€, che restano tuoi. Il premio: sul conto entro 72 ore.
+Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
+Guida con le domande frequenti: https://www.goatlink.it/myfin.html
 ```
 
 ### `/buddybank` — Buddybank 80€

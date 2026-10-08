@@ -1,6 +1,6 @@
 # Crédit Agricole — 50€
 
-> Generato da data.js il 7 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 8 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 2 novembre · Banca · 1 transazione + carta Visa · paga: Buono Regalo Amazon.it
 
 Link da usare (contano i clienti per canale):
