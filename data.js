@@ -998,16 +998,16 @@ const BONUSES = [
     "amountLabel": "10€",
     "minutes": 15,
     "difficulty": "Facile",
-    "badge": "Ultimi giorni",
+    "badge": null,
     "payout": "Sul conto entro 72 ore",
     "deposit": "Spesa con carta oltre 10€",
-    "expires": "2026-09-30",
-    "updated": "2026-09-25",
+    "expires": "2026-10-31",
+    "updated": "2026-10-08",
     "featured": false,
     "countInTotal": true,
     "source": "https://www.myfin.bg/docs/en/referral.pdf",
     "seo_title": "Bonus MyFin 10€ (codice amico) — guida 2026 | GoatLink",
-    "summary": "Registrati su MyFin con il codice di un amico entro il <strong>30 settembre</strong>, verifica l'identità e paga con la carta virtuale un acquisto sopra i 10€. Ricevi 10€ sul conto entro 72 ore.",
+    "summary": "Registrati su MyFin con il codice di un amico entro il <strong>31 ottobre</strong>, verifica l'identità e paga con la carta virtuale un acquisto sopra i 10€. Ricevi 10€ sul conto entro 72 ore.",
     "code": null,
     "steps": [
       "Procurati il <strong>codice invito</strong>. Lo può dare solo chi ha già un conto MyFin: scrivici su WhatsApp e te lo passiamo in privato.",
@@ -1018,7 +1018,7 @@ const BONUSES = [
       "Ricevi <strong>10€</strong> sul conto MyFin entro <strong>72 ore</strong> dal completamento dei passaggi."
     ],
     "rules_ok": [
-      "La campagna «Invite a Friend» è attiva dal <strong>01/09/2026 al 30/09/2026</strong>. Registrazione, verifica e acquisto vanno chiusi dentro queste date.",
+      "La campagna «Invite a Friend» è attiva dal <strong>01/10/2026 al 31/10/2026</strong>. Registrazione, verifica e acquisto vanno chiusi dentro queste date.",
       "L'acquisto non è una spesa persa: compri una cosa che ti serve o un buono che userai.",
       "I 10€ arrivano sul conto a tuo nome: li puoi spendere con la carta o trasferire su un altro conto.",
       "Anche chi ti invita riceve 10€. Te lo diciamo perché è giusto tu lo sappia: non cambia niente di quello che prendi tu."
@@ -1037,7 +1037,7 @@ const BONUSES = [
       },
       {
         "q": "Entro quando devo fare tutto?",
-        "a": "La campagna in corso va dal <strong>1° al 30 settembre 2026</strong>. Registrazione, verifica e acquisto vanno chiusi entro il 30."
+        "a": "La campagna in corso va dal <strong>1° al 31 ottobre 2026</strong>. Registrazione, verifica e acquisto vanno chiusi entro il 31."
       },
       {
         "q": "Posso usare il deposito su Trading 212 come spesa?",
