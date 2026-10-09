@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 8 ottobre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 9 ottobre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.

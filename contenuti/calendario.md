@@ -2,12 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Giovedì 8 ottobre 2026
-- **🆕 Nuova promo: MyFin 10€** — Reel 1 (Tutorial) + post canale + aggiungi la risposta rapida /myfin in WhatsApp Business. → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
-- **🛑 KAST è terminata** — Post canale: "La promo KAST è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /kast da WhatsApp Business.
-- **⏳ Fineco scade tra 7 giorni (15 ottobre)** — Reel 2 (Conviene davvero?) + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-- **🎬 Contenuto del giorno: Revolut** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
-
 ## Venerdì 9 ottobre 2026
 - **🎬 Contenuto del giorno: Trading 212** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
 
@@ -56,3 +50,6 @@
 
 ## Mercoledì 21 ottobre 2026
 - **🎬 Contenuto del giorno: Trading 212** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
+
+## Giovedì 22 ottobre 2026
+- **🎬 Contenuto del giorno: BBVA** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
