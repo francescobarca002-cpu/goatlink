@@ -1,6 +1,6 @@
 # Revolut — 15€
 
-> Generato da data.js il 9 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 10 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Fintech · 3 spese da 5€ · paga: Pagato in 2 giorni
 
 Link da usare (contano i clienti per canale):

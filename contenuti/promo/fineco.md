@@ -1,6 +1,6 @@
 # Fineco — 50€
 
-> Generato da data.js il 9 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 10 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 15 ottobre · Banca · Stipendio, 2.500€ di carta o 5 ordini · paga: Accredito in conto nel 2027
 
 Link da usare (contano i clienti per canale):

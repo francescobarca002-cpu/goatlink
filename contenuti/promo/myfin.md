@@ -1,6 +1,6 @@
 # MyFin — 10€
 
-> Generato da data.js il 9 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 10 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 31 ottobre · Fintech · Spesa con carta oltre 10€ · paga: Sul conto entro 72 ore
 
 Link da usare (contano i clienti per canale):
