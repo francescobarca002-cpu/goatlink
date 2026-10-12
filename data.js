@@ -657,6 +657,7 @@ const BONUSES = [
     "capitale": 50,
     "name": "Change",
     "category": "Crypto",
+    "logo": "logos/change.png",
     "emoji": "🔁",
     "amount": 25,
     "currency": "€",
