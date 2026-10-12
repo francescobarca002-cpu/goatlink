@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Domenica 11 ottobre 2026
-- **🎬 Contenuto del giorno: Buddybank** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
-
 ## Lunedì 12 ottobre 2026
 - **⏳ Fineco scade tra 3 giorni (15 ottobre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
 - **🎬 Contenuto del giorno: Coinbase** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
@@ -54,3 +51,6 @@
 ## Sabato 24 ottobre 2026
 - **⏳ MyFin scade tra 7 giorni (31 ottobre)** — Reel 2 (Conviene davvero?) + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 - **🎬 Contenuto del giorno: Coinbase** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
+
+## Domenica 25 ottobre 2026
+- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)

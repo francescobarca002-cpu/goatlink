@@ -1,6 +1,6 @@
 # Buddybank — 80€
 
-> Generato da data.js il 11 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 12 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 20 gennaio · Banca · Ricarica 11€ + spesa da 10€ · paga: Entro 90 giorni, prelevabile
 > 🔥 Maggiorazione attiva: 80€ fino al 16 novembre, poi torna a 50€.
 
