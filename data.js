@@ -653,6 +653,92 @@ const BONUSES = [
     "scadenza_etichetta": "A tempo indeterminato"
   },
   {
+    "slug": "change",
+    "capitale": 50,
+    "name": "Change",
+    "category": "Crypto",
+    "emoji": "🔁",
+    "amount": 25,
+    "currency": "€",
+    "amountLabel": "25€",
+    "minutes": 20,
+    "difficulty": "Medio",
+    "badge": null,
+    "payout": "Bloccato 30 giorni dopo l'accredito",
+    "deposit": "Deposito 50€ + 1 acquisto e 1 vendita",
+    "expires": null,
+    "updated": "2026-10-12",
+    "featured": false,
+    "countInTotal": false,
+    "source": "https://www.changeinvest.com/legal#referral-program-terms",
+    "seo_title": "Bonus Change 25€ con invito (app crypto) — guida 2026 | GoatLink",
+    "summary": "App crypto europea con licenza MiCA. Registrati dal link di invito e, entro 30 giorni, completa la verifica identità, deposita almeno 50€ e fai un acquisto e una vendita di crypto. Bonus 25€, usabile e prelevabile dopo 30 giorni dall'accredito.",
+    "code": null,
+    "steps": [
+      "Apri il <strong>link di invito dal telefono</strong> e installa l'app partendo da lì. Change aggancia l'invito solo dal link: <strong>non esiste un campo dove inserire un codice dopo</strong>, quindi se scarichi l'app prima dallo store rischi di perdere il bonus.",
+      "Crea l'account. Devi essere un <strong>utente nuovo</strong>: chi ha già avuto un account Change, anche chiuso, non è idoneo.",
+      "Completa la verifica identità (KYC) con documento e selfie.",
+      "Deposita almeno <strong>50€</strong> con bonifico SEPA, che non ha commissioni.",
+      "Fai <strong>almeno un acquisto e almeno una vendita</strong> di crypto. Il modo più economico è comprare Bitcoin e rivenderlo: su BTC la commissione è 0%, paghi solo lo spread.",
+      "Tutto (verifica, deposito e i due trade) va fatto <strong>entro 30 giorni</strong> da quando hai usato il link. Se manca anche un solo passaggio, il bonus non arriva né a te né a chi ti ha invitato.",
+      "Ricevi <strong>25€</strong> sul conto Change. Per i primi <strong>30 giorni</strong> dall'accredito il bonus è bloccato: non puoi usarlo per comprare crypto né trasferirlo fuori."
+    ],
+    "rules_ok": [
+      "Esempio valido: deposita 50€, compra Bitcoin, poi rivendilo. I 50€ restano tuoi, a parte lo spread e l'oscillazione del prezzo nel frattempo.",
+      "Bitcoin ha <strong>0% di commissione</strong> su acquisto e vendita; le altre crypto costano lo 0,10%.",
+      "Il deposito con bonifico è gratuito; il prelievo in euro costa <strong>1€</strong> (minimo 10€).",
+      "Change opera con una <strong>licenza MiCA</strong> rilasciata nei Paesi Bassi dall'AFM a Change Securities B.V.",
+      "Anche chi invita riceve un premio, fino a 20 amici."
+    ],
+    "rules_ko": [
+      "<strong>Il codice non si inserisce dopo.</strong> Il regolamento parla solo di link di invito: se il collegamento non risulta, l'unica strada è chiedere all'assistenza in-app un abbinamento manuale, che è a loro discrezione.",
+      "L'assistenza risponde <strong>solo in inglese</strong> (o estone, tedesco, spagnolo e poche altre lingue), non in italiano.",
+      "Non contano i soli acquisti: servono <strong>un acquisto e una vendita</strong>.",
+      "Account doppi: Change li chiude.",
+      "L'importo del premio può cambiare senza preavviso: <strong>vale quello mostrato quando usi il link</strong>, quindi controllalo nella pagina che si apre."
+    ],
+    "faq": [
+      {
+        "q": "Quanto vale il bonus Change?",
+        "a": "25€ per chi si iscrive dal link di invito e completa i requisiti. Change può cambiare l'importo in qualsiasi momento: conta quello in vigore quando usi il link e crei l'account."
+      },
+      {
+        "q": "Cosa devo fare per ottenere il bonus Change?",
+        "a": "Entro 30 giorni dal link: verifica identità, deposito di almeno 50€ e almeno due operazioni crypto, cioè un acquisto e una vendita."
+      },
+      {
+        "q": "Posso inserire il codice amico dopo essermi registrato?",
+        "a": "No, Change non prevede un campo codice: l'invito si aggancia solo aprendo il link prima della registrazione. Se hai dubbi che sia stato tracciato, scrivi in inglese all'assistenza in-app indicando il link usato, prima di fare deposito e trade."
+      },
+      {
+        "q": "Quando posso usare o prelevare il bonus?",
+        "a": "Dopo 30 giorni dall'accredito. Fino ad allora il bonus non si può usare per comprare crypto né trasferire fuori dal conto."
+      },
+      {
+        "q": "Quanto costa fare i due trade?",
+        "a": "Su Bitcoin la commissione è 0% sia in acquisto sia in vendita, resta solo lo spread. Su altre crypto è lo 0,10%. Il prelievo in euro costa 1€."
+      },
+      {
+        "q": "Change è regolamentata?",
+        "a": "Sì: Change Securities B.V., con sede ad Amsterdam, ha ottenuto la licenza MiCA dall'autorità olandese AFM, annunciata ad aprile 2026."
+      }
+    ],
+    "why": "25€ con un deposito da 50€ che ti riprendi, e costi quasi nulli se fai i due trade su Bitcoin. Unico vero vincolo: i 25€ restano fermi 30 giorni prima di poterli muovere.",
+    "pros": [
+      "25€ con un deposito da 50€ che resta tuo",
+      "0% di commissione su Bitcoin",
+      "Licenza MiCA nei Paesi Bassi"
+    ],
+    "cons": [
+      "Servono sia un acquisto sia una vendita",
+      "Bonus bloccato 30 giorni dopo l'accredito",
+      "Assistenza solo in inglese"
+    ],
+    "codice_box": false,
+    "categoria_etichetta": "Fintech · Crypto",
+    "scadenza_etichetta": "Senza scadenza"
+  },
+  {
     "slug": "revolut",
     "capitale": 0,
     "name": "Revolut",
