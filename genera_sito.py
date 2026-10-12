@@ -220,7 +220,7 @@ def guida(b, tutte, oggi):
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
-  <a class="g-logo" href="index.html"><img src="logo-goatlink.svg" alt="GoatLink" width="164" height="38"></a>
+  <a class="g-logo" href="index.html"><img src="logo-goatlink.svg" alt="GoatLink" width="165" height="38"></a>
   <a class="g-back" href="index.html#bonus">← Tutti i bonus</a>
 </div></header>
 
