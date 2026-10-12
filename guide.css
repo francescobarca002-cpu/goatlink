@@ -21,8 +21,8 @@ a{color:inherit;text-decoration:none}
 
 header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:linear-gradient(180deg,rgba(7,6,17,.85),rgba(7,6,17,.4));border-bottom:1px solid var(--line)}
 .g-nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.g-logo{font-family:"Orbitron";font-weight:800;font-size:1.2rem;letter-spacing:.04em}
-.g-logo span{background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-logo{display:block;line-height:0}
+.g-logo img{display:block;height:38px;width:auto}
 .g-back{font-size:.8rem;color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;font-family:"Orbitron";font-weight:500}
 .g-back:hover{color:var(--cyan)}
 

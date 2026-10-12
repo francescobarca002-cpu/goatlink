@@ -195,6 +195,9 @@ def guida(b, tutte, oggi):
 <title>{titolo}</title>
 <meta name="description" content="{attr(descr)}">
 <link rel="canonical" href="{url}">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{attr(titolo)}">
 <meta property="og:description" content="{attr(descr)}">
@@ -217,7 +220,7 @@ def guida(b, tutte, oggi):
 <div class="g-grid-floor"></div>
 
 <header><div class="g-wrap g-nav">
-  <a class="g-logo" href="index.html">GOAT<span>LINK</span></a>
+  <a class="g-logo" href="index.html"><img src="logo-goatlink.svg" alt="GoatLink" width="164" height="38"></a>
   <a class="g-back" href="index.html#bonus">← Tutti i bonus</a>
 </div></header>
 
