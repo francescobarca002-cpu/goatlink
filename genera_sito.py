@@ -125,6 +125,9 @@ def guida(b, tutte, oggi):
     ld_html = "\n".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
 
     scaduta = not b["attiva"]
+    # schede stabili ("verifica_periodica": false): niente data di aggiornamento in pagina
+    aggiornato = ("" if b.get("verifica_periodica", True) is False else
+                  f'\n    <p class="g-updated">Ultimo aggiornamento: <time datetime="{b["updated"]}">{data_it(b["updated"])}</time></p>')
     if b.get("expires"):
         etichetta = (f"Promo terminata il {data_it(b['expires'])}" if scaduta else f"Valida fino al {data_it(b['expires'])}")
     else:
@@ -247,8 +250,7 @@ def guida(b, tutte, oggi):
     </section>
 {regole}{sezioni(b.get("sezioni_dopo"))}{verdetto}
     <div class="g-cta-wrap"><a class="g-cta" href="https://wa.me/{WA}?text={attr(nome.replace(" ", "%20"))}">{cta}</a><p class="g-disc">{nota}</p></div>
-{faq}
-    <p class="g-updated">Ultimo aggiornamento: <time datetime="{b["updated"]}">{data_it(b["updated"])}</time></p>
+{faq}{aggiornato}
   </article>
 
   <section class="g-related">
