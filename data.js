@@ -667,7 +667,7 @@ const BONUSES = [
     "badge": null,
     "payout": "Bloccato 30 giorni dopo l'accredito",
     "deposit": "Deposito 50€ + 1 acquisto e 1 vendita",
-    "expires": null,
+    "expires": "2026-10-12",
     "updated": "2026-10-12",
     "featured": false,
     "countInTotal": false,
@@ -736,8 +736,7 @@ const BONUSES = [
       "Assistenza solo in inglese"
     ],
     "codice_box": false,
-    "categoria_etichetta": "Fintech · Crypto",
-    "scadenza_etichetta": "Senza scadenza"
+    "categoria_etichetta": "Fintech · Crypto"
   },
   {
     "slug": "revolut",
