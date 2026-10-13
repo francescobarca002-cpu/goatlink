@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 12 ottobre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 13 ottobre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -40,6 +40,7 @@ Ecco le promo attive oggi 👇
 • Revolut — 15€
 • Trading 212 — 8€–100€
 • BBVA — 10€
+• Change — 25€
 • Coinbase — 20€
 • Crédit Agricole — 50€
 • MyFin — 10€
@@ -130,6 +131,28 @@ Ciao! 🐐 Ecco come ottenere il bonus *BBVA* (10€):
 Non devi lasciare soldi fermi. Il premio: pagato in pochi giorni.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/bbva.html
+```
+
+### `/change` — Change 25€
+
+Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
+
+```
+Ciao! 🐐 Ecco come ottenere il bonus *Change* (25€):
+
+1. Apri il link di invito dal telefono e installa l'app partendo da lì. Change aggancia l'invito solo dal link: non esiste un campo dove inserire un codice dopo, quindi se scarichi l'app prima dallo store rischi di perdere il bonus.
+2. Crea l'account. Devi essere un utente nuovo: chi ha già avuto un account Change, anche chiuso, non è idoneo.
+3. Completa la verifica identità (KYC) con documento e selfie.
+4. Deposita almeno 50€ con bonifico SEPA, che non ha commissioni.
+5. Fai almeno un acquisto e almeno una vendita di crypto. Il modo più economico è comprare Bitcoin e rivenderlo: su BTC la commissione è 0%, paghi solo lo spread.
+6. Tutto (verifica, deposito e i due trade) va fatto entro 30 giorni da quando hai usato il link. Se manca anche un solo passaggio, il bonus non arriva né a te né a chi ti ha invitato.
+7. Ricevi 25€ sul conto Change. Per i primi 30 giorni dall'accredito il bonus è bloccato: non puoi usarlo per comprare crypto né trasferirlo fuori.
+
+👉 Link di invito: [LINK]
+
+Ti chiede di muovere 50€, che restano tuoi. Il premio: bloccato 30 giorni dopo l'accredito.
+Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
+Guida con le domande frequenti: https://www.goatlink.it/change.html
 ```
 
 ### `/coinbase` — Coinbase 20€
