@@ -757,6 +757,7 @@ const BONUSES = [
     "updated": "2026-05-28",
     "featured": false,
     "countInTotal": false,
+    "verifica_periodica": false,
     "source": "https://www.revolut.com/it-IT/legal/referrals-terms/",
     "summary": "Apri il conto, ordina la carta Standard gratuita e fai 3 spese da 5€ ciascuna entro 30 giorni. 15€ accreditati in 2 giorni.",
     "code": null,

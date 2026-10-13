@@ -87,7 +87,8 @@ def controlla_dati(bonus, catalogo, oggi):
             giorni = (datetime.date.fromisoformat(boost["until"]) - datetime.date.fromisoformat(oggi)).days
             if giorni <= 7:
                 avv(dove, f"la maggiorazione finisce tra {giorni} giorni: dopo vanno riscritti i testi che la citano")
-        if b.get("updated") and data_valida(b["updated"]) and attiva(b, oggi):
+        # "verifica_periodica": false = scheda stabile, niente avviso sulla verifica vecchia
+        if b.get("updated") and data_valida(b["updated"]) and attiva(b, oggi) and b.get("verifica_periodica", True):
             vecchia = (datetime.date.fromisoformat(oggi) - datetime.date.fromisoformat(b["updated"])).days
             if vecchia > 45:
                 avv(dove, f"ultima verifica {vecchia} giorni fa ({b['updated']})")
