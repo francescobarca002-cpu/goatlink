@@ -2,61 +2,62 @@
 
 > Generato da data.js. [Calendario 14 giorni](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/calendario.md) · [Kit WhatsApp Business](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/whatsapp-business.md)
 
-## Martedì 13 ottobre 2026
-- **🆕 Nuova promo: Change 25€** — Reel 1 (Tutorial) + post canale + aggiungi la risposta rapida /change in WhatsApp Business. → [kit change](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/change.md)
-- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
+## Mercoledì 14 ottobre 2026
+- **🛑 Change è terminata** — Post canale: "La promo Change è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /change da WhatsApp Business.
+- **⏳ Fineco scade domani (15 ottobre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
+- **🎬 Contenuto del giorno: ING** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
 
 ---
 
-### Crédit Agricole — Reel 1 — Tutorial
+### ING — Reel 2 — Conviene davvero?
 
-**Formato:** registrazione schermo dell'app + testo a video. 30–45 secondi.
+**Formato:** faccia in camera oppure testo su sfondo, tono da amico che ti avvisa. 25–35 secondi.
 
-- **Gancio (0–3 s), testo a video:** "Crédit Agricole: 50€ in 15 minuti. Ti faccio vedere come."
-- **Contesto (3–8 s):** "Basta una transazione con la carta Visa, di qualsiasi importo, e il buono arriva senza fare altro."
-- **Passaggi (8–35 s)**, uno per schermata:
-  1. Apri il Conto Online Crédit Agricole dall'invito
-  2. Inserisci il codice promozionale nel form di apertura
-  3. Nella stessa richiesta sottoscrivi la Carta Visa Debit
-  4. Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per…
-  5. Fai almeno 1 transazione con la carta, di qualsiasi importo
-  (gli altri 1 passaggi sono nella guida)
-- **Attenzione (35–40 s):** "Non devi lasciare soldi fermi. Il premio: buono Regalo Amazon.it."
-- **Chiusura (40–45 s):** "Guida completa e codice amico: link in bio, oppure scrivici su WhatsApp."
+- **Gancio (0–3 s):** "Il bonus ING da 75€ conviene davvero? Te lo dico in 30 secondi."
+- **Cosa chiede (3–10 s):** "Conto + carta, spesa 250€. Ci metti circa 15 minuti."
+- **Pro (10–20 s):**
+  - ✅ 75€, il più alto in catalogo
+  - ✅ Zero capitale immobilizzato
+  - ✅ Gratis fino ai 30 anni
+- **Contro (20–28 s):**
+  - ⚠️ per il premio serve pazienza (Cashback entro il 31/01/2027)
+  - ⚠️ scade il 2 novembre
+- **Verdetto (28–33 s):** "È il bonus più alto del sito e non chiede di lasciare fermo un euro: i 250€ di spesa restano tuoi, cambia solo la carta con cui li paghi."
+- **Chiusura:** "Tutti i passaggi e il codice amico: link in bio."
 - **Testo fisso in basso:** "Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia."
 
 **Caption**
 
 ```
-Crédit Agricole: 50€ di bonus, 15 minuti da telefono.
+ING: 75€ di bonus, 15 minuti da telefono.
 
-Cosa chiede: 1 transazione + carta Visa.
-Quando paga: Buono Regalo Amazon.it.
+Cosa chiede: Conto + carta, spesa 250€.
+Quando paga: Cashback entro il 31/01/2027.
 Non devi lasciare soldi fermi.
 Tempo: entro il 2 novembre.
 
-Basta una transazione con la carta Visa, di qualsiasi importo, e il buono arriva senza fare altro.
+È il bonus più alto del sito e non chiede di lasciare fermo un euro: i 250€ di spesa restano tuoi, cambia solo la carta con cui li paghi.
 
 👉 Guida passo-passo e codice amico: link in bio (o scrivici su WhatsApp).
 
 Trasparenza: il codice che ti passiamo è un codice amico. Il tuo bonus non cambia, e chi lo condivide può ricevere il premio previsto per chi invita.
 I prodotti finanziari comportano rischi: questa non è consulenza.
 
-#bonusconto #contocorrente #risparmio #finanzapersonale #goatlink #creditagricole
+#bonusconto #contocorrente #risparmio #finanzapersonale #goatlink #ing
 ```
 
-### Change — post per il canale
+### Fineco — post per il canale
 
 ```
-*Change — 25€*
-⏱ 20 minuti · Medio
-📋 Deposito 50€ + 1 acquisto e 1 vendita
-💸 Bloccato 30 giorni dopo l'accredito
-📅 Finché la promo resta attiva
+*Fineco — 50€*
+⏱ 15 minuti · Medio
+📋 Stipendio, 2.500€ di carta o 5 ordini
+💸 Accredito in conto nel 2027
+📅 Entro il 15 ottobre
 
-25€ con un deposito da 50€ che ti riprendi, e costi quasi nulli se fai i due trade su Bitcoin. Unico vero vincolo: i 25€ restano fermi 30 giorni prima di poterli muovere.
+È l’unica promo del catalogo che ti lascia scegliere come sbloccarla, e ti dà quasi quattro mesi per farlo invece delle solite sei settimane. In cambio chiede pazienza: l’accredito arriva nel 2027 e va confermato con una firma.
 
-Guida completa 👉 https://www.goatlink.it/change.html?utm_source=canale&utm_campaign=change-202610
+Guida completa 👉 https://www.goatlink.it/fineco.html?utm_source=canale&utm_campaign=fineco-202610
 Per il codice amico scrivici in privato.
 
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._

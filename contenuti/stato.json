@@ -1,9 +1,8 @@
 {
- "data": "2026-10-13",
+ "data": "2026-10-14",
  "attive": [
   "bbva",
   "buddybank",
-  "change",
   "coinbase",
   "creditagricole",
   "fineco",
@@ -12,10 +11,10 @@
   "revolut",
   "trading212"
  ],
- "nuove": [
+ "nuove": [],
+ "finite": [
   "change"
  ],
- "finite": [],
- "scelta": "creditagricole",
- "scelta_ieri": "coinbase"
+ "scelta": "ing",
+ "scelta_ieri": "creditagricole"
 }
