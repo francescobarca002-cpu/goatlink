@@ -95,12 +95,11 @@ Da salvare come risposta rapida `/myfin`. Sostituisci [CODICE] con il tuo codice
 ```
 Ciao! 🐐 Ecco come ottenere il bonus *MyFin* (10€):
 
-1. Procurati il codice invito. Lo può dare solo chi ha già un conto MyFin: scrivici su WhatsApp e te lo passiamo in privato.
-2. Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard è gratuito e per il bonus basta.
-3. Completa la verifica dell'identità con un documento. Può richiedere qualche ora e non arriva sempre una notifica: se riesci a caricare il conto, la verifica è passata.
-4. Crea la carta virtuale, gratuita, e carica sul conto almeno 11€ da un altro conto tuo.
-5. Paga con la carta MyFin un acquisto sopra i 10€ da un negozio, online o in fisico. Per esempio un buono regalo da 11€.
-6. Ricevi 10€ sul conto MyFin entro 72 ore dal completamento dei passaggi.
+1. Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard è gratuito e per il bonus basta.
+2. Completa la verifica dell'identità con un documento. Può richiedere qualche ora e non arriva sempre una notifica: se riesci a caricare il conto, la verifica è passata.
+3. Crea la carta virtuale, gratuita, e carica sul conto almeno 11€ da un altro conto tuo.
+4. Paga con la carta MyFin un acquisto sopra i 10€ da un negozio, online o in fisico. Per esempio un buono regalo da 11€.
+5. Ricevi 10€ sul conto MyFin entro 72 ore dal completamento dei passaggi.
 
 👉 Codice amico: [CODICE]
 

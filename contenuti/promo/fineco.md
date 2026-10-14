@@ -95,13 +95,12 @@ Da salvare come risposta rapida `/fineco`. Sostituisci [CODICE] con il tuo codic
 ```
 Ciao! 🐐 Ecco come ottenere il bonus *Fineco* (50€):
 
-1. Procurati il Codice Amico. Lo può dare solo chi ha già un conto Fineco: se non conosci nessuno, scrivici su WhatsApp e te lo passiamo in privato.
-2. Apri il conto su finecobank.com o dall’app e inserisci il codice nel campo dedicato durante la procedura. È l’unico momento in cui si può mettere: dopo non è più aggiungibile e il bonus non si recupera.
-3. Completa la richiesta di apertura entro il 15/10/2026 e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.
-4. Scegli una sola delle quattro strade e completala entro il 04/01/2027: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.
-5. La quarta strada, se hai liquidità ferma: trasferimento di almeno 20.000€ entro il 30/11/2026, mantenuti sul conto fino al 04/01/2027.
-6. Quando la banca la mette a disposizione in area riservata o in app, firma l’integrazione contrattuale. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
-7. Ricevi i 50€ sul conto corrente, accreditati al netto della ritenuta del 26%.
+1. Apri il conto su finecobank.com o dall’app e inserisci il codice nel campo dedicato durante la procedura. È l’unico momento in cui si può mettere: dopo non è più aggiungibile e il bonus non si recupera.
+2. Completa la richiesta di apertura entro il 15/10/2026 e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.
+3. Scegli una sola delle quattro strade e completala entro il 04/01/2027: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.
+4. La quarta strada, se hai liquidità ferma: trasferimento di almeno 20.000€ entro il 30/11/2026, mantenuti sul conto fino al 04/01/2027.
+5. Quando la banca la mette a disposizione in area riservata o in app, firma l’integrazione contrattuale. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
+6. Ricevi i 50€ sul conto corrente, accreditati al netto della ritenuta del 26%.
 
 👉 Codice amico: [CODICE]
 

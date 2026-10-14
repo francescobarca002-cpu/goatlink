@@ -97,12 +97,11 @@ Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
 ```
 Ciao! 🐐 Ecco come ottenere il bonus *Trading 212* (8€–100€):
 
-1. Procurati il link di invito. Lo può dare solo chi ha già un conto Trading 212 Invest: scrivici su WhatsApp e te lo passiamo in privato.
-2. Registrati dal link e apri il conto Invest: è l'unico conto valido per il bonus. Con il conto CFD o altri tipi di conto l'azione non arriva.
-3. Completa la verifica dell'identità.
-4. Deposita almeno 10€ entro 10 giorni dalla creazione del conto.
-5. Entro 3 giorni lavorativi ricevi l'azione premio, scelta a caso con un valore fra 8€ e 100€.
-6. Puoi venderla subito. Il contante che ne ricavi si preleva dopo 30 giorni dall'accredito.
+1. Registrati dal link e apri il conto Invest: è l'unico conto valido per il bonus. Con il conto CFD o altri tipi di conto l'azione non arriva.
+2. Completa la verifica dell'identità.
+3. Deposita almeno 10€ entro 10 giorni dalla creazione del conto.
+4. Entro 3 giorni lavorativi ricevi l'azione premio, scelta a caso con un valore fra 8€ e 100€.
+5. Puoi venderla subito. Il contante che ne ricavi si preleva dopo 30 giorni dall'accredito.
 
 👉 Link di invito: [LINK]
 
@@ -180,12 +179,11 @@ Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
 ```
 Ciao! 🐐 Ecco come ottenere il bonus *MyFin* (10€):
 
-1. Procurati il codice invito. Lo può dare solo chi ha già un conto MyFin: scrivici su WhatsApp e te lo passiamo in privato.
-2. Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard è gratuito e per il bonus basta.
-3. Completa la verifica dell'identità con un documento. Può richiedere qualche ora e non arriva sempre una notifica: se riesci a caricare il conto, la verifica è passata.
-4. Crea la carta virtuale, gratuita, e carica sul conto almeno 11€ da un altro conto tuo.
-5. Paga con la carta MyFin un acquisto sopra i 10€ da un negozio, online o in fisico. Per esempio un buono regalo da 11€.
-6. Ricevi 10€ sul conto MyFin entro 72 ore dal completamento dei passaggi.
+1. Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard è gratuito e per il bonus basta.
+2. Completa la verifica dell'identità con un documento. Può richiedere qualche ora e non arriva sempre una notifica: se riesci a caricare il conto, la verifica è passata.
+3. Crea la carta virtuale, gratuita, e carica sul conto almeno 11€ da un altro conto tuo.
+4. Paga con la carta MyFin un acquisto sopra i 10€ da un negozio, online o in fisico. Per esempio un buono regalo da 11€.
+5. Ricevi 10€ sul conto MyFin entro 72 ore dal completamento dei passaggi.
 
 👉 Codice amico: [CODICE]
 
@@ -248,13 +246,12 @@ Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
 ```
 Ciao! 🐐 Ecco come ottenere il bonus *Fineco* (50€):
 
-1. Procurati il Codice Amico. Lo può dare solo chi ha già un conto Fineco: se non conosci nessuno, scrivici su WhatsApp e te lo passiamo in privato.
-2. Apri il conto su finecobank.com o dall’app e inserisci il codice nel campo dedicato durante la procedura. È l’unico momento in cui si può mettere: dopo non è più aggiungibile e il bonus non si recupera.
-3. Completa la richiesta di apertura entro il 15/10/2026 e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.
-4. Scegli una sola delle quattro strade e completala entro il 04/01/2027: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.
-5. La quarta strada, se hai liquidità ferma: trasferimento di almeno 20.000€ entro il 30/11/2026, mantenuti sul conto fino al 04/01/2027.
-6. Quando la banca la mette a disposizione in area riservata o in app, firma l’integrazione contrattuale. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
-7. Ricevi i 50€ sul conto corrente, accreditati al netto della ritenuta del 26%.
+1. Apri il conto su finecobank.com o dall’app e inserisci il codice nel campo dedicato durante la procedura. È l’unico momento in cui si può mettere: dopo non è più aggiungibile e il bonus non si recupera.
+2. Completa la richiesta di apertura entro il 15/10/2026 e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.
+3. Scegli una sola delle quattro strade e completala entro il 04/01/2027: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.
+4. La quarta strada, se hai liquidità ferma: trasferimento di almeno 20.000€ entro il 30/11/2026, mantenuti sul conto fino al 04/01/2027.
+5. Quando la banca la mette a disposizione in area riservata o in app, firma l’integrazione contrattuale. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
+6. Ricevi i 50€ sul conto corrente, accreditati al netto della ritenuta del 26%.
 
 👉 Codice amico: [CODICE]
 

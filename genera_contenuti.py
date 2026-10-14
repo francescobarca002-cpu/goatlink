@@ -221,7 +221,8 @@ def invito(b):
 
 def risposta_whatsapp(b, oggi):
     etichetta, segnaposto = invito(b)
-    p = passi(b)
+    # in chat il codice/link è già nel messaggio: via il passaggio "scrivici su WhatsApp"
+    p = [s for s in passi(b) if "scrivici su whatsapp" not in s.lower()]
     elenco = "\n".join(f"{i + 1}. {s}" for i, s in enumerate(p))
     return f"""Ciao! 🐐 Ecco come ottenere il bonus *{b['name']}* ({b['amountLabel']}):
 

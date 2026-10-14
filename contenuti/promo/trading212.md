@@ -94,12 +94,11 @@ Da salvare come risposta rapida `/trading212`. Sostituisci [LINK] con il tuo lin
 ```
 Ciao! 🐐 Ecco come ottenere il bonus *Trading 212* (8€–100€):
 
-1. Procurati il link di invito. Lo può dare solo chi ha già un conto Trading 212 Invest: scrivici su WhatsApp e te lo passiamo in privato.
-2. Registrati dal link e apri il conto Invest: è l'unico conto valido per il bonus. Con il conto CFD o altri tipi di conto l'azione non arriva.
-3. Completa la verifica dell'identità.
-4. Deposita almeno 10€ entro 10 giorni dalla creazione del conto.
-5. Entro 3 giorni lavorativi ricevi l'azione premio, scelta a caso con un valore fra 8€ e 100€.
-6. Puoi venderla subito. Il contante che ne ricavi si preleva dopo 30 giorni dall'accredito.
+1. Registrati dal link e apri il conto Invest: è l'unico conto valido per il bonus. Con il conto CFD o altri tipi di conto l'azione non arriva.
+2. Completa la verifica dell'identità.
+3. Deposita almeno 10€ entro 10 giorni dalla creazione del conto.
+4. Entro 3 giorni lavorativi ricevi l'azione premio, scelta a caso con un valore fra 8€ e 100€.
+5. Puoi venderla subito. Il contante che ne ricavi si preleva dopo 30 giorni dall'accredito.
 
 👉 Link di invito: [LINK]
 
