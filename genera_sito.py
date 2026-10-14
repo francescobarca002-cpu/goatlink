@@ -30,6 +30,11 @@ SITO = "https://www.goatlink.it"
 WA = "393421619836"   # numero WhatsApp di GoatLink (prefisso 39, senza +): si cambia SOLO qui,
                       # genera_sito.py lo riporta in tutte le pagine e in wa-message.js
 CANALE = "https://whatsapp.com/channel/0029Vb8bdwD72WTyKrvBWZ1W"
+MOSTRA_CANALE = False  # ottobre 2026: canale WhatsApp tolto dalle guide; True per rimetterlo
+                       # (home, chi siamo, termini e privacy vanno ripristinati a mano)
+BOX_CANALE = ('<div class="g-tg"><div class="g-tg-txt"><b>📣 Non perderti la prossima promo</b><span>Sul Canale WhatsApp ti avvisiamo quando un bonus sta per scadere e quando ne arriva uno nuovo verificato. Niente spam.</span></div>'
+              f'<a class="g-tg-btn" href="{CANALE}">Entra nel canale →</a></div>\n') if MOSTRA_CANALE else ''
+LINK_CANALE = f' &nbsp;·&nbsp; <a href="{CANALE}">Canale WhatsApp</a>' if MOSTRA_CANALE else ''
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 PAGINE_FISSE = ["chi-siamo.html", "privacy.html", "termini.html"]
@@ -260,10 +265,9 @@ def guida(b, tutte, oggi):
   </section>
 </main>
 
-<div class="g-tg"><div class="g-tg-txt"><b>📣 Non perderti la prossima promo</b><span>Sul Canale WhatsApp ti avvisiamo quando un bonus sta per scadere e quando ne arriva uno nuovo verificato. Niente spam.</span></div><a class="g-tg-btn" href="{CANALE}">Entra nel canale →</a></div>
-<footer class="g-footer"><div class="g-wrap">
+{BOX_CANALE}<footer class="g-footer"><div class="g-wrap">
   <p>I bonus sono pagati direttamente da banche e piattaforme, dentro i loro programmi «Invita un amico». GoatLink non ha accordi commerciali con i marchi citati: i codici che ti passiamo sono codici amico, e chi li condivide può ricevere il premio che il regolamento prevede per chi invita. Per te nessun costo aggiuntivo e il tuo bonus non cambia. GoatLink non è sponsorizzato né approvato dai marchi citati e non è un intermediario finanziario. I prodotti finanziari e crypto comportano rischi; nessuna informazione qui è consulenza finanziaria o fiscale.</p>
-  <p style="margin-top:14px"><a href="chi-siamo.html">Chi siamo</a> &nbsp;·&nbsp; <a href="termini.html">Termini e Condizioni</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy &amp; Cookie</a> &nbsp;·&nbsp; <a href="https://wa.me/{WA}">Assistenza WhatsApp</a> &nbsp;·&nbsp; <a href="{CANALE}">Canale WhatsApp</a></p>
+  <p style="margin-top:14px"><a href="chi-siamo.html">Chi siamo</a> &nbsp;·&nbsp; <a href="termini.html">Termini e Condizioni</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy &amp; Cookie</a> &nbsp;·&nbsp; <a href="https://wa.me/{WA}">Assistenza WhatsApp</a>{LINK_CANALE}</p>
   <a href="index.html">© 2026 GoatLink</a>
 </div></footer>
 
