@@ -26,7 +26,7 @@
    Include una sola volta prima di </body>:  <script src="wa-message.js"></script>
    Override manuale opzionale:  <body data-bonus="Buddybank">  */
 (function () {
-  var WA = "393793719306";
+  var WA = "393421619836";
   var override = document.body.getAttribute("data-bonus");
   var h1 = document.querySelector("h1");
   var nome = override

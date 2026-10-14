@@ -27,7 +27,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SITO = "https://www.goatlink.it"
-WA = "393793719306"   # numero WhatsApp di GoatLink (prefisso 39, senza +): si cambia SOLO qui,
+WA = "393421619836"   # numero WhatsApp di GoatLink (prefisso 39, senza +): si cambia SOLO qui,
                       # genera_sito.py lo riporta in tutte le pagine e in wa-message.js
 CANALE = "https://whatsapp.com/channel/0029Vb8bdwD72WTyKrvBWZ1W"
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
