@@ -2,48 +2,48 @@
 
 > Generato da data.js. [Calendario 14 giorni](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/calendario.md) · [Kit WhatsApp Business](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/whatsapp-business.md)
 
-## Mercoledì 14 ottobre 2026
-- **🛑 Change è terminata** — Post canale: "La promo Change è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /change da WhatsApp Business.
-- **⏳ Fineco scade domani (15 ottobre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-- **🎬 Contenuto del giorno: ING** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
+## Giovedì 15 ottobre 2026
+- **⏰ Ultimo giorno per Fineco** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus Fineco da 50€." → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
+- **🎬 Contenuto del giorno: MyFin** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 
 ---
 
-### ING — Reel 2 — Conviene davvero?
+### MyFin — Reel 2 — Conviene davvero?
 
 **Formato:** faccia in camera oppure testo su sfondo, tono da amico che ti avvisa. 25–35 secondi.
 
-- **Gancio (0–3 s):** "Il bonus ING da 75€ conviene davvero? Te lo dico in 30 secondi."
-- **Cosa chiede (3–10 s):** "Conto + carta, spesa 250€. Ci metti circa 15 minuti."
+- **Gancio (0–3 s):** "Il bonus MyFin da 10€ conviene davvero? Te lo dico in 30 secondi."
+- **Cosa chiede (3–10 s):** "Spesa con carta oltre 10€. Ci metti circa 15 minuti."
 - **Pro (10–20 s):**
-  - ✅ 75€, il più alto in catalogo
-  - ✅ Zero capitale immobilizzato
-  - ✅ Gratis fino ai 30 anni
+  - ✅ Piano Standard gratuito
+  - ✅ Carta virtuale inclusa
+  - ✅ Bonus in 72 ore
 - **Contro (20–28 s):**
-  - ⚠️ per il premio serve pazienza (Cashback entro il 31/01/2027)
-  - ⚠️ scade il 2 novembre
-- **Verdetto (28–33 s):** "È il bonus più alto del sito e non chiede di lasciare fermo un euro: i 250€ di spesa restano tuoi, cambia solo la carta con cui li paghi."
+  - ⚠️ devi muovere 11€ (restano tuoi)
+  - ⚠️ per il premio serve pazienza (Sul conto entro 72 ore)
+  - ⚠️ scade il 31 ottobre
+- **Verdetto (28–33 s):** "Conto gratuito con carta virtuale, e il bonus arriva in 72 ore. Ti chiede solo un acquisto sopra i 10€ che puoi comunque usare."
 - **Chiusura:** "Tutti i passaggi e il codice amico: link in bio."
 - **Testo fisso in basso:** "Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia."
 
 **Caption**
 
 ```
-ING: 75€ di bonus, 15 minuti da telefono.
+MyFin: 10€ di bonus, 15 minuti da telefono.
 
-Cosa chiede: Conto + carta, spesa 250€.
-Quando paga: Cashback entro il 31/01/2027.
-Non devi lasciare soldi fermi.
-Tempo: entro il 2 novembre.
+Cosa chiede: Spesa con carta oltre 10€.
+Quando paga: Sul conto entro 72 ore.
+Ti chiede di muovere 11€, che restano tuoi.
+Tempo: entro il 31 ottobre.
 
-È il bonus più alto del sito e non chiede di lasciare fermo un euro: i 250€ di spesa restano tuoi, cambia solo la carta con cui li paghi.
+Conto gratuito con carta virtuale, e il bonus arriva in 72 ore. Ti chiede solo un acquisto sopra i 10€ che puoi comunque usare.
 
 👉 Guida passo-passo e codice amico: link in bio (o scrivici su WhatsApp).
 
 Trasparenza: il codice che ti passiamo è un codice amico. Il tuo bonus non cambia, e chi lo condivide può ricevere il premio previsto per chi invita.
 I prodotti finanziari comportano rischi: questa non è consulenza.
 
-#bonusconto #contocorrente #risparmio #finanzapersonale #goatlink #ing
+#bonusconto #contocorrente #risparmio #finanzapersonale #goatlink #myfin
 ```
 
 ### Fineco — post per il canale

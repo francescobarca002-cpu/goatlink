@@ -1,5 +1,5 @@
 {
- "data": "2026-10-14",
+ "data": "2026-10-15",
  "attive": [
   "bbva",
   "buddybank",
@@ -12,9 +12,7 @@
   "trading212"
  ],
  "nuove": [],
- "finite": [
-  "change"
- ],
- "scelta": "ing",
- "scelta_ieri": "creditagricole"
+ "finite": [],
+ "scelta": "myfin",
+ "scelta_ieri": "ing"
 }
