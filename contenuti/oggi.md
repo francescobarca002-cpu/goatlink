@@ -2,63 +2,47 @@
 
 > Generato da data.js. [Calendario 14 giorni](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/calendario.md) · [Kit WhatsApp Business](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/whatsapp-business.md)
 
-## Giovedì 15 ottobre 2026
-- **⏰ Ultimo giorno per Fineco** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus Fineco da 50€." → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-- **🎬 Contenuto del giorno: MyFin** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
+## Venerdì 16 ottobre 2026
+- **🛑 Fineco è terminata** — Post canale: "La promo Fineco è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /fineco da WhatsApp Business.
+- **🎬 Contenuto del giorno: Buddybank** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
 
 ---
 
-### MyFin — Reel 2 — Conviene davvero?
+### Buddybank — Reel 1 — Tutorial
 
-**Formato:** faccia in camera oppure testo su sfondo, tono da amico che ti avvisa. 25–35 secondi.
+**Formato:** registrazione schermo dell'app + testo a video. 30–45 secondi.
 
-- **Gancio (0–3 s):** "Il bonus MyFin da 10€ conviene davvero? Te lo dico in 30 secondi."
-- **Cosa chiede (3–10 s):** "Spesa con carta oltre 10€. Ci metti circa 15 minuti."
-- **Pro (10–20 s):**
-  - ✅ Piano Standard gratuito
-  - ✅ Carta virtuale inclusa
-  - ✅ Bonus in 72 ore
-- **Contro (20–28 s):**
-  - ⚠️ devi muovere 11€ (restano tuoi)
-  - ⚠️ per il premio serve pazienza (Sul conto entro 72 ore)
-  - ⚠️ scade il 31 ottobre
-- **Verdetto (28–33 s):** "Conto gratuito con carta virtuale, e il bonus arriva in 72 ore. Ti chiede solo un acquisto sopra i 10€ che puoi comunque usare."
-- **Chiusura:** "Tutti i passaggi e il codice amico: link in bio."
+- **Gancio (0–3 s), testo a video:** "Buddybank: 80€ in 10 minuti. Ti faccio vedere come."
+- **Contesto (3–8 s):** "Il bonus più alto rispetto allo sforzo richiesto: un pagamento da 10€ e hai finito, e fino al 16 novembre vale 80€ invece di 50€."
+- **Passaggi (8–35 s)**, uno per schermata:
+  1. Apri l'app buddy (o il sito) e tocca Apri conto
+  2. Nella prima schermata ti viene chiesto il codice promo
+  3. Scegli la carta di debito MyOne in versione solo digitale
+  4. Completa l'apertura con documento e selfie, poi aspetta l'email di conferma
+  5. Quando il conto è attivo, caricalo con un bonifico da 11€ da un altro conto tuo
+  (gli altri 4 passaggi sono nella guida)
+- **Attenzione (35–40 s):** "Ti chiede di muovere 11€, che restano tuoi. Il premio: entro 90 giorni, prelevabile."
+- **Chiusura (40–45 s):** "Guida completa e codice amico: link in bio, oppure scrivici su WhatsApp."
 - **Testo fisso in basso:** "Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia."
 
 **Caption**
 
 ```
-MyFin: 10€ di bonus, 15 minuti da telefono.
+Buddybank: 80€ di bonus, 10 minuti da telefono.
 
-Cosa chiede: Spesa con carta oltre 10€.
-Quando paga: Sul conto entro 72 ore.
+🔥 Fino al 16 novembre vale 80€ invece di 50€.
+
+Cosa chiede: Ricarica 11€ + spesa da 10€.
+Quando paga: Entro 90 giorni, prelevabile.
 Ti chiede di muovere 11€, che restano tuoi.
-Tempo: entro il 31 ottobre.
+Tempo: entro il 20 gennaio.
 
-Conto gratuito con carta virtuale, e il bonus arriva in 72 ore. Ti chiede solo un acquisto sopra i 10€ che puoi comunque usare.
+Il bonus più alto rispetto allo sforzo richiesto: un pagamento da 10€ e hai finito, e fino al 16 novembre vale 80€ invece di 50€.
 
 👉 Guida passo-passo e codice amico: link in bio (o scrivici su WhatsApp).
 
 Trasparenza: il codice che ti passiamo è un codice amico. Il tuo bonus non cambia, e chi lo condivide può ricevere il premio previsto per chi invita.
 I prodotti finanziari comportano rischi: questa non è consulenza.
 
-#bonusconto #contocorrente #risparmio #finanzapersonale #goatlink #myfin
-```
-
-### Fineco — post per il canale
-
-```
-*Fineco — 50€*
-⏱ 15 minuti · Medio
-📋 Stipendio, 2.500€ di carta o 5 ordini
-💸 Accredito in conto nel 2027
-📅 Entro il 15 ottobre
-
-È l’unica promo del catalogo che ti lascia scegliere come sbloccarla, e ti dà quasi quattro mesi per farlo invece delle solite sei settimane. In cambio chiede pazienza: l’accredito arriva nel 2027 e va confermato con una firma.
-
-Guida completa 👉 https://www.goatlink.it/fineco.html?utm_source=canale&utm_campaign=fineco-202610
-Per il codice amico scrivici in privato.
-
-_Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
+#bonusconto #contocorrente #risparmio #finanzapersonale #goatlink #buddybank
 ```

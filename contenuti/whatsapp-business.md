@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 15 ottobre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 16 ottobre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -45,7 +45,6 @@ Ecco le promo attive oggi 👇
 • MyFin — 10€
 • Buddybank — 80€
 • ING — 75€
-• Fineco — 50€
 
 Dimmi quale ti interessa e ti mando i passaggi.
 Le prime della lista sono quelle che pagano prima.
@@ -237,25 +236,4 @@ Ciao! 🐐 Ecco come ottenere il bonus *ING* (75€):
 Non devi lasciare soldi fermi. Il premio: cashback entro il 31/01/2027.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/ing.html
-```
-
-### `/fineco` — Fineco 50€
-
-Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
-
-```
-Ciao! 🐐 Ecco come ottenere il bonus *Fineco* (50€):
-
-1. Apri il conto su finecobank.com o dall’app e inserisci il codice nel campo dedicato durante la procedura. È l’unico momento in cui si può mettere: dopo non è più aggiungibile e il bonus non si recupera.
-2. Completa la richiesta di apertura entro il 15/10/2026 e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.
-3. Scegli una sola delle quattro strade e completala entro il 04/01/2027: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.
-4. La quarta strada, se hai liquidità ferma: trasferimento di almeno 20.000€ entro il 30/11/2026, mantenuti sul conto fino al 04/01/2027.
-5. Quando la banca la mette a disposizione in area riservata o in app, firma l’integrazione contrattuale. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
-6. Ricevi i 50€ sul conto corrente, accreditati al netto della ritenuta del 26%.
-
-👉 Codice amico: [CODICE]
-
-Non devi lasciare soldi fermi. Il premio: accredito in conto nel 2027.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/fineco.html
 ```
