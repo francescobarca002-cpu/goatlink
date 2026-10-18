@@ -739,6 +739,102 @@ const BONUSES = [
     "categoria_etichetta": "Fintech · Crypto"
   },
   {
+    "slug": "pumpfun",
+    "capitale": 50,
+    "name": "pump.fun",
+    "category": "Crypto",
+    "logo": null,
+    "emoji": "💊",
+    "amount": 50,
+    "currency": "$",
+    "amountLabel": "50$",
+    "minutes": 15,
+    "difficulty": "Medio",
+    "badge": "Nuova",
+    "payout": "A rate, un giorno di trading alla volta",
+    "deposit": "Acquisto 50$ + 5 giorni di trading",
+    "expires": null,
+    "updated": "2026-10-18",
+    "featured": false,
+    "countInTotal": false,
+    "source": "https://pump.fun/docs/fees",
+    "seo_title": "Bonus pump.fun 50$ (invito app) — guida 2026 | GoatLink",
+    "summary": "App per comprare e vendere memecoin su Solana. Iscriviti dal link di invito, fai il primo acquisto di crypto dentro l'app con Apple Pay o carta e poi almeno una transazione in 5 giorni diversi entro 10 giorni. pump.fun abbina il tuo primo acquisto fino a 50$, pagati a rate: ogni giorno di trading completato ne sblocca una parte.",
+    "code": null,
+    "steps": [
+      "Apri il <strong>link di invito dal telefono</strong> e scarica l'app pump.fun partendo da lì. Prima di creare l'account controlla che la pagina indichi chi ti ha invitato: senza invito il bonus non c'è.",
+      "Crea l'account. Devi essere un <strong>utente nuovo</strong>.",
+      "Tocca <strong>Deposita</strong> e compra crypto dentro l'app con <strong>Apple Pay o carta</strong>. Il match è pari a questo primo acquisto, <strong>fino a 50$</strong>: se compri 30$ ricevi al massimo 30$. Metti <strong>55$</strong>, così la commissione del pagamento non ti porta sotto la soglia.",
+      "Nel tuo profilo compare il riquadro <strong>«Essere attivi per 5 giorni»</strong>: aprilo e trovi il contatore del deposito abbinato e la data entro cui completare i giorni.",
+      "Fai <strong>almeno una transazione</strong> (un acquisto o una vendita) in <strong>5 giorni diversi</strong> prima di quella data, cioè entro 10 giorni. I giorni <strong>non devono essere consecutivi</strong>.",
+      "Ogni giorno completato sblocca una parte del bonus, se risulti idoneo. Al quinto giorno hai l'importo intero."
+    ],
+    "rules_ok": [
+      "Dall'Italia funziona: app, acquisto con Apple Pay e riquadro della promo li abbiamo provati noi.",
+      "Commissioni ufficiali: <strong>0,40%</strong> di piattaforma per chi si iscrive con un invito (0,45% senza), più quella del pool: <strong>1,25%</strong> sulle monete ancora in bonding curve, da 1,25% a <strong>0,30%</strong> su quelle già passate su PumpSwap, in base alla capitalizzazione.",
+      "Sulle monete più grandi paghi quindi circa lo <strong>0,70% a operazione</strong>: con pochi dollari al giorno sono centesimi.",
+      "Anche chi invita riceve fino a 50$ per ogni amico che completa i 5 giorni."
+    ],
+    "rules_ko": [
+      "<strong>Il solo deposito non basta.</strong> Senza i 5 giorni di trading il match non arriva, e un giorno saltato è una rata persa.",
+      "<strong>Le memecoin possono perdere il 20–30% in pochi minuti.</strong> Non tenere posizioni aperte: compra pochi dollari e rivendi subito, altrimenti il bonus se ne va in perdite.",
+      "Su Solana i trade sulle memecoin finiscono spesso nel mirino dei bot: imposta una <strong>slippage bassa</strong> prima di confermare.",
+      "<strong>Non prelevare prima di aver finito i 5 giorni.</strong> Alcuni utenti segnalano che chi preleva prima perde le rate non ancora pagate.",
+      "La commissione del pagamento con carta o Apple Pay la applica il fornitore integrato: guardala nel riepilogo prima di confermare.",
+      "I premi sono soggetti a verifica, a regole di idoneità e a un budget: pump.fun può cambiare o chiudere il programma in qualsiasi momento.",
+      "pump.fun non è una banca: i token che compri non hanno nessuna tutela e possono andare a zero."
+    ],
+    "trick": {
+      "titolo": "Il modo più economico per fare i 5 giorni",
+      "testo": "Ogni giorno compra 2–5$ di una moneta grande, già passata su PumpSwap e con molto volume, e rivendila subito. Su queste monete la commissione del pool scende fino allo 0,30%: con quella di piattaforma paghi circa lo 0,70% per lato, cioè pochi centesimi al giorno, e l'esposizione al prezzo dura pochi secondi.",
+      "rischio": "Nella schermata della promo non è indicato un importo minimo per far valere il giorno, e l'idoneità la decide pump.fun: operazioni minuscole e identiche ripetute ogni giorno potrebbero non essere considerate valide. Se il giorno non risulta completato entro il giorno dopo, scrivi al supporto dall'app prima di continuare."
+    },
+    "faq": [
+      {
+        "q": "Quanto vale il bonus pump.fun?",
+        "a": "Fino a 50$. pump.fun abbina il tuo primo acquisto di crypto fatto dentro l'app, fino a un massimo di 50$: se compri 50$ o più ricevi 50$, se compri meno ricevi quanto hai comprato."
+      },
+      {
+        "q": "Cosa devo fare per ottenerlo?",
+        "a": "Iscriverti dal link di invito, fare il primo acquisto dentro l'app con Apple Pay o carta e poi almeno una transazione in 5 giorni diversi entro 10 giorni."
+      },
+      {
+        "q": "I 5 giorni devono essere consecutivi?",
+        "a": "No. Basta che siano 5 giorni diversi prima della data indicata nella schermata della promo."
+      },
+      {
+        "q": "Quando arriva il bonus?",
+        "a": "A rate: ogni giorno di trading completato ne sblocca una parte, se risulti idoneo. Il controllo non è sempre immediato, quindi il giorno può comparire come completato con un po' di ritardo."
+      },
+      {
+        "q": "Vale se trasferisco SOL da un exchange?",
+        "a": "Il match si basa sul primo acquisto fatto tramite il fornitore di pagamento integrato nell'app, e il solo deposito non basta. Per non rischiare, compra dall'app con Apple Pay o carta."
+      },
+      {
+        "q": "Quanto costa fare i 5 giorni di trading?",
+        "a": "Con l'invito la commissione di piattaforma è dello 0,40% a operazione, più quella del pool: 1,25% sulle monete in bonding curve, fino a 0,30% sulle monete più grandi già su PumpSwap. Facendo ogni giorno un acquisto e una vendita da pochi dollari su una moneta grande, spendi pochi centesimi al giorno."
+      },
+      {
+        "q": "Posso perdere soldi?",
+        "a": "Sì. Il rischio vero non sono le commissioni ma le memecoin, che possono crollare in pochi minuti. Per questo conviene usare importi piccoli e rivendere subito, senza tenere posizioni aperte."
+      }
+    ],
+    "why": "50$ su un acquisto da 50$ è uno dei rapporti più alti del catalogo, ma è anche l'unico in cui il rischio vero non sono le commissioni: sono le memecoin. Fatta con pochi dollari al giorno su monete grandi e rivendendo subito, costa pochi euro.",
+    "pros": [
+      "Match fino a 50$ sul primo acquisto",
+      "Giorni di trading non consecutivi",
+      "Commissioni sotto l'1% sulle monete grandi"
+    ],
+    "cons": [
+      "Memecoin: si può perdere molto in pochi minuti",
+      "Servono 5 giorni di trading in 10",
+      "Programma a budget, modificabile in ogni momento"
+    ],
+    "codice_box": false,
+    "categoria_etichetta": "Crypto · Memecoin",
+    "scadenza_etichetta": "Nessuna data di fine annunciata"
+  },
+  {
     "slug": "revolut",
     "capitale": 0,
     "name": "Revolut",
