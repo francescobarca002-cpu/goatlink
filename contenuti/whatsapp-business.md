@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 17 ottobre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 18 ottobre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -42,9 +42,11 @@ Ecco le promo attive oggi 👇
 • BBVA — 10€
 • Coinbase — 20€
 • Crédit Agricole — 50€
+• pump.fun — 50$
 • MyFin — 10€
 • Buddybank — 80€
 • ING — 75€
+• Fineco — 50€
 
 Dimmi quale ti interessa e ti mando i passaggi.
 Le prime della lista sono quelle che pagano prima.
@@ -161,14 +163,35 @@ Ciao! 🐐 Ecco come ottenere il bonus *Crédit Agricole* (50€):
 2. Inserisci il codice promozionale nel form di apertura: se apri senza, il bonus può non essere riconosciuto e non si recupera dopo.
 3. Nella stessa richiesta sottoscrivi la Carta Visa Debit: senza carta la promo non parte. Tutto entro il 02/11/2026.
 4. Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per posta).
-5. Fai almeno 1 transazione con la carta, di qualsiasi importo. I prelievi non contano, e nemmeno le spese stornate o annullate.
-6. Ricevi 50€ in Buono Regalo Amazon.it.
+5. Fai almeno 1 transazione con la carta, di qualsiasi importo, entro 30 giorni dall'apertura effettiva del conto. Valgono POS, wallet digitali ed e-commerce. I prelievi non contano, e nemmeno le spese stornate o annullate.
+6. Dopo la verifica della banca il buono da 50€ in Buono Regalo Amazon.it compare nell'app, nella sezione CA Club: va richiesto da lì, non arriva da solo. Il codice Amazon lo trovi poi in «Storico Premi».
 
 👉 Codice invito: [CODICE]
 
 Non devi lasciare soldi fermi. Il premio: buono Regalo Amazon.it.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/creditagricole.html
+```
+
+### `/pumpfun` — pump.fun 50$
+
+Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
+
+```
+Ciao! 🐐 Ecco come ottenere il bonus *pump.fun* (50$):
+
+1. Apri il link di invito dal telefono e scarica l'app pump.fun partendo da lì. Prima di creare l'account controlla che la pagina indichi chi ti ha invitato: senza invito il bonus non c'è.
+2. Crea l'account. Devi essere un utente nuovo.
+3. Tocca Deposita e compra crypto dentro l'app con Apple Pay o carta. Il match è pari a questo primo acquisto, fino a 50$: se compri 30$ ricevi al massimo 30$. Metti 55$, così la commissione del pagamento non ti porta sotto la soglia.
+4. Nel tuo profilo compare il riquadro «Essere attivi per 5 giorni»: aprilo e trovi il contatore del deposito abbinato e la data entro cui completare i giorni.
+5. Fai almeno una transazione (un acquisto o una vendita) in 5 giorni diversi prima di quella data, cioè entro 10 giorni. I giorni non devono essere consecutivi.
+6. Ogni giorno completato sblocca una parte del bonus, se risulti idoneo. Al quinto giorno hai l'importo intero.
+
+👉 Link di invito: [LINK]
+
+Ti chiede di muovere 50€, che restano tuoi. Il premio: a rate, un giorno di trading alla volta.
+Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
+Guida con le domande frequenti: https://www.goatlink.it/pumpfun.html
 ```
 
 ### `/myfin` — MyFin 10€
@@ -236,4 +259,25 @@ Ciao! 🐐 Ecco come ottenere il bonus *ING* (75€):
 Non devi lasciare soldi fermi. Il premio: cashback entro il 31/01/2027.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/ing.html
+```
+
+### `/fineco` — Fineco 50€
+
+Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
+
+```
+Ciao! 🐐 Ecco come ottenere il bonus *Fineco* (50€):
+
+1. Apri il conto su finecobank.com o dall’app e inserisci il codice nel campo dedicato durante la procedura. È l’unico momento in cui si può mettere: dopo non è più aggiungibile e il bonus non si recupera.
+2. Completa la richiesta di apertura entro il 16/11/2026 e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.
+3. Scegli una sola delle quattro strade e completala entro il 05/02/2027: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.
+4. La quarta strada, se hai liquidità ferma: trasferimento di almeno 20.000€ entro il 31/12/2026, mantenuti sul conto fino al 05/02/2027.
+5. Quando la banca la mette a disposizione in area riservata o in app, firma l’integrazione contrattuale. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
+6. Ricevi i 50€ sul conto corrente, accreditati al netto della ritenuta del 26%.
+
+👉 Codice amico: [CODICE]
+
+Non devi lasciare soldi fermi. Il premio: accredito in conto nel 2027.
+Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
+Guida con le domande frequenti: https://www.goatlink.it/fineco.html
 ```

@@ -1,17 +1,22 @@
 {
- "data": "2026-10-17",
+ "data": "2026-10-18",
  "attive": [
   "bbva",
   "buddybank",
   "coinbase",
   "creditagricole",
+  "fineco",
   "ing",
   "myfin",
+  "pumpfun",
   "revolut",
   "trading212"
  ],
- "nuove": [],
+ "nuove": [
+  "fineco",
+  "pumpfun"
+ ],
  "finite": [],
- "scelta": "coinbase",
- "scelta_ieri": "buddybank"
+ "scelta": "revolut",
+ "scelta_ieri": "coinbase"
 }

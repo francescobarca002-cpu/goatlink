@@ -1,6 +1,6 @@
 # BBVA — 10€
 
-> Generato da data.js il 17 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 18 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Banca · 1 spesa di qualsiasi importo · paga: Pagato in pochi giorni
 
 Link da usare (contano i clienti per canale):

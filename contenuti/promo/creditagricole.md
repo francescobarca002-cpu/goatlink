@@ -1,6 +1,6 @@
 # Crédit Agricole — 50€
 
-> Generato da data.js il 17 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 18 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 2 novembre · Banca · 1 transazione + carta Visa · paga: Buono Regalo Amazon.it
 
 Link da usare (contano i clienti per canale):
@@ -20,7 +20,7 @@ Link da usare (contano i clienti per canale):
   2. Inserisci il codice promozionale nel form di apertura
   3. Nella stessa richiesta sottoscrivi la Carta Visa Debit
   4. Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per…
-  5. Fai almeno 1 transazione con la carta, di qualsiasi importo
+  5. Fai almeno 1 transazione con la carta, di qualsiasi importo, entro 30 giorni…
   (gli altri 1 passaggi sono nella guida)
 - **Attenzione (35–40 s):** "Non devi lasciare soldi fermi. Il premio: buono Regalo Amazon.it."
 - **Chiusura (40–45 s):** "Guida completa e codice amico: link in bio, oppure scrivici su WhatsApp."
@@ -98,8 +98,8 @@ Ciao! 🐐 Ecco come ottenere il bonus *Crédit Agricole* (50€):
 2. Inserisci il codice promozionale nel form di apertura: se apri senza, il bonus può non essere riconosciuto e non si recupera dopo.
 3. Nella stessa richiesta sottoscrivi la Carta Visa Debit: senza carta la promo non parte. Tutto entro il 02/11/2026.
 4. Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per posta).
-5. Fai almeno 1 transazione con la carta, di qualsiasi importo. I prelievi non contano, e nemmeno le spese stornate o annullate.
-6. Ricevi 50€ in Buono Regalo Amazon.it.
+5. Fai almeno 1 transazione con la carta, di qualsiasi importo, entro 30 giorni dall'apertura effettiva del conto. Valgono POS, wallet digitali ed e-commerce. I prelievi non contano, e nemmeno le spese stornate o annullate.
+6. Dopo la verifica della banca il buono da 50€ in Buono Regalo Amazon.it compare nell'app, nella sezione CA Club: va richiesto da lì, non arriva da solo. Il codice Amazon lo trovi poi in «Storico Premi».
 
 👉 Codice invito: [CODICE]
 
