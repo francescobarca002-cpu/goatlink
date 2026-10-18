@@ -143,25 +143,31 @@ const BONUSES = [
     "payout": "Buono Regalo Amazon.it",
     "deposit": "1 transazione + carta Visa",
     "expires": "2026-11-02",
-    "updated": "2026-09-01",
+    "updated": "2026-10-18",
     "featured": true,
     "countInTotal": true,
     "source": "https://www.credit-agricole.it/privati/conti/promozioni",
-    "summary": "Apri il Conto Online con la carta di debito Visa entro il 02/11/2026 e ricevi 50€ in Buono Regalo Amazon.it. Ci sono scaglioni aggiuntivi legati allo stipendio e all'uso della carta.",
+    "summary": "Apri il Conto Online con la carta di debito Visa entro il 02/11/2026, fai una transazione con la carta entro 30 giorni dall'apertura e ricevi 50€ in Buono Regalo Amazon.it. Ci sono scaglioni aggiuntivi legati allo stipendio e alla spesa con la carta.",
     "code": null,
     "steps": [
       "Apri il <strong>Conto Online Crédit Agricole</strong> dall'invito. Serve essere <strong>nuovo correntista</strong> del Gruppo Crédit Agricole Italia.",
       "Inserisci il codice promozionale <strong>nel form di apertura</strong>: se apri senza, il bonus può non essere riconosciuto e non si recupera dopo.",
       "Nella stessa richiesta sottoscrivi la <strong>Carta Visa Debit</strong>: senza carta la promo non parte. Tutto entro il <strong>02/11/2026</strong>.",
       "Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per posta).",
-      "Fai almeno <strong>1 transazione</strong> con la carta, di qualsiasi importo. <strong>I prelievi non contano</strong>, e nemmeno le spese stornate o annullate.",
-      "Ricevi <strong>50€ in Buono Regalo Amazon.it</strong>."
+      "Fai almeno <strong>1 transazione</strong> con la carta, di qualsiasi importo, <strong>entro 30 giorni dall'apertura effettiva del conto</strong>. Valgono POS, wallet digitali ed e-commerce. <strong>I prelievi non contano</strong>, e nemmeno le spese stornate o annullate.",
+      "Dopo la verifica della banca il buono da <strong>50€ in Buono Regalo Amazon.it</strong> compare nell'app, nella sezione <strong>CA Club</strong>: va richiesto da lì, non arriva da solo. Il codice Amazon lo trovi poi in «Storico Premi»."
     ],
     "rules_ok": [
       "L'operazione a premi «Invita un amico in Crédit Agricole – Agosto 2026» è valida dal 31/07/2026 al 03/01/2027, e la finestra per chiedere l'apertura del conto si chiude il <strong>02/11/2026</strong>.",
       "La Carta Visa Debit è obbligatoria: sceglila in fase di apertura.",
-      "Esistono scaglioni aggiuntivi: +100€ con accredito stipendio o pensione e fino a +100€ in base all'utilizzo della carta. Importi e tempistiche nel regolamento ufficiale dell'edizione di agosto.",
+      "Scaglioni aggiuntivi: <strong>+100€</strong> con accredito di stipendio o pensione; <strong>+50€</strong> con 1.000–1.999,99€ di spesa con la carta oppure <strong>+100€</strong> da 2.000€ in su, sempre entro 30 giorni dall'apertura. Tutti in Buoni Regalo Amazon.it.",
       "Se accrediti lo stipendio, il bonifico deve avere <strong>causale ABI 27, SALA o PENS</strong>: con una causale generica la banca non lo riconosce."
+    ],
+    "rules_ko": [
+      "<strong>30 giorni per la prima transazione.</strong> Partono dall'apertura effettiva del conto, non dalla richiesta: se la carta arriva tardi, usala appena attiva.",
+      "Tieni il conto e la carta attivi fino alla verifica finale della banca, prevista a fine operazione (03/01/2027): chi chiude prima perde il buono.",
+      "Sono esclusi i già clienti del Gruppo Crédit Agricole Italia, chi ha chiuso un conto Crédit Agricole Italia dal 01/01/2021 e i dipendenti del Gruppo.",
+      "Il buono va <strong>richiesto in app</strong>, nella sezione CA Club, entro i termini del regolamento: se non lo richiedi lo perdi. Attiva le notifiche e controlla lo spam della mail indicata in apertura."
     ],
     "why": "Basta una transazione con la carta Visa, di qualsiasi importo, e il buono arriva senza fare altro.",
     "pros": [
@@ -172,7 +178,7 @@ const BONUSES = [
     "faq": [
       {
         "q": "Quanto si guadagna con Crédit Agricole?",
-        "a": "50€ in Buono Regalo Amazon.it aprendo il Conto Online con la Carta Visa Debit. Ci sono scaglioni aggiuntivi: +100€ con accredito stipendio o pensione e fino a +100€ in base all'utilizzo della carta, con importi e tempistiche indicati nel regolamento dell'edizione di agosto."
+        "a": "50€ in Buono Regalo Amazon.it aprendo il Conto Online con la Carta Visa Debit. Ci sono scaglioni aggiuntivi: +100€ con accredito stipendio o pensione e +50€ con 1.000–1.999,99€ di spesa con la carta oppure +100€ da 2.000€ in su, sempre entro 30 giorni dall'apertura del conto."
       },
       {
         "q": "Entro quando devo aprire il conto?",
@@ -184,7 +190,7 @@ const BONUSES = [
       },
       {
         "q": "Cosa conta come transazione valida?",
-        "a": "Una sola transazione con la carta, di qualsiasi importo. Non contano i prelievi, né le spese stornate o annullate."
+        "a": "Una sola transazione con la carta, di qualsiasi importo, entro 30 giorni dall'apertura del conto: pagamenti POS, wallet digitali o acquisti online. Non contano i prelievi, né le spese stornate o annullate."
       },
       {
         "q": "Cosa serve per l'extra stipendio?",
@@ -192,7 +198,11 @@ const BONUSES = [
       },
       {
         "q": "Chi è escluso dalla promozione?",
-        "a": "Chi è già correntista del Gruppo Crédit Agricole Italia. La promozione è riservata ai nuovi correntisti."
+        "a": "Chi è già cliente del Gruppo Crédit Agricole Italia, chi ha chiuso un conto Crédit Agricole Italia dal 1° gennaio 2021 e i dipendenti del Gruppo. La promozione è riservata ai nuovi correntisti."
+      },
+      {
+        "q": "Come ricevo il buono Amazon?",
+        "a": "Dopo la verifica della banca il buono compare nell'app Crédit Agricole, nella sezione CA Club, e va richiesto da lì. Entro qualche giorno dalla richiesta trovi il codice Amazon.it in «Storico Premi»."
       }
     ],
     "codice_etichetta": "Codice invito",
