@@ -743,7 +743,7 @@ const BONUSES = [
     "capitale": 50,
     "name": "pump.fun",
     "category": "Crypto",
-    "logo": null,
+    "logo": "logos/pumpfun.png",
     "emoji": "💊",
     "amount": 50,
     "currency": "$",
