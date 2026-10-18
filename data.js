@@ -318,25 +318,25 @@ const BONUSES = [
     "badge": "Nuova edizione",
     "payout": "Accredito in conto nel 2027",
     "deposit": "Stipendio, 2.500€ di carta o 5 ordini",
-    "expires": "2026-10-15",
-    "updated": "2026-09-17",
+    "expires": "2026-11-16",
+    "updated": "2026-10-18",
     "featured": false,
     "countInTotal": false,
     "source": "https://it.finecobank.com/invita-un-amico/",
-    "summary": "È tornata: apri il conto Fineco con il codice di un amico entro il <strong>15 ottobre</strong> e sblocchi 50€ scegliendo una condizione su quattro. Hai tempo fino al 4 gennaio 2027 per completarla.",
+    "summary": "Rinnovata: apri il conto Fineco con il codice di un amico entro il <strong>16 novembre</strong> e sblocchi 50€ scegliendo una condizione su quattro. Hai tempo fino al 5 febbraio 2027 per completarla.",
     "code": null,
     "steps": [
       "Procurati il <strong>Codice Amico</strong>. Lo può dare solo chi ha già un conto Fineco: se non conosci nessuno, scrivici su WhatsApp e te lo passiamo in privato.",
       "Apri il conto su finecobank.com o dall’app e inserisci il codice <strong>nel campo dedicato durante la procedura</strong>. È l’unico momento in cui si può mettere: dopo non è più aggiungibile e il bonus non si recupera.",
-      "Completa la richiesta di apertura entro il <strong>15/10/2026</strong> e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.",
-      "Scegli <strong>una sola</strong> delle quattro strade e completala entro il <strong>04/01/2027</strong>: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.",
-      "La quarta strada, se hai liquidità ferma: trasferimento di almeno <strong>20.000€ entro il 30/11/2026</strong>, mantenuti sul conto fino al 04/01/2027.",
+      "Completa la richiesta di apertura entro il <strong>16/11/2026</strong> e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.",
+      "Scegli <strong>una sola</strong> delle quattro strade e completala entro il <strong>05/02/2027</strong>: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.",
+      "La quarta strada, se hai liquidità ferma: trasferimento di almeno <strong>20.000€ entro il 31/12/2026</strong>, mantenuti sul conto fino al 05/02/2027.",
       "Quando la banca la mette a disposizione in area riservata o in app, <strong>firma l’integrazione contrattuale</strong>. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.",
       "Ricevi i <strong>50€</strong> sul conto corrente, accreditati al netto della ritenuta del 26%."
     ],
     "rules_ok": [
-      "L’iniziativa è «Invita un amico», valida dal <strong>15/09/2026 al 15/10/2026</strong>. Quella che conta è la data della richiesta di apertura del conto.",
-      "Basta <strong>una</strong> delle quattro condizioni e hai tempo fino al <strong>4 gennaio 2027</strong>: è la finestra più larga che Fineco abbia mai dato su questa promo. Le edizioni precedenti chiudevano in sei settimane.",
+      "L’iniziativa è «Invita un amico», valida dal <strong>16/10/2026 al 16/11/2026</strong>. Quella che conta è la data della richiesta di apertura del conto.",
+      "Basta <strong>una</strong> delle quattro condizioni e hai tempo fino al <strong>5 febbraio 2027</strong>: quasi quattro mesi, come nell'edizione di settembre. Le edizioni di inizio anno chiudevano in sei settimane.",
       "Anche chi ti passa il codice prende 50€. Te lo diciamo perché è giusto tu lo sappia: non cambia un centesimo di quello che prendi tu.",
       "Fino al compimento dei 30 anni: <strong>carta di debito a canone zero</strong>, azioni ed ETF Italia e Germania a 2,95€ per ordine, mercati USA a 3,95$, PAC in ETP senza costi applicati da Fineco e imposta di bollo gratuita sotto i 5.000€ di giacenza media.",
       "Fineco è una banca italiana: i depositi sono garantiti fino a 100.000€ dal <strong>FITD</strong>, il fondo interbancario italiano.",
@@ -346,7 +346,7 @@ const BONUSES = [
       "<strong>Codice non inserito, bonus perso.</strong> Va messo in fase di apertura e non è recuperabile dopo, nemmeno chiamando l’assistenza.",
       "Il campo del codice è <strong>uno solo</strong>: se ci metti un codice promozionale trading, di quelli che regalano ordini gratuiti, il codice amico non ci sta. Scegli prima quale dei due ti conviene.",
       "Il bonus <strong>non è promesso né garantito</strong>: il regolamento lo definisce un riconoscimento discrezionale della banca dopo le sue verifiche. È scritto nero su bianco sulla pagina ufficiale.",
-      "Nelle tre edizioni precedenti erano esclusi i già intestatari o cointestatari di un conto Fineco e chi aveva chiuso un conto nei due anni prima. Il regolamento completo di questa edizione non è ancora online: appena esce lo verifichiamo e aggiorniamo questa riga.",
+      "Nelle edizioni precedenti erano esclusi i già intestatari o cointestatari di un conto Fineco e chi aveva chiuso un conto nei due anni prima. Il regolamento completo di questa edizione non è ancora online: appena esce lo verifichiamo e aggiorniamo questa riga.",
       "Sempre nelle edizioni precedenti, per i 2.500€ di carta non contavano i <strong>prelievi di contante</strong> né le operazioni poi stornate.",
       "La firma dell’integrazione contrattuale ha una finestra chiusa, di solito un mese: chi la salta perde tutto. Per questa edizione la data non è ancora pubblicata, quindi tieni il conto attivo e l’app sotto controllo."
     ],
@@ -354,23 +354,23 @@ const BONUSES = [
     "faq": [
       {
         "q": "Quanto vale il bonus Fineco oggi?",
-        "a": "50€ sul conto corrente per chi apre con un Codice Amico, più altri 50€ a chi il codice te lo ha passato. È l’iniziativa «Invita un amico», riaperta il 15 settembre 2026 dopo la chiusura dell’edizione di luglio."
+        "a": "50€ sul conto corrente per chi apre con un Codice Amico, più altri 50€ a chi il codice te lo ha passato. È l’iniziativa «Invita un amico», rinnovata il 16 ottobre 2026, subito dopo la chiusura dell’edizione di settembre."
       },
       {
         "q": "Entro quando devo aprire il conto?",
-        "a": "Entro il <strong>15 ottobre 2026</strong>. La finestra dura un mese esatto e non è stata prorogata al momento in cui scriviamo: le edizioni passate qualche volta lo sono state, ma non è una cosa su cui contare."
+        "a": "Entro il <strong>16 novembre 2026</strong>. La finestra dura un mese esatto e non è stata prorogata al momento in cui scriviamo: le edizioni passate qualche volta lo sono state, ma non è una cosa su cui contare."
       },
       {
         "q": "Cosa devo fare per sbloccare i 50€?",
-        "a": "Una cosa sola a scelta fra quattro, entro il <strong>4 gennaio 2027</strong>: accreditare stipendio o pensione, fare almeno 5 ordini trading in acquisto o vendita, oppure chiedere una carta di debito o credito e arrivare a 2.500€ di pagamenti. La quarta è trasferire almeno 20.000€ entro il 30/11/2026 e lasciarli lì fino al 4 gennaio."
+        "a": "Una cosa sola a scelta fra quattro, entro il <strong>5 febbraio 2027</strong>: accreditare stipendio o pensione, fare almeno 5 ordini trading in acquisto o vendita, oppure chiedere una carta di debito o credito e arrivare a 2.500€ di pagamenti. La quarta è trasferire almeno 20.000€ entro il 31/12/2026 e lasciarli lì fino al 5 febbraio."
       },
       {
         "q": "Qual è la strada più economica se non ho lo stipendio?",
-        "a": "I 5 ordini. Fino ai 30 anni un ordine su azioni ed ETF Italia costa 2,95€: cinque ordini sono circa 15€ contro 50€ di bonus, e valgono anche le vendite, quindi puoi chiudere la posizione contando gli ordini di uscita. Stai però comprando strumenti veri: il rischio di mercato è tuo. La strada della carta chiede oltre 700€ al mese di spesa, quindi conviene solo se quella spesa la facevi comunque."
+        "a": "I 5 ordini. Fino ai 30 anni un ordine su azioni ed ETF Italia costa 2,95€: cinque ordini sono circa 15€ contro 50€ di bonus, e valgono anche le vendite, quindi puoi chiudere la posizione contando gli ordini di uscita. Stai però comprando strumenti veri: il rischio di mercato è tuo. La strada della carta chiede circa 700€ al mese di spesa, quindi conviene solo se quella spesa la facevi comunque."
       },
       {
         "q": "Quanto arriva davvero in conto?",
-        "a": "Il programma dice 50€ ed è quello che pubblichiamo. Sul bonus la banca applica la ritenuta del 26% prevista dall’art. 26 c. 2 del DPR 600/73, come ha fatto in tutte e tre le edizioni del 2026: l’accredito arriva al netto. Il regolamento di questa edizione non è ancora online; appena esce lo verifichiamo."
+        "a": "Il programma dice 50€ ed è quello che pubblichiamo. Sul bonus la banca applica la ritenuta del 26% prevista dall’art. 26 c. 2 del DPR 600/73, come ha fatto in tutte le edizioni precedenti del 2026: l’accredito arriva al netto. Il regolamento di questa edizione non è ancora online; appena esce lo verifichiamo."
       },
       {
         "q": "Quando arrivano i soldi?",
@@ -396,7 +396,7 @@ const BONUSES = [
     "why": "È l’unica promo del catalogo che ti lascia scegliere come sbloccarla, e ti dà quasi quattro mesi per farlo invece delle solite sei settimane. In cambio chiede pazienza: l’accredito arriva nel 2027 e va confermato con una firma.",
     "pros": [
       "Quattro strade, ne basta una",
-      "Tempo fino al 4 gennaio 2027",
+      "Tempo fino al 5 febbraio 2027",
       "Zero capitale immobilizzato",
       "Banca italiana, garanzia FITD",
       "Under 30: carta e bollo gratis"
