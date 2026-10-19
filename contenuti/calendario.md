@@ -2,11 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Domenica 18 ottobre 2026
-- **🆕 Nuova promo: pump.fun 50$** — Reel 1 (Tutorial) + post canale + aggiungi la risposta rapida /pumpfun in WhatsApp Business. → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
-- **🆕 Nuova promo: Fineco 50€** — Reel 1 (Tutorial) + post canale + aggiungi la risposta rapida /fineco in WhatsApp Business. → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-- **🎬 Contenuto del giorno: Revolut** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
-
 ## Lunedì 19 ottobre 2026
 - **⏳ Crédit Agricole scade tra 14 giorni (2 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
 - **⏳ ING scade tra 14 giorni (2 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
@@ -60,3 +55,9 @@
 - **⏰ Ultimo giorno per MyFin** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus MyFin da 10€." → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 - **⏳ Trading 212 scade tra 3 giorni (3 novembre)** — Storia con countdown + post canale → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
 - **🎬 Contenuto del giorno: Buddybank** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
+
+## Domenica 1 novembre 2026
+- **🛑 MyFin è terminata** — Post canale: "La promo MyFin è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /myfin da WhatsApp Business.
+- **⏳ Crédit Agricole scade domani (2 novembre)** — Storia con countdown + post canale → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
+- **⏳ ING scade domani (2 novembre)** — Storia con countdown + post canale → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
+- **🎬 Contenuto del giorno: Fineco** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
