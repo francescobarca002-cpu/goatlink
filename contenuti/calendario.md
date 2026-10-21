@@ -2,10 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Martedì 20 ottobre 2026
-- **⏳ Trading 212 scade tra 14 giorni (3 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
-- **🎬 Contenuto del giorno: BBVA** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
-
 ## Mercoledì 21 ottobre 2026
 - **🎬 Contenuto del giorno: Buddybank** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
 
@@ -63,3 +59,9 @@
 - **⏳ Fineco scade tra 14 giorni (16 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
 - **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
 - **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
+
+## Martedì 3 novembre 2026
+- **⏰ Ultimo giorno per Trading 212** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus Trading 212 da 8€–100€." → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
+- **🛑 ING è terminata** — Post canale: "La promo ING è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /ing da WhatsApp Business.
+- **🛑 Crédit Agricole è terminata** — Post canale: "La promo Crédit Agricole è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /creditagricole da WhatsApp Business.
+- **🎬 Contenuto del giorno: Coinbase** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
