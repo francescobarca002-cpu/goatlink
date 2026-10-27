@@ -2,12 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Lunedì 26 ottobre 2026
-- **⏳ Crédit Agricole scade tra 7 giorni (2 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
-- **⏳ ING scade tra 7 giorni (2 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
-- **🎬 Contenuto del giorno: MyFin** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
-- **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
-
 ## Martedì 27 ottobre 2026
 - **⏳ Trading 212 scade tra 7 giorni (3 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
 - **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
@@ -65,3 +59,9 @@
 
 ## Domenica 8 novembre 2026
 - **🎬 Contenuto del giorno: Coinbase** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
+
+## Lunedì 9 novembre 2026
+- **🔥 Buddybank a 80€ ancora per 7 giorni** — Reel 1 (Tutorial) con il gancio sulla maggiorazione + post canale → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
+- **⏳ Fineco scade tra 7 giorni (16 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
+- **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
+- **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
