@@ -2,10 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Martedì 27 ottobre 2026
-- **⏳ Trading 212 scade tra 7 giorni (3 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
-- **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
-
 ## Mercoledì 28 ottobre 2026
 - **⏳ MyFin scade tra 3 giorni (31 ottobre)** — Storia con countdown + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 - **🎬 Contenuto del giorno: Revolut** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
@@ -65,3 +61,6 @@
 - **⏳ Fineco scade tra 7 giorni (16 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
 - **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
 - **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
+
+## Martedì 10 novembre 2026
+- **🎬 Contenuto del giorno: Revolut** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
