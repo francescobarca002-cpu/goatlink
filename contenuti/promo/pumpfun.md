@@ -1,6 +1,6 @@
 # pump.fun — 50$
 
-> Generato da data.js il 28 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 29 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Crypto · Acquisto 50$ + 5 giorni di trading · paga: A rate, un giorno di trading alla volta
 
 Link da usare (contano i clienti per canale):

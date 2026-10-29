@@ -2,10 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Mercoledì 28 ottobre 2026
-- **⏳ MyFin scade tra 3 giorni (31 ottobre)** — Storia con countdown + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
-- **🎬 Contenuto del giorno: Revolut** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
-
 ## Giovedì 29 ottobre 2026
 - **🎬 Contenuto del giorno: Trading 212** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
 
@@ -36,8 +32,8 @@
 
 ## Martedì 3 novembre 2026
 - **⏰ Ultimo giorno per Trading 212** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus Trading 212 da 8€–100€." → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
-- **🛑 ING è terminata** — Post canale: "La promo ING è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /ing da WhatsApp Business.
 - **🛑 Crédit Agricole è terminata** — Post canale: "La promo Crédit Agricole è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /creditagricole da WhatsApp Business.
+- **🛑 ING è terminata** — Post canale: "La promo ING è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /ing da WhatsApp Business.
 - **🎬 Contenuto del giorno: Coinbase** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
 
 ## Mercoledì 4 novembre 2026
@@ -64,3 +60,6 @@
 
 ## Martedì 10 novembre 2026
 - **🎬 Contenuto del giorno: Revolut** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
+
+## Mercoledì 11 novembre 2026
+- **🎬 Contenuto del giorno: BBVA** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
