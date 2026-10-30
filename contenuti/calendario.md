@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Giovedì 29 ottobre 2026
-- **🎬 Contenuto del giorno: Trading 212** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit trading212](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/trading212.md)
-
 ## Venerdì 30 ottobre 2026
 - **⏳ Crédit Agricole scade tra 3 giorni (2 novembre)** — Storia con countdown + post canale → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
 - **⏳ MyFin scade domani (31 ottobre)** — Storia con countdown + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
@@ -63,3 +60,6 @@
 
 ## Mercoledì 11 novembre 2026
 - **🎬 Contenuto del giorno: BBVA** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
+
+## Giovedì 12 novembre 2026
+- **🎬 Contenuto del giorno: Buddybank** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
