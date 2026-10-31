@@ -1,0 +1,49 @@
+# Bot Telegram di GoatLink (bot_telegram.py).
+#  - Ogni sera apre/chiude i topic del gruppo in base alle promo di data.js e
+#    pubblica sul canale promo nuove, scadenze, promo finite e il riepilogo
+#    del lunedi'.
+#  - Il token sta nel secret TELEGRAM_BOT_TOKEN (Settings → Secrets → Actions).
+#  - Si lancia anche a mano (Actions → Bot Telegram → Run workflow) e quando
+#    cambia telegram/config.json.
+#  - Salva cosa ha fatto in telegram/stato.json, cosi' non ripete i post.
+name: Bot Telegram
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 17 * * *"   # 18:37 ora italiana (19:37 con l'ora legale)
+  push:
+    branches: [main]
+    paths:
+      - telegram/config.json
+
+concurrency:
+  group: bot-telegram
+  cancel-in-progress: false
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Giro del bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: python3 bot_telegram.py
+      - name: Salva lo stato
+        if: always()
+        run: |
+          git add -A telegram
+          if git diff --cached --quiet; then
+            echo "Stato invariato."
+          else
+            git config user.name "GoatLink bot"
+            git config user.email "actions@github.com"
+            git commit -m "Bot Telegram: giro del $(date +%F)"
+            git pull --rebase origin main
+            git push
+          fi

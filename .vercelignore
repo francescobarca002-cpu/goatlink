@@ -6,3 +6,6 @@ __pycache__
 # Contenuti social generati: restano su GitHub, non vanno sul sito.
 contenuti
 *.md
+
+# Stato del bot Telegram: resta su GitHub, non va sul sito.
+telegram
