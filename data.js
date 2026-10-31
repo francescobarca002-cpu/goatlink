@@ -35,7 +35,7 @@
 //                 revisione c'e' stata davvero.
 // ============================================================
 
-const CATALOGO_VERIFICATO = "2026-10-04"; // tolti Bybit e Bitstack; Tinaba scaduta; buddy prorogata
+const CATALOGO_VERIFICATO = "2026-10-31"; // revisione completa sulle fonti ufficiali: regolamento Fineco online, BBVA 90 giorni
 
 const TODAY = new Date(); // usato per calcolare automaticamente lo stato "scaduto"
 
@@ -143,7 +143,7 @@ const BONUSES = [
     "payout": "Buono Regalo Amazon.it",
     "deposit": "1 transazione + carta Visa",
     "expires": "2026-11-02",
-    "updated": "2026-10-18",
+    "updated": "2026-10-31",
     "featured": true,
     "countInTotal": true,
     "source": "https://www.credit-agricole.it/privati/conti/promozioni",
@@ -329,7 +329,7 @@ const BONUSES = [
     "payout": "Accredito in conto nel 2027",
     "deposit": "Stipendio, 2.500€ di carta o 5 ordini",
     "expires": "2026-11-16",
-    "updated": "2026-10-18",
+    "updated": "2026-10-31",
     "featured": false,
     "countInTotal": false,
     "source": "https://it.finecobank.com/invita-un-amico/",
@@ -341,7 +341,7 @@ const BONUSES = [
       "Completa la richiesta di apertura entro il <strong>16/11/2026</strong> e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.",
       "Scegli <strong>una sola</strong> delle quattro strade e completala entro il <strong>05/02/2027</strong>: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.",
       "La quarta strada, se hai liquidità ferma: trasferimento di almeno <strong>20.000€ entro il 31/12/2026</strong>, mantenuti sul conto fino al 05/02/2027.",
-      "Quando la banca la mette a disposizione in area riservata o in app, <strong>firma l’integrazione contrattuale</strong>. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.",
+      "Dal <strong>23/02/2027</strong> la banca mette a disposizione in area riservata o in app l’integrazione contrattuale: <strong>firmala entro il 16/03/2027</strong>. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.",
       "Ricevi i <strong>50€</strong> sul conto corrente, accreditati al netto della ritenuta del 26%."
     ],
     "rules_ok": [
@@ -356,9 +356,9 @@ const BONUSES = [
       "<strong>Codice non inserito, bonus perso.</strong> Va messo in fase di apertura e non è recuperabile dopo, nemmeno chiamando l’assistenza.",
       "Il campo del codice è <strong>uno solo</strong>: se ci metti un codice promozionale trading, di quelli che regalano ordini gratuiti, il codice amico non ci sta. Scegli prima quale dei due ti conviene.",
       "Il bonus <strong>non è promesso né garantito</strong>: il regolamento lo definisce un riconoscimento discrezionale della banca dopo le sue verifiche. È scritto nero su bianco sulla pagina ufficiale.",
-      "Nelle edizioni precedenti erano esclusi i già intestatari o cointestatari di un conto Fineco e chi aveva chiuso un conto nei due anni prima. Il regolamento completo di questa edizione non è ancora online: appena esce lo verifichiamo e aggiorniamo questa riga.",
-      "Sempre nelle edizioni precedenti, per i 2.500€ di carta non contavano i <strong>prelievi di contante</strong> né le operazioni poi stornate.",
-      "La firma dell’integrazione contrattuale ha una finestra chiusa, di solito un mese: chi la salta perde tutto. Per questa edizione la data non è ancora pubblicata, quindi tieni il conto attivo e l’app sotto controllo."
+      "Sono esclusi i già intestatari o cointestatari di un conto Fineco, chi ha avuto un conto Fineco chiuso durante l’iniziativa o nei due anni prima, i titolari di un conto Under 18, i dipendenti e i consulenti finanziari Fineco con i loro cointestatari. Non vale nemmeno per chi apre come professionista, lavoratore autonomo o ditta individuale.",
+      "Per i 2.500€ di carta non contano i <strong>prelievi di contante</strong> né le operazioni poi stornate. Per i 5 ordini valgono azioni ed ETF su Borsa Italiana, azioni USA, tedesche, francesi e canadesi e le obbligazioni sui mercati MOT ed EuroTLX: fondi, PAC, CFD, futures, opzioni e warrant non contano.",
+      "La firma dell’integrazione contrattuale ha una finestra chiusa, <strong>dal 23/02/2027 al 16/03/2027</strong>: chi la salta perde tutto. Tieni il conto attivo e l’app sotto controllo in quelle settimane."
     ],
     "seo_title": "Bonus Fineco 50€ Invita un amico (codice amico) — guida 2026 | GoatLink",
     "faq": [
@@ -380,11 +380,11 @@ const BONUSES = [
       },
       {
         "q": "Quanto arriva davvero in conto?",
-        "a": "Il programma dice 50€ ed è quello che pubblichiamo. Sul bonus la banca applica la ritenuta del 26% prevista dall’art. 26 c. 2 del DPR 600/73, come ha fatto in tutte le edizioni precedenti del 2026: l’accredito arriva al netto. Il regolamento di questa edizione non è ancora online; appena esce lo verifichiamo."
+        "a": "Il programma dice 50€ ed è quello che pubblichiamo. Sul bonus la banca applica la ritenuta del 26% prevista dall’art. 26 c. 2 del DPR 600/73, e il regolamento di questa edizione lo conferma: l’accredito arriva al netto."
       },
       {
         "q": "Quando arrivano i soldi?",
-        "a": "Nel 2027, e non in automatico. Dopo che hai completato la condizione, la banca mette a disposizione in area riservata un’integrazione contrattuale da firmare: solo dopo quella firma accredita il bonus. La finestra per firmare è chiusa e chi la salta perde tutto. Per questa edizione la data non è ancora pubblicata."
+        "a": "Nel 2027, e non in automatico. Dopo che hai completato la condizione, la banca mette a disposizione in area riservata un’integrazione contrattuale da firmare: solo dopo quella firma accredita il bonus. La finestra per firmare va dal <strong>23 febbraio al 16 marzo 2027</strong>: chi non firma entro il 16 marzo perde il bonus."
       },
       {
         "q": "Dove trovo un Codice Amico?",
@@ -434,7 +434,7 @@ const BONUSES = [
     "payout": "Entro 90 giorni, prelevabile",
     "deposit": "Ricarica 11€ + spesa da 10€",
     "expires": "2027-01-20",
-    "updated": "2026-10-04",
+    "updated": "2026-10-31",
     "featured": true,
     "countInTotal": true,
     "source": "https://www.buddy.unicredit.it/tutti-prodotti/conto-genius-buddy/",
@@ -919,7 +919,7 @@ const BONUSES = [
     "payout": "Pagato in pochi giorni",
     "deposit": "1 spesa di qualsiasi importo",
     "expires": null,
-    "updated": "2026-10-04",
+    "updated": "2026-10-31",
     "featured": false,
     "countInTotal": true,
     "source": "https://www.bbva.it/persone/promozioni.html",
@@ -929,7 +929,7 @@ const BONUSES = [
       "Scarica l'app BBVA.",
       "Al quarto passaggio inserisci il codice promo.",
       "Accetta i termini della promo <strong>Passaparola</strong>.",
-      "Ricarica il conto e fai una spesa di qualsiasi importo. <strong>Non valgono</strong> conti gioco e scommesse, ricariche e buoni regalo.",
+      "Ricarica il conto e fai con la Carta di Debito BBVA un acquisto di qualsiasi importo <strong>entro 90 giorni</strong> dalla registrazione. <strong>Non valgono</strong> addebiti di banche e finanziarie, criptovalute, sale giochi e scommesse, recupero crediti, prelievi al bancomat, centri di salute e bellezza, massaggi e saune.",
       "Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta.",
       "Ricevi <strong>10€</strong>, in genere entro pochi giorni lavorativi."
     ],
@@ -948,11 +948,11 @@ const BONUSES = [
     "faq": [
       {
         "q": "Come funziona il bonus BBVA da 10€?",
-        "a": "Scarica l'app, inserisci il codice promo Passaparola al quarto passaggio, accetta i termini e fai una spesa di qualsiasi importo. Ricevi 10€, in genere entro pochi giorni lavorativi."
+        "a": "Scarica l'app, inserisci il codice promo Passaparola al quarto passaggio, accetta i termini e fai una spesa di qualsiasi importo entro 90 giorni. Ricevi 10€, in genere entro pochi giorni lavorativi."
       },
       {
         "q": "Quali spese non valgono per il bonus BBVA?",
-        "a": "Conti gioco, scommesse, ricariche e buoni regalo non sono considerate spese valide."
+        "a": "Secondo la pagina ufficiale Passaparola non valgono gli addebiti di banche e finanziarie, le criptovalute, le sale giochi e i centri scommesse, i pagamenti a società di recupero crediti, i prelievi al bancomat, i centri di salute e bellezza, i massaggi e le saune. L’acquisto va fatto entro 90 giorni dalla registrazione come cliente."
       },
       {
         "q": "Il conto BBVA è gratuito?",
@@ -1105,7 +1105,7 @@ const BONUSES = [
     "payout": "Azione entro 3 giorni lavorativi",
     "deposit": "Deposito min. 10€",
     "expires": "2026-11-03",
-    "updated": "2026-09-23",
+    "updated": "2026-10-31",
     "featured": false,
     "countInTotal": false,
     "source": "https://helpcentre.trading212.com/hc/en-us/articles/360007291258-Invite-Your-Friends-Get-Free-Fractional-Shares",
@@ -1195,7 +1195,7 @@ const BONUSES = [
     "payout": "Sul conto entro 72 ore",
     "deposit": "Spesa con carta oltre 10€",
     "expires": "2026-10-31",
-    "updated": "2026-10-08",
+    "updated": "2026-10-31",
     "featured": false,
     "countInTotal": true,
     "source": "https://www.myfin.bg/docs/en/referral.pdf",
