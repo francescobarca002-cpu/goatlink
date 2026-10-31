@@ -44,6 +44,8 @@ STATO = CARTELLA / "stato.json"
 CONFIG = CARTELLA / "config.json"
 SITO = G.SITO
 
+GIORNI_DOPO = 60   # quanto resta aperto il topic di una promo finita, per chi l'aveva gia' aperta
+
 FISSI = [
     ("regole", "📌 Regole e info"),
     ("come", "❓ Come funziona"),
@@ -210,7 +212,7 @@ Qui c'è un topic per ogni promo attiva: entra in quello dell'app che ti interes
 📖 Guide complete: {SITO}/?utm_source=telegram&utm_campaign=regole
 🔑 Il codice amico non si pubblica: scrivici in privato.
 
-Quando una promo finisce il suo topic si chiude; se torna, si riapre con tutte le risposte già dentro.
+Quando una promo finisce, il suo topic resta aperto ancora un po' per chi l'ha già aperta, poi si chiude; se la promo torna, si riapre con tutte le risposte già dentro.
 
 _{C.TRASPARENZA_BREVE}_"""
 
@@ -326,6 +328,21 @@ def giro(tg, stato, bonus, oggi):
             salva(stato)
         return m
 
+    def fissa(m):
+        if not m:
+            return
+        try:
+            tg("pinChatMessage", chat_id=gid, message_id=m["message_id"], disable_notification=True)
+        except RuntimeError as e:
+            print(f"fissare un messaggio: {e}")
+
+    def rinomina(t, nome):
+        nome = nome[:128]
+        if t.get("nome") != nome:
+            tg("editForumTopic", chat_id=gid, message_thread_id=t["id"], name=nome)
+            t["nome"] = nome
+            salva(stato)
+
     # topic fissi
     fissi = stato.setdefault("fissi", {})
     for chiave, nome in FISSI:
@@ -335,11 +352,7 @@ def giro(tg, stato, bonus, oggi):
         fissi[chiave] = tid
         salva(stato)
         testo = {"regole": testo_regole(canale_link), "come": TESTO_COME, "ricevuti": TESTO_RICEVUTI}[chiave]
-        m = manda(gid, testo, tid)
-        try:
-            tg("pinChatMessage", chat_id=gid, message_id=m["message_id"], disable_notification=True)
-        except RuntimeError as e:
-            print(f"fissare il messaggio in {nome}: {e}")
+        fissa(manda(gid, testo, tid))
         if chiave == "regole":   # topic chiuso: scrive solo l'admin
             tg("closeForumTopic", chat_id=gid, message_thread_id=tid)
         fatto.append(f"topic fisso {nome}")
@@ -354,41 +367,53 @@ def giro(tg, stato, bonus, oggi):
             continue   # finisce oggi: non vale la pena aprire un topic
         if not t:
             tid = tg("createForumTopic", chat_id=gid, name=nome_topic(b))["message_thread_id"]
-            topic[b["slug"]] = {"id": tid, "aperto": True, "nome": nome_topic(b)}
+            topic[b["slug"]] = {"id": tid, "stato": "attiva", "nome": nome_topic(b)}
             salva(stato)
-            m = manda(gid, primo_messaggio(b, oggi), tid)
-            try:
-                tg("pinChatMessage", chat_id=gid, message_id=m["message_id"], disable_notification=True)
-            except RuntimeError:
-                pass
+            fissa(manda(gid, primo_messaggio(b, oggi), tid))
             nuove.append(b)
             fatto.append(f"topic aperto: {b['name']}")
-        elif not t["aperto"]:
+            continue
+        if t["stato"] == "chiuso":
             tg("reopenForumTopic", chat_id=gid, message_thread_id=t["id"])
-            t["aperto"] = True
+        if t["stato"] != "attiva":
+            t["stato"], t["scaduta"] = "attiva", None
             salva(stato)
-            manda(gid, f"🔄 *{b['name']} è tornata* — {b['amountLabel']}, {C.scadenza_frase(b)}.\n"
-                       f"📖 Guida aggiornata 👉 {link(b, 'topic-' + b['slug'])}", t["id"])
+            fissa(manda(gid, f"🔄 *{b['name']} è tornata* — {b['amountLabel']}, {C.scadenza_frase(b)}.\n"
+                             f"📖 Guida aggiornata 👉 {link(b, 'topic-' + b['slug'])}", t["id"]))
             tornate.append(b)
-            fatto.append(f"topic riaperto: {b['name']}")
-        if t and t["aperto"] and t.get("nome") != nome_topic(b):
-            tg("editForumTopic", chat_id=gid, message_thread_id=t["id"], name=nome_topic(b))
-            t["nome"] = nome_topic(b)
-            salva(stato)
+            fatto.append(f"topic riattivato: {b['name']}")
+        rinomina(t, nome_topic(b))
 
+    # promo finite: il topic resta aperto per chi l'ha gia' aperta, poi si chiude
     finite = []
     attive_slug = {b["slug"] for b in attive}
+    d = datetime.date.fromisoformat(oggi)
     for slug, t in topic.items():
-        if t["aperto"] and slug not in attive_slug:
-            b = per_slug.get(slug)
-            nome = b["name"] if b else slug
-            manda(gid, f"🛑 *La promo {nome} è terminata.*\nIl topic si chiude qui: se la promo torna lo riapriamo, "
-                       "con tutte le risposte già dentro.", t["id"])
-            tg("closeForumTopic", chat_id=gid, message_thread_id=t["id"])
-            t["aperto"] = False
+        if slug in attive_slug:
+            continue
+        b = per_slug.get(slug)
+        nome = b["name"] if b else slug
+        if t["stato"] == "attiva":
+            fine = (b or {}).get("expires") or oggi
+            chiusura = (datetime.date.fromisoformat(fine) + datetime.timedelta(days=GIORNI_DOPO)).isoformat()
+            t["stato"], t["scaduta"] = "scaduta", fine
             salva(stato)
+            fissa(manda(gid, f"🛑 *Promo {nome} chiusa ai nuovi iscritti.*\n\nSe l'hai già aperta, questo topic resta "
+                             f"aperto fino al {C.data_breve(chiusura)}: chiedi qui per requisiti e bonus in arrivo.\n"
+                             "Se la promo torna, lo annunciamo qui e sul canale.", t["id"]))
             finite.append(nome)
-            fatto.append(f"topic chiuso: {nome}")
+            fatto.append(f"topic {nome}: chiuso ai nuovi")
+        if t["stato"] == "scaduta":
+            rinomina(t, f"{nome_topic(b) if b else nome} · chiusa ai nuovi")
+            fine = datetime.date.fromisoformat(t["scaduta"])
+            if (d - fine).days >= GIORNI_DOPO:
+                manda(gid, f"🔒 *Topic chiuso.* Sono passati {GIORNI_DOPO} giorni dalla fine della promo {nome}. "
+                           "Le risposte restano qui; per altri dubbi scrivi in ❓ Come funziona.", t["id"])
+                tg("closeForumTopic", chat_id=gid, message_thread_id=t["id"])
+                t["stato"] = "chiuso"
+                rinomina(t, nome_topic(b) if b else nome)
+                salva(stato)
+                fatto.append(f"topic chiuso: {nome}")
 
     # canale
     if primo_giro:
@@ -410,7 +435,6 @@ def giro(tg, stato, bonus, oggi):
             manda(cid, post_riepilogo(attive, oggi, gruppo_link), chiave=f"riepilogo:{oggi}")
             fatto.append("canale: riepilogo del lunedì")
 
-    d = datetime.date.fromisoformat(oggi)
     for b in attive:
         if b["slug"] not in topic:
             continue
