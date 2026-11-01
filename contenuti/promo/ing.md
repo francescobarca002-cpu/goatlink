@@ -1,13 +1,13 @@
 # ING — 75€
 
-> Generato da data.js il 31 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 1 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 2 novembre · Banca · Conto + carta, spesa 250€ · paga: Cashback entro il 31/01/2027
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
 - Storie: `https://www.goatlink.it/ing.html?utm_source=ig&utm_campaign=storia-ing`
-- TikTok: `https://www.goatlink.it/ing.html?utm_source=tiktok&utm_campaign=ing-202610`
-- Canale WhatsApp: `https://www.goatlink.it/ing.html?utm_source=canale&utm_campaign=ing-202610`
+- TikTok: `https://www.goatlink.it/ing.html?utm_source=tiktok&utm_campaign=ing-202611`
+- Canale WhatsApp: `https://www.goatlink.it/ing.html?utm_source=canale&utm_campaign=ing-202611`
 
 ## Reel 1 — Tutorial
 
@@ -81,7 +81,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 
 È il bonus più alto del sito e non chiede di lasciare fermo un euro: i 250€ di spesa restano tuoi, cambia solo la carta con cui li paghi.
 
-Guida completa 👉 https://www.goatlink.it/ing.html?utm_source=canale&utm_campaign=ing-202610
+Guida completa 👉 https://www.goatlink.it/ing.html?utm_source=canale&utm_campaign=ing-202611
 Per il codice amico scrivici in privato.
 
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._

@@ -1,13 +1,13 @@
 # Crédit Agricole — 50€
 
-> Generato da data.js il 31 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 1 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 2 novembre · Banca · 1 transazione + carta Visa · paga: Buono Regalo Amazon.it
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
 - Storie: `https://www.goatlink.it/creditagricole.html?utm_source=ig&utm_campaign=storia-creditagricole`
-- TikTok: `https://www.goatlink.it/creditagricole.html?utm_source=tiktok&utm_campaign=creditagricole-202610`
-- Canale WhatsApp: `https://www.goatlink.it/creditagricole.html?utm_source=canale&utm_campaign=creditagricole-202610`
+- TikTok: `https://www.goatlink.it/creditagricole.html?utm_source=tiktok&utm_campaign=creditagricole-202611`
+- Canale WhatsApp: `https://www.goatlink.it/creditagricole.html?utm_source=canale&utm_campaign=creditagricole-202611`
 
 ## Reel 1 — Tutorial
 
@@ -81,7 +81,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 
 Basta una transazione con la carta Visa, di qualsiasi importo, e il buono arriva senza fare altro.
 
-Guida completa 👉 https://www.goatlink.it/creditagricole.html?utm_source=canale&utm_campaign=creditagricole-202610
+Guida completa 👉 https://www.goatlink.it/creditagricole.html?utm_source=canale&utm_campaign=creditagricole-202611
 Per il codice amico scrivici in privato.
 
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._

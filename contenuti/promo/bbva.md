@@ -1,13 +1,13 @@
 # BBVA — 10€
 
-> Generato da data.js il 31 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 1 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Banca · 1 spesa di qualsiasi importo · paga: Pagato in pochi giorni
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
 - Storie: `https://www.goatlink.it/bbva.html?utm_source=ig&utm_campaign=storia-bbva`
-- TikTok: `https://www.goatlink.it/bbva.html?utm_source=tiktok&utm_campaign=bbva-202610`
-- Canale WhatsApp: `https://www.goatlink.it/bbva.html?utm_source=canale&utm_campaign=bbva-202610`
+- TikTok: `https://www.goatlink.it/bbva.html?utm_source=tiktok&utm_campaign=bbva-202611`
+- Canale WhatsApp: `https://www.goatlink.it/bbva.html?utm_source=canale&utm_campaign=bbva-202611`
 
 ## Reel 1 — Tutorial
 
@@ -19,7 +19,7 @@ Link da usare (contano i clienti per canale):
   1. Scarica l'app BBVA
   2. Al quarto passaggio inserisci il codice promo
   3. Accetta i termini della promo Passaparola
-  4. Ricarica il conto e fai una spesa di qualsiasi importo
+  4. Ricarica il conto e fai con la Carta di Debito BBVA un acquisto di qualsiasi…
   5. Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta
   (gli altri 1 passaggi sono nella guida)
 - **Attenzione (35–40 s):** "Non devi lasciare soldi fermi. Il premio: pagato in pochi giorni."
@@ -80,7 +80,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 
 La più facile del sito: una spesa qualsiasi, senza soglie, e il bonus arriva in pochi giorni.
 
-Guida completa 👉 https://www.goatlink.it/bbva.html?utm_source=canale&utm_campaign=bbva-202610
+Guida completa 👉 https://www.goatlink.it/bbva.html?utm_source=canale&utm_campaign=bbva-202611
 Per il codice amico scrivici in privato.
 
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
@@ -96,7 +96,7 @@ Ciao! 🐐 Ecco come ottenere il bonus *BBVA* (10€):
 1. Scarica l'app BBVA.
 2. Al quarto passaggio inserisci il codice promo.
 3. Accetta i termini della promo Passaparola.
-4. Ricarica il conto e fai una spesa di qualsiasi importo. Non valgono conti gioco e scommesse, ricariche e buoni regalo.
+4. Ricarica il conto e fai con la Carta di Debito BBVA un acquisto di qualsiasi importo entro 90 giorni dalla registrazione. Non valgono addebiti di banche e finanziarie, criptovalute, sale giochi e scommesse, recupero crediti, prelievi al bancomat, centri di salute e bellezza, massaggi e saune.
 5. Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta.
 6. Ricevi 10€, in genere entro pochi giorni lavorativi.
 

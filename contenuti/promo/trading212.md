@@ -1,13 +1,13 @@
 # Trading 212 — 8€–100€
 
-> Generato da data.js il 31 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 1 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 3 novembre · Trading · Deposito min. 10€ · paga: Azione entro 3 giorni lavorativi
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
 - Storie: `https://www.goatlink.it/trading212.html?utm_source=ig&utm_campaign=storia-trading212`
-- TikTok: `https://www.goatlink.it/trading212.html?utm_source=tiktok&utm_campaign=trading212-202610`
-- Canale WhatsApp: `https://www.goatlink.it/trading212.html?utm_source=canale&utm_campaign=trading212-202610`
+- TikTok: `https://www.goatlink.it/trading212.html?utm_source=tiktok&utm_campaign=trading212-202611`
+- Canale WhatsApp: `https://www.goatlink.it/trading212.html?utm_source=canale&utm_campaign=trading212-202611`
 
 ## Reel 1 — Tutorial
 
@@ -81,7 +81,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 
 Chiede solo un piccolo deposito, che resta tuo, e pochi minuti da telefono. In cambio il premio è un'estrazione fra 8€ e 100€ e il contante resta fermo 30 giorni.
 
-Guida completa 👉 https://www.goatlink.it/trading212.html?utm_source=canale&utm_campaign=trading212-202610
+Guida completa 👉 https://www.goatlink.it/trading212.html?utm_source=canale&utm_campaign=trading212-202611
 Per il codice amico scrivici in privato.
 
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._

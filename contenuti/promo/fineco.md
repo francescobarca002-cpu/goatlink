@@ -1,13 +1,13 @@
 # Fineco — 50€
 
-> Generato da data.js il 31 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 1 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 16 novembre · Banca · Stipendio, 2.500€ di carta o 5 ordini · paga: Accredito in conto nel 2027
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
 - Storie: `https://www.goatlink.it/fineco.html?utm_source=ig&utm_campaign=storia-fineco`
-- TikTok: `https://www.goatlink.it/fineco.html?utm_source=tiktok&utm_campaign=fineco-202610`
-- Canale WhatsApp: `https://www.goatlink.it/fineco.html?utm_source=canale&utm_campaign=fineco-202610`
+- TikTok: `https://www.goatlink.it/fineco.html?utm_source=tiktok&utm_campaign=fineco-202611`
+- Canale WhatsApp: `https://www.goatlink.it/fineco.html?utm_source=canale&utm_campaign=fineco-202611`
 
 ## Reel 1 — Tutorial
 
@@ -82,7 +82,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 
 È l’unica promo del catalogo che ti lascia scegliere come sbloccarla, e ti dà quasi quattro mesi per farlo invece delle solite sei settimane. In cambio chiede pazienza: l’accredito arriva nel 2027 e va confermato con una firma.
 
-Guida completa 👉 https://www.goatlink.it/fineco.html?utm_source=canale&utm_campaign=fineco-202610
+Guida completa 👉 https://www.goatlink.it/fineco.html?utm_source=canale&utm_campaign=fineco-202611
 Per il codice amico scrivici in privato.
 
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
@@ -99,7 +99,7 @@ Ciao! 🐐 Ecco come ottenere il bonus *Fineco* (50€):
 2. Completa la richiesta di apertura entro il 16/11/2026 e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.
 3. Scegli una sola delle quattro strade e completala entro il 05/02/2027: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.
 4. La quarta strada, se hai liquidità ferma: trasferimento di almeno 20.000€ entro il 31/12/2026, mantenuti sul conto fino al 05/02/2027.
-5. Quando la banca la mette a disposizione in area riservata o in app, firma l’integrazione contrattuale. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
+5. Dal 23/02/2027 la banca mette a disposizione in area riservata o in app l’integrazione contrattuale: firmala entro il 16/03/2027. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
 6. Ricevi i 50€ sul conto corrente, accreditati al netto della ritenuta del 26%.
 
 👉 Codice amico: [CODICE]

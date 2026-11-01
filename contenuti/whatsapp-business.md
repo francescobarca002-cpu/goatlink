@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 31 ottobre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 1 novembre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -43,7 +43,6 @@ Ecco le promo attive oggi 👇
 • Coinbase — 20€
 • Crédit Agricole — 50€
 • pump.fun — 50$
-• MyFin — 10€
 • Buddybank — 80€
 • ING — 75€
 • Fineco — 50€
@@ -121,7 +120,7 @@ Ciao! 🐐 Ecco come ottenere il bonus *BBVA* (10€):
 1. Scarica l'app BBVA.
 2. Al quarto passaggio inserisci il codice promo.
 3. Accetta i termini della promo Passaparola.
-4. Ricarica il conto e fai una spesa di qualsiasi importo. Non valgono conti gioco e scommesse, ricariche e buoni regalo.
+4. Ricarica il conto e fai con la Carta di Debito BBVA un acquisto di qualsiasi importo entro 90 giorni dalla registrazione. Non valgono addebiti di banche e finanziarie, criptovalute, sale giochi e scommesse, recupero crediti, prelievi al bancomat, centri di salute e bellezza, massaggi e saune.
 5. Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta.
 6. Ricevi 10€, in genere entro pochi giorni lavorativi.
 
@@ -194,26 +193,6 @@ Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/pumpfun.html
 ```
 
-### `/myfin` — MyFin 10€
-
-Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
-
-```
-Ciao! 🐐 Ecco come ottenere il bonus *MyFin* (10€):
-
-1. Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard è gratuito e per il bonus basta.
-2. Completa la verifica dell'identità con un documento. Può richiedere qualche ora e non arriva sempre una notifica: se riesci a caricare il conto, la verifica è passata.
-3. Crea la carta virtuale, gratuita, e carica sul conto almeno 11€ da un altro conto tuo.
-4. Paga con la carta MyFin un acquisto sopra i 10€ da un negozio, online o in fisico. Per esempio un buono regalo da 11€.
-5. Ricevi 10€ sul conto MyFin entro 72 ore dal completamento dei passaggi.
-
-👉 Codice amico: [CODICE]
-
-Ti chiede di muovere 11€, che restano tuoi. Il premio: sul conto entro 72 ore.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/myfin.html
-```
-
 ### `/buddybank` — Buddybank 80€
 
 Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
@@ -272,7 +251,7 @@ Ciao! 🐐 Ecco come ottenere il bonus *Fineco* (50€):
 2. Completa la richiesta di apertura entro il 16/11/2026 e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.
 3. Scegli una sola delle quattro strade e completala entro il 05/02/2027: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.
 4. La quarta strada, se hai liquidità ferma: trasferimento di almeno 20.000€ entro il 31/12/2026, mantenuti sul conto fino al 05/02/2027.
-5. Quando la banca la mette a disposizione in area riservata o in app, firma l’integrazione contrattuale. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
+5. Dal 23/02/2027 la banca mette a disposizione in area riservata o in app l’integrazione contrattuale: firmala entro il 16/03/2027. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
 6. Ricevi i 50€ sul conto corrente, accreditati al netto della ritenuta del 26%.
 
 👉 Codice amico: [CODICE]

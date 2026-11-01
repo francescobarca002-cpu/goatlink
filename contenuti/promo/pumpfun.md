@@ -1,13 +1,13 @@
 # pump.fun — 50$
 
-> Generato da data.js il 31 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 1 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Crypto · Acquisto 50$ + 5 giorni di trading · paga: A rate, un giorno di trading alla volta
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
 - Storie: `https://www.goatlink.it/pumpfun.html?utm_source=ig&utm_campaign=storia-pumpfun`
-- TikTok: `https://www.goatlink.it/pumpfun.html?utm_source=tiktok&utm_campaign=pumpfun-202610`
-- Canale WhatsApp: `https://www.goatlink.it/pumpfun.html?utm_source=canale&utm_campaign=pumpfun-202610`
+- TikTok: `https://www.goatlink.it/pumpfun.html?utm_source=tiktok&utm_campaign=pumpfun-202611`
+- Canale WhatsApp: `https://www.goatlink.it/pumpfun.html?utm_source=canale&utm_campaign=pumpfun-202611`
 
 ## Reel 1 — Tutorial
 
@@ -82,7 +82,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 
 50$ su un acquisto da 50$ è uno dei rapporti più alti del catalogo, ma è anche l'unico in cui il rischio vero non sono le commissioni: sono le memecoin. Fatta con pochi dollari al giorno su monete grandi e rivendendo subito, costa pochi euro.
 
-Guida completa 👉 https://www.goatlink.it/pumpfun.html?utm_source=canale&utm_campaign=pumpfun-202610
+Guida completa 👉 https://www.goatlink.it/pumpfun.html?utm_source=canale&utm_campaign=pumpfun-202611
 Per il codice amico scrivici in privato.
 
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._

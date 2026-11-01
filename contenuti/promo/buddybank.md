@@ -1,14 +1,14 @@
 # Buddybank — 80€
 
-> Generato da data.js il 31 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 1 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 20 gennaio · Banca · Ricarica 11€ + spesa da 10€ · paga: Entro 90 giorni, prelevabile
 > 🔥 Maggiorazione attiva: 80€ fino al 16 novembre, poi torna a 50€.
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
 - Storie: `https://www.goatlink.it/buddybank.html?utm_source=ig&utm_campaign=storia-buddybank`
-- TikTok: `https://www.goatlink.it/buddybank.html?utm_source=tiktok&utm_campaign=buddybank-202610`
-- Canale WhatsApp: `https://www.goatlink.it/buddybank.html?utm_source=canale&utm_campaign=buddybank-202610`
+- TikTok: `https://www.goatlink.it/buddybank.html?utm_source=tiktok&utm_campaign=buddybank-202611`
+- Canale WhatsApp: `https://www.goatlink.it/buddybank.html?utm_source=canale&utm_campaign=buddybank-202611`
 
 ## Reel 1 — Tutorial
 
@@ -86,7 +86,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 
 Il bonus più alto rispetto allo sforzo richiesto: un pagamento da 10€ e hai finito, e fino al 16 novembre vale 80€ invece di 50€.
 
-Guida completa 👉 https://www.goatlink.it/buddybank.html?utm_source=canale&utm_campaign=buddybank-202610
+Guida completa 👉 https://www.goatlink.it/buddybank.html?utm_source=canale&utm_campaign=buddybank-202611
 Per il codice amico scrivici in privato.
 
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._

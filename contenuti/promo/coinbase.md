@@ -1,13 +1,13 @@
 # Coinbase — 20€
 
-> Generato da data.js il 31 ottobre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 1 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Crypto · Deposito + trade min. 21€ · paga: Pagato in 15–30 giorni
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
 - Storie: `https://www.goatlink.it/coinbase.html?utm_source=ig&utm_campaign=storia-coinbase`
-- TikTok: `https://www.goatlink.it/coinbase.html?utm_source=tiktok&utm_campaign=coinbase-202610`
-- Canale WhatsApp: `https://www.goatlink.it/coinbase.html?utm_source=canale&utm_campaign=coinbase-202610`
+- TikTok: `https://www.goatlink.it/coinbase.html?utm_source=tiktok&utm_campaign=coinbase-202611`
+- Canale WhatsApp: `https://www.goatlink.it/coinbase.html?utm_source=canale&utm_campaign=coinbase-202611`
 
 ## Reel 1 — Tutorial
 
@@ -80,7 +80,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 
 L'ingresso più pulito al mondo crypto: depositi 21€, compri, e quei 21€ restano tuoi.
 
-Guida completa 👉 https://www.goatlink.it/coinbase.html?utm_source=canale&utm_campaign=coinbase-202610
+Guida completa 👉 https://www.goatlink.it/coinbase.html?utm_source=canale&utm_campaign=coinbase-202611
 Per il codice amico scrivici in privato.
 
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
