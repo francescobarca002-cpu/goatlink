@@ -2,12 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Domenica 1 novembre 2026
-- **🛑 MyFin è terminata** — Post canale: "La promo MyFin è finita. Le alternative più veloci oggi: Revolut (15€) e Trading 212 (8€–100€)." Togli la risposta rapida /myfin da WhatsApp Business.
-- **⏳ Crédit Agricole scade domani (2 novembre)** — Storia con countdown + post canale → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
-- **⏳ ING scade domani (2 novembre)** — Storia con countdown + post canale → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
-- **🎬 Contenuto del giorno: Fineco** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-
 ## Lunedì 2 novembre 2026
 - **⏰ Ultimo giorno per Crédit Agricole** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus Crédit Agricole da 50€." → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
 - **⏰ Ultimo giorno per ING** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus ING da 75€." → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
@@ -60,3 +54,8 @@
 
 ## Sabato 14 novembre 2026
 - **🎬 Contenuto del giorno: Fineco** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
+
+## Domenica 15 novembre 2026
+- **🔥 Buddybank a 80€ solo fino a domani** — Reel 1 (Tutorial) con il gancio sulla maggiorazione + post canale → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
+- **⏳ Fineco scade domani (16 novembre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
+- **🎬 Contenuto del giorno: pump.fun** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
