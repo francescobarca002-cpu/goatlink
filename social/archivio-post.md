@@ -15,9 +15,14 @@ Stato: `bozza` = pronto, non ancora uscito · `pubblicato` = online (metti la da
 
 | Data | Stato | Formato | Brand | Accento | Titolo / gancio | Messaggio in una riga | File |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| — | bozza | Carosello 4 slide | buddybank, Fineco, BBVA, Coinbase, pump.fun | cyan | "5 bonus attivi questo mese" | Riepilogo di novembre: card per banche e per crypto, poi "come funziona" | Carosello-1…4 |
+| — | bozza | Carosello 4 slide | buddybank, Fineco, Coinbase, pump.fun | cyan | "4 bonus attivi questo mese" | Riepilogo di novembre: card per banche e per crypto, poi "come funziona" | Carosello-1…4 |
 | — | bozza | Post singolo | buddybank | gold | "80€ fino al 16 novembre, poi torna a 50€" | Bonus maggiorato a tempo, 3 passaggi, soldi prelevabili entro 90 giorni | Buddybank |
 | — | bozza | Post singolo | — (istituzionale) | cyan | "Bonus reali. Spiegati bene." | Chi è GoatLink: bonus verificati sul regolamento, nessun costo, ti seguiamo fino all'accredito | Main |
+
+## Brand da non mettere nei post pubblici
+
+- BBVA: il regolamento Passaparola vieta di condividere il codice apertamente su social e mezzi di massa (solo contatti propri).
+- Revolut: il link va mandato solo a persone che si conoscono e il premio va solo a chi invita.
 
 ## Angoli già usati
 
