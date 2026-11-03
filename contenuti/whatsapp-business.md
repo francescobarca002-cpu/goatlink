@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 2 novembre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 3 novembre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -41,10 +41,8 @@ Ecco le promo attive oggi 👇
 • Trading 212 — 8€–100€
 • BBVA — 10€
 • Coinbase — 20€
-• Crédit Agricole — 50€
 • pump.fun — 50$
 • Buddybank — 80€
-• ING — 75€
 • Fineco — 50€
 
 Dimmi quale ti interessa e ti mando i passaggi.
@@ -151,27 +149,6 @@ Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/coinbase.html
 ```
 
-### `/creditagricole` — Crédit Agricole 50€
-
-Sostituisci [CODICE] con il tuo codice invito solo dentro l'app.
-
-```
-Ciao! 🐐 Ecco come ottenere il bonus *Crédit Agricole* (50€):
-
-1. Apri il Conto Online Crédit Agricole dall'invito. Serve essere nuovo correntista del Gruppo Crédit Agricole Italia.
-2. Inserisci il codice promozionale nel form di apertura: se apri senza, il bonus può non essere riconosciuto e non si recupera dopo.
-3. Nella stessa richiesta sottoscrivi la Carta Visa Debit: senza carta la promo non parte. Tutto entro il 02/11/2026.
-4. Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per posta).
-5. Fai almeno 1 transazione con la carta, di qualsiasi importo, entro 30 giorni dall'apertura effettiva del conto. Valgono POS, wallet digitali ed e-commerce. I prelievi non contano, e nemmeno le spese stornate o annullate.
-6. Dopo la verifica della banca il buono da 50€ in Buono Regalo Amazon.it compare nell'app, nella sezione CA Club: va richiesto da lì, non arriva da solo. Il codice Amazon lo trovi poi in «Storico Premi».
-
-👉 Codice invito: [CODICE]
-
-Non devi lasciare soldi fermi. Il premio: buono Regalo Amazon.it.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/creditagricole.html
-```
-
 ### `/pumpfun` — pump.fun 50$
 
 Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
@@ -215,29 +192,6 @@ Ciao! 🐐 Ecco come ottenere il bonus *Buddybank* (80€):
 Ti chiede di muovere 11€, che restano tuoi. Il premio: entro 90 giorni, prelevabile.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/buddybank.html
-```
-
-### `/ing` — ING 75€
-
-Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
-
-```
-Ciao! 🐐 Ecco come ottenere il bonus *ING* (75€):
-
-1. Apri il Conto Corrente Arancio Più su ing.it entro il 02/11/2026. L’Arancio Light non dà diritto al bonus da nuovo cliente: è l’errore più frequente di questa promo.
-2. Prima di confermare, verifica che il codice amico risulti già inserito nel riepilogo. Si mette solo in fase di apertura: dopo non è più aggiungibile e il bonus non si recupera.
-3. Nella stessa richiesta chiedi la Carta di Debito Mastercard (oppure la Carta di Credito Mastercard Gold). Senza carta la promo non parte.
-4. Completa la verifica identità: servono documento e tessera sanitaria, con eventuale conferma tramite SPID. Tieni entrambi a portata di mano prima di iniziare.
-5. Facoltativo: durante la richiesta puoi aprire anche il Conto Arancio, il conto deposito. Serve solo se ti interessa la promo separata sul 4% (vedi sotto): per i 75€ non è richiesto.
-6. Attiva il conto e portaci sopra la somma che ti serve per la spesa, con un bonifico da un altro conto tuo.
-7. Spendi almeno 250€ con la carta entro il 31/12/2026. Vale la somma di più transazioni e puoi sommare carta di debito e carta di credito Gold.
-8. Ricevi 75€ di cashback sul Conto Corrente Arancio entro il 31/01/2027.
-
-👉 Codice amico: [CODICE]
-
-Non devi lasciare soldi fermi. Il premio: cashback entro il 31/01/2027.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/ing.html
 ```
 
 ### `/fineco` — Fineco 50€
