@@ -1,6 +1,6 @@
 # Revolut — 15€
 
-> Generato da data.js il 3 novembre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 4 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Fintech · 3 spese da 5€ · paga: Pagato in 2 giorni
 
 Link da usare (contano i clienti per canale):
@@ -112,4 +112,4 @@ Guida con le domande frequenti: https://www.goatlink.it/revolut.html
 
 - **A metà strada:** "Ciao! Come va con Revolut? Per sbloccare il bonus serve: 3 spese da 5€. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
 - **In attesa del premio:** "Tutto fatto con Revolut 👌 Ora si aspetta l'accredito (Pagato in 2 giorni). Non chiudere il conto e non svuotarlo prima dell'accredito."
-- **Bonus successivo:** "Ciao! Il bonus Revolut è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Trading 212* (8€–100€): deposito min. 10€, circa 15 minuti. Ti mando i passaggi?"
+- **Bonus successivo:** "Ciao! Il bonus Revolut è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *BBVA* (10€): 1 spesa di qualsiasi importo, circa 10 minuti. Ti mando i passaggi?"

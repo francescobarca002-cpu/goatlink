@@ -1,6 +1,6 @@
 # Coinbase — 20€
 
-> Generato da data.js il 3 novembre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 4 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Crypto · Deposito + trade min. 21€ · paga: Pagato in 15–30 giorni
 
 Link da usare (contano i clienti per canale):

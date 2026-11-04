@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 3 novembre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 4 novembre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -38,7 +38,6 @@ Nuovo contatto · Passaggi inviati · Attende accredito · Completato · Da ripr
 ```
 Ecco le promo attive oggi 👇
 • Revolut — 15€
-• Trading 212 — 8€–100€
 • BBVA — 10€
 • Coinbase — 20€
 • pump.fun — 50$
@@ -86,26 +85,6 @@ Ciao! 🐐 Ecco come ottenere il bonus *Revolut* (15€):
 Non devi lasciare soldi fermi. Il premio: pagato in 2 giorni.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/revolut.html
-```
-
-### `/trading212` — Trading 212 8€–100€
-
-Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
-
-```
-Ciao! 🐐 Ecco come ottenere il bonus *Trading 212* (8€–100€):
-
-1. Registrati dal link e apri il conto Invest: è l'unico conto valido per il bonus. Con il conto CFD o altri tipi di conto l'azione non arriva.
-2. Completa la verifica dell'identità.
-3. Deposita almeno 10€ entro 10 giorni dalla creazione del conto.
-4. Entro 3 giorni lavorativi ricevi l'azione premio, scelta a caso con un valore fra 8€ e 100€.
-5. Puoi venderla subito. Il contante che ne ricavi si preleva dopo 30 giorni dall'accredito.
-
-👉 Link di invito: [LINK]
-
-Ti chiede di muovere 10€, che restano tuoi. Il premio: azione entro 3 giorni lavorativi.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/trading212.html
 ```
 
 ### `/bbva` — BBVA 10€
