@@ -2,10 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Mercoledì 4 novembre 2026
-- **🛑 Trading 212 è terminata** — Post canale: "La promo Trading 212 è finita. Le alternative più veloci oggi: Revolut (15€) e BBVA (10€)." Togli la risposta rapida /trading212 da WhatsApp Business.
-- **🎬 Contenuto del giorno: pump.fun** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
-
 ## Giovedì 5 novembre 2026
 - **🎬 Contenuto del giorno: Revolut** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
 
@@ -56,3 +52,6 @@
 - **🛑 Fineco è terminata** — Post canale: "La promo Fineco è finita. Le alternative più veloci oggi: Revolut (15€) e BBVA (10€)." Togli la risposta rapida /fineco da WhatsApp Business.
 - **↩️ Buddybank è tornato a 50€** — Aggiorna la risposta rapida /buddybank in WhatsApp Business. → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
 - **🎬 Contenuto del giorno: Coinbase** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
+
+## Mercoledì 18 novembre 2026
+- **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
