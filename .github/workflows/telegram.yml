@@ -37,6 +37,7 @@ jobs:
       - name: Salva lo stato
         if: always()
         run: |
+          [ -d telegram ] || { echo "Niente da salvare."; exit 0; }
           git add -A telegram
           if git diff --cached --quiet; then
             echo "Stato invariato."
