@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Venerdì 6 novembre 2026
-- **🎬 Contenuto del giorno: BBVA** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
-
 ## Sabato 7 novembre 2026
 - **🎬 Contenuto del giorno: Buddybank** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
 
@@ -55,3 +52,6 @@
 
 ## Giovedì 19 novembre 2026
 - **🎬 Contenuto del giorno: Revolut** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
+
+## Venerdì 20 novembre 2026
+- **🎬 Contenuto del giorno: BBVA** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)

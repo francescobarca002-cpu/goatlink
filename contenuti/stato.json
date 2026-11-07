@@ -1,5 +1,5 @@
 {
- "data": "2026-11-06",
+ "data": "2026-11-07",
  "attive": [
   "bbva",
   "buddybank",
@@ -10,6 +10,6 @@
  ],
  "nuove": [],
  "finite": [],
- "scelta": "bbva",
- "scelta_ieri": "revolut"
+ "scelta": "buddybank",
+ "scelta_ieri": "bbva"
 }
