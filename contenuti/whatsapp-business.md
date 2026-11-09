@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 8 novembre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 9 novembre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -40,8 +40,11 @@ Ecco le promo attive oggi 👇
 • Revolut — 15€
 • BBVA — 10€
 • Coinbase — 20€
+• Crédit Agricole — 50€
 • pump.fun — 50$
+• MyFin — 10€
 • Buddybank — 80€
+• ING — 50€
 • Fineco — 50€
 
 Dimmi quale ti interessa e ti mando i passaggi.
@@ -118,14 +121,35 @@ Ciao! 🐐 Ecco come ottenere il bonus *Coinbase* (20€):
 1. Iscriviti come nuovo utente tramite il link ufficiale. Un solo account: Coinbase incrocia i dati e blocca i bonus sui doppioni.
 2. Completa la verifica identità (KYC).
 3. Deposita almeno 21€ — metti 22–23€, così le commissioni di deposito (circa 1–1,50€) non ti fanno scendere sotto la soglia.
-4. Fai un acquisto da almeno 21€ entro 60 giorni dalla verifica dell'identità, solo su Coinbase base, pagando con bonifico o carta: le operazioni su Advanced e Prime non valgono.
-5. Ricevi il bonus entro 15–30 giorni. Arriva in Bitcoin: il controvalore in euro si muove finché non lo vendi.
+4. Fai un acquisto da almeno 21€ entro 90 giorni dalla verifica dell'identità, solo su Coinbase base, pagando con bonifico o carta: le operazioni su Advanced e Prime non valgono.
+5. Ricevi il bonus entro 5–15 giorni. Arriva in Bitcoin: il controvalore in euro si muove finché non lo vendi.
 
 👉 Link di invito: [LINK]
 
-Ti chiede di muovere 21€, che restano tuoi. Il premio: pagato in 15–30 giorni.
+Ti chiede di muovere 21€, che restano tuoi. Il premio: pagato in 5–15 giorni.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/coinbase.html
+```
+
+### `/creditagricole` — Crédit Agricole 50€
+
+Sostituisci [CODICE] con il tuo codice invito solo dentro l'app.
+
+```
+Ciao! 🐐 Ecco come ottenere il bonus *Crédit Agricole* (50€):
+
+1. Apri il Conto Online Crédit Agricole dall'invito. Serve essere nuovo correntista del Gruppo Crédit Agricole Italia.
+2. Inserisci il codice promozionale nel form di apertura: se apri senza, il bonus può non essere riconosciuto e non si recupera dopo.
+3. Nella stessa richiesta sottoscrivi la Carta Visa Debit: senza carta la promo non parte. Tutto entro il 12/01/2027.
+4. Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per posta).
+5. Fai almeno 1 transazione con la carta, di qualsiasi importo, entro 60 giorni dall'apertura effettiva del conto (e comunque entro il 14/03/2027). Valgono POS, wallet digitali ed e-commerce. I prelievi non contano, e nemmeno le spese stornate o annullate.
+6. Dopo la verifica della banca il buono da 50€ in Buono Regalo Amazon.it compare nell'app, nella sezione CA Club: va richiesto da lì, non arriva da solo. Il codice Amazon lo trovi poi in «Storico Premi».
+
+👉 Codice invito: [CODICE]
+
+Non devi lasciare soldi fermi. Il premio: buono Regalo Amazon.it.
+Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
+Guida con le domande frequenti: https://www.goatlink.it/creditagricole.html
 ```
 
 ### `/pumpfun` — pump.fun 50$
@@ -147,6 +171,26 @@ Ciao! 🐐 Ecco come ottenere il bonus *pump.fun* (50$):
 Ti chiede di muovere 50€, che restano tuoi. Il premio: a rate, un giorno di trading alla volta.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/pumpfun.html
+```
+
+### `/myfin` — MyFin 10€
+
+Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
+
+```
+Ciao! 🐐 Ecco come ottenere il bonus *MyFin* (10€):
+
+1. Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard è gratuito e per il bonus basta.
+2. Completa la verifica dell'identità con un documento. Può richiedere qualche ora e non arriva sempre una notifica: se riesci a caricare il conto, la verifica è passata.
+3. Crea la carta virtuale, gratuita, e carica sul conto almeno 11€ da un altro conto tuo.
+4. Paga con la carta MyFin un acquisto sopra i 10€ da un negozio, online o in fisico. Per esempio un buono regalo da 11€.
+5. Ricevi 10€ sul conto MyFin entro 72 ore dal completamento dei passaggi.
+
+👉 Codice amico: [CODICE]
+
+Ti chiede di muovere 11€, che restano tuoi. Il premio: sul conto entro 72 ore.
+Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
+Guida con le domande frequenti: https://www.goatlink.it/myfin.html
 ```
 
 ### `/buddybank` — Buddybank 80€
@@ -171,6 +215,28 @@ Ciao! 🐐 Ecco come ottenere il bonus *Buddybank* (80€):
 Ti chiede di muovere 11€, che restano tuoi. Il premio: entro 90 giorni, prelevabile.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/buddybank.html
+```
+
+### `/ing` — ING 50€
+
+Sostituisci [CODICE] con il tuo codice amico solo dentro l'app.
+
+```
+Ciao! 🐐 Ecco come ottenere il bonus *ING* (50€):
+
+1. Apri il Conto Corrente Arancio Più dal sito ing.it o dall'app ING entro il 20/12/2026. L’Arancio Light non dà diritto al bonus da invitato: è l’errore più frequente di questa promo.
+2. Prima di confermare, verifica che il codice amico risulti già inserito nel riepilogo. Si mette solo in fase di apertura: dopo non è più aggiungibile e il bonus non si recupera.
+3. Nella stessa richiesta chiedi la Carta di Debito Mastercard (oppure la Carta di Credito Mastercard Gold). Si può chiedere anche dopo, dall'area riservata, ma sempre entro il 20/12/2026.
+4. Completa la verifica identità: servono documento e tessera sanitaria, con eventuale conferma tramite SPID. Tieni entrambi a portata di mano prima di iniziare.
+5. Attiva il conto e portaci sopra la somma che ti serve per la spesa, con un bonifico da un altro conto tuo.
+6. Spendi almeno 150€ con la carta entro il 28/02/2027. Vale anche la somma di più acquisti, online o in negozio, e puoi sommare carta di debito e carta di credito Gold.
+7. Ricevi 50€ di cashback sul Conto Corrente Arancio entro il 31/03/2027.
+
+👉 Codice amico: [CODICE]
+
+Non devi lasciare soldi fermi. Il premio: cashback entro il 31/03/2027.
+Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
+Guida con le domande frequenti: https://www.goatlink.it/ing.html
 ```
 
 ### `/fineco` — Fineco 50€

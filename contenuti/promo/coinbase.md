@@ -1,7 +1,7 @@
 # Coinbase — 20€
 
-> Generato da data.js il 8 novembre 2026: non modificare a mano, si rigenera ogni mattina.
-> Senza scadenza dichiarata · Crypto · Deposito + trade min. 21€ · paga: Pagato in 15–30 giorni
+> Generato da data.js il 9 novembre 2026: non modificare a mano, si rigenera ogni mattina.
+> Senza scadenza dichiarata · Crypto · Deposito + trade min. 21€ · paga: Pagato in 5–15 giorni
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
@@ -19,9 +19,9 @@ Link da usare (contano i clienti per canale):
   1. Iscriviti come nuovo utente tramite il link ufficiale
   2. Completa la verifica identità (KYC)
   3. Deposita almeno 21€ — metti 22–23€, così le commissioni di deposito (circa…
-  4. Fai un acquisto da almeno 21€ entro 60 giorni dalla verifica dell'identità,…
-  5. Ricevi il bonus entro 15–30 giorni
-- **Attenzione (35–40 s):** "Ti chiede di muovere 21€, che restano tuoi. Il premio: pagato in 15–30 giorni."
+  4. Fai un acquisto da almeno 21€ entro 90 giorni dalla verifica dell'identità,…
+  5. Ricevi il bonus entro 5–15 giorni
+- **Attenzione (35–40 s):** "Ti chiede di muovere 21€, che restano tuoi. Il premio: pagato in 5–15 giorni."
 - **Chiusura (40–45 s):** "Guida completa e codice amico: link in bio, oppure scrivici su WhatsApp."
 - **Testo fisso in basso:** "Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia."
 
@@ -48,7 +48,7 @@ Link da usare (contano i clienti per canale):
 Coinbase: 20€ di bonus, 15 minuti da telefono.
 
 Cosa chiede: Deposito + trade min. 21€.
-Quando paga: Pagato in 15–30 giorni.
+Quando paga: Pagato in 5–15 giorni.
 Ti chiede di muovere 21€, che restano tuoi.
 Tempo: finché la promo resta attiva.
 
@@ -65,7 +65,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 ## Storie (3 schermate)
 
 1. **Sondaggio:** "Conosci il bonus Coinbase?" → Sì / No
-2. **Numeri:** "20€ · 15 minuti · Deposito + trade min. 21€ · Pagato in 15–30 giorni"
+2. **Numeri:** "20€ · 15 minuti · Deposito + trade min. 21€ · Pagato in 5–15 giorni"
 3. **Link sticker:** "Guida + codice amico 👇" → `https://www.goatlink.it/coinbase.html?utm_source=ig&utm_campaign=storia-coinbase`
    Testo piccolo: "Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia."
 
@@ -75,7 +75,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 *Coinbase — 20€*
 ⏱ 15 minuti · Medio
 📋 Deposito + trade min. 21€
-💸 Pagato in 15–30 giorni
+💸 Pagato in 5–15 giorni
 📅 Finché la promo resta attiva
 
 L'ingresso più pulito al mondo crypto: depositi 21€, compri, e quei 21€ restano tuoi.
@@ -96,12 +96,12 @@ Ciao! 🐐 Ecco come ottenere il bonus *Coinbase* (20€):
 1. Iscriviti come nuovo utente tramite il link ufficiale. Un solo account: Coinbase incrocia i dati e blocca i bonus sui doppioni.
 2. Completa la verifica identità (KYC).
 3. Deposita almeno 21€ — metti 22–23€, così le commissioni di deposito (circa 1–1,50€) non ti fanno scendere sotto la soglia.
-4. Fai un acquisto da almeno 21€ entro 60 giorni dalla verifica dell'identità, solo su Coinbase base, pagando con bonifico o carta: le operazioni su Advanced e Prime non valgono.
-5. Ricevi il bonus entro 15–30 giorni. Arriva in Bitcoin: il controvalore in euro si muove finché non lo vendi.
+4. Fai un acquisto da almeno 21€ entro 90 giorni dalla verifica dell'identità, solo su Coinbase base, pagando con bonifico o carta: le operazioni su Advanced e Prime non valgono.
+5. Ricevi il bonus entro 5–15 giorni. Arriva in Bitcoin: il controvalore in euro si muove finché non lo vendi.
 
 👉 Link di invito: [LINK]
 
-Ti chiede di muovere 21€, che restano tuoi. Il premio: pagato in 15–30 giorni.
+Ti chiede di muovere 21€, che restano tuoi. Il premio: pagato in 5–15 giorni.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/coinbase.html
 ```
@@ -109,5 +109,5 @@ Guida con le domande frequenti: https://www.goatlink.it/coinbase.html
 ## Messaggi di sollecito
 
 - **A metà strada:** "Ciao! Come va con Coinbase? Per sbloccare il bonus serve: deposito + trade min. 21€. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
-- **In attesa del premio:** "Tutto fatto con Coinbase 👌 Ora si aspetta l'accredito (Pagato in 15–30 giorni). Non chiudere il conto e non svuotarlo prima dell'accredito."
+- **In attesa del premio:** "Tutto fatto con Coinbase 👌 Ora si aspetta l'accredito (Pagato in 5–15 giorni). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus Coinbase è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Revolut* (15€): 3 spese da 5€, circa 10 minuti. Ti mando i passaggi?"
