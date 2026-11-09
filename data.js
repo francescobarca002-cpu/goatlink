@@ -35,7 +35,7 @@
 //                 revisione c'e' stata davvero.
 // ============================================================
 
-const CATALOGO_VERIFICATO = "2026-10-31"; // revisione completa sulle fonti ufficiali: regolamento Fineco online, BBVA 90 giorni
+const CATALOGO_VERIFICATO = "2026-11-09"; // revisione completa sulle fonti ufficiali: nuove edizioni ING VI, Crédit Agricole Novembre 2026, MyFin novembre; Coinbase 90 giorni
 
 const TODAY = new Date(); // usato per calcolare automaticamente lo stato "scaduto"
 
@@ -139,33 +139,33 @@ const BONUSES = [
     "amountLabel": "50€",
     "minutes": 15,
     "difficulty": "Facile",
-    "badge": "Prorogata",
+    "badge": "Nuova edizione",
     "payout": "Buono Regalo Amazon.it",
     "deposit": "1 transazione + carta Visa",
-    "expires": "2026-11-02",
-    "updated": "2026-10-31",
+    "expires": "2027-01-12",
+    "updated": "2026-11-09",
     "featured": true,
     "countInTotal": true,
-    "source": "https://www.credit-agricole.it/privati/conti/promozioni",
-    "summary": "Apri il Conto Online con la carta di debito Visa entro il 02/11/2026, fai una transazione con la carta entro 30 giorni dall'apertura e ricevi 50€ in Buono Regalo Amazon.it. Ci sono scaglioni aggiuntivi legati allo stipendio e alla spesa con la carta.",
+    "source": "https://www.credit-agricole.it/privati/conti/promozioni/invita-un-amico",
+    "summary": "Nuova edizione: apri il Conto Online con la carta di debito Visa entro il <strong>12 gennaio 2027</strong>, fai una transazione con la carta entro 60 giorni dall'apertura e ricevi 50€ in Buono Regalo Amazon.it. Ci sono scaglioni aggiuntivi legati allo stipendio e alla spesa con la carta.",
     "code": null,
     "steps": [
       "Apri il <strong>Conto Online Crédit Agricole</strong> dall'invito. Serve essere <strong>nuovo correntista</strong> del Gruppo Crédit Agricole Italia.",
       "Inserisci il codice promozionale <strong>nel form di apertura</strong>: se apri senza, il bonus può non essere riconosciuto e non si recupera dopo.",
-      "Nella stessa richiesta sottoscrivi la <strong>Carta Visa Debit</strong>: senza carta la promo non parte. Tutto entro il <strong>02/11/2026</strong>.",
+      "Nella stessa richiesta sottoscrivi la <strong>Carta Visa Debit</strong>: senza carta la promo non parte. Tutto entro il <strong>12/01/2027</strong>.",
       "Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per posta).",
-      "Fai almeno <strong>1 transazione</strong> con la carta, di qualsiasi importo, <strong>entro 30 giorni dall'apertura effettiva del conto</strong>. Valgono POS, wallet digitali ed e-commerce. <strong>I prelievi non contano</strong>, e nemmeno le spese stornate o annullate.",
+      "Fai almeno <strong>1 transazione</strong> con la carta, di qualsiasi importo, <strong>entro 60 giorni dall'apertura effettiva del conto</strong> (e comunque entro il 14/03/2027). Valgono POS, wallet digitali ed e-commerce. <strong>I prelievi non contano</strong>, e nemmeno le spese stornate o annullate.",
       "Dopo la verifica della banca il buono da <strong>50€ in Buono Regalo Amazon.it</strong> compare nell'app, nella sezione <strong>CA Club</strong>: va richiesto da lì, non arriva da solo. Il codice Amazon lo trovi poi in «Storico Premi»."
     ],
     "rules_ok": [
-      "L'operazione a premi «Invita un amico in Crédit Agricole – Agosto 2026» è valida dal 31/07/2026 al 03/01/2027, e la finestra per chiedere l'apertura del conto si chiude il <strong>02/11/2026</strong>.",
+      "L'operazione a premi «Invita un amico in Crédit Agricole – Novembre 2026» è valida dal <strong>03/11/2026 al 12/01/2027</strong>: la richiesta di apertura del conto e della carta va completata in queste date.",
       "La Carta Visa Debit è obbligatoria: sceglila in fase di apertura.",
-      "Scaglioni aggiuntivi: <strong>+100€</strong> con accredito di stipendio o pensione; <strong>+50€</strong> con 1.000–1.999,99€ di spesa con la carta oppure <strong>+100€</strong> da 2.000€ in su, sempre entro 30 giorni dall'apertura. Tutti in Buoni Regalo Amazon.it.",
+      "Scaglioni aggiuntivi: <strong>+100€</strong> con accredito di stipendio o pensione; con la carta <strong>+50€</strong> da 1.000€ di spesa, <strong>+100€</strong> da 2.000€ o <strong>+150€</strong> da 3.000€ in su, entro 60 giorni dall'apertura. Tutti in Buoni Regalo Amazon.it, fino a 300€ in totale.",
       "Se accrediti lo stipendio, il bonifico deve avere <strong>causale ABI 27, SALA o PENS</strong>: con una causale generica la banca non lo riconosce."
     ],
     "rules_ko": [
-      "<strong>30 giorni per la prima transazione.</strong> Partono dall'apertura effettiva del conto, non dalla richiesta: se la carta arriva tardi, usala appena attiva.",
-      "Tieni il conto e la carta attivi fino alla verifica finale della banca, prevista a fine operazione (03/01/2027): chi chiude prima perde il buono.",
+      "<strong>60 giorni per la prima transazione</strong>, e comunque entro il 14/03/2027. Partono dall'apertura effettiva del conto, non dalla richiesta: se la carta arriva tardi, usala appena attiva.",
+      "Tieni il conto e la carta attivi fino alla verifica dei requisiti del <strong>14/03/2027</strong>: chi chiude prima perde il buono.",
       "Sono esclusi i già clienti del Gruppo Crédit Agricole Italia, chi ha chiuso un conto Crédit Agricole Italia dal 01/01/2021 e i dipendenti del Gruppo.",
       "Il buono va <strong>richiesto in app</strong>, nella sezione CA Club, entro i termini del regolamento: se non lo richiedi lo perdi. Attiva le notifiche e controlla lo spam della mail indicata in apertura."
     ],
@@ -178,11 +178,11 @@ const BONUSES = [
     "faq": [
       {
         "q": "Quanto si guadagna con Crédit Agricole?",
-        "a": "50€ in Buono Regalo Amazon.it aprendo il Conto Online con la Carta Visa Debit. Ci sono scaglioni aggiuntivi: +100€ con accredito stipendio o pensione e +50€ con 1.000–1.999,99€ di spesa con la carta oppure +100€ da 2.000€ in su, sempre entro 30 giorni dall'apertura del conto."
+        "a": "50€ in Buono Regalo Amazon.it aprendo il Conto Online con la Carta Visa Debit. Ci sono scaglioni aggiuntivi: +100€ con accredito stipendio o pensione e, con la carta, +50€ da 1.000€ di spesa, +100€ da 2.000€ o +150€ da 3.000€ in su, entro 60 giorni dall'apertura del conto. In tutto si arriva a 300€."
       },
       {
         "q": "Entro quando devo aprire il conto?",
-        "a": "La finestra per chiedere l'apertura si chiude il <strong>02/11/2026</strong>. L'operazione a premi «Invita un amico in Crédit Agricole – Agosto 2026» resta valida fino al 03/01/2027, ma senza richiesta entro il 02/11/2026 non si partecipa."
+        "a": "Entro il <strong>12 gennaio 2027</strong>. L'operazione a premi «Invita un amico in Crédit Agricole – Novembre 2026» è partita il 3 novembre e la richiesta di apertura del conto e della carta va completata entro il 12 gennaio."
       },
       {
         "q": "Quale carta devo scegliere?",
@@ -190,7 +190,7 @@ const BONUSES = [
       },
       {
         "q": "Cosa conta come transazione valida?",
-        "a": "Una sola transazione con la carta, di qualsiasi importo, entro 30 giorni dall'apertura del conto: pagamenti POS, wallet digitali o acquisti online. Non contano i prelievi, né le spese stornate o annullate."
+        "a": "Una sola transazione con la carta, di qualsiasi importo, entro 60 giorni dall'apertura del conto (e comunque entro il 14/03/2027): pagamenti POS, wallet digitali o acquisti online. Non contano i prelievi, né le spese stornate o annullate."
       },
       {
         "q": "Cosa serve per l'extra stipendio?",
@@ -215,102 +215,98 @@ const BONUSES = [
     "category": "Banca",
     "logo": "logos/ing.png",
     "emoji": "🦁",
-    "amount": 75,
+    "amount": 50,
     "currency": "€",
-    "amountLabel": "75€",
+    "amountLabel": "50€",
     "minutes": 15,
     "difficulty": "Facile",
-    "badge": "Bonus più alto",
-    "payout": "Cashback entro il 31/01/2027",
-    "deposit": "Conto + carta, spesa 250€",
-    "expires": "2026-11-02",
-    "updated": "2026-09-14",
+    "badge": "Nuova edizione",
+    "payout": "Cashback entro il 31/03/2027",
+    "deposit": "Conto + carta, spesa 150€",
+    "expires": "2026-12-20",
+    "updated": "2026-11-09",
     "featured": true,
     "countInTotal": true,
-    "source": "https://www.ing.it/conto-corrente-arancio/conto-corrente-online.html",
-    "summary": "Nuova campagna: apri il Conto Corrente Arancio Più con il codice amico entro il 02/11, chiedi la carta e spendi 250€ entro il 31/12. 75€ di cashback entro il 31 gennaio, senza lasciare fermo un euro.",
+    "source": "https://www.ing.it/invita-i-tuoi-amici-in-ING.html",
+    "summary": "Nuova edizione: apri il Conto Corrente Arancio Più con il codice amico entro il <strong>20 dicembre</strong>, chiedi la carta e spendi 150€ entro il 28 febbraio. 50€ di cashback entro il 31 marzo 2027, senza lasciare fermo un euro.",
     "code": null,
     "steps": [
-      "Apri il <strong>Conto Corrente Arancio Più</strong> su ing.it entro il <strong>02/11/2026</strong>. L’<strong>Arancio Light</strong> non dà diritto al bonus da nuovo cliente: è l’errore più frequente di questa promo.",
+      "Apri il <strong>Conto Corrente Arancio Più</strong> dal sito ing.it o dall'app ING entro il <strong>20/12/2026</strong>. L’<strong>Arancio Light</strong> non dà diritto al bonus da invitato: è l’errore più frequente di questa promo.",
       "Prima di confermare, verifica che il <strong>codice amico risulti già inserito</strong> nel riepilogo. Si mette solo in fase di apertura: dopo non è più aggiungibile e il bonus non si recupera.",
-      "Nella stessa richiesta chiedi la <strong>Carta di Debito Mastercard</strong> (oppure la Carta di Credito Mastercard Gold). Senza carta la promo non parte.",
+      "Nella stessa richiesta chiedi la <strong>Carta di Debito Mastercard</strong> (oppure la Carta di Credito Mastercard Gold). Si può chiedere anche dopo, dall'area riservata, ma sempre <strong>entro il 20/12/2026</strong>.",
       "Completa la verifica identità: servono <strong>documento e tessera sanitaria</strong>, con eventuale conferma tramite SPID. Tieni entrambi a portata di mano prima di iniziare.",
-      "<strong>Facoltativo:</strong> durante la richiesta puoi aprire anche il <strong>Conto Arancio</strong>, il conto deposito. Serve solo se ti interessa la promo separata sul 4% (vedi sotto): per i 75€ non è richiesto.",
       "Attiva il conto e portaci sopra la somma che ti serve per la spesa, con un bonifico da un altro conto tuo.",
-      "Spendi almeno <strong>250€</strong> con la carta entro il <strong>31/12/2026</strong>. Vale la somma di più transazioni e puoi sommare carta di debito e carta di credito Gold.",
-      "Ricevi <strong>75€ di cashback</strong> sul Conto Corrente Arancio <strong>entro il 31/01/2027</strong>."
+      "Spendi almeno <strong>150€</strong> con la carta entro il <strong>28/02/2027</strong>. Vale anche la somma di più acquisti, online o in negozio, e puoi sommare carta di debito e carta di credito Gold.",
+      "Ricevi <strong>50€ di cashback</strong> sul Conto Corrente Arancio <strong>entro il 31/03/2027</strong>."
     ],
     "rules_ok": [
-      "L’iniziativa è «Invita i tuoi amici in ING – 2026 Edizione V», valida dall’08/09/2026 al 31/12/2026. La finestra per aprire il conto con il codice si chiude il <strong>02/11/2026</strong>: è quella la data che conta.",
-      "I 250€ si raggiungono <strong>in più transazioni</strong>, anche piccole, e sommando le due carte se le hai richieste entrambe.",
+      "L’iniziativa è «Invita i tuoi amici in ING – 2026 Edizione VI», valida dal 03/11/2026 al 28/02/2027. Il conto con il codice va chiesto <strong>tra il 03/11 e il 20/12/2026</strong>: è quella la data che conta.",
+      "Possono partecipare i nuovi clienti e anche gli <strong>ex clienti</strong> ING che aprono il loro primo Conto Corrente Arancio Più.",
+      "I 150€ si raggiungono <strong>in più transazioni</strong>, anche piccole, e sommando le due carte se le hai richieste entrambe.",
       "La carta di debito arriva subito in versione <strong>digitale</strong>: la carichi su Apple Pay o Google Pay e inizi a spendere mentre aspetti quella fisica.",
-      "Canone 5€ al mese, azzerato con accredito dello stipendio o con entrate da almeno 1.000€ al mese. <strong>Fino ai 30 anni il conto è gratuito</strong> senza altre condizioni.",
+      "Canone 5€ al mese, azzerato con accredito dello stipendio o della pensione, con entrate da almeno 1.000€ al mese o <strong>se hai meno di 30 anni</strong>.",
       "Bonifici SEPA anche istantanei, F24, MAV, RAV, CBILL e pagoPA a costo zero.",
-      "Dopo l’apertura diventi presentatore a tua volta: <strong>75€ per ogni amico</strong> fino a 50 amici, più un Superbonus di 250€ ogni 10 amici che completano i requisiti.",
+      "Anche chi ti passa il codice riceve 50€, fino a 10 amici. Te lo diciamo perché è giusto tu lo sappia: non cambia niente di quello che prendi tu.",
       "I depositi sono garantiti fino a 100.000€ dal sistema olandese di garanzia, non dal FITD italiano: stessa copertura, fondo diverso."
     ],
     "rules_ko": [
-      "<strong>L’Arancio Light non vale</strong> per il bonus da nuovo cliente. Puoi comunque partecipare come presentatore, ma i 75€ da nuovo cliente richiedono l’Arancio Più.",
-      "Esiste anche il codice <strong>UNDER30</strong>, che dà 100€ invece di 75€ ma <strong>non fa guadagnare nulla a chi ti invita</strong>. Si può inserire un solo codice: se hai meno di 30 anni e l’iniziativa è attiva quando apri, valutala: 25€ in più sono 25€ in più.",
-      "Il <strong>4% sul Conto Arancio non è automatico</strong> e non c’entra con questo bonus: è un’iniziativa separata, valida fino al 31/01/2027, che chiede il Conto Arancio e l’accredito mensile. Chi salta un mese perde il tasso e non lo recupera.",
-      "La banca effettua <strong>controlli periodici</strong> sul rispetto dei requisiti prima di accreditare il bonus.",
-      "Il conto va aperto <strong>dal sito ing.it</strong>: aprendolo da altri canali il codice amico può non essere agganciato."
+      "<strong>L’Arancio Light non vale</strong> per il bonus da invitato: serve l’Arancio Più.",
+      "<strong>Non valgono</strong> i prelievi, le operazioni non andate a buon fine o stornate e i pagamenti in sale giochi e sale da biliardo.",
+      "Se apri un conto <strong>cointestato</strong> con il codice, il cashback è uno solo: 50€, non 50€ a testa.",
+      "Il conto va aperto <strong>dal sito ing.it o dall'app ING</strong>: aprendolo da altri canali il codice amico può non essere agganciato.",
+      "Il bonus arriva solo se alla data di pagamento sei ancora titolare del Conto Corrente Arancio Più."
     ],
     "trick": {
-      "titolo": "Arrivare a 250€ senza spendere davvero",
-      "testo": "La spesa richiesta è alta e non tutti hanno 250€ di acquisti da fare entro dicembre. La strada che gira è comprare con la carta ING dei <strong>voucher Aircash ABON o MuchBetter</strong> — in tabaccheria, al supermercato, nei negozi di elettronica o online — caricarli sul wallet e poi riportarsi i soldi sul proprio conto. L’acquisto del voucher è una transazione con carta a tutti gli effetti. Su MuchBetter la commissione è <strong>fissa, 4€ per ricarica</strong>, con tagli da 30€, 50€ e 100€. Su Aircash la ricarica è <strong>gratuita</strong> (tagli da 10€ a 50€) e riporti i soldi sul tuo conto con un bonifico all’1% — su 50€ sono 50 centesimi.",
-      "rischio": "Da sapere prima di partire: il regolamento dell’Edizione V chiede di «spendere con la carta» e non pubblica un elenco di operazioni escluse, a differenza di altre promo dove gift card e ricariche sono escluse nero su bianco. Non è quindi vietato, ma resta una zona grigia, e ING fa controlli prima di pagare. Se hai comunque 250€ di spese normali da fare entro dicembre, quella resta la strada senza discussioni."
+      "titolo": "Arrivare a 150€ senza spendere davvero",
+      "testo": "Se non hai 150€ di acquisti da fare entro febbraio, la strada che gira è comprare con la carta ING dei <strong>voucher Aircash ABON o MuchBetter</strong> — in tabaccheria, al supermercato, nei negozi di elettronica o online — caricarli sul wallet e poi riportarsi i soldi sul proprio conto. L’acquisto del voucher è una transazione con carta a tutti gli effetti. Su MuchBetter la commissione è <strong>fissa, 4€ per ricarica</strong>, con tagli da 30€, 50€ e 100€. Su Aircash la ricarica è <strong>gratuita</strong> (tagli da 10€ a 50€) e riporti i soldi sul tuo conto con un bonifico all’1% — su 50€ sono 50 centesimi.",
+      "rischio": "Da sapere prima di partire: ING esclude per nome prelievi, storni e pagamenti in sale giochi e sale da biliardo, e i voucher non sono in quell'elenco. Non è quindi vietato, ma resta una zona grigia e la banca fa controlli prima di pagare. Se hai comunque 150€ di spese normali da fare entro febbraio, quella resta la strada senza discussioni."
     },
-    "seo_title": "Bonus ING 75€ Conto Corrente Arancio Più (codice amico) — guida 2026 | GoatLink",
+    "seo_title": "Bonus ING 50€ Conto Corrente Arancio Più (codice amico) — guida 2026 | GoatLink",
     "faq": [
       {
         "q": "Quanto vale il bonus ING oggi?",
-        "a": "75€ di cashback per chi apre il Conto Corrente Arancio Più con un codice amico. È la nuova campagna, l'Edizione V: la precedente da 100€ con il codice WELCOME si è chiusa il 7 settembre 2026."
+        "a": "50€ di cashback per chi apre il Conto Corrente Arancio Più con un codice amico. È la nuova campagna, l'Edizione VI: la precedente da 75€ si è chiusa il 2 novembre 2026."
       },
       {
         "q": "Entro quando devo aprire il conto?",
-        "a": "Entro il <strong>2 novembre 2026</strong>. L'iniziativa resta valida fino al 31/12/2026, ma la richiesta di apertura con il codice amico va fatta entro il 2 novembre: dopo quella data non si partecipa più."
+        "a": "Entro il <strong>20 dicembre 2026</strong>. L'iniziativa resta valida fino al 28/02/2027 per la spesa, ma la richiesta di apertura con il codice amico va fatta entro il 20 dicembre."
       },
       {
         "q": "Quanto devo spendere e con quale carta?",
-        "a": "Almeno 250€ entro il 31/12/2026, con la Carta di Debito Mastercard e/o la Carta di Credito Mastercard Gold. Vale la somma di più transazioni e le due carte si sommano fra loro."
+        "a": "Almeno 150€ entro il 28/02/2027, con la Carta di Debito Mastercard e/o la Carta di Credito Mastercard Gold. Vale la somma di più acquisti e le due carte si sommano fra loro."
       },
       {
-        "q": "Quando arrivano i 75€?",
-        "a": "Sul Conto Corrente Arancio entro il <strong>31 gennaio 2027</strong>. Nella pratica spesso arrivano prima, ma quella è la data che la banca si impegna a rispettare."
+        "q": "Quando arrivano i 50€?",
+        "a": "Sul Conto Corrente Arancio entro il <strong>31 marzo 2027</strong>. Quella è la data che la banca si impegna a rispettare."
       },
       {
         "q": "Va bene il Conto Corrente Arancio Light?",
-        "a": "No. Il bonus da nuovo cliente richiede l'<strong>Arancio Più</strong>. Con il Light puoi partecipare solo come presentatore, cioè invitando altri con il tuo codice."
+        "a": "No. Il bonus da invitato richiede l'<strong>Arancio Più</strong>. Con il Light puoi partecipare solo come presentatore, cioè invitando altri con il tuo codice."
       },
       {
-        "q": "Conviene di più il codice amico o il codice UNDER30?",
-        "a": "Dipende da te. Il codice amico dà 75€ a te e 75€ a chi ti ha invitato. Il codice UNDER30, se hai meno di 30 anni, dà 100€ a te e niente all'altro. Se ne inserisce uno solo. Noi te lo diciamo lo stesso: 25€ in più in tasca tua sono 25€ in più, e la scelta è tua."
+        "q": "Ho già avuto un conto ING, posso partecipare?",
+        "a": "Sì, se oggi non sei più cliente: questa edizione ammette anche gli ex clienti che aprono il loro primo Conto Corrente Arancio Più."
       },
       {
-        "q": "Il 4% sul Conto Arancio è compreso nel bonus?",
-        "a": "No, sono due cose diverse. Il 4% è un'iniziativa separata valida fino al 31/01/2027, che chiede di aprire anche il Conto Arancio e di mantenere un accredito mensile: se salti un mese il tasso promozionale si perde e non si recupera. Per i 75€ il Conto Arancio non serve."
-      },
-      {
-        "q": "Posso arrivare ai 250€ senza spendere davvero?",
-        "a": "Si può, comprando con la carta ING dei voucher Aircash o MuchBetter e riportandosi poi i soldi sul proprio conto. Il regolamento di questa edizione non pubblica un elenco di operazioni escluse, quindi non è vietato, ma resta una zona grigia e la banca fa controlli prima di pagare. Se hai comunque 250€ di spese normali da fare entro dicembre, quella è la strada senza discussioni."
+        "q": "Posso arrivare ai 150€ senza spendere davvero?",
+        "a": "Si può, comprando con la carta ING dei voucher Aircash o MuchBetter e riportandosi poi i soldi sul proprio conto. ING esclude prelievi, storni e sale giochi, e i voucher non sono nell'elenco: non è vietato, ma resta una zona grigia e la banca fa controlli prima di pagare. Se hai comunque 150€ di spese normali da fare entro febbraio, quella è la strada senza discussioni."
       },
       {
         "q": "Il conto ha un canone?",
-        "a": "5€ al mese, azzerati con l'accredito dello stipendio o con entrate da almeno 1.000€ al mese. Fino ai 30 anni il primo Conto Corrente Arancio Più è gratuito senza altre condizioni."
+        "a": "5€ al mese, azzerati con l'accredito dello stipendio o della pensione, con entrate da almeno 1.000€ al mese oppure se hai meno di 30 anni."
       },
       {
         "q": "I soldi sul conto sono garantiti?",
         "a": "Sì, fino a 100.000€, ma dal sistema di garanzia olandese e non dal FITD italiano: stessa copertura prevista in tutta l'UE, fondo diverso."
       }
     ],
-    "why": "È il bonus più alto del sito e non chiede di lasciare fermo un euro: i 250€ di spesa restano tuoi, cambia solo la carta con cui li paghi.",
+    "why": "Non chiede di lasciare fermo un euro: i 150€ di spesa restano tuoi, cambia solo la carta con cui li paghi, e hai quasi quattro mesi per farli.",
     "pros": [
-      "75€, il più alto in catalogo",
       "Zero capitale immobilizzato",
+      "Spesa richiesta scesa a 150€",
       "Gratis fino ai 30 anni",
       "Carta digitale attiva subito",
-      "Quasi 4 mesi per fare la spesa"
+      "Fino a fine febbraio per spendere"
     ]
   },
   {
@@ -329,7 +325,7 @@ const BONUSES = [
     "payout": "Accredito in conto nel 2027",
     "deposit": "Stipendio, 2.500€ di carta o 5 ordini",
     "expires": "2026-11-16",
-    "updated": "2026-10-31",
+    "updated": "2026-11-09",
     "featured": false,
     "countInTotal": false,
     "source": "https://it.finecobank.com/invita-un-amico/",
@@ -434,7 +430,7 @@ const BONUSES = [
     "payout": "Entro 90 giorni, prelevabile",
     "deposit": "Ricarica 11€ + spesa da 10€",
     "expires": "2027-01-20",
-    "updated": "2026-10-31",
+    "updated": "2026-11-09",
     "featured": true,
     "countInTotal": true,
     "source": "https://www.buddy.unicredit.it/tutti-prodotti/conto-genius-buddy/",
@@ -617,21 +613,21 @@ const BONUSES = [
     "minutes": 15,
     "difficulty": "Medio",
     "badge": null,
-    "payout": "Pagato in 15–30 giorni",
+    "payout": "Pagato in 5–15 giorni",
     "deposit": "Deposito + trade min. 21€",
     "expires": null,
-    "updated": "2026-10-04",
+    "updated": "2026-11-09",
     "featured": false,
     "countInTotal": true,
-    "source": null,
-    "summary": "Nuovo utente: iscriviti, completa il KYC, deposita almeno 21€ e fai un acquisto da almeno 21€ entro 60 giorni dalla verifica. Bonus 20€ in Bitcoin.",
+    "source": "https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/new-customer-incentive/simple-referral",
+    "summary": "Nuovo utente: iscriviti, completa il KYC, deposita almeno 21€ e fai un acquisto da almeno 21€ entro 90 giorni dalla verifica. Bonus 20€ in Bitcoin.",
     "code": null,
     "steps": [
       "Iscriviti come <strong>nuovo utente</strong> tramite il link ufficiale. Un solo account: Coinbase incrocia i dati e blocca i bonus sui doppioni.",
       "Completa la verifica identità (KYC).",
       "Deposita almeno 21€ — metti <strong>22–23€</strong>, così le commissioni di deposito (circa 1–1,50€) non ti fanno scendere sotto la soglia.",
-      "Fai un acquisto da almeno <strong>21€</strong> entro <strong>60 giorni</strong> dalla verifica dell'identità, <strong>solo su Coinbase base</strong>, pagando con bonifico o carta: le operazioni su Advanced e Prime non valgono.",
-      "Ricevi il bonus entro 15–30 giorni. Arriva <strong>in Bitcoin</strong>: il controvalore in euro si muove finché non lo vendi."
+      "Fai un acquisto da almeno <strong>21€</strong> entro <strong>90 giorni</strong> dalla verifica dell'identità, <strong>solo su Coinbase base</strong>, pagando con bonifico o carta: le operazioni su Advanced e Prime non valgono.",
+      "Ricevi il bonus entro 5–15 giorni. Arriva <strong>in Bitcoin</strong>: il controvalore in euro si muove finché non lo vendi."
     ],
     "rules_ok": [
       "Esempio valido: deposita 22€, compra 21€ di BTC, poi rivendili.",
@@ -647,7 +643,7 @@ const BONUSES = [
     "faq": [
       {
         "q": "Come si ottiene il bonus Coinbase da 20€?",
-        "a": "Da nuovo utente: iscriviti col link, completa la verifica, deposita almeno 21€ e fai un acquisto da almeno 21€ entro 60 giorni dalla verifica, solo su Coinbase base."
+        "a": "Da nuovo utente: iscriviti col link, completa la verifica, deposita almeno 21€ e fai un acquisto da almeno 21€ entro 90 giorni dalla verifica, solo su Coinbase base."
       },
       {
         "q": "Quanto costa fare il trade su Coinbase?",
@@ -655,7 +651,7 @@ const BONUSES = [
       },
       {
         "q": "Quando arriva il bonus Coinbase?",
-        "a": "Generalmente entro 15–30 giorni dal trade qualificante."
+        "a": "Entro 5–15 giorni dal trade qualificante, secondo le condizioni ufficiali del programma."
       }
     ],
     "codice_box": false,
@@ -764,7 +760,7 @@ const BONUSES = [
     "payout": "A rate, un giorno di trading alla volta",
     "deposit": "Acquisto 50$ + 5 giorni di trading",
     "expires": null,
-    "updated": "2026-10-18",
+    "updated": "2026-11-09",
     "featured": false,
     "countInTotal": false,
     "source": "https://pump.fun/docs/fees",
@@ -919,7 +915,7 @@ const BONUSES = [
     "payout": "Pagato in pochi giorni",
     "deposit": "1 spesa di qualsiasi importo",
     "expires": null,
-    "updated": "2026-10-31",
+    "updated": "2026-11-09",
     "featured": false,
     "countInTotal": true,
     "source": "https://www.bbva.it/persone/promozioni.html",
@@ -1194,13 +1190,13 @@ const BONUSES = [
     "badge": null,
     "payout": "Sul conto entro 72 ore",
     "deposit": "Spesa con carta oltre 10€",
-    "expires": "2026-10-31",
-    "updated": "2026-10-31",
+    "expires": "2026-11-30",
+    "updated": "2026-11-09",
     "featured": false,
     "countInTotal": true,
     "source": "https://www.myfin.bg/docs/en/referral.pdf",
     "seo_title": "Bonus MyFin 10€ (codice amico) — guida 2026 | GoatLink",
-    "summary": "Registrati su MyFin con il codice di un amico entro il <strong>31 ottobre</strong>, verifica l'identità e paga con la carta virtuale un acquisto sopra i 10€. Ricevi 10€ sul conto entro 72 ore.",
+    "summary": "Registrati su MyFin con il codice di un amico entro il <strong>30 novembre</strong>, verifica l'identità e paga con la carta virtuale un acquisto sopra i 10€. Ricevi 10€ sul conto entro 72 ore.",
     "code": null,
     "steps": [
       "Procurati il <strong>codice invito</strong>. Lo può dare solo chi ha già un conto MyFin: scrivici su WhatsApp e te lo passiamo in privato.",
@@ -1211,7 +1207,7 @@ const BONUSES = [
       "Ricevi <strong>10€</strong> sul conto MyFin entro <strong>72 ore</strong> dal completamento dei passaggi."
     ],
     "rules_ok": [
-      "La campagna «Invite a Friend» è attiva dal <strong>01/10/2026 al 31/10/2026</strong>. Registrazione, verifica e acquisto vanno chiusi dentro queste date.",
+      "La campagna «Invite a Friend» è attiva dal <strong>01/11/2026 al 30/11/2026</strong>. Registrazione, verifica e acquisto vanno chiusi dentro queste date.",
       "L'acquisto non è una spesa persa: compri una cosa che ti serve o un buono che userai.",
       "I 10€ arrivano sul conto a tuo nome: li puoi spendere con la carta o trasferire su un altro conto.",
       "Anche chi ti invita riceve 10€. Te lo diciamo perché è giusto tu lo sappia: non cambia niente di quello che prendi tu."
@@ -1230,7 +1226,7 @@ const BONUSES = [
       },
       {
         "q": "Entro quando devo fare tutto?",
-        "a": "La campagna in corso va dal <strong>1° al 31 ottobre 2026</strong>. Registrazione, verifica e acquisto vanno chiusi entro il 31."
+        "a": "La campagna in corso va dal <strong>1° al 30 novembre 2026</strong>. Registrazione, verifica e acquisto vanno chiusi entro il 30."
       },
       {
         "q": "Posso usare il deposito su Trading 212 come spesa?",
