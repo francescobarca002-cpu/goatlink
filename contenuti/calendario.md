@@ -2,15 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Lunedì 9 novembre 2026
-- **🆕 Nuova promo: Crédit Agricole 50€** — Reel 1 (Tutorial) + post canale + aggiungi la risposta rapida /creditagricole in WhatsApp Business. → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
-- **🆕 Nuova promo: MyFin 10€** — Reel 1 (Tutorial) + post canale + aggiungi la risposta rapida /myfin in WhatsApp Business. → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
-- **🆕 Nuova promo: ING 50€** — Reel 1 (Tutorial) + post canale + aggiungi la risposta rapida /ing in WhatsApp Business. → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
-- **🔥 Buddybank a 80€ ancora per 7 giorni** — Reel 1 (Tutorial) con il gancio sulla maggiorazione + post canale → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
-- **⏳ Fineco scade tra 7 giorni (16 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-- **🎬 Contenuto del giorno: pump.fun** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
-- **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
-
 ## Martedì 10 novembre 2026
 - **🎬 Contenuto del giorno: Fineco** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
 
@@ -59,3 +50,8 @@
 
 ## Domenica 22 novembre 2026
 - **🎬 Contenuto del giorno: pump.fun** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
+
+## Lunedì 23 novembre 2026
+- **⏳ MyFin scade tra 7 giorni (30 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
+- **🎬 Contenuto del giorno: Revolut** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
+- **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)

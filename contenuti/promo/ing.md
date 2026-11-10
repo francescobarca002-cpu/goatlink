@@ -1,6 +1,6 @@
 # ING — 50€
 
-> Generato da data.js il 9 novembre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 10 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Scade il 20 dicembre · Banca · Conto + carta, spesa 150€ · paga: Cashback entro il 31/03/2027
 
 Link da usare (contano i clienti per canale):
