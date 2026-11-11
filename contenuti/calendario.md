@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Martedì 10 novembre 2026
-- **🎬 Contenuto del giorno: Fineco** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-
 ## Mercoledì 11 novembre 2026
 - **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
 
@@ -55,3 +52,6 @@
 - **⏳ MyFin scade tra 7 giorni (30 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 - **🎬 Contenuto del giorno: Revolut** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
 - **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
+
+## Martedì 24 novembre 2026
+- **🎬 Contenuto del giorno: BBVA** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
