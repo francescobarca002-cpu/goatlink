@@ -760,17 +760,17 @@ const BONUSES = [
     "payout": "A rate, un giorno di trading alla volta",
     "deposit": "Acquisto 50$ + 5 giorni di trading",
     "expires": null,
-    "updated": "2026-11-09",
+    "updated": "2026-11-12",
     "featured": false,
     "countInTotal": false,
-    "source": "https://pump.fun/docs/fees",
+    "source": "https://pump.fun/docs/referral-rewards",
     "seo_title": "Bonus pump.fun 50$ (invito app) — guida 2026 | GoatLink",
-    "summary": "App per comprare e vendere memecoin su Solana. Iscriviti dal link di invito, fai il primo acquisto di crypto dentro l'app con Apple Pay o carta e poi almeno una transazione in 5 giorni diversi entro 10 giorni. pump.fun abbina il tuo primo acquisto fino a 50$, pagati a rate: ogni giorno di trading completato ne sblocca una parte.",
+    "summary": "App per comprare e vendere memecoin su Solana. Iscriviti dal link di invito, fai il primo acquisto di crypto dentro l'app con Apple Pay o carta e poi almeno una transazione in 5 giorni diversi entro 10 giorni. pump.fun abbina il tuo primo acquisto fino all'importo massimo indicato nell'offerta in app (finora 50$), pagato a rate: ogni giorno di trading completato ne sblocca una parte.",
     "code": null,
     "steps": [
       "Apri il <strong>link di invito dal telefono</strong> e scarica l'app pump.fun partendo da lì. Prima di creare l'account controlla che la pagina indichi chi ti ha invitato: senza invito il bonus non c'è.",
       "Crea l'account. Devi essere un <strong>utente nuovo</strong>.",
-      "Tocca <strong>Deposita</strong> e compra crypto dentro l'app con <strong>Apple Pay o carta</strong>. Il match è pari a questo primo acquisto, <strong>fino a 50$</strong>: se compri 30$ ricevi al massimo 30$. Metti <strong>55$</strong>, così la commissione del pagamento non ti porta sotto la soglia.",
+      "Tocca <strong>Deposita</strong> e compra crypto dentro l'app con <strong>Apple Pay o carta</strong>. <strong>Prima di pagare leggi l'offerta mostrata in app</strong>: indica l'importo massimo del match e se arriva a rate o in un'unica volta. Il match è pari a questo primo acquisto, fino a quel massimo (finora <strong>50$</strong>): se compri 30$ ricevi al massimo 30$. Metti qualche dollaro in più del massimo, così la commissione del pagamento non ti porta sotto la soglia.",
       "Nel tuo profilo compare il riquadro <strong>«Essere attivi per 5 giorni»</strong>: aprilo e trovi il contatore del deposito abbinato e la data entro cui completare i giorni.",
       "Fai <strong>almeno una transazione</strong> (un acquisto o una vendita) in <strong>5 giorni diversi</strong> prima di quella data, cioè entro 10 giorni. I giorni <strong>non devono essere consecutivi</strong>.",
       "Ogni giorno completato sblocca una parte del bonus, se risulti idoneo. Al quinto giorno hai l'importo intero."
@@ -779,7 +779,7 @@ const BONUSES = [
       "Dall'Italia funziona: app, acquisto con Apple Pay e riquadro della promo li abbiamo provati noi.",
       "Commissioni ufficiali: <strong>0,40%</strong> di piattaforma per chi si iscrive con un invito (0,45% senza), più quella del pool: <strong>1,25%</strong> sulle monete ancora in bonding curve, da 1,25% a <strong>0,30%</strong> su quelle già passate su PumpSwap, in base alla capitalizzazione.",
       "Sulle monete più grandi paghi quindi circa lo <strong>0,70% a operazione</strong>: con pochi dollari al giorno sono centesimi.",
-      "Anche chi invita riceve fino a 50$ per ogni amico che completa i 5 giorni."
+      "Chi invita guadagna a vita il <strong>37,5%</strong> delle commissioni di piattaforma pagate dai suoi invitati (boost 1,5x, il 4x è finito il 1° novembre) più una parte delle loro ricompense Callout."
     ],
     "rules_ko": [
       "<strong>Il solo deposito non basta.</strong> Senza i 5 giorni di trading il match non arriva, e un giorno saltato è una rata persa.",
@@ -787,6 +787,7 @@ const BONUSES = [
       "Su Solana i trade sulle memecoin finiscono spesso nel mirino dei bot: imposta una <strong>slippage bassa</strong> prima di confermare.",
       "<strong>Non prelevare prima di aver finito i 5 giorni.</strong> Alcuni utenti segnalano che chi preleva prima perde le rate non ancora pagate.",
       "La commissione del pagamento con carta o Apple Pay la applica il fornitore integrato: guardala nel riepilogo prima di confermare.",
+      "Dall'8 novembre 2026 le regole sono cambiate (ora «Deposit Match Program»): l'importo massimo e il modo di pagamento li decide l'offerta in app e pump.fun può cambiarli per ogni paese in qualsiasi momento.",
       "I premi sono soggetti a verifica, a regole di idoneità e a un budget: pump.fun può cambiare o chiudere il programma in qualsiasi momento.",
       "pump.fun non è una banca: i token che compri non hanno nessuna tutela e possono andare a zero."
     ],
@@ -798,7 +799,7 @@ const BONUSES = [
     "faq": [
       {
         "q": "Quanto vale il bonus pump.fun?",
-        "a": "Fino a 50$. pump.fun abbina il tuo primo acquisto di crypto fatto dentro l'app, fino a un massimo di 50$: se compri 50$ o più ricevi 50$, se compri meno ricevi quanto hai comprato."
+        "a": "Dipende dall'offerta che l'app ti mostra prima del primo acquisto: finora il massimo era 50$. pump.fun abbina il tuo primo acquisto di crypto fatto dentro l'app fino a quel massimo: se compri di più ricevi il massimo, se compri meno ricevi quanto hai comprato."
       },
       {
         "q": "Cosa devo fare per ottenerlo?",
