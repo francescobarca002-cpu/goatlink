@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Mercoledì 11 novembre 2026
-- **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
-
 ## Giovedì 12 novembre 2026
 - **🎬 Contenuto del giorno: MyFin** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 
@@ -55,3 +52,6 @@
 
 ## Martedì 24 novembre 2026
 - **🎬 Contenuto del giorno: BBVA** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
+
+## Mercoledì 25 novembre 2026
+- **🎬 Contenuto del giorno: Buddybank** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)

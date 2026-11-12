@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 11 novembre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 12 novembre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -39,9 +39,9 @@ Nuovo contatto · Passaggi inviati · Attende accredito · Completato · Da ripr
 Ecco le promo attive oggi 👇
 • Revolut — 15€
 • BBVA — 10€
+• pump.fun — 10$–50$
 • Coinbase — 20€
 • Crédit Agricole — 50€
-• pump.fun — 50$
 • MyFin — 10€
 • Buddybank — 80€
 • ING — 50€
@@ -111,6 +111,28 @@ Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/bbva.html
 ```
 
+### `/pumpfun` — pump.fun 10$–50$
+
+Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
+
+```
+Ciao! 🐐 Ecco come ottenere il bonus *pump.fun* (10$–50$):
+
+1. Apri il link di invito dal telefono e scarica l'app pump.fun partendo da lì. Prima di creare l'account controlla che la pagina indichi chi ti ha invitato: senza invito il bonus non c'è.
+2. Crea l'account. Devi essere un utente nuovo. Applica il codice di invito subito, appena apri l'app per la prima volta, e comunque prima del primo acquisto.
+3. Tocca Deposita: l'app ti mostra il tuo premio massimo (da 10$ a 50$, è personale) e se il bonus arriva a rate o in un'unica volta. Fai uno screenshot dell'offerta prima di pagare.
+4. Compra crypto dentro l'app con Apple Pay o carta (fornitore integrato, es. MoonPay) per almeno l'importo massimo mostrato, più qualche dollaro per la commissione del pagamento. Comprare di più non aumenta il bonus; i trasferimenti da exchange o wallet esterni non valgono.
+5. Se il bonus è a rate: fai almeno una transazione (acquisto o vendita) dall'app mobile in 5 giorni diversi entro 10 giorni dall'acquisto. I giorni non devono essere consecutivi; ogni giorno completato sblocca una rata e al quinto hai l'importo intero.
+6. Se il bonus è in un'unica volta: non servono i 5 giorni. pump.fun decide sull'accredito entro il termine mostrato in app (in genere un paio di giorni) e può fare controlli in più.
+7. In entrambi i casi non prelevare le crypto del primo acquisto finché il bonus non è stato accreditato per intero.
+
+👉 Link di invito: [LINK]
+
+Ti chiede di muovere 50€, che restano tuoi. Il premio: a rate in 5 giorni o in un'unica volta.
+Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
+Guida con le domande frequenti: https://www.goatlink.it/pumpfun.html
+```
+
 ### `/coinbase` — Coinbase 20€
 
 Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
@@ -150,27 +172,6 @@ Ciao! 🐐 Ecco come ottenere il bonus *Crédit Agricole* (50€):
 Non devi lasciare soldi fermi. Il premio: buono Regalo Amazon.it.
 Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: https://www.goatlink.it/creditagricole.html
-```
-
-### `/pumpfun` — pump.fun 50$
-
-Sostituisci [LINK] con il tuo link di invito solo dentro l'app.
-
-```
-Ciao! 🐐 Ecco come ottenere il bonus *pump.fun* (50$):
-
-1. Apri il link di invito dal telefono e scarica l'app pump.fun partendo da lì. Prima di creare l'account controlla che la pagina indichi chi ti ha invitato: senza invito il bonus non c'è.
-2. Crea l'account. Devi essere un utente nuovo.
-3. Tocca Deposita e compra crypto dentro l'app con Apple Pay o carta. Il match è pari a questo primo acquisto, fino a 50$: se compri 30$ ricevi al massimo 30$. Metti 55$, così la commissione del pagamento non ti porta sotto la soglia.
-4. Nel tuo profilo compare il riquadro «Essere attivi per 5 giorni»: aprilo e trovi il contatore del deposito abbinato e la data entro cui completare i giorni.
-5. Fai almeno una transazione (un acquisto o una vendita) in 5 giorni diversi prima di quella data, cioè entro 10 giorni. I giorni non devono essere consecutivi.
-6. Ogni giorno completato sblocca una parte del bonus, se risulti idoneo. Al quinto giorno hai l'importo intero.
-
-👉 Link di invito: [LINK]
-
-Ti chiede di muovere 50€, che restano tuoi. Il premio: a rate, un giorno di trading alla volta.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/pumpfun.html
 ```
 
 ### `/myfin` — MyFin 10€
