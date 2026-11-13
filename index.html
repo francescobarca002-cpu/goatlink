@@ -771,7 +771,7 @@ if(statCount) statCount.textContent = active.length;
 // Trading resta sempre visibile anche a zero promo: la sezione è annunciata.
 const ORDER = ['Banca','Fintech','Crypto','Trading'];
 const present = new Set(active.map(b=>b.category));
-const cats = ['Tutti', ...ORDER.filter(c => present.has(c) || c === 'Trading'),
+const cats = ['Tutti', ...ORDER.filter(c => present.has(c)),
                        ...[...present].filter(c => !ORDER.includes(c))];
 let current = 'Tutti';
 cats.forEach(c=>{
