@@ -87,29 +87,45 @@ Per il codice amico scrivici in privato.
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/creditagricole`. Sostituisci [CODICE] con il tuo codice invito **solo dentro l'app**: qui non va mai scritto.
+Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono.
+
+### `/creditagricole` — Crédit Agricole: apertura (1° messaggio)
+
+Sostituisci [CODICE] con il tuo codice invito **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 Ecco come ottenere il bonus *Crédit Agricole* (50€):
+Ciao! 🐐 *Crédit Agricole* (50€), si fa così:
 
-1. Apri il Conto Online Crédit Agricole dall'invito. Serve essere nuovo correntista del Gruppo Crédit Agricole Italia.
-2. Inserisci il codice promozionale nel form di apertura: se apri senza, il bonus può non essere riconosciuto e non si recupera dopo.
-3. Nella stessa richiesta sottoscrivi la Carta Visa Debit: senza carta la promo non parte. Tutto entro il 12/01/2027.
-4. Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per posta).
-5. Fai almeno 1 transazione con la carta, di qualsiasi importo, entro 60 giorni dall'apertura effettiva del conto (e comunque entro il 14/03/2027). Valgono POS, wallet digitali ed e-commerce. I prelievi non contano, e nemmeno le spese stornate o annullate.
-6. Dopo la verifica della banca il buono da 50€ in Buono Regalo Amazon.it compare nell'app, nella sezione CA Club: va richiesto da lì, non arriva da solo. Il codice Amazon lo trovi poi in «Storico Premi».
+1. Apri il Conto Online Crédit Agricole entro il 12/01/2027 e inserisci il codice nel modulo di apertura.
+2. Nella stessa richiesta chiedi la Carta Visa Debit: senza carta niente bonus.
+3. Quando arrivano per posta le credenziali, attiva i pagamenti online e il 3D Secure.
 
 👉 Codice invito: [CODICE]
 
-Non devi lasciare soldi fermi. Il premio: buono Regalo Amazon.it.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/creditagricole.html
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍
+```
+
+### `/creditagricole2` — Crédit Agricole: dopo l'apertura (quando risponde FATTO)
+
+```
+Perfetto! 🙌 Ultimi passi per *Crédit Agricole*:
+
+4. Entro 60 giorni dall'apertura fai un pagamento con la carta, di qualsiasi importo. I prelievi non contano.
+5. Quando la banca ha verificato, nell'app vai in CA Club e richiedi il buono Amazon da 50€: non arriva da solo.
+
+❌ Lo perdi se:
+• non richiedi il buono in CA Club
+• chiudi conto o carta prima del 14/03/2027
+• sei già cliente Crédit Agricole o hai chiuso un conto con loro dal 2021
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: https://www.goatlink.it/creditagricole.html
 ```
 
 ## Messaggi di sollecito
 
-- **A metà strada:** "Ciao! Come va con Crédit Agricole? Per sbloccare il bonus serve: 1 transazione + carta visa. Ricorda che la promo scade il 12 gennaio. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
+- **A metà strada** (circa una settimana dopo il FATTO): "Ciao! Come va con Crédit Agricole? 🐐 Ti ricordo cosa manca: entro 60 giorni dall'apertura fai un pagamento con la carta, di qualsiasi importo. I prelievi non contano. Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi."
 - **In attesa del premio:** "Tutto fatto con Crédit Agricole 👌 Ora si aspetta l'accredito (Buono Regalo Amazon.it). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus Crédit Agricole è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Revolut* (15€): 3 spese da 5€, circa 10 minuti. Ti mando i passaggi?"

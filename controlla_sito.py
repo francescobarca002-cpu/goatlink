@@ -67,6 +67,15 @@ def controlla_dati(bonus, catalogo, oggi):
         visti.add(b.get("slug"))
         if b.get("code"):
             err(dove, "codice amico pubblicato (code deve essere null)")
+        c = b.get("corta")
+        if c is not None:
+            if not (isinstance(c, dict) and c.get("apri") and c.get("poi")
+                    and all(isinstance(c.get(k, []), list) for k in ("apri", "poi", "perdi"))):
+                err(dove, "corta deve essere {apri: [...], poi: [...], perdi: [...]} con apri e poi non vuoti")
+            elif len(c.get("perdi", [])) > 3:
+                avv(dove, f"corta.perdi ha {len(c['perdi'])} voci: nella versione corta ne vanno al massimo 3")
+        elif attiva(b, oggi):
+            avv(dove, "promo attiva senza versione corta (campo corta): la guida resta nel formato lungo")
         if b.get("difficulty") not in DIFFICOLTA:
             err(dove, f"difficulty '{b.get('difficulty')}' non valida")
         for k in ("updated", "expires"):
@@ -108,7 +117,8 @@ def controlla_scadenze_nei_testi(bonus, oggi):
         boost = b.get("boost")
         boost_finito = boost and not G.attiva(boost.get("until"), oggi)
         testi = [b.get("summary", ""), b.get("why", "")] + b.get("steps", []) + b.get("rules_ok", []) + \
-                b.get("rules_ko", []) + b.get("pros", []) + [f["q"] + " " + f["a"] for f in b.get("faq", [])]
+                b.get("rules_ko", []) + b.get("pros", []) + [f["q"] + " " + f["a"] for f in b.get("faq", [])] + \
+                [x for k in ("apri", "poi", "perdi") for x in (b.get("corta") or {}).get(k, [])]
         for t in testi:
             for m in SCADENZA_TESTO.finditer(t or ""):
                 g = int(m.group(1))

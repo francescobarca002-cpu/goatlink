@@ -546,6 +546,17 @@
   #recensioni .rtag.amt{border-color:rgba(224,192,113,.4);color:var(--gold)}
   #recensioni .rfonte{margin-top:20px;font-size:.76rem;color:var(--ink-faint);
     border-left:2px solid var(--line);padding-left:12px;max-width:66ch}
+  /* Riquadro "Mai fatto un bonus? Parti da qui" */
+  .start{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;margin:6px 0 30px;padding:22px 24px;
+    border-radius:var(--radius);border:1px solid rgba(95,213,224,.4);
+    background:linear-gradient(135deg,rgba(95,213,224,.09),rgba(197,119,216,.09));box-shadow:0 0 30px rgba(95,213,224,.08)}
+  .start[hidden]{display:none}
+  .start-txt{flex:1;min-width:240px}
+  .start-lbl{font-family:"Orbitron";font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
+  .start-nm{font-family:"Orbitron";font-size:1.35rem;font-weight:800;margin-bottom:6px}
+  .start-nm span{background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent;margin-left:6px}
+  .start-txt p{color:var(--ink-dim);font-size:.95rem;max-width:58ch}
+  @media(max-width:640px){.start{padding:18px}.start .btn{width:100%;text-align:center}}
 </style>
 </head>
 <body>
@@ -637,6 +648,7 @@
     <h2 class="tech">Scegli il tuo bonus</h2>
     <p class="sub">Tutti verificati, tutti ufficiali. In ordine di difficoltà: parti dai più semplici, poi sali.</p>
     <p class="sub" style="font-size:.82rem;color:var(--ink-faint);border-left:2px solid var(--line);padding-left:12px">Contenuto promozionale · I codici che ti passiamo sono codici amico: chi li condivide può ricevere il premio che il regolamento prevede per chi invita. Per te nessun costo e il tuo bonus non cambia.</p>
+    <div class="start" id="start" hidden></div>
     <div class="filters" id="filters"></div>
     <div class="legend">
       <span><i class="d d1"></i><b>Facile</b> — registrazione + una spesa piccola</span>
@@ -862,6 +874,23 @@ const capBox = document.getElementById('cap-off');
 if(capBox) capBox.onchange = ()=>{ capOff = capBox.checked; render(); };
 
 render();
+
+// ===== "Mai fatto un bonus? Parti da qui" =====
+// La promo e' quella con primo_bonus in data.js; se e' scaduta, la prima della lista "Dal piu' facile".
+(function(){
+  const el = document.getElementById('start');
+  if(!el || !active.length) return;
+  const b = active.find(x => x.primo_bonus) ||
+    [...active].sort((a,c) => ((DIFF_RANK[a.difficulty]||9) - (DIFF_RANK[c.difficulty]||9)) || (a.minutes - c.minutes) || (c.amount - a.amount))[0];
+  const passi = b.corta ? b.corta.apri.length + b.corta.poi.length : b.steps.length;
+  el.innerHTML = `<div class="start-txt">
+      <div class="start-lbl">Mai fatto un bonus? Parti da qui</div>
+      <div class="start-nm">${b.name}<span>${b.amountLabel}</span></div>
+      <p>${passi} passi, circa ${b.minutes} minuti dal telefono. ${b.deposit}. È il più semplice per cominciare: fatto questo, gli altri li fai a occhi chiusi.</p>
+    </div>
+    <a class="btn" href="${b.slug}.html">Inizia da qui →</a>`;
+  el.hidden = false;
+})();
 
 // ===== Sezione "Tornano presto" (bonus scaduti) =====
 const expired = BONUSES.filter(b => bonusStatus(b) === 'expired');

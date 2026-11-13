@@ -235,6 +235,53 @@ Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
 Guida con le domande frequenti: {SITO}/{b['slug']}.html"""
 
 
+def risposte_corte(b, oggi):
+    """Versione corta in due messaggi: (1) apertura con il codice, (2) dopo l'apertura.
+    None se la scheda non ha il campo corta: si usa la risposta lunga."""
+    c = b.get("corta")
+    if not c:
+        return None
+    etichetta, segnaposto = invito(b)
+    apri = [testo(x) for x in c["apri"]]
+    poi = [testo(x) for x in c["poi"]]
+    perdi = [testo(x) for x in c.get("perdi", [])]
+    n = len(apri)
+    uno = "\n".join(f"{i + 1}. {x}" for i, x in enumerate(apri))
+    due = "\n".join(f"{n + i + 1}. {x}" for i, x in enumerate(poi))
+    lose = ("\n\n❌ Lo perdi se:\n" + "\n".join(f"• {x}" for x in perdi)) if perdi else ""
+    primo = f"""Ciao! 🐐 *{b['name']}* ({b['amountLabel']}), si fa così:
+
+{uno}
+
+👉 {etichetta}: {segnaposto}
+
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍"""
+    secondo = f"""Perfetto! 🙌 Ultimi passi per *{b['name']}*:
+
+{due}{lose}
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: {SITO}/{b['slug']}.html"""
+    return primo, secondo
+
+
+def blocco_risposte(b, oggi, titolo="###"):
+    """Testo markdown con le risposte rapide della promo (corte se ci sono, altrimenti quella lunga)."""
+    etichetta, segnaposto = invito(b)
+    corte = risposte_corte(b, oggi)
+    nota = f"Sostituisci {segnaposto} con il tuo {etichetta.lower()} **solo dentro l'app**: qui non va mai scritto."
+    if not corte:
+        return (f"{titolo} `/{b['slug']}` — {b['name']} {b['amountLabel']}\n\n{nota}\n\n"
+                f"```\n{risposta_whatsapp(b, oggi)}\n```")
+    return (f"{titolo} `/{b['slug']}` — {b['name']}: apertura (1° messaggio)\n\n{nota}\n\n```\n{corte[0]}\n```\n\n"
+            f"{titolo} `/{b['slug']}2` — {b['name']}: dopo l'apertura (quando risponde FATTO)\n\n```\n{corte[1]}\n```")
+
+
+def rapide_di(b):
+    """Come si chiamano le risposte rapide della promo in WhatsApp Business."""
+    return f"le risposte rapide /{b['slug']} e /{b['slug']}2" if b.get("corta") else f"la risposta rapida /{b['slug']}"
+
+
 def solleciti(b, prossime):
     succ = ""
     if prossime:
@@ -243,6 +290,15 @@ def solleciti(b, prossime):
                 f"*{x['name']}* ({x['amountLabel']}): {x['deposit'].lower()}, circa {x['minutes']} minuti. "
                 f"Ti mando i passaggi?")
     tempo = f" Ricorda che la promo scade il {data_breve(b['expires'])}." if b.get("expires") else ""
+    c = b.get("corta")
+    if c:
+        # il passo che fa perdere piu' bonus e' la spesa/condizione dopo l'apertura: lo si ricorda per esteso
+        cosa = testo(c["poi"][0]) if len(c["poi"]) == 1 else " ".join(testo(x) for x in c["poi"][:-1])
+        meta = (f"Ciao! Come va con {b['name']}? 🐐 Ti ricordo cosa manca: {minuscola(cosa)} "
+                f"Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi.")
+        return f"""- **A metà strada** (circa una settimana dopo il FATTO): "{meta}"
+- **In attesa del premio:** "Tutto fatto con {b['name']} 👌 Ora si aspetta l'accredito ({b['payout']}). Non chiudere il conto e non svuotarlo prima dell'accredito."
+- **Bonus successivo:** "{succ}\""""
     return f"""- **A metà strada:** "Ciao! Come va con {b['name']}? Per sbloccare il bonus serve: {b['deposit'].lower()}.{tempo} Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
 - **In attesa del premio:** "Tutto fatto con {b['name']} 👌 Ora si aspetta l'accredito ({b['payout']}). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "{succ}\""""
@@ -289,13 +345,11 @@ Link da usare (contano i clienti per canale):
 {post_canale(b, oggi)}
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/{b['slug']}`. Sostituisci {invito(b)[1]} con il tuo {invito(b)[0].lower()} **solo dentro l'app**: qui non va mai scritto.
+{"Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono." if b.get("corta") else "Da salvare come risposta rapida."}
 
-```
-{risposta_whatsapp(b, oggi)}
-```
+{blocco_risposte(b, oggi)}
 
 ## Messaggi di sollecito
 
@@ -306,10 +360,8 @@ Da salvare come risposta rapida `/{b['slug']}`. Sostituisci {invito(b)[1]} con i
 # ---------------------------------------------------------------- WhatsApp Business
 def whatsapp_business(attive, oggi):
     menu = "\n".join(f"• {b['name']} — {b['amountLabel']}" for b in attive)
-    rapide = "\n\n".join(
-        f"### `/{b['slug']}` — {b['name']} {b['amountLabel']}\n\n"
-        f"Sostituisci {invito(b)[1]} con il tuo {invito(b)[0].lower()} solo dentro l'app.\n\n"
-        f"```\n{risposta_whatsapp(b, oggi)}\n```" for b in attive)
+    rapide = "\n\n".join(blocco_risposte(b, oggi) for b in attive)
+    n_rapide = 3 + sum(2 if b.get("corta") else 1 for b in attive)
     return f"""# Kit WhatsApp Business
 
 > Generato da data.js il {G.data_it(oggi)}. Si carica **una volta** nell'app
@@ -372,6 +424,13 @@ Se conosci qualcuno a cui può servire, giragli {SITO}: lo seguo io come ho fatt
 
 ## Risposte rapide per promo
 
+Come si usano: quando ti chiedono un bonus mandi `/<promo>` (apertura + codice). Quando rispondono
+*FATTO* mandi `/<promo>2` (gli ultimi passi e cosa fa perdere il bonus). Così ricevono un pezzo
+alla volta, nel momento in cui gli serve, invece di un muro di testo.
+Etichetta la chat *Passaggi inviati* dopo il primo messaggio e *Attende accredito* dopo il secondo.
+
+In tutto sono {n_rapide} risposte rapide (WhatsApp Business ne tiene al massimo 50).
+
 {rapide}
 """
 
@@ -400,11 +459,11 @@ def eventi_giorno(attive, tutte, oggi, nuove, finite):
                            "Reel 1 (Tutorial) con il gancio sulla maggiorazione + post canale"))
             elif n == -1:
                 ev.append((1, f"↩️ {b['name']} è tornato a {b['amountLabel_base']}", b["slug"],
-                           f"Aggiorna la risposta rapida /{b['slug']} in WhatsApp Business."))
+                           f"Aggiorna {rapide_di(b)} in WhatsApp Business."))
     for b in attive:
         if b["slug"] in nuove:
             ev.append((0, f"🆕 Nuova promo: {b['name']} {b['amountLabel']}", b["slug"],
-                       f"Reel 1 (Tutorial) + post canale + aggiungi la risposta rapida /{b['slug']} in WhatsApp Business."))
+                       f"Reel 1 (Tutorial) + post canale + aggiungi {rapide_di(b)} in WhatsApp Business."))
     per_slug = {b["slug"]: b for b in tutte}
     for s in finite:
         b = per_slug.get(s)
@@ -413,7 +472,7 @@ def eventi_giorno(attive, tutte, oggi, nuove, finite):
         alt_txt = " e ".join(f"{x['name']} ({x['amountLabel']})" for x in alt)
         ev.append((0, f"🛑 {nome} è terminata", None,
                    f"Post canale: \"La promo {nome} è finita. Le alternative più veloci oggi: {alt_txt}.\" "
-                   f"Togli la risposta rapida /{s} da WhatsApp Business."))
+                   f"Togli {rapide_di(b) if b else 'la risposta rapida /' + s} da WhatsApp Business."))
     return sorted(ev, key=lambda x: x[0])
 
 

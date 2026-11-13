@@ -108,6 +108,12 @@ def correlati(b, tutte):
     return titolo, righe
 
 
+def dopo_titolo(b):
+    """Titoletto fra i passaggi di apertura e quelli dopo (anche nel 2° messaggio WhatsApp)."""
+    return (b["corta"].get("dopo_titolo")
+            or ("Quando l'account è attivo:" if b["category"] in ("Crypto", "Trading") else "Quando il conto è attivo:"))
+
+
 def guida(b, tutte, oggi):
     nome, slug, lab = b["name"], b["slug"], b["amountLabel"]
     titolo = b.get("seo_title") or f"Bonus {nome} {lab} — guida 2026 | GoatLink"
@@ -186,12 +192,39 @@ def guida(b, tutte, oggi):
         voci = "".join(f'\n      <details class="g-faq-item">\n        <summary>{f["q"]}</summary>\n        <div>{f["a"]}</div>\n      </details>' for f in b["faq"])
         faq = f'\n    <section class="g-section g-faq">\n      <h2>Domande frequenti sul bonus {nome}</h2>{voci}\n    </section>\n'
 
+    corta = b.get("corta")
+    if corta:
+        n_apri = len(corta["apri"])
+        perdi = "".join(f"<li>{x}</li>" for x in corta.get("perdi", []))
+        breve = (f'\n    <section class="g-section g-quick">\n      <h2>Come si fa, in breve</h2>'
+                 f'\n      <ol class="g-steps">{li(corta["apri"])}</ol>{codice}'
+                 f'\n      <p class="g-phase">{dopo_titolo(b)}</p>'
+                 f'\n      <ol class="g-steps" start="{n_apri + 1}" style="counter-reset:s {n_apri}">{li(corta["poi"])}</ol>'
+                 + (f'\n      <div class="g-lose"><h3>❌ Lo perdi se…</h3><ul>{perdi}</ul></div>' if perdi else "")
+                 + "\n    </section>\n")
+        completa_passi = (f'\n    <section class="g-section">\n      <h2>Guida completa passo-passo</h2>'
+                          f'\n      <ol class="g-steps">{li(b["steps"])}</ol>\n    </section>\n')
+        dettagli = (f'\n    <details class="g-more">\n      <summary>Guida completa, regole e casi particolari</summary>'
+                    f'\n      <div class="g-more-in">{sezioni(b.get("sezioni_prima"))}{completa_passi}{regole}{sezioni(b.get("sezioni_dopo"))}{verdetto}'
+                    f'\n      </div>\n    </details>\n')
     cta = b.get("cta") or "Ricevi il link ufficiale su WhatsApp →"
     nota = b.get("cta_nota") or f"Il bonus è erogato direttamente da {nome}. GoatLink non chiede alcun pagamento."
     rel_titolo, rel = correlati(b, tutte)
     avviso = ('\n  <div class="g-expired">⏰ Questa promo è terminata. Scrivici su WhatsApp per essere avvisato se torna.</div>\n'
               if scaduta else "")
     body_attr = f' data-bonus="{attr(nome)}"' + (f' data-expires="{b["expires"]}"' if b.get("expires") else "")
+    bottone = (f'\n    <div class="g-cta-wrap"><a class="g-cta" href="https://wa.me/{WA}?text={attr(nome.replace(" ", "%20"))}">{cta}</a>'
+               f'<p class="g-disc">{nota}</p></div>\n')
+    if corta:
+        # versione corta in cima, poi il bottone, poi tutto il resto chiuso (resta nella pagina per i motori di ricerca)
+        corpo = f"{breve}{bottone}{dettagli}{faq}{aggiornato}"
+    else:
+        corpo = (f"""{sezioni(b.get("sezioni_prima"))}
+    <section class="g-section">
+      <h2>Come ottenere il bonus {nome}: procedura passo-passo</h2>
+      <ol class="g-steps">{li(b["steps"])}</ol>{codice}
+    </section>
+{regole}{sezioni(b.get("sezioni_dopo"))}{verdetto}{bottone}{faq}{aggiornato}""")
 
     return f"""<!DOCTYPE html>
 <html lang="it">
@@ -248,14 +281,7 @@ def guida(b, tutte, oggi):
     </div>
 
     <p class="g-summary">{b["summary"]}</p>
-{sezioni(b.get("sezioni_prima"))}
-    <section class="g-section">
-      <h2>Come ottenere il bonus {nome}: procedura passo-passo</h2>
-      <ol class="g-steps">{li(b["steps"])}</ol>{codice}
-    </section>
-{regole}{sezioni(b.get("sezioni_dopo"))}{verdetto}
-    <div class="g-cta-wrap"><a class="g-cta" href="https://wa.me/{WA}?text={attr(nome.replace(" ", "%20"))}">{cta}</a><p class="g-disc">{nota}</p></div>
-{faq}{aggiornato}
+{corpo}
   </article>
 
   <section class="g-related">

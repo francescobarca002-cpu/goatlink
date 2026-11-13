@@ -25,6 +25,17 @@
 //                 badge}: dopo "until" torna l'importo base.
 //   code          SEMPRE null: il codice amico non si pubblica online.
 //
+//   corta         versione corta in cima alla guida e nei messaggi
+//                 WhatsApp: {apri: [...], poi: [...], perdi: [...]}.
+//                 "apri" = fino al conto aperto (1° messaggio WhatsApp,
+//                 con il codice), "poi" = dopo l'apertura (2° messaggio),
+//                 "perdi" = massimo 3 errori che fanno perdere il bonus.
+//                 Frasi brevi, parole semplici. Senza "corta" la guida
+//                 resta nel formato lungo.
+//   primo_bonus   true su UNA promo: e' quella proposta in home nel
+//                 riquadro "Mai fatto un bonus? Parti da qui". Se e'
+//                 scaduta si usa la prima della lista "Dal piu' facile".
+//
 // Campi solo per la guida (facoltativi): seo_title, faq, trick,
 //   sezioni_prima / sezioni_dopo [{titolo, html}], cons,
 //   codice_box (false = niente riquadro codice), codice_etichetta,
@@ -157,6 +168,22 @@ const BONUSES = [
       "Fai almeno <strong>1 transazione</strong> con la carta, di qualsiasi importo, <strong>entro 60 giorni dall'apertura effettiva del conto</strong> (e comunque entro il 14/03/2027). Valgono POS, wallet digitali ed e-commerce. <strong>I prelievi non contano</strong>, e nemmeno le spese stornate o annullate.",
       "Dopo la verifica della banca il buono da <strong>50€ in Buono Regalo Amazon.it</strong> compare nell'app, nella sezione <strong>CA Club</strong>: va richiesto da lì, non arriva da solo. Il codice Amazon lo trovi poi in «Storico Premi»."
     ],
+    "corta": {
+      "apri": [
+        "Apri il <strong>Conto Online</strong> Crédit Agricole entro il 12/01/2027 e inserisci il codice nel modulo di apertura.",
+        "Nella stessa richiesta chiedi la <strong>Carta Visa Debit</strong>: senza carta niente bonus.",
+        "Quando arrivano per posta le credenziali, attiva i pagamenti online e il 3D Secure."
+      ],
+      "poi": [
+        "Entro 60 giorni dall'apertura fai <strong>un pagamento</strong> con la carta, di qualsiasi importo. I prelievi non contano.",
+        "Quando la banca ha verificato, nell'app vai in <strong>CA Club</strong> e richiedi il buono Amazon da 50€: non arriva da solo."
+      ],
+      "perdi": [
+        "non richiedi il buono in CA Club",
+        "chiudi conto o carta prima del 14/03/2027",
+        "sei già cliente Crédit Agricole o hai chiuso un conto con loro dal 2021"
+      ]
+    },
     "rules_ok": [
       "L'operazione a premi «Invita un amico in Crédit Agricole – Novembre 2026» è valida dal <strong>03/11/2026 al 12/01/2027</strong>: la richiesta di apertura del conto e della carta va completata in queste date.",
       "La Carta Visa Debit è obbligatoria: sceglila in fase di apertura.",
@@ -239,6 +266,24 @@ const BONUSES = [
       "Spendi almeno <strong>150€</strong> con la carta entro il <strong>28/02/2027</strong>. Vale anche la somma di più acquisti, online o in negozio, e puoi sommare carta di debito e carta di credito Gold.",
       "Ricevi <strong>50€ di cashback</strong> sul Conto Corrente Arancio <strong>entro il 31/03/2027</strong>."
     ],
+    "corta": {
+      "apri": [
+        "Dal sito ing.it o dall'app ING apri il <strong>Conto Corrente Arancio Più</strong> entro il 20/12/2026. <strong>Non</strong> l'Arancio Light: con quello niente bonus.",
+        "Inserisci il codice amico e, prima di confermare, controlla che compaia nel riepilogo.",
+        "Nella stessa richiesta chiedi la <strong>carta di debito</strong>.",
+        "Tieni pronti documento e tessera sanitaria per la verifica dell'identità."
+      ],
+      "poi": [
+        "Mandati con un bonifico i soldi che ti servono per la spesa.",
+        "Spendi <strong>150€</strong> con la carta entro il 28/02/2027, anche in più acquisti.",
+        "I 50€ arrivano sul conto entro il 31/03/2027."
+      ],
+      "perdi": [
+        "apri l'Arancio Light invece dell'Arancio Più",
+        "confermi senza vedere il codice nel riepilogo",
+        "chiudi il conto prima che arrivi il bonus"
+      ]
+    },
     "rules_ok": [
       "L’iniziativa è «Invita i tuoi amici in ING – 2026 Edizione VI», valida dal 03/11/2026 al 28/02/2027. Il conto con il codice va chiesto <strong>tra il 03/11 e il 20/12/2026</strong>: è quella la data che conta.",
       "Possono partecipare i nuovi clienti e anche gli <strong>ex clienti</strong> ING che aprono il loro primo Conto Corrente Arancio Più.",
@@ -340,6 +385,23 @@ const BONUSES = [
       "Dal <strong>23/02/2027</strong> la banca mette a disposizione in area riservata o in app l’integrazione contrattuale: <strong>firmala entro il 16/03/2027</strong>. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.",
       "Ricevi i <strong>50€</strong> sul conto corrente, accreditati al netto della ritenuta del 26%."
     ],
+    "corta": {
+      "apri": [
+        "Apri il conto su finecobank.com o dall'app <strong>entro il 16/11/2026</strong>.",
+        "Durante la procedura inserisci il codice amico nel campo dedicato: dopo non si può più.",
+        "Attiva i codici di accesso quando arrivano."
+      ],
+      "poi": [
+        "Entro il 05/02/2027 completa <strong>una</strong> di queste strade: stipendio o pensione accreditati sul conto, 5 ordini di borsa, oppure 2.500€ di pagamenti con la carta.",
+        "Tra il 23/02 e il 16/03/2027 firma in app l'<strong>integrazione contrattuale</strong>: senza quella firma niente bonus.",
+        "I 50€ arrivano sul conto, meno la ritenuta del 26%."
+      ],
+      "perdi": [
+        "non metti il codice durante l'apertura, o ci metti un codice promo trading al suo posto",
+        "salti la firma tra il 23/02 e il 16/03/2027",
+        "sei cliente Fineco o lo sei stato negli ultimi due anni"
+      ]
+    },
     "rules_ok": [
       "L’iniziativa è «Invita un amico», valida dal <strong>16/10/2026 al 16/11/2026</strong>. Quella che conta è la data della richiesta di apertura del conto.",
       "Basta <strong>una</strong> delle quattro condizioni e hai tempo fino al <strong>5 febbraio 2027</strong>: quasi quattro mesi, come nell'edizione di settembre. Le edizioni di inizio anno chiudevano in sei settimane.",
@@ -410,6 +472,7 @@ const BONUSES = [
   },
   {
     "slug": "buddybank",
+    "primo_bonus": true,
     "capitale": 11,
     "name": "Buddybank",
     "category": "Banca",
@@ -442,12 +505,30 @@ const BONUSES = [
       "Nella <strong>prima schermata</strong> ti viene chiesto il codice promo: inseriscilo lì. A conto aperto non si può più aggiungere e il bonus non si recupera.",
       "Scegli la <strong>carta di debito MyOne in versione solo digitale</strong>: è gratuita, mentre la fisica ha un costo. Per il bonus la virtuale basta.",
       "Completa l'apertura con documento e selfie, poi aspetta l'email di conferma. <strong>La carta virtuale si attiva dopo 48 ore</strong> dall'apertura: prima di allora numero, scadenza e CVV non sono visibili.",
-      "Quando il conto è attivo, caricalo con un bonifico da <strong>11€</strong> da un altro conto tuo. Ne bastano 10 per la spesa, il centesimo in più serve a non finire a saldo zero.",
+      "Quando il conto è attivo, caricalo con un bonifico da <strong>11€</strong> da un altro conto tuo. Ne bastano 10 per la spesa, l'euro in più serve a non finire a saldo zero.",
       "Entro <strong>30 giorni</strong> dall'apertura fai <strong>un pagamento da almeno 10€</strong> con la MyOne: POS fisico, acquisto online, oppure la carta caricata su Apple Pay, Google Pay o Samsung Pay.",
       "Non ridurti all'ultimo giorno: per i controlli fa fede la <strong>data valuta</strong>, non quella dell'acquisto.",
       "Tieni il <strong>saldo disponibile pari o superiore a zero</strong> fino all'accredito: se svuoti il conto mentre aspetti, il premio salta.",
       "Ricevi il bonus <strong>entro 90 giorni</strong> dalla transazione valida, direttamente sul conto e prelevabile."
     ],
+    "corta": {
+      "apri": [
+        "Scarica l'app buddy e tocca <strong>Apri conto</strong>. Registrati con i documenti, <strong>non con SPID</strong>: con SPID si blocca a metà.",
+        "Nella <strong>prima schermata</strong> inserisci il codice amico. Dopo non si può più aggiungere.",
+        "Scegli la carta <strong>solo digitale</strong>: è gratis e per il bonus basta.",
+        "Finisci con documento e selfie. La carta si attiva dopo 48 ore."
+      ],
+      "poi": [
+        "Mandati <strong>11€</strong> da un altro tuo conto.",
+        "Entro <strong>30 giorni</strong> dall'apertura paga qualcosa da almeno 10€ con la carta: in negozio, online o con Apple Pay / Google Pay.",
+        "Lascia sul conto quello che resta: il bonus arriva entro 90 giorni, ed è prelevabile."
+      ],
+      "perdi": [
+        "metti il codice dopo aver aperto il conto",
+        "hai già avuto buddy, o eri cliente UniCredit a settembre 2024",
+        "svuoti il conto prima che arrivi il bonus"
+      ]
+    },
     "rules_ok": [
       "Fino al <strong>16 novembre 2026</strong> il bonus di benvenuto è maggiorato a <strong>80€</strong> (prorogato dal 4 ottobre). Dal 17 novembre torna a 50€: la promozione resta aperta fino al 20/01/2027, cambia solo l'importo.",
       "Il conto corrente è <strong>gratuito</strong>, e la carta MyOne virtuale è gratuita: per prendere il bonus non spendi nulla in canoni.",
@@ -629,6 +710,22 @@ const BONUSES = [
       "Fai un acquisto da almeno <strong>21€</strong> entro <strong>90 giorni</strong> dalla verifica dell'identità, <strong>solo su Coinbase base</strong>, pagando con bonifico o carta: le operazioni su Advanced e Prime non valgono.",
       "Ricevi il bonus entro 5–15 giorni. Arriva <strong>in Bitcoin</strong>: il controvalore in euro si muove finché non lo vendi."
     ],
+    "corta": {
+      "apri": [
+        "Iscriviti dal <strong>link</strong> che ti mandiamo. Un solo account a persona.",
+        "Completa la verifica dell'identità."
+      ],
+      "poi": [
+        "Deposita <strong>22–23€</strong>: le commissioni si prendono 1–1,50€ e sotto i 21€ non vale.",
+        "Entro 90 giorni dalla verifica compra almeno 21€ di crypto su Coinbase normale, non su Advanced.",
+        "Il bonus arriva in 5–15 giorni, in Bitcoin: il valore in euro si muove finché non lo vendi."
+      ],
+      "perdi": [
+        "ti iscrivi senza link o con un secondo account",
+        "fai l'acquisto su Coinbase Advanced",
+        "le commissioni ti portano sotto i 21€"
+      ]
+    },
     "rules_ok": [
       "Esempio valido: deposita 22€, compra 21€ di BTC, poi rivendili.",
       "Coinbase One è gratis la prima settimana e azzera le commissioni (ricordati di disdire entro 7 giorni).",
@@ -776,6 +873,23 @@ const BONUSES = [
       "<strong>Se il bonus è in un'unica volta:</strong> non servono i 5 giorni. pump.fun decide sull'accredito entro il termine mostrato in app (in genere un paio di giorni) e può fare controlli in più.",
       "In entrambi i casi <strong>non prelevare</strong> le crypto del primo acquisto finché il bonus non è stato accreditato per intero."
     ],
+    "corta": {
+      "apri": [
+        "Apri il <strong>link</strong> dal telefono e scarica l'app partendo da lì. Controlla che la pagina dica chi ti ha invitato.",
+        "Crea l'account e applica subito il codice di invito, prima di comprare qualsiasi cosa.",
+        "Tocca <strong>Deposita</strong>: vedi il tuo premio massimo (10$–50$) e se arriva a rate. Fai uno screenshot."
+      ],
+      "poi": [
+        "Compra in app con Apple Pay o carta almeno l'importo mostrato, più qualche dollaro di commissione.",
+        "Se il bonus è a rate: fai un'operazione in app in <strong>5 giorni diversi</strong> entro 10 giorni.",
+        "Non prelevare niente finché il bonus non è arrivato tutto."
+      ],
+      "perdi": [
+        "porti crypto da un altro exchange o wallet invece di comprarle in app",
+        "con il bonus a rate salti dei giorni: ogni giorno saltato è una rata persa",
+        "tieni aperte posizioni su memecoin, che possono perdere il 20–30% in pochi minuti"
+      ]
+    },
     "rules_ok": [
       "Dall'Italia funziona: app, acquisto con Apple Pay e riquadro della promo li abbiamo provati noi.",
       "Commissioni ufficiali: <strong>0,40%</strong> di piattaforma per chi si iscrive con un invito (0,45% senza), più quella del pool: <strong>1,25%</strong> sulle monete ancora in bonding curve, da 1,25% a <strong>0,30%</strong> su quelle già passate su PumpSwap, in base alla capitalizzazione.",
@@ -877,6 +991,22 @@ const BONUSES = [
       "Non annullare gli acquisti dopo averli fatti: Revolut può stornare il bonus.",
       "Ricevi <strong>15€</strong> entro 2 giorni lavorativi."
     ],
+    "corta": {
+      "apri": [
+        "Registrati dal <strong>link</strong> che ti mandiamo e controlla l'offerta sulla pagina che si apre: Revolut cambia spesso gli importi.",
+        "Completa la verifica con documento e selfie.",
+        "Ordina la carta Standard gratuita e attivala quando arriva."
+      ],
+      "poi": [
+        "Fai <strong>3 spese da 5€</strong> l'una entro 30 giorni.",
+        "Non annullare gli acquisti: i 15€ arrivano in 2 giorni lavorativi."
+      ],
+      "perdi": [
+        "non ti registri dal link",
+        "paghi gift card, scommesse o fai trasferimenti invece di acquisti normali",
+        "annulli gli acquisti dopo averli fatti"
+      ]
+    },
     "rules_ok": [
       "Va bene sia la carta fisica che quella virtuale, anche acquisti online",
       "Esempi: 3 caffè al bar, piccola spesa, acquisti su Amazon in giorni diversi"
@@ -934,6 +1064,21 @@ const BONUSES = [
       "Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta.",
       "Ricevi <strong>10€</strong>, in genere entro pochi giorni lavorativi."
     ],
+    "corta": {
+      "apri": [
+        "Scarica l'app BBVA e inizia la registrazione.",
+        "Al <strong>quarto passaggio</strong> inserisci il codice amico e accetta i termini della promo Passaparola."
+      ],
+      "poi": [
+        "Ricarica il conto e fai <strong>un acquisto di qualsiasi importo</strong> con la carta di debito entro 90 giorni.",
+        "Se Apple Pay non si attiva subito, la prima volta usa la carta normalmente.",
+        "I 10€ arrivano in pochi giorni lavorativi."
+      ],
+      "perdi": [
+        "non inserisci il codice al quarto passaggio",
+        "invece di comprare qualcosa prelevi, compri crypto o paghi scommesse"
+      ]
+    },
     "rules_ok": [
       "Cumulabile con il <strong>cashback 4%</strong>: fino a 50€ complessivi, calcolato sui primi 210€ di acquisti di ogni mese per i primi 6 mesi dal primo acquisto. Il conto va sottoscritto entro l'<strong>11/12/2026</strong>.",
       "Il conto è remunerato al <strong>4% lordo per i primi 6 mesi</strong> fino a 200.000€ (2,10% oltre), se lo sottoscrivi entro l'11/12/2026. Dopo, il tasso diventa variabile ogni trimestre ed è agganciato a quello BCE.",
@@ -1211,6 +1356,22 @@ const BONUSES = [
       "Paga con la carta MyFin un <strong>acquisto sopra i 10€</strong> da un negozio, online o in fisico. Per esempio un buono regalo da 11€.",
       "Ricevi <strong>10€</strong> sul conto MyFin entro <strong>72 ore</strong> dal completamento dei passaggi."
     ],
+    "corta": {
+      "apri": [
+        "Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard, gratuito, basta.",
+        "Verifica l'identità con un documento: può volerci qualche ora."
+      ],
+      "poi": [
+        "Crea la carta virtuale gratuita e caricaci almeno 11€ da un altro tuo conto.",
+        "Compra qualcosa <strong>sopra i 10€</strong> (non 10€ esatti) da un negozio, online o in fisico.",
+        "I 10€ arrivano sul conto entro 72 ore."
+      ],
+      "perdi": [
+        "paghi esattamente 10€ invece di qualcosa in più",
+        "usi la carta per ricaricare un altro conto o wallet (PayPal, Revolut…)",
+        "hai già un profilo MyFin"
+      ]
+    },
     "rules_ok": [
       "La campagna «Invite a Friend» è attiva dal <strong>01/11/2026 al 30/11/2026</strong>. Registrazione, verifica e acquisto vanno chiusi dentro queste date.",
       "L'acquisto non è una spesa persa: compri una cosa che ti serve o un buono che userai.",

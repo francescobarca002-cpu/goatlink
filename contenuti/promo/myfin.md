@@ -88,28 +88,45 @@ Per il codice amico scrivici in privato.
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/myfin`. Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
+Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono.
+
+### `/myfin` — MyFin: apertura (1° messaggio)
+
+Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 Ecco come ottenere il bonus *MyFin* (10€):
+Ciao! 🐐 *MyFin* (10€), si fa così:
 
-1. Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard è gratuito e per il bonus basta.
-2. Completa la verifica dell'identità con un documento. Può richiedere qualche ora e non arriva sempre una notifica: se riesci a caricare il conto, la verifica è passata.
-3. Crea la carta virtuale, gratuita, e carica sul conto almeno 11€ da un altro conto tuo.
-4. Paga con la carta MyFin un acquisto sopra i 10€ da un negozio, online o in fisico. Per esempio un buono regalo da 11€.
-5. Ricevi 10€ sul conto MyFin entro 72 ore dal completamento dei passaggi.
+1. Scarica l'app MyFin e registrati inserendo il codice. Il piano Standard, gratuito, basta.
+2. Verifica l'identità con un documento: può volerci qualche ora.
 
 👉 Codice amico: [CODICE]
 
-Ti chiede di muovere 11€, che restano tuoi. Il premio: sul conto entro 72 ore.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/myfin.html
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍
+```
+
+### `/myfin2` — MyFin: dopo l'apertura (quando risponde FATTO)
+
+```
+Perfetto! 🙌 Ultimi passi per *MyFin*:
+
+3. Crea la carta virtuale gratuita e caricaci almeno 11€ da un altro tuo conto.
+4. Compra qualcosa sopra i 10€ (non 10€ esatti) da un negozio, online o in fisico.
+5. I 10€ arrivano sul conto entro 72 ore.
+
+❌ Lo perdi se:
+• paghi esattamente 10€ invece di qualcosa in più
+• usi la carta per ricaricare un altro conto o wallet (PayPal, Revolut…)
+• hai già un profilo MyFin
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: https://www.goatlink.it/myfin.html
 ```
 
 ## Messaggi di sollecito
 
-- **A metà strada:** "Ciao! Come va con MyFin? Per sbloccare il bonus serve: spesa con carta oltre 10€. Ricorda che la promo scade il 30 novembre. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
+- **A metà strada** (circa una settimana dopo il FATTO): "Ciao! Come va con MyFin? 🐐 Ti ricordo cosa manca: crea la carta virtuale gratuita e caricaci almeno 11€ da un altro tuo conto. Compra qualcosa sopra i 10€ (non 10€ esatti) da un negozio, online o in fisico. Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi."
 - **In attesa del premio:** "Tutto fatto con MyFin 👌 Ora si aspetta l'accredito (Sul conto entro 72 ore). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus MyFin è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Revolut* (15€): 3 spese da 5€, circa 10 minuti. Ti mando i passaggi?"

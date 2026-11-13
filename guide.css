@@ -105,6 +105,32 @@ main{padding:26px 0 60px}
 
 @media (prefers-reduced-motion: reduce){.g-grid-floor{animation:none}}
 
+/* Versione corta in cima alla guida */
+.g-quick{background:var(--panel);border:1px solid rgba(95,213,224,.35);border-radius:var(--radius);padding:24px 22px 20px;backdrop-filter:blur(6px);
+  box-shadow:0 0 30px rgba(95,213,224,.08)}
+.g-quick h2{margin-bottom:8px}
+.g-quick .g-steps li{color:var(--ink);font-size:1.02rem}
+.g-quick .g-code-block{margin:6px 0 4px}
+.g-phase{font-family:"Orbitron";font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--magenta);margin:24px 0 2px}
+.g-lose{margin-top:20px;border:1px solid rgba(224,138,138,.4);background:rgba(224,138,138,.06);border-radius:12px;padding:16px 18px}
+.g-lose h3{font-family:"Orbitron";font-size:.9rem;font-weight:600;color:var(--err);margin-bottom:10px}
+.g-lose ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.g-lose li{font-size:.95rem;color:var(--ink);padding-left:16px;position:relative}
+.g-lose li::before{content:"–";position:absolute;left:0;color:var(--err)}
+@media(max-width:620px){.g-quick{padding:20px 16px 16px}.g-quick .g-steps li{padding-left:48px}}
+
+/* Guida completa, chiusa di default */
+.g-more{margin:36px 0;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);backdrop-filter:blur(6px)}
+.g-more>summary{list-style:none;cursor:pointer;padding:18px 22px;font-family:"Orbitron";font-weight:600;font-size:.92rem;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--ink-dim)}
+.g-more>summary::-webkit-details-marker{display:none}
+.g-more>summary::after{content:"+";color:var(--cyan);font-size:1.3rem;transition:.2s}
+.g-more[open]>summary::after{transform:rotate(45deg);color:var(--magenta)}
+.g-more>summary:hover{color:var(--ink)}
+.g-more-in{padding:0 22px 6px}
+.g-more-in .g-section:first-child{margin-top:10px}
+.g-more-in .g-rules{margin-bottom:16px}
+
 /* Conviene? + pro/contro */
 .g-verdict-txt{color:var(--ink-dim);font-size:1rem;margin-bottom:22px}
 .g-procon{display:grid;grid-template-columns:1fr 1fr;gap:16px}

@@ -87,30 +87,47 @@ Per il codice amico scrivici in privato.
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/ing`. Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
+Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono.
+
+### `/ing` — ING: apertura (1° messaggio)
+
+Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 Ecco come ottenere il bonus *ING* (50€):
+Ciao! 🐐 *ING* (50€), si fa così:
 
-1. Apri il Conto Corrente Arancio Più dal sito ing.it o dall'app ING entro il 20/12/2026. L’Arancio Light non dà diritto al bonus da invitato: è l’errore più frequente di questa promo.
-2. Prima di confermare, verifica che il codice amico risulti già inserito nel riepilogo. Si mette solo in fase di apertura: dopo non è più aggiungibile e il bonus non si recupera.
-3. Nella stessa richiesta chiedi la Carta di Debito Mastercard (oppure la Carta di Credito Mastercard Gold). Si può chiedere anche dopo, dall'area riservata, ma sempre entro il 20/12/2026.
-4. Completa la verifica identità: servono documento e tessera sanitaria, con eventuale conferma tramite SPID. Tieni entrambi a portata di mano prima di iniziare.
-5. Attiva il conto e portaci sopra la somma che ti serve per la spesa, con un bonifico da un altro conto tuo.
-6. Spendi almeno 150€ con la carta entro il 28/02/2027. Vale anche la somma di più acquisti, online o in negozio, e puoi sommare carta di debito e carta di credito Gold.
-7. Ricevi 50€ di cashback sul Conto Corrente Arancio entro il 31/03/2027.
+1. Dal sito ing.it o dall'app ING apri il Conto Corrente Arancio Più entro il 20/12/2026. Non l'Arancio Light: con quello niente bonus.
+2. Inserisci il codice amico e, prima di confermare, controlla che compaia nel riepilogo.
+3. Nella stessa richiesta chiedi la carta di debito.
+4. Tieni pronti documento e tessera sanitaria per la verifica dell'identità.
 
 👉 Codice amico: [CODICE]
 
-Non devi lasciare soldi fermi. Il premio: cashback entro il 31/03/2027.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/ing.html
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍
+```
+
+### `/ing2` — ING: dopo l'apertura (quando risponde FATTO)
+
+```
+Perfetto! 🙌 Ultimi passi per *ING*:
+
+5. Mandati con un bonifico i soldi che ti servono per la spesa.
+6. Spendi 150€ con la carta entro il 28/02/2027, anche in più acquisti.
+7. I 50€ arrivano sul conto entro il 31/03/2027.
+
+❌ Lo perdi se:
+• apri l'Arancio Light invece dell'Arancio Più
+• confermi senza vedere il codice nel riepilogo
+• chiudi il conto prima che arrivi il bonus
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: https://www.goatlink.it/ing.html
 ```
 
 ## Messaggi di sollecito
 
-- **A metà strada:** "Ciao! Come va con ING? Per sbloccare il bonus serve: conto + carta, spesa 150€. Ricorda che la promo scade il 20 dicembre. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
+- **A metà strada** (circa una settimana dopo il FATTO): "Ciao! Come va con ING? 🐐 Ti ricordo cosa manca: mandati con un bonifico i soldi che ti servono per la spesa. Spendi 150€ con la carta entro il 28/02/2027, anche in più acquisti. Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi."
 - **In attesa del premio:** "Tutto fatto con ING 👌 Ora si aspetta l'accredito (Cashback entro il 31/03/2027). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus ING è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Revolut* (15€): 3 spese da 5€, circa 10 minuti. Ti mando i passaggi?"

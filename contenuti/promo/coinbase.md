@@ -86,28 +86,45 @@ Per il codice amico scrivici in privato.
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/coinbase`. Sostituisci [LINK] con il tuo link di invito **solo dentro l'app**: qui non va mai scritto.
+Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono.
+
+### `/coinbase` — Coinbase: apertura (1° messaggio)
+
+Sostituisci [LINK] con il tuo link di invito **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 Ecco come ottenere il bonus *Coinbase* (20€):
+Ciao! 🐐 *Coinbase* (20€), si fa così:
 
-1. Iscriviti come nuovo utente tramite il link ufficiale. Un solo account: Coinbase incrocia i dati e blocca i bonus sui doppioni.
-2. Completa la verifica identità (KYC).
-3. Deposita almeno 21€ — metti 22–23€, così le commissioni di deposito (circa 1–1,50€) non ti fanno scendere sotto la soglia.
-4. Fai un acquisto da almeno 21€ entro 90 giorni dalla verifica dell'identità, solo su Coinbase base, pagando con bonifico o carta: le operazioni su Advanced e Prime non valgono.
-5. Ricevi il bonus entro 5–15 giorni. Arriva in Bitcoin: il controvalore in euro si muove finché non lo vendi.
+1. Iscriviti dal link che ti mandiamo. Un solo account a persona.
+2. Completa la verifica dell'identità.
 
 👉 Link di invito: [LINK]
 
-Ti chiede di muovere 21€, che restano tuoi. Il premio: pagato in 5–15 giorni.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/coinbase.html
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍
+```
+
+### `/coinbase2` — Coinbase: dopo l'apertura (quando risponde FATTO)
+
+```
+Perfetto! 🙌 Ultimi passi per *Coinbase*:
+
+3. Deposita 22–23€: le commissioni si prendono 1–1,50€ e sotto i 21€ non vale.
+4. Entro 90 giorni dalla verifica compra almeno 21€ di crypto su Coinbase normale, non su Advanced.
+5. Il bonus arriva in 5–15 giorni, in Bitcoin: il valore in euro si muove finché non lo vendi.
+
+❌ Lo perdi se:
+• ti iscrivi senza link o con un secondo account
+• fai l'acquisto su Coinbase Advanced
+• le commissioni ti portano sotto i 21€
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: https://www.goatlink.it/coinbase.html
 ```
 
 ## Messaggi di sollecito
 
-- **A metà strada:** "Ciao! Come va con Coinbase? Per sbloccare il bonus serve: deposito + trade min. 21€. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
+- **A metà strada** (circa una settimana dopo il FATTO): "Ciao! Come va con Coinbase? 🐐 Ti ricordo cosa manca: deposita 22–23€: le commissioni si prendono 1–1,50€ e sotto i 21€ non vale. Entro 90 giorni dalla verifica compra almeno 21€ di crypto su Coinbase normale, non su Advanced. Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi."
 - **In attesa del premio:** "Tutto fatto con Coinbase 👌 Ora si aspetta l'accredito (Pagato in 5–15 giorni). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus Coinbase è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Revolut* (15€): 3 spese da 5€, circa 10 minuti. Ti mando i passaggi?"

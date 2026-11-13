@@ -92,32 +92,47 @@ Per il codice amico scrivici in privato.
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/buddybank`. Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
+Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono.
+
+### `/buddybank` — Buddybank: apertura (1° messaggio)
+
+Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 Ecco come ottenere il bonus *Buddybank* (80€):
+Ciao! 🐐 *Buddybank* (80€), si fa così:
 
-1. Apri l'app buddy (o il sito) e tocca Apri conto. Registrati con la procedura classica, con scansione dei documenti: con SPID o CIEid la registrazione si blocca a metà e tocca ricominciare.
-2. Nella prima schermata ti viene chiesto il codice promo: inseriscilo lì. A conto aperto non si può più aggiungere e il bonus non si recupera.
-3. Scegli la carta di debito MyOne in versione solo digitale: è gratuita, mentre la fisica ha un costo. Per il bonus la virtuale basta.
-4. Completa l'apertura con documento e selfie, poi aspetta l'email di conferma. La carta virtuale si attiva dopo 48 ore dall'apertura: prima di allora numero, scadenza e CVV non sono visibili.
-5. Quando il conto è attivo, caricalo con un bonifico da 11€ da un altro conto tuo. Ne bastano 10 per la spesa, il centesimo in più serve a non finire a saldo zero.
-6. Entro 30 giorni dall'apertura fai un pagamento da almeno 10€ con la MyOne: POS fisico, acquisto online, oppure la carta caricata su Apple Pay, Google Pay o Samsung Pay.
-7. Non ridurti all'ultimo giorno: per i controlli fa fede la data valuta, non quella dell'acquisto.
-8. Tieni il saldo disponibile pari o superiore a zero fino all'accredito: se svuoti il conto mentre aspetti, il premio salta.
-9. Ricevi il bonus entro 90 giorni dalla transazione valida, direttamente sul conto e prelevabile.
+1. Scarica l'app buddy e tocca Apri conto. Registrati con i documenti, non con SPID: con SPID si blocca a metà.
+2. Nella prima schermata inserisci il codice amico. Dopo non si può più aggiungere.
+3. Scegli la carta solo digitale: è gratis e per il bonus basta.
+4. Finisci con documento e selfie. La carta si attiva dopo 48 ore.
 
 👉 Codice amico: [CODICE]
 
-Ti chiede di muovere 11€, che restano tuoi. Il premio: entro 90 giorni, prelevabile.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/buddybank.html
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍
+```
+
+### `/buddybank2` — Buddybank: dopo l'apertura (quando risponde FATTO)
+
+```
+Perfetto! 🙌 Ultimi passi per *Buddybank*:
+
+5. Mandati 11€ da un altro tuo conto.
+6. Entro 30 giorni dall'apertura paga qualcosa da almeno 10€ con la carta: in negozio, online o con Apple Pay / Google Pay.
+7. Lascia sul conto quello che resta: il bonus arriva entro 90 giorni, ed è prelevabile.
+
+❌ Lo perdi se:
+• metti il codice dopo aver aperto il conto
+• hai già avuto buddy, o eri cliente UniCredit a settembre 2024
+• svuoti il conto prima che arrivi il bonus
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: https://www.goatlink.it/buddybank.html
 ```
 
 ## Messaggi di sollecito
 
-- **A metà strada:** "Ciao! Come va con Buddybank? Per sbloccare il bonus serve: ricarica 11€ + spesa da 10€. Ricorda che la promo scade il 20 gennaio. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
+- **A metà strada** (circa una settimana dopo il FATTO): "Ciao! Come va con Buddybank? 🐐 Ti ricordo cosa manca: mandati 11€ da un altro tuo conto. Entro 30 giorni dall'apertura paga qualcosa da almeno 10€ con la carta: in negozio, online o con Apple Pay / Google Pay. Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi."
 - **In attesa del premio:** "Tutto fatto con Buddybank 👌 Ora si aspetta l'accredito (Entro 90 giorni, prelevabile). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus Buddybank è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Revolut* (15€): 3 spese da 5€, circa 10 minuti. Ti mando i passaggi?"

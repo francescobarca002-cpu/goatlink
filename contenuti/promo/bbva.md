@@ -86,29 +86,44 @@ Per il codice amico scrivici in privato.
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/bbva`. Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
+Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono.
+
+### `/bbva` — BBVA: apertura (1° messaggio)
+
+Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 Ecco come ottenere il bonus *BBVA* (10€):
+Ciao! 🐐 *BBVA* (10€), si fa così:
 
-1. Scarica l'app BBVA.
-2. Al quarto passaggio inserisci il codice promo.
-3. Accetta i termini della promo Passaparola.
-4. Ricarica il conto e fai con la Carta di Debito BBVA un acquisto di qualsiasi importo entro 90 giorni dalla registrazione. Non valgono addebiti di banche e finanziarie, criptovalute, sale giochi e scommesse, recupero crediti, prelievi al bancomat, centri di salute e bellezza, massaggi e saune.
-5. Se Apple Pay non si attiva subito, usa la carta manualmente la prima volta.
-6. Ricevi 10€, in genere entro pochi giorni lavorativi.
+1. Scarica l'app BBVA e inizia la registrazione.
+2. Al quarto passaggio inserisci il codice amico e accetta i termini della promo Passaparola.
 
 👉 Codice amico: [CODICE]
 
-Non devi lasciare soldi fermi. Il premio: pagato in pochi giorni.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/bbva.html
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍
+```
+
+### `/bbva2` — BBVA: dopo l'apertura (quando risponde FATTO)
+
+```
+Perfetto! 🙌 Ultimi passi per *BBVA*:
+
+3. Ricarica il conto e fai un acquisto di qualsiasi importo con la carta di debito entro 90 giorni.
+4. Se Apple Pay non si attiva subito, la prima volta usa la carta normalmente.
+5. I 10€ arrivano in pochi giorni lavorativi.
+
+❌ Lo perdi se:
+• non inserisci il codice al quarto passaggio
+• invece di comprare qualcosa prelevi, compri crypto o paghi scommesse
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: https://www.goatlink.it/bbva.html
 ```
 
 ## Messaggi di sollecito
 
-- **A metà strada:** "Ciao! Come va con BBVA? Per sbloccare il bonus serve: 1 spesa di qualsiasi importo. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
+- **A metà strada** (circa una settimana dopo il FATTO): "Ciao! Come va con BBVA? 🐐 Ti ricordo cosa manca: ricarica il conto e fai un acquisto di qualsiasi importo con la carta di debito entro 90 giorni. Se Apple Pay non si attiva subito, la prima volta usa la carta normalmente. Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi."
 - **In attesa del premio:** "Tutto fatto con BBVA 👌 Ora si aspetta l'accredito (Pagato in pochi giorni). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus BBVA è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Revolut* (15€): 3 spese da 5€, circa 10 minuti. Ti mando i passaggi?"

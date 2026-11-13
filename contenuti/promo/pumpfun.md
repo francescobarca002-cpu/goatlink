@@ -87,30 +87,46 @@ Per il codice amico scrivici in privato.
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/pumpfun`. Sostituisci [LINK] con il tuo link di invito **solo dentro l'app**: qui non va mai scritto.
+Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono.
+
+### `/pumpfun` — pump.fun: apertura (1° messaggio)
+
+Sostituisci [LINK] con il tuo link di invito **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 Ecco come ottenere il bonus *pump.fun* (10$–50$):
+Ciao! 🐐 *pump.fun* (10$–50$), si fa così:
 
-1. Apri il link di invito dal telefono e scarica l'app pump.fun partendo da lì. Prima di creare l'account controlla che la pagina indichi chi ti ha invitato: senza invito il bonus non c'è.
-2. Crea l'account. Devi essere un utente nuovo. Applica il codice di invito subito, appena apri l'app per la prima volta, e comunque prima del primo acquisto.
-3. Tocca Deposita: l'app ti mostra il tuo premio massimo (da 10$ a 50$, è personale) e se il bonus arriva a rate o in un'unica volta. Fai uno screenshot dell'offerta prima di pagare.
-4. Compra crypto dentro l'app con Apple Pay o carta (fornitore integrato, es. MoonPay) per almeno l'importo massimo mostrato, più qualche dollaro per la commissione del pagamento. Comprare di più non aumenta il bonus; i trasferimenti da exchange o wallet esterni non valgono.
-5. Se il bonus è a rate: fai almeno una transazione (acquisto o vendita) dall'app mobile in 5 giorni diversi entro 10 giorni dall'acquisto. I giorni non devono essere consecutivi; ogni giorno completato sblocca una rata e al quinto hai l'importo intero.
-6. Se il bonus è in un'unica volta: non servono i 5 giorni. pump.fun decide sull'accredito entro il termine mostrato in app (in genere un paio di giorni) e può fare controlli in più.
-7. In entrambi i casi non prelevare le crypto del primo acquisto finché il bonus non è stato accreditato per intero.
+1. Apri il link dal telefono e scarica l'app partendo da lì. Controlla che la pagina dica chi ti ha invitato.
+2. Crea l'account e applica subito il codice di invito, prima di comprare qualsiasi cosa.
+3. Tocca Deposita: vedi il tuo premio massimo (10$–50$) e se arriva a rate. Fai uno screenshot.
 
 👉 Link di invito: [LINK]
 
-Ti chiede di muovere 50€, che restano tuoi. Il premio: a rate in 5 giorni o in un'unica volta.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/pumpfun.html
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍
+```
+
+### `/pumpfun2` — pump.fun: dopo l'apertura (quando risponde FATTO)
+
+```
+Perfetto! 🙌 Ultimi passi per *pump.fun*:
+
+4. Compra in app con Apple Pay o carta almeno l'importo mostrato, più qualche dollaro di commissione.
+5. Se il bonus è a rate: fai un'operazione in app in 5 giorni diversi entro 10 giorni.
+6. Non prelevare niente finché il bonus non è arrivato tutto.
+
+❌ Lo perdi se:
+• porti crypto da un altro exchange o wallet invece di comprarle in app
+• con il bonus a rate salti dei giorni: ogni giorno saltato è una rata persa
+• tieni aperte posizioni su memecoin, che possono perdere il 20–30% in pochi minuti
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: https://www.goatlink.it/pumpfun.html
 ```
 
 ## Messaggi di sollecito
 
-- **A metà strada:** "Ciao! Come va con pump.fun? Per sbloccare il bonus serve: acquisto pari al massimo mostrato in app. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
+- **A metà strada** (circa una settimana dopo il FATTO): "Ciao! Come va con pump.fun? 🐐 Ti ricordo cosa manca: compra in app con Apple Pay o carta almeno l'importo mostrato, più qualche dollaro di commissione. Se il bonus è a rate: fai un'operazione in app in 5 giorni diversi entro 10 giorni. Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi."
 - **In attesa del premio:** "Tutto fatto con pump.fun 👌 Ora si aspetta l'accredito (A rate in 5 giorni o in un'unica volta). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus pump.fun è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Revolut* (15€): 3 spese da 5€, circa 10 minuti. Ti mando i passaggi?"

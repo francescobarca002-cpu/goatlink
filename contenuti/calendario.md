@@ -23,8 +23,8 @@
 - **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
 
 ## Martedì 17 novembre 2026
-- **🛑 Fineco è terminata** — Post canale: "La promo Fineco è finita. Le alternative più veloci oggi: Revolut (15€) e BBVA (10€)." Togli la risposta rapida /fineco da WhatsApp Business.
-- **↩️ Buddybank è tornato a 50€** — Aggiorna la risposta rapida /buddybank in WhatsApp Business. → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
+- **🛑 Fineco è terminata** — Post canale: "La promo Fineco è finita. Le alternative più veloci oggi: Revolut (15€) e BBVA (10€)." Togli le risposte rapide /fineco e /fineco2 da WhatsApp Business.
+- **↩️ Buddybank è tornato a 50€** — Aggiorna le risposte rapide /buddybank e /buddybank2 in WhatsApp Business. → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
 - **🎬 Contenuto del giorno: Crédit Agricole** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
 
 ## Mercoledì 18 novembre 2026

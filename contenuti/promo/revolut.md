@@ -86,30 +86,45 @@ Per il codice amico scrivici in privato.
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/revolut`. Sostituisci [LINK] con il tuo link di invito **solo dentro l'app**: qui non va mai scritto.
+Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono.
+
+### `/revolut` — Revolut: apertura (1° messaggio)
+
+Sostituisci [LINK] con il tuo link di invito **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 Ecco come ottenere il bonus *Revolut* (15€):
+Ciao! 🐐 *Revolut* (15€), si fa così:
 
-1. Registrati tramite il link referral (obbligatorio). Prima di partire controlla l'offerta sulla pagina che si apre: Revolut ruota le campagne ogni poche settimane e gli importi cambiano.
-2. Inserisci il numero di telefono nella prima schermata.
-3. Completa la verifica identità (documento + selfie).
-4. Ordina la carta Standard gratuita e attivala all'arrivo.
-5. Fai almeno 3 spese da 5€ ciascuna entro 30 giorni. Non contano gioco e scommesse, gift card e buoni, trasferimenti, cambio valuta e prelievi ATM.
-6. Non annullare gli acquisti dopo averli fatti: Revolut può stornare il bonus.
-7. Ricevi 15€ entro 2 giorni lavorativi.
+1. Registrati dal link che ti mandiamo e controlla l'offerta sulla pagina che si apre: Revolut cambia spesso gli importi.
+2. Completa la verifica con documento e selfie.
+3. Ordina la carta Standard gratuita e attivala quando arriva.
 
 👉 Link di invito: [LINK]
 
-Non devi lasciare soldi fermi. Il premio: pagato in 2 giorni.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/revolut.html
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍
+```
+
+### `/revolut2` — Revolut: dopo l'apertura (quando risponde FATTO)
+
+```
+Perfetto! 🙌 Ultimi passi per *Revolut*:
+
+4. Fai 3 spese da 5€ l'una entro 30 giorni.
+5. Non annullare gli acquisti: i 15€ arrivano in 2 giorni lavorativi.
+
+❌ Lo perdi se:
+• non ti registri dal link
+• paghi gift card, scommesse o fai trasferimenti invece di acquisti normali
+• annulli gli acquisti dopo averli fatti
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: https://www.goatlink.it/revolut.html
 ```
 
 ## Messaggi di sollecito
 
-- **A metà strada:** "Ciao! Come va con Revolut? Per sbloccare il bonus serve: 3 spese da 5€. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
+- **A metà strada** (circa una settimana dopo il FATTO): "Ciao! Come va con Revolut? 🐐 Ti ricordo cosa manca: fai 3 spese da 5€ l'una entro 30 giorni. Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi."
 - **In attesa del premio:** "Tutto fatto con Revolut 👌 Ora si aspetta l'accredito (Pagato in 2 giorni). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus Revolut è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *BBVA* (10€): 1 spesa di qualsiasi importo, circa 10 minuti. Ti mando i passaggi?"

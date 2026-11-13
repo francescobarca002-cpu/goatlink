@@ -88,29 +88,46 @@ Per il codice amico scrivici in privato.
 _Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia._
 ```
 
-## Risposta WhatsApp con i passaggi
+## Risposte WhatsApp con i passaggi
 
-Da salvare come risposta rapida `/fineco`. Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
+Due risposte rapide: la prima quando ti chiedono il bonus, la seconda quando rispondono FATTO. Un passo alla volta, così non si perdono.
+
+### `/fineco` — Fineco: apertura (1° messaggio)
+
+Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 Ecco come ottenere il bonus *Fineco* (50€):
+Ciao! 🐐 *Fineco* (50€), si fa così:
 
-1. Apri il conto su finecobank.com o dall’app e inserisci il codice nel campo dedicato durante la procedura. È l’unico momento in cui si può mettere: dopo non è più aggiungibile e il bonus non si recupera.
-2. Completa la richiesta di apertura entro il 16/11/2026 e attiva i codici di accesso. Conta la data della richiesta, ma il conto deve arrivare ad aprirsi davvero.
-3. Scegli una sola delle quattro strade e completala entro il 05/02/2027: accredito di stipendio o pensione; almeno 5 ordini trading in acquisto o in vendita; carta di debito o credito richiesta e 2.500€ di pagamenti.
-4. La quarta strada, se hai liquidità ferma: trasferimento di almeno 20.000€ entro il 31/12/2026, mantenuti sul conto fino al 05/02/2027.
-5. Dal 23/02/2027 la banca mette a disposizione in area riservata o in app l’integrazione contrattuale: firmala entro il 16/03/2027. Senza quella firma il bonus non viene pagato, ed è la finestra in cui si perde più spesso.
-6. Ricevi i 50€ sul conto corrente, accreditati al netto della ritenuta del 26%.
+1. Apri il conto su finecobank.com o dall'app entro il 16/11/2026.
+2. Durante la procedura inserisci il codice amico nel campo dedicato: dopo non si può più.
+3. Attiva i codici di accesso quando arrivano.
 
 👉 Codice amico: [CODICE]
 
-Non devi lasciare soldi fermi. Il premio: accredito in conto nel 2027.
-Se ti blocchi su un passaggio scrivimi qui, ti seguo fino all'accredito.
-Guida con le domande frequenti: https://www.goatlink.it/fineco.html
+Quando hai finito scrivimi *FATTO* e ti mando gli ultimi passi 👍
+```
+
+### `/fineco2` — Fineco: dopo l'apertura (quando risponde FATTO)
+
+```
+Perfetto! 🙌 Ultimi passi per *Fineco*:
+
+4. Entro il 05/02/2027 completa una di queste strade: stipendio o pensione accreditati sul conto, 5 ordini di borsa, oppure 2.500€ di pagamenti con la carta.
+5. Tra il 23/02 e il 16/03/2027 firma in app l'integrazione contrattuale: senza quella firma niente bonus.
+6. I 50€ arrivano sul conto, meno la ritenuta del 26%.
+
+❌ Lo perdi se:
+• non metti il codice durante l'apertura, o ci metti un codice promo trading al suo posto
+• salti la firma tra il 23/02 e il 16/03/2027
+• sei cliente Fineco o lo sei stato negli ultimi due anni
+
+Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
+Guida completa: https://www.goatlink.it/fineco.html
 ```
 
 ## Messaggi di sollecito
 
-- **A metà strada:** "Ciao! Come va con Fineco? Per sbloccare il bonus serve: stipendio, 2.500€ di carta o 5 ordini. Ricorda che la promo scade il 16 novembre. Se ti blocchi su un passaggio scrivimi, lo vediamo insieme."
+- **A metà strada** (circa una settimana dopo il FATTO): "Ciao! Come va con Fineco? 🐐 Ti ricordo cosa manca: entro il 05/02/2027 completa una di queste strade: stipendio o pensione accreditati sul conto, 5 ordini di borsa, oppure 2.500€ di pagamenti con la carta. Tra il 23/02 e il 16/03/2027 firma in app l'integrazione contrattuale: senza quella firma niente bonus. Se l'hai già fatto, perfetto: ora si aspetta. Se ti blocchi scrivimi."
 - **In attesa del premio:** "Tutto fatto con Fineco 👌 Ora si aspetta l'accredito (Accredito in conto nel 2027). Non chiudere il conto e non svuotarlo prima dell'accredito."
 - **Bonus successivo:** "Ciao! Il bonus Fineco è arrivato? 🎉 Se ti è piaciuto, il prossimo che ti consiglio è *Revolut* (15€): 3 spese da 5€, circa 10 minuti. Ti mando i passaggi?"
