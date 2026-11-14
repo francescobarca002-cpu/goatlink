@@ -26,8 +26,12 @@ var GL_TRACKING = {
     wait_for_update: 500
   });
 
-  // --- 2. GA4: parte consent-aware (senza cookie finché non c'è ok) ---
-  if (ok(GL_TRACKING.GA4_ID)) {
+  // --- 2. GA4: si carica SOLO dopo il consenso "analytics" ---
+  // Prima del consenso non parte nulla verso Google (nemmeno i segnali
+  // senza cookie della Consent Mode), come dichiarato nella Privacy.
+  function loadGA() {
+    if (!ok(GL_TRACKING.GA4_ID) || window._glGALoaded) return;
+    window._glGALoaded = true;
     var g = document.createElement("script");
     g.src = "https://www.googletagmanager.com/gtag/js?id=" + GL_TRACKING.GA4_ID;
     g.async = true; document.head.appendChild(g);
@@ -69,6 +73,7 @@ var GL_TRACKING = {
         ad_user_data: mk ? "granted" : "denied",
         ad_personalization: mk ? "granted" : "denied"
       });
+      if (an) loadGA();
       if (mk) loadPixel();
     }
     CookieConsent.run({
