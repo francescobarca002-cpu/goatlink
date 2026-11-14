@@ -1,6 +1,6 @@
 # pump.fun — 10$–50$
 
-> Generato da data.js il 13 novembre 2026: non modificare a mano, si rigenera ogni mattina.
+> Generato da data.js il 14 novembre 2026: non modificare a mano, si rigenera ogni mattina.
 > Senza scadenza dichiarata · Crypto · Acquisto pari al massimo mostrato in app · paga: A rate in 5 giorni o in un'unica volta
 
 Link da usare (contano i clienti per canale):
