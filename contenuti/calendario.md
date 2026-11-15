@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Sabato 14 novembre 2026
-- **🎬 Contenuto del giorno: Revolut** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
-
 ## Domenica 15 novembre 2026
 - **🔥 Buddybank a 80€ solo fino a domani** — Reel 1 (Tutorial) con il gancio sulla maggiorazione + post canale → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
 - **⏳ Fineco scade domani (16 novembre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
@@ -54,3 +51,6 @@
 ## Venerdì 27 novembre 2026
 - **⏳ MyFin scade tra 3 giorni (30 novembre)** — Storia con countdown + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 - **🎬 Contenuto del giorno: Crédit Agricole** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
+
+## Sabato 28 novembre 2026
+- **🎬 Contenuto del giorno: ING** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
