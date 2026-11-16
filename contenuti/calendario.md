@@ -2,11 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Domenica 15 novembre 2026
-- **🔥 Buddybank a 80€ solo fino a domani** — Reel 1 (Tutorial) con il gancio sulla maggiorazione + post canale → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
-- **⏳ Fineco scade domani (16 novembre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-- **🎬 Contenuto del giorno: BBVA** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
-
 ## Lunedì 16 novembre 2026
 - **🔥 Ultimo giorno di Buddybank a 80€** — Storia + post canale: da domani torna a 50€. → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
 - **⏰ Ultimo giorno per Fineco** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus Fineco da 50€." → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
@@ -54,3 +49,7 @@
 
 ## Sabato 28 novembre 2026
 - **🎬 Contenuto del giorno: ING** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
+
+## Domenica 29 novembre 2026
+- **⏳ MyFin scade domani (30 novembre)** — Storia con countdown + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
+- **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
