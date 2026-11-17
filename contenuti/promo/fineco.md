@@ -1,7 +1,7 @@
 # Fineco — 50€
 
-> Generato da data.js il 16 novembre 2026: non modificare a mano, si rigenera ogni mattina.
-> Scade il 16 novembre · Banca · Stipendio, 2.500€ di carta o 5 ordini · paga: Accredito in conto nel 2027
+> Generato da data.js il 17 novembre 2026: non modificare a mano, si rigenera ogni mattina.
+> Scade il 30 novembre · Banca · Stipendio, 2.500€ di carta o 5 ordini · paga: Accredito in conto nel 2027
 
 Link da usare (contano i clienti per canale):
 - Bio Instagram: `https://www.goatlink.it/?utm_source=ig&utm_campaign=bio`
@@ -18,7 +18,7 @@ Link da usare (contano i clienti per canale):
 - **Passaggi (8–35 s)**, uno per schermata:
   1. Procurati il Codice Amico
   2. Apri il conto su finecobank.com o dall’app e inserisci il codice nel campo…
-  3. Completa la richiesta di apertura entro il 16/11/2026 e attiva i codici di…
+  3. Completa la richiesta di apertura entro il 30/11/2026 e attiva i codici di…
   4. Scegli una sola delle quattro strade e completala entro il 05/02/2027
   5. La quarta strada, se hai liquidità ferma
   (gli altri 2 passaggi sono nella guida)
@@ -39,7 +39,7 @@ Link da usare (contano i clienti per canale):
 - **Contro (20–28 s):**
   - ⚠️ per il premio serve pazienza (Accredito in conto nel 2027)
   - ⚠️ difficoltà: medio
-  - ⚠️ scade il 16 novembre
+  - ⚠️ scade il 30 novembre
 - **Verdetto (28–33 s):** "È l’unica promo del catalogo che ti lascia scegliere come sbloccarla, e ti dà quasi quattro mesi per farlo invece delle solite sei settimane. In cambio chiede pazienza: l’accredito arriva nel 2027 e va confermato con una firma."
 - **Chiusura:** "Tutti i passaggi e il codice amico: link in bio."
 - **Testo fisso in basso:** "Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia."
@@ -52,7 +52,7 @@ Fineco: 50€ di bonus, 15 minuti da telefono.
 Cosa chiede: Stipendio, 2.500€ di carta o 5 ordini.
 Quando paga: Accredito in conto nel 2027.
 Non devi lasciare soldi fermi.
-Tempo: entro il 16 novembre.
+Tempo: entro il 30 novembre.
 
 È l’unica promo del catalogo che ti lascia scegliere come sbloccarla, e ti dà quasi quattro mesi per farlo invece delle solite sei settimane. In cambio chiede pazienza: l’accredito arriva nel 2027 e va confermato con una firma.
 
@@ -78,7 +78,7 @@ I prodotti finanziari comportano rischi: questa non è consulenza.
 ⏱ 15 minuti · Medio
 📋 Stipendio, 2.500€ di carta o 5 ordini
 💸 Accredito in conto nel 2027
-📅 Entro il 16 novembre
+📅 Entro il 30 novembre
 
 È l’unica promo del catalogo che ti lascia scegliere come sbloccarla, e ti dà quasi quattro mesi per farlo invece delle solite sei settimane. In cambio chiede pazienza: l’accredito arriva nel 2027 e va confermato con una firma.
 
@@ -99,7 +99,7 @@ Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va m
 ```
 Ciao! 🐐 *Fineco* (50€), si fa così:
 
-1. Apri il conto su finecobank.com o dall'app entro il 16/11/2026.
+1. Apri il conto su finecobank.com o dall'app entro il 30/11/2026.
 2. Durante la procedura inserisci il codice amico nel campo dedicato: dopo non si può più.
 3. Attiva i codici di accesso quando arrivano.
 

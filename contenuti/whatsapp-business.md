@@ -1,6 +1,6 @@
 # Kit WhatsApp Business
 
-> Generato da data.js il 16 novembre 2026. Si carica **una volta** nell'app
+> Generato da data.js il 17 novembre 2026. Si carica **una volta** nell'app
 > (Impostazioni → Strumenti per l'azienda) e si aggiorna quando cambia il catalogo:
 > il piano del giorno avvisa quando una risposta rapida va aggiunta, cambiata o tolta.
 > Codici e link di invito non vanno MAI scritti qui: si incollano solo nell'app.
@@ -43,7 +43,7 @@ Ecco le promo attive oggi 👇
 • Coinbase — 20€
 • Crédit Agricole — 50€
 • MyFin — 10€
-• Buddybank — 80€
+• Buddybank — 50€
 • ING — 50€
 • Fineco — 50€
 
@@ -278,7 +278,7 @@ Guida completa: https://www.goatlink.it/myfin.html
 Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va mai scritto.
 
 ```
-Ciao! 🐐 *Buddybank* (80€), si fa così:
+Ciao! 🐐 *Buddybank* (50€), si fa così:
 
 1. Scarica l'app buddy e tocca Apri conto. Registrati con i documenti, non con SPID: con SPID si blocca a metà.
 2. Nella prima schermata inserisci il codice amico. Dopo non si può più aggiungere.
@@ -350,7 +350,7 @@ Sostituisci [CODICE] con il tuo codice amico **solo dentro l'app**: qui non va m
 ```
 Ciao! 🐐 *Fineco* (50€), si fa così:
 
-1. Apri il conto su finecobank.com o dall'app entro il 16/11/2026.
+1. Apri il conto su finecobank.com o dall'app entro il 30/11/2026.
 2. Durante la procedura inserisci il codice amico nel campo dedicato: dopo non si può più.
 3. Attiva i codici di accesso quando arrivano.
 

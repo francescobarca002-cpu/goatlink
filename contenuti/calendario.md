@@ -2,54 +2,54 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Lunedì 16 novembre 2026
-- **🔥 Ultimo giorno di Buddybank a 80€** — Storia + post canale: da domani torna a 50€. → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
-- **⏰ Ultimo giorno per Fineco** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus Fineco da 50€." → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-- **⏳ MyFin scade tra 14 giorni (30 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
-- **🎬 Contenuto del giorno: Coinbase** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
-- **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
-
 ## Martedì 17 novembre 2026
-- **🛑 Fineco è terminata** — Post canale: "La promo Fineco è finita. Le alternative più veloci oggi: Revolut (15€) e BBVA (10€)." Togli le risposte rapide /fineco e /fineco2 da WhatsApp Business.
-- **↩️ Buddybank è tornato a 50€** — Aggiorna le risposte rapide /buddybank e /buddybank2 in WhatsApp Business. → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
-- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
+- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
 
 ## Mercoledì 18 novembre 2026
-- **🎬 Contenuto del giorno: Coinbase** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
+- **🎬 Contenuto del giorno: Fineco** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
 
 ## Giovedì 19 novembre 2026
-- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
+- **🎬 Contenuto del giorno: ING** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
 
 ## Venerdì 20 novembre 2026
-- **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
+- **🎬 Contenuto del giorno: MyFin** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 
 ## Sabato 21 novembre 2026
-- **🎬 Contenuto del giorno: MyFin** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
+- **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
 
 ## Domenica 22 novembre 2026
-- **🎬 Contenuto del giorno: pump.fun** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
+- **🎬 Contenuto del giorno: Revolut** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
 
 ## Lunedì 23 novembre 2026
 - **⏳ MyFin scade tra 7 giorni (30 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
-- **🎬 Contenuto del giorno: Revolut** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
+- **⏳ Fineco scade tra 7 giorni (30 novembre)** — Reel 2 (Conviene davvero?) + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
+- **🎬 Contenuto del giorno: BBVA** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
 - **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
 
 ## Martedì 24 novembre 2026
-- **🎬 Contenuto del giorno: BBVA** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit bbva](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/bbva.md)
+- **🎬 Contenuto del giorno: Buddybank** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
 
 ## Mercoledì 25 novembre 2026
-- **🎬 Contenuto del giorno: Buddybank** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
+- **🎬 Contenuto del giorno: Coinbase** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
 
 ## Giovedì 26 novembre 2026
-- **🎬 Contenuto del giorno: Coinbase** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
+- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
 
 ## Venerdì 27 novembre 2026
 - **⏳ MyFin scade tra 3 giorni (30 novembre)** — Storia con countdown + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
-- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
+- **⏳ Fineco scade tra 3 giorni (30 novembre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
+- **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
 
 ## Sabato 28 novembre 2026
-- **🎬 Contenuto del giorno: ING** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
+- **🎬 Contenuto del giorno: Fineco** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
 
 ## Domenica 29 novembre 2026
 - **⏳ MyFin scade domani (30 novembre)** — Storia con countdown + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
-- **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
+- **⏳ Fineco scade domani (30 novembre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
+- **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
+
+## Lunedì 30 novembre 2026
+- **⏰ Ultimo giorno per MyFin** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus MyFin da 10€." → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
+- **⏰ Ultimo giorno per Fineco** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus Fineco da 50€." → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
+- **🎬 Contenuto del giorno: pump.fun** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
+- **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
