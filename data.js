@@ -481,12 +481,6 @@ const BONUSES = [
     "amount": 50,
     "currency": "€",
     "amountLabel": "50€",
-    "boost": {
-      "amount": 80,
-      "amountLabel": "80€",
-      "until": "2026-11-16",
-      "badge": "Bonus maggiorato"
-    },
     "minutes": 10,
     "difficulty": "Facile",
     "badge": null,
@@ -497,8 +491,8 @@ const BONUSES = [
     "featured": true,
     "countInTotal": true,
     "source": "https://www.buddy.unicredit.it/tutti-prodotti/conto-genius-buddy/",
-    "seo_title": "Bonus Buddybank 80€ conto Genius buddy (codice amico) — guida 2026 | GoatLink",
-    "summary": "Apri il conto Genius buddy con il codice amico, carica 11€ e fai un pagamento da almeno 10€ con la carta MyOne. Fino al 16 novembre il bonus è maggiorato a 80€, poi torna a 50€. Soldi cash sul conto, prelevabili.",
+    "seo_title": "Bonus Buddybank 50€ conto Genius buddy (codice amico) — guida 2026 | GoatLink",
+    "summary": "Apri il conto Genius buddy con il codice amico, carica 11€ e fai un pagamento da almeno 10€ con la carta MyOne: ricevi 50€ cash sul conto, prelevabili. Promozione aperta fino al 20 gennaio 2027.",
     "code": null,
     "steps": [
       "Apri l'app <strong>buddy</strong> (o il sito) e tocca <strong>Apri conto</strong>. Registrati con la <strong>procedura classica, con scansione dei documenti</strong>: con SPID o CIEid la registrazione si blocca a metà e tocca ricominciare.",
@@ -530,7 +524,7 @@ const BONUSES = [
       ]
     },
     "rules_ok": [
-      "Fino al <strong>16 novembre 2026</strong> il bonus di benvenuto è maggiorato a <strong>80€</strong> (prorogato dal 4 ottobre). Dal 17 novembre torna a 50€: la promozione resta aperta fino al 20/01/2027, cambia solo l'importo.",
+      "Il bonus di benvenuto è di <strong>50€</strong> e la promozione resta aperta fino al <strong>20/01/2027</strong>.",
       "Il conto corrente è <strong>gratuito</strong>, e la carta MyOne virtuale è gratuita: per prendere il bonus non spendi nulla in canoni.",
       "Sono valide le transazioni su <strong>POS fisico</strong> (contactless o chip e PIN), su <strong>POS virtuale</strong> per gli acquisti online e i pagamenti tramite <strong>Apple Pay, Google Pay e Samsung Pay</strong>.",
       "I soldi arrivano <strong>cash sul conto</strong> e sono prelevabili: non è un buono né un cashback vincolato.",
@@ -548,7 +542,7 @@ const BONUSES = [
     "faq": [
       {
         "q": "Quanto vale davvero il bonus Buddybank adesso?",
-        "a": "80€ per chi apre entro il <strong>16 novembre 2026</strong>, poi 50€. La promozione resta comunque aperta fino al 20 gennaio 2027: cambia solo l'importo, non i requisiti."
+        "a": "<strong>50€</strong> per chi apre il conto con il codice amico entro il 20 gennaio 2027 e fa il pagamento da 10€. Arrivano cash sul conto e sono prelevabili."
       },
       {
         "q": "Quanto devo spendere per prenderlo?",
@@ -579,9 +573,9 @@ const BONUSES = [
         "a": "No. Il conto Genius buddy è gratuito e la carta MyOne in versione digitale è gratuita. La versione fisica ha un costo, ma per il bonus non serve."
       }
     ],
-    "why": "Il bonus più alto rispetto allo sforzo richiesto: un pagamento da 10€ e hai finito, e fino al 16 novembre vale 80€ invece di 50€.",
+    "why": "Il bonus più facile rispetto allo sforzo richiesto: un pagamento da 10€ e hai finito, e i 50€ arrivano cash sul conto.",
     "pros": [
-      "80€ fino al 16 novembre",
+      "Promo aperta fino al 20 gennaio 2027",
       "Un pagamento da 10€ e basta",
       "Soldi cash, prelevabili",
       "Conto e carta virtuale gratuiti"
