@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Martedì 17 novembre 2026
-- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
-
 ## Mercoledì 18 novembre 2026
 - **🎬 Contenuto del giorno: Fineco** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
 
@@ -53,3 +50,8 @@
 - **⏰ Ultimo giorno per Fineco** — Storia + post canale: "Oggi è l'ultimo giorno per il bonus Fineco da 50€." → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
 - **🎬 Contenuto del giorno: pump.fun** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
 - **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
+
+## Martedì 1 dicembre 2026
+- **🛑 Fineco è terminata** — Post canale: "La promo Fineco è finita. Le alternative più veloci oggi: Revolut (15€) e BBVA (10€)." Togli le risposte rapide /fineco e /fineco2 da WhatsApp Business.
+- **🛑 MyFin è terminata** — Post canale: "La promo MyFin è finita. Le alternative più veloci oggi: Revolut (15€) e BBVA (10€)." Togli le risposte rapide /myfin e /myfin2 da WhatsApp Business.
+- **🎬 Contenuto del giorno: Coinbase** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
