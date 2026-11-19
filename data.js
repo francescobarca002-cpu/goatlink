@@ -495,10 +495,10 @@ const BONUSES = [
     "summary": "Apri il conto Genius buddy con il codice amico, carica 11€ e fai un pagamento da almeno 10€ con la carta MyOne: ricevi 50€ cash sul conto, prelevabili. Promozione aperta fino al 20 gennaio 2027.",
     "code": null,
     "steps": [
-      "Apri l'app <strong>buddy</strong> (o il sito) e tocca <strong>Apri conto</strong>. Registrati con la <strong>procedura classica, con scansione dei documenti</strong>: con SPID o CIEid la registrazione si blocca a metà e tocca ricominciare.",
+      "Apri il conto dal sito <strong>buddy.unicredit.it</strong>: nell'app non si apre, il tasto <strong>Apri conto</strong> ti porta comunque al modulo sul sito. Registrati con la <strong>procedura classica, con scansione dei documenti</strong>: con SPID o CIEid la registrazione si blocca a metà e tocca ricominciare.",
       "Nella <strong>prima schermata</strong> ti viene chiesto il codice promo: inseriscilo lì. A conto aperto non si può più aggiungere e il bonus non si recupera.",
       "Scegli la <strong>carta di debito MyOne in versione solo digitale</strong>: è gratuita, mentre la fisica ha un costo. Per il bonus la virtuale basta.",
-      "Completa l'apertura con documento e selfie, poi aspetta l'email di conferma. <strong>La carta virtuale si attiva dopo 48 ore</strong> dall'apertura: prima di allora numero, scadenza e CVV non sono visibili.",
+      "Completa l'apertura con documento e selfie, poi aspetta l'email di conferma. Quando ti arrivano le credenziali, <strong>scarica l'app buddy e attivala con quelle</strong>. <strong>La carta virtuale si attiva dopo 48 ore</strong> dall'apertura: prima di allora numero, scadenza e CVV non sono visibili.",
       "Quando il conto è attivo, caricalo con un bonifico da <strong>11€</strong> da un altro conto tuo. Ne bastano 10 per la spesa, l'euro in più serve a non finire a saldo zero.",
       "Entro <strong>30 giorni</strong> dall'apertura fai <strong>un pagamento da almeno 10€</strong> con la MyOne: POS fisico, acquisto online, oppure la carta caricata su Apple Pay, Google Pay o Samsung Pay.",
       "Non ridurti all'ultimo giorno: per i controlli fa fede la <strong>data valuta</strong>, non quella dell'acquisto.",
@@ -507,10 +507,10 @@ const BONUSES = [
     ],
     "corta": {
       "apri": [
-        "Scarica l'app buddy e tocca <strong>Apri conto</strong>. Registrati con i documenti, <strong>non con SPID</strong>: con SPID si blocca a metà.",
-        "Nella <strong>prima schermata</strong> inserisci il codice amico. Dopo non si può più aggiungere.",
+        "Apri il conto dal sito <strong>buddy.unicredit.it</strong> (il tasto Apri conto nell'app ti porta comunque lì). Registrati con i documenti, <strong>non con SPID</strong>: con SPID si blocca a metà.",
+        "Nella <strong>prima schermata</strong> del modulo inserisci il codice amico. Dopo non si può più aggiungere.",
         "Scegli la carta <strong>solo digitale</strong>: è gratis e per il bonus basta.",
-        "Finisci con documento e selfie. La carta si attiva dopo 48 ore."
+        "Finisci con documento e selfie. Quando ti arrivano le credenziali, scarica l'app buddy e attivala con quelle. La carta si attiva dopo 48 ore."
       ],
       "poi": [
         "Mandati <strong>11€</strong> da un altro tuo conto.",
