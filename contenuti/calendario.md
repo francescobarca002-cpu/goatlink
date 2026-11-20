@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Giovedì 19 novembre 2026
-- **🎬 Contenuto del giorno: ING** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
-
 ## Venerdì 20 novembre 2026
 - **🎬 Contenuto del giorno: MyFin** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 
@@ -55,3 +52,6 @@
 
 ## Mercoledì 2 dicembre 2026
 - **🎬 Contenuto del giorno: Crédit Agricole** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
+
+## Giovedì 3 dicembre 2026
+- **🎬 Contenuto del giorno: ING** — Reel 2 — Conviene davvero?, pubblica alle 19:00–20:30 (fascia migliore) → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
