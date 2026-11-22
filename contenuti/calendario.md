@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Sabato 21 novembre 2026
-- **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
-
 ## Domenica 22 novembre 2026
 - **🎬 Contenuto del giorno: Revolut** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
 
@@ -55,3 +52,6 @@
 
 ## Venerdì 4 dicembre 2026
 - **🎬 Contenuto del giorno: pump.fun** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
+
+## Sabato 5 dicembre 2026
+- **🎬 Contenuto del giorno: Revolut** — Reel 2 — Conviene davvero?, pubblica alle 19:00 → [kit revolut](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/revolut.md)
