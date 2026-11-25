@@ -487,7 +487,7 @@ const BONUSES = [
     "payout": "Entro 90 giorni, prelevabile",
     "deposit": "Ricarica 11€ + spesa da 10€",
     "expires": "2027-01-20",
-    "updated": "2026-11-17",
+    "updated": "2026-11-25",
     "featured": true,
     "countInTotal": true,
     "source": "https://www.buddy.unicredit.it/tutti-prodotti/conto-genius-buddy/",
@@ -499,11 +499,11 @@ const BONUSES = [
       "Nella <strong>prima schermata</strong> ti viene chiesto il codice promo: inseriscilo lì. A conto aperto non si può più aggiungere e il bonus non si recupera.",
       "Scegli la <strong>carta di debito MyOne in versione solo digitale</strong>: è gratuita, mentre la fisica ha un costo. Per il bonus la virtuale basta.",
       "Completa l'apertura con documento e selfie, poi aspetta l'email di conferma. Quando ti arrivano le credenziali, <strong>scarica l'app buddy e attivala con quelle</strong>. <strong>La carta virtuale si attiva dopo 48 ore</strong> dall'apertura: prima di allora numero, scadenza e CVV non sono visibili.",
-      "Quando il conto è attivo, caricalo con un bonifico da <strong>11€</strong> da un altro conto tuo. Ne bastano 10 per la spesa, l'euro in più serve a non finire a saldo zero.",
+      "Quando il conto è attivo, caricalo con un bonifico da <strong>11€</strong> da un altro conto tuo. Ne bastano 10 per la spesa, l'euro in più è solo un margine.",
       "Entro <strong>30 giorni</strong> dall'apertura fai <strong>un pagamento da almeno 10€</strong> con la MyOne: POS fisico, acquisto online, oppure la carta caricata su Apple Pay, Google Pay o Samsung Pay.",
       "Non ridurti all'ultimo giorno: per i controlli fa fede la <strong>data valuta</strong>, non quella dell'acquisto.",
-      "Tieni il <strong>saldo disponibile pari o superiore a zero</strong> fino all'accredito: se svuoti il conto mentre aspetti, il premio salta.",
-      "Ricevi il bonus <strong>entro 90 giorni</strong> dalla transazione valida, direttamente sul conto e prelevabile."
+      "<strong>Non chiudere il conto</strong> prima dell'accredito: il bonus arriva solo se il conto è ancora aperto e non bloccato.",
+      "Ricevi il bonus <strong>entro 90 giorni lavorativi</strong> dalla transazione valida, direttamente sul conto e prelevabile."
     ],
     "corta": {
       "apri": [
@@ -515,12 +515,12 @@ const BONUSES = [
       "poi": [
         "Mandati <strong>11€</strong> da un altro tuo conto.",
         "Entro <strong>30 giorni</strong> dall'apertura paga qualcosa da almeno 10€ con la carta: in negozio, online o con Apple Pay / Google Pay.",
-        "Lascia sul conto quello che resta: il bonus arriva entro 90 giorni, ed è prelevabile."
+        "Non chiudere il conto: il bonus arriva entro 90 giorni lavorativi, ed è prelevabile."
       ],
       "perdi": [
         "metti il codice dopo aver aperto il conto",
-        "hai già avuto buddy, o eri cliente UniCredit a settembre 2024",
-        "svuoti il conto prima che arrivi il bonus"
+        "hai avuto un conto o una carta UniCredit o buddy dal 2020 in poi",
+        "chiudi il conto prima che arrivi il bonus"
       ]
     },
     "rules_ok": [
@@ -528,15 +528,16 @@ const BONUSES = [
       "Il conto corrente è <strong>gratuito</strong>, e la carta MyOne virtuale è gratuita: per prendere il bonus non spendi nulla in canoni.",
       "Sono valide le transazioni su <strong>POS fisico</strong> (contactless o chip e PIN), su <strong>POS virtuale</strong> per gli acquisti online e i pagamenti tramite <strong>Apple Pay, Google Pay e Samsung Pay</strong>.",
       "I soldi arrivano <strong>cash sul conto</strong> e sono prelevabili: non è un buono né un cashback vincolato.",
+      "I <strong>50€ sono già netti</strong>: la ritenuta del 26% la banca la applica sul lordo, a te arrivano 50€ pieni.",
       "Dopo l'apertura inviti a tua volta: <strong>50€ per ogni amico valido</strong>, fino a 100 amici.",
       "Documenti accettati per la verifica: carta d'identità elettronica o cartacea, patente, passaporto."
     ],
     "rules_ko": [
       "<strong>Non contano</strong> bonifici e giroconti verso altri conti correnti, bonifici e ricariche verso carte prepagate con IBAN e ricariche verso carte prepagate. Deve essere un pagamento vero a un esercente.",
       "La <strong>carta virtuale serve per pagare, non per ricaricare</strong>: le operazioni di ricarica verso altre carte restano escluse anche facendole dal wallet, quindi qui la scorciatoia dei voucher non funziona. Con 10€ di soglia non serve comunque.",
-      "Sono esclusi i <strong>vecchi clienti buddybank</strong> e i dipendenti del Gruppo UniCredit.",
-      "È escluso chi, alla data del <strong>16 settembre 2024</strong>, era già cliente UniCredit o buddy con un conto corrente, una prepagata o una carta ricaricabile con IBAN Genius Pay.",
-      "È escluso anche chi ha <strong>chiuso</strong> un conto buddybank, Genius buddy o una Genius Pay prima o durante il periodo della promozione, <strong>anche se poi lo ha riaperto</strong>.",
+      "È escluso chi ha avuto <strong>rapporti di qualsiasi tipo con UniCredit</strong> (buddybank e buddy compresi) in qualsiasi momento <strong>dal 1° gennaio 2020</strong> all'avvio della promo, anche se poi li ha chiusi.",
+      "Il conto o la Genius Pay devono essere aperti <strong>per la prima volta</strong>: chi li ha già avuti non rientra. Esclusi anche i dipendenti del Gruppo UniCredit.",
+      "Il bonus arriva solo se alla data dell'accredito il conto è <strong>ancora aperto e non bloccato</strong>.",
       "Registrandoti con <strong>SPID o CIEid</strong> la procedura si inceppa: usa la registrazione classica."
     ],
     "faq": [
@@ -550,7 +551,7 @@ const BONUSES = [
       },
       {
         "q": "Devo lasciare dei soldi fermi?",
-        "a": "No, ma il saldo disponibile deve restare pari o superiore a zero dall'apertura del conto fino a quando arriva il premio. In pratica carichi 11€, ne spendi 10 e il resto lo lasci lì: non svuotare il conto mentre aspetti."
+        "a": "No, il regolamento non chiede di tenere soldi fermi: basta che il conto sia ancora aperto e non bloccato quando arriva il premio. In pratica carichi 11€, ne spendi 10 e non chiudi il conto finché non arrivano i 50€."
       },
       {
         "q": "Posso pagare con la carta virtuale prima che arrivi quella fisica?",
@@ -562,7 +563,7 @@ const BONUSES = [
       },
       {
         "q": "Chi è escluso dalla promozione?",
-        "a": "I vecchi clienti buddybank, i dipendenti del Gruppo UniCredit e chi al 16 settembre 2024 era già cliente UniCredit o buddy con conto corrente, prepagata o carta ricaricabile con IBAN Genius Pay. È escluso anche chi ha chiuso uno di questi rapporti prima o durante il periodo, anche se poi lo ha riaperto."
+        "a": "Chi ha avuto rapporti di qualsiasi tipo con UniCredit, buddybank e buddy compresi, in qualsiasi momento dal 1° gennaio 2020 all'avvio della promo, anche se poi li ha chiusi. Sono esclusi anche i dipendenti del Gruppo UniCredit."
       },
       {
         "q": "Perché non devo usare SPID per registrarmi?",

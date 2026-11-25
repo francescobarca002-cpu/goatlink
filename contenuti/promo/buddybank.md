@@ -116,12 +116,12 @@ Perfetto! 🙌 Ultimi passi per *Buddybank*:
 
 5. Mandati 11€ da un altro tuo conto.
 6. Entro 30 giorni dall'apertura paga qualcosa da almeno 10€ con la carta: in negozio, online o con Apple Pay / Google Pay.
-7. Lascia sul conto quello che resta: il bonus arriva entro 90 giorni, ed è prelevabile.
+7. Non chiudere il conto: il bonus arriva entro 90 giorni lavorativi, ed è prelevabile.
 
 ❌ Lo perdi se:
 • metti il codice dopo aver aperto il conto
-• hai già avuto buddy, o eri cliente UniCredit a settembre 2024
-• svuoti il conto prima che arrivi il bonus
+• hai avuto un conto o una carta UniCredit o buddy dal 2020 in poi
+• chiudi il conto prima che arrivi il bonus
 
 Se ti blocchi scrivimi qui, ti seguo fino all'accredito.
 Guida completa: https://www.goatlink.it/buddybank.html
