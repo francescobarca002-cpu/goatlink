@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Martedì 24 novembre 2026
-- **🎬 Contenuto del giorno: Buddybank** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
-
 ## Mercoledì 25 novembre 2026
 - **🎬 Contenuto del giorno: Coinbase** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
 
@@ -54,3 +51,6 @@
 ## Lunedì 7 dicembre 2026
 - **🎬 Contenuto del giorno: Buddybank** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit buddybank](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/buddybank.md)
 - **📣 Lunedì: riepilogo settimanale sul canale** (testo sotto)
+
+## Martedì 8 dicembre 2026
+- **🎬 Contenuto del giorno: Coinbase** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
