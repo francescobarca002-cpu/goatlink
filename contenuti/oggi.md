@@ -2,43 +2,44 @@
 
 > Generato da data.js. [Calendario 14 giorni](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/calendario.md) · [Kit WhatsApp Business](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/whatsapp-business.md)
 
-## Mercoledì 25 novembre 2026
-- **🎬 Contenuto del giorno: Coinbase** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit coinbase](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/coinbase.md)
+## Giovedì 26 novembre 2026
+- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
 
 ---
 
-### Coinbase — Reel 1 — Tutorial
+### Crédit Agricole — Reel 1 — Tutorial
 
 **Formato:** registrazione schermo dell'app + testo a video. 30–45 secondi.
 
-- **Gancio (0–3 s), testo a video:** "Coinbase: 20€ in 15 minuti. Ti faccio vedere come."
-- **Contesto (3–8 s):** "L'ingresso più pulito al mondo crypto: depositi 21€, compri, e quei 21€ restano tuoi."
+- **Gancio (0–3 s), testo a video:** "Crédit Agricole: 50€ in 15 minuti. Ti faccio vedere come."
+- **Contesto (3–8 s):** "Basta una transazione con la carta Visa, di qualsiasi importo, e il buono arriva senza fare altro."
 - **Passaggi (8–35 s)**, uno per schermata:
-  1. Iscriviti come nuovo utente tramite il link ufficiale
-  2. Completa la verifica identità (KYC)
-  3. Deposita almeno 21€ — metti 22–23€, così le commissioni di deposito (circa…
-  4. Fai un acquisto da almeno 21€ entro 90 giorni dalla verifica dell'identità,…
-  5. Ricevi il bonus entro 5–15 giorni
-- **Attenzione (35–40 s):** "Ti chiede di muovere 21€, che restano tuoi. Il premio: pagato in 5–15 giorni."
+  1. Apri il Conto Online Crédit Agricole dall'invito
+  2. Inserisci il codice promozionale nel form di apertura
+  3. Nella stessa richiesta sottoscrivi la Carta Visa Debit
+  4. Attiva transazioni online e 3D Secure (servono le credenziali che arrivano per…
+  5. Fai almeno 1 transazione con la carta, di qualsiasi importo, entro 60 giorni…
+  (gli altri 1 passaggi sono nella guida)
+- **Attenzione (35–40 s):** "Non devi lasciare soldi fermi. Il premio: buono Regalo Amazon.it."
 - **Chiusura (40–45 s):** "Guida completa e codice amico: link in bio, oppure scrivici su WhatsApp."
 - **Testo fisso in basso:** "Codice amico: chi lo condivide può ricevere un premio. Il tuo bonus non cambia."
 
 **Caption**
 
 ```
-Coinbase: 20€ di bonus, 15 minuti da telefono.
+Crédit Agricole: 50€ di bonus, 15 minuti da telefono.
 
-Cosa chiede: Deposito + trade min. 21€.
-Quando paga: Pagato in 5–15 giorni.
-Ti chiede di muovere 21€, che restano tuoi.
-Tempo: finché la promo resta attiva.
+Cosa chiede: 1 transazione + carta Visa.
+Quando paga: Buono Regalo Amazon.it.
+Non devi lasciare soldi fermi.
+Tempo: entro il 12 gennaio.
 
-L'ingresso più pulito al mondo crypto: depositi 21€, compri, e quei 21€ restano tuoi.
+Basta una transazione con la carta Visa, di qualsiasi importo, e il buono arriva senza fare altro.
 
 👉 Guida passo-passo e codice amico: link in bio (o scrivici su WhatsApp).
 
 Trasparenza: il codice che ti passiamo è un codice amico. Il tuo bonus non cambia, e chi lo condivide può ricevere il premio previsto per chi invita.
 I prodotti finanziari comportano rischi: questa non è consulenza.
 
-#bonusconto #contocorrente #risparmio #finanzapersonale #goatlink #coinbase
+#bonusconto #contocorrente #risparmio #finanzapersonale #goatlink #creditagricole
 ```

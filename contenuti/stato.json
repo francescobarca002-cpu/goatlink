@@ -1,5 +1,5 @@
 {
- "data": "2026-11-25",
+ "data": "2026-11-26",
  "attive": [
   "bbva",
   "buddybank",
@@ -13,6 +13,6 @@
  ],
  "nuove": [],
  "finite": [],
- "scelta": "coinbase",
- "scelta_ieri": "buddybank"
+ "scelta": "creditagricole",
+ "scelta_ieri": "coinbase"
 }
