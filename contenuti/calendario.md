@@ -2,9 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Giovedì 26 novembre 2026
-- **🎬 Contenuto del giorno: Crédit Agricole** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
-
 ## Venerdì 27 novembre 2026
 - **⏳ MyFin scade tra 3 giorni (30 novembre)** — Storia con countdown + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
 - **⏳ Fineco scade tra 3 giorni (30 novembre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
@@ -54,3 +51,6 @@
 
 ## Mercoledì 9 dicembre 2026
 - **🎬 Contenuto del giorno: Crédit Agricole** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit creditagricole](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/creditagricole.md)
+
+## Giovedì 10 dicembre 2026
+- **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
