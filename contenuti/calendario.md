@@ -2,11 +2,6 @@
 
 > Generato da data.js: se cambia una promo, cambia anche qui.
 
-## Venerdì 27 novembre 2026
-- **⏳ MyFin scade tra 3 giorni (30 novembre)** — Storia con countdown + post canale → [kit myfin](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/myfin.md)
-- **⏳ Fineco scade tra 3 giorni (30 novembre)** — Storia con countdown + post canale → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
-- **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
-
 ## Sabato 28 novembre 2026
 - **🎬 Contenuto del giorno: Fineco** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit fineco](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/fineco.md)
 
@@ -54,3 +49,6 @@
 
 ## Giovedì 10 dicembre 2026
 - **🎬 Contenuto del giorno: ING** — Reel 1 — Tutorial, pubblica alle 19:00–20:30 (fascia migliore) → [kit ing](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/ing.md)
+
+## Venerdì 11 dicembre 2026
+- **🎬 Contenuto del giorno: pump.fun** — Reel 1 — Tutorial, pubblica alle 19:00 → [kit pumpfun](https://github.com/francescobarca002-cpu/goatlink/blob/main/contenuti/promo/pumpfun.md)
